@@ -71,9 +71,8 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     // Third bar chart - Relationship of perpetrator to victim
     const relationship_data = await readData("DARPV");
-    console.log(relationship_data);
 
-    const year = "2018/19";
+  const year = "2018/19";
   const seriesKey = "Percentage of perpetrators";
   const yearData = relationship_data.data[seriesKey][year];
 
@@ -103,6 +102,15 @@ new Chart(ctx, {
     maintainAspectRatio: false,
     plugins: {
       legend: { display: false },
+      datalabels: {
+        anchor: "end",
+        align: "right",
+        formatter: (v) => {
+          return `${v}%`;
+        },
+        color: "#000",
+        clamp: true
+      },
       tooltip: {
         callbacks: {
           label: (context) => `${context.parsed.x}%` // <-- horizontal bar uses x for value
@@ -112,10 +120,6 @@ new Chart(ctx, {
     scales: {
       x: {
         beginAtZero: true,
-        title: { display: true, text: "Percentage (%)" },
-        ticks: {
-          callback: (value) => `${value}%`
-        }
       },
       y: {
         grid: { display: false },
@@ -127,7 +131,8 @@ new Chart(ctx, {
         }
       }
     }
-  }
+  },
+  plugins: [ChartDataLabels]
 });
 
 
