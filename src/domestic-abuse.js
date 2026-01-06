@@ -70,7 +70,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     }); 
 
     // Third bar chart - Relationship of perpetrator to victim
-    const relationship_data = await readData("DARPV");
+  const relationship_data = await readData("DARPV");
 
   const year = "2018/19";
   const seriesKey = "Percentage of perpetrators";
@@ -82,93 +82,89 @@ window.addEventListener("DOMContentLoaded", async () => {
   // If chart_colours is shorter than the number of bars, repeat it
   const colours = labels.map((_, i) => chart_colours[i % chart_colours.length]);
 
-const ctx = document.getElementById("domestic-abuse-3-bar").getContext("2d");
+  const ctx = document.getElementById("domestic-abuse-3-bar").getContext("2d");
 
-new Chart(ctx, {
-  type: "bar",
-  data: {
-    labels,
-    datasets: [
-      {
-        label: `${relationship_data.label} (${year})`,
-        data: values,
-        backgroundColor: colours,
-        borderWidth: 0
-      }
-    ]
-  },
-  options: {
-    indexAxis: "y",              // <-- horizontal
-    maintainAspectRatio: false,
-    plugins: {
-      legend: { display: false },
-      datalabels: {
-        anchor: "end",
-        align: "right",
-        formatter: (v) => {
-          return `${v}%`;
-        },
-        color: "#000",
-        clamp: true
-      },
-      tooltip: {
-        callbacks: {
-          label: (context) => `${context.parsed.x}%` // <-- horizontal bar uses x for value
+  new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels,
+      datasets: [
+        {
+          label: `${relationship_data.label} (${year})`,
+          data: values,
+          backgroundColor: colours,
+          borderWidth: 0
         }
-      }
+      ]
     },
-    scales: {
-      x: {
-        beginAtZero: true,
+    options: {
+      indexAxis: "y",              // <-- horizontal
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        datalabels: {
+          anchor: "end",
+          align: "right",
+          formatter: (v) => {
+            return `${v}%`;
+          },
+          color: "#000",
+          clamp: true
+        },
+        tooltip: {
+          callbacks: {
+            label: (context) => `${context.parsed.x}%` // <-- horizontal bar uses x for value
+          }
+        }
       },
-      y: {
-        grid: { display: false },
-        ticks: {
-          callback: function (value) {
-            const label = this.getLabelForValue(value);
-            return wrapLabel(label, 20); // <-- same wrapping as your function
+      scales: {
+        x: {
+          beginAtZero: true,
+        },
+        y: {
+          grid: { display: false },
+          ticks: {
+            callback: function (value) {
+              const label = this.getLabelForValue(value);
+              return wrapLabel(label, 20); // <-- same wrapping as your function
+            }
           }
         }
       }
-    }
-  },
-  plugins: [ChartDataLabels]
-});
+    },
+    plugins: [ChartDataLabels]
+  });
 
 
-        // Populate info boxes
+   // Populate info boxes
     
-        populateInfoBoxes(
-            ["Definitions", "Source", "What does the data mean?"],
-            [
-`<p>As part of the introduction to the module, respondents were advised of the government's definition of domestic violence and abuse, that is: 'threatening, controlling, coercive behaviour, violence or abuse (psychological, virtual, physical, verbal, sexual, financial or emotional) inflicted on anyone (irrespective of age, ethnicity, religion, gender, gender identity, sexual orientation or any form of disability) by a current or former intimate partner or family member.’</p>
-<p>Personal experiences of domestic violence and abuse were subdivided into three main offence groups: non-physical abuse; threats; and force. To reflect the fact that people’s circumstances, lifestyles, and thus, associated levels of risk of domestic abuse change over time it is important to examine the experience of domestic abuse both in recent years and over a lifetime.</p>
-<p><strong>Non-physical abuse:</strong> Prevented you from having your fair share of the household money or taken money from you, controlled how household work or childcare was done, enforced rules or activities which humiliated you, repeatedly put you down so you felt worthless, kept track of where you went or how you spent your time, monitored your mail, calls, emails, texts or social media, stopped you from seeing friends and/or relatives.</p>
-<p><strong>Threats:</strong> Threatened to hurt someone close to you (your children, family members, friends, or pets), threatened to hurt your current/previous partner, threatened to hurt you, threatened to kill you.</p>
-<p><strong>Force:</strong> Bullied or intimidated you, pressurised or tried to pressurise you to have sex or take part in another sexual activity when you didn't want to, pressurised you to view material which you considered to be pornography, threatened to kill or attempted to kill themselves as a way of making you do something, threatened to, attempted to, or actually hurt themselves as a way of making you do something, used some kind of force against you (choking, kicking, biting, pushing, slapping), used a weapon against you.</p>`,
+  populateInfoBoxes(
+    ["Definitions", "Source", "What does the data mean?"],
+    [
+    `<p>As part of the introduction to the module, respondents were advised of the government's definition of domestic violence and abuse, that is: 'threatening, controlling, coercive behaviour, violence or abuse (psychological, virtual, physical, verbal, sexual, financial or emotional) inflicted on anyone (irrespective of age, ethnicity, religion, gender, gender identity, sexual orientation or any form of disability) by a current or former intimate partner or family member.'</p>
+    <p>Personal experiences of domestic violence and abuse were subdivided into three main offence groups: non-physical abuse; threats; and force. To reflect the fact that people's circumstances, lifestyles, and thus, associated levels of risk of domestic abuse change over time it is important to examine the experience of domestic abuse both in recent years and over a lifetime.</p>
+    <p><strong>Non-physical abuse:</strong> Prevented you from having your fair share of the household money or taken money from you, controlled how household work or childcare was done, enforced rules or activities which humiliated you, repeatedly put you down so you felt worthless, kept track of where you went or how you spent your time, monitored your mail, calls, emails, texts or social media, stopped you from seeing friends and/or relatives.</p>
+    <p><strong>Threats:</strong> Threatened to hurt someone close to you (your children, family members, friends, or pets), threatened to hurt your current/previous partner, threatened to hurt you, threatened to kill you.</p>
+    <p><strong>Force:</strong> Bullied or intimidated you, pressurised or tried to pressurise you to have sex or take part in another sexual activity when you didn't want to, pressurised you to view material which you considered to be pornography, threatened to kill or attempted to kill themselves as a way of making you do something, threatened to, attempted to, or actually hurt themselves as a way of making you do something, used some kind of force against you (choking, kicking, biting, pushing, slapping), used a weapon against you.</p>`,
 
-`<p>This section presents findings from the 2018/19 <strong>Northern Ireland Safe Community Survey (NISCS)</strong>. The NISCS (previously known as the Northern Ireland Crime Survey) is a representative, continuous, personal interview survey of the experiences and perceptions of crime, of adults living in private households throughout Northern Ireland.</p>
-<p>A self-completion module capturing respondents’ experiences of domestic abuse, was asked as part of the NISCS in 2018-19. The findings below relate to the 2,135 respondents aged between 16 and 74 years, who completed the domestic abuse module.</p>
-<p>The survey has adopted the definition of domestic abuse as outlined in the Northern Ireland Government Strategy 'Stopping Domestic and Sexual Violence and Abuse in Northern Ireland'.</p>
-<p>Two measures of domestic abuse are adopted: lifetime; and the last three years. Lifetime prevalence is a good indicator of the percentage of NISCS respondents who have experienced domestic abuse at some point in their lives since age 16.</p>
-<p>This data is available on the <a href="https://ppdata.nisra.gov.uk/table/EXPDA" target="_blank">NISRA Data Portal</a>.</p>
-<p>Statistical publications can be found on the <a href="https://www.justice-ni.gov.uk/sites/default/files/publications/justice/experience%20of%20domestic%20abuse%20findings%20from%20the%20201819%20niscs.pdf" target="_blank">relevant publication page</a>.</p>
-<p><strong>Updates:</strong> NA</p>`,
+    `<p>This section presents findings from the 2018/19 <strong>Northern Ireland Safe Community Survey (NISCS)</strong>. The NISCS (previously known as the Northern Ireland Crime Survey) is a representative, continuous, personal interview survey of the experiences and perceptions of crime, of adults living in private households throughout Northern Ireland.</p>
+    <p>A self-completion module capturing respondents' experiences of domestic abuse, was asked as part of the NISCS in 2018-19. The findings below relate to the 2,135 respondents aged between 16 and 74 years, who completed the domestic abuse module.</p>
+    <p>The survey has adopted the definition of domestic abuse as outlined in the Northern Ireland Government Strategy 'Stopping Domestic and Sexual Violence and Abuse in Northern Ireland'.</p>
+    <p>Two measures of domestic abuse are adopted: lifetime; and the last three years. Lifetime prevalence is a good indicator of the percentage of NISCS respondents who have experienced domestic abuse at some point in their lives since age 16.</p>
+    <p>This data is available on the <a href="https://ppdata.nisra.gov.uk/table/EXPDA" target="_blank">NISRA Data Portal</a>.</p>
+    <p>Statistical publications can be found on the <a href="https://www.justice-ni.gov.uk/sites/default/files/publications/justice/experience%20of%20domestic%20abuse%20findings%20from%20the%20201819%20niscs.pdf" target="_blank">relevant publication page</a>.</p>
+    <p><strong>Updates:</strong> NA</p>`,
 
-`<p>This tab provides an overview of how common domestic violence is, based on self-reported experiences from survey respondents.</p>
-<ul>
-    <li><strong>What it tells us:</strong> It shows the proportion of people who say they have experienced domestic violence, offering insight into the scale of the issue beyond what is reported to authorities.</li>
-    <li><strong>Why it matters:</strong> Understanding prevalence helps practitioners gauge the hidden burden of domestic violence and plan services accordingly. It highlights that many cases remain unreported, reinforcing the need for proactive outreach and support.</li>
-    <li><strong>How to use it:</strong> Use these figures to inform policy development, prevention strategies, and resource allocation for victim support. They can also guide awareness campaigns aimed at encouraging reporting and help-seeking.</li>
-    <li><strong>Limitations:</strong> Self-reported data can be affected by stigma or reluctance to disclose, so actual prevalence may be higher. Interpret these figures alongside administrative data for a complete picture.</li>
-</ul>`
-            
-            ]
-        );
+    `<p>This tab provides an overview of how common domestic violence is, based on self-reported experiences from survey respondents.</p>
+    <ul>
+        <li><strong>What it tells us:</strong> It shows the proportion of people who say they have experienced domestic violence, offering insight into the scale of the issue beyond what is reported to authorities.</li>
+        <li><strong>Why it matters:</strong> Understanding prevalence helps practitioners gauge the hidden burden of domestic violence and plan services accordingly. It highlights that many cases remain unreported, reinforcing the need for proactive outreach and support.</li>
+        <li><strong>How to use it:</strong> Use these figures to inform policy development, prevention strategies, and resource allocation for victim support. They can also guide awareness campaigns aimed at encouraging reporting and help-seeking.</li>
+        <li><strong>Limitations:</strong> Self-reported data can be affected by stigma or reluctance to disclose, so actual prevalence may be higher. Interpret these figures alongside administrative data for a complete picture.</li>
+    </ul>`          
+    ]
+  );
 
-        insertFooter();
-
-    
-
+  insertFooter();
 
 })
