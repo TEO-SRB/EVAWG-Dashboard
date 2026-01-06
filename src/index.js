@@ -65,13 +65,6 @@ window.addEventListener("DOMContentLoaded", async () => {
     insertValue("sexual-days", INDPRCASEEQ.data[INDPRCASEEQ_stat][latest_year]["Offence category - Sexual"]);
     insertValue("all-days", INDPRCASEEQ.data[INDPRCASEEQ_stat][latest_year]["Northern Ireland"]);
 
-    populateInfoBoxes(
-        ["For help and support"],
-        [`<a href="https://www.executiveoffice-ni.gov.uk/articles/support-services-executiveoffice" target="_blank">Support Services</a>
-        <p>The information on this page will direct you to services that will support you if you have concerns about an issue of coercive control.</p>
-        `]
-    )
-
     function mapResizeHandler() {
 
         const first_card_body = document.querySelectorAll(".card-body")[0];

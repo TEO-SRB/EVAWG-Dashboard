@@ -199,7 +199,7 @@ table tr:not(:has(th)):hover {
 .home {
   background-color: #fff;
   color: #00205B;
-  border: 2px solid #732777;
+  border: 2px solid #00205B;
 }
 
 .blue-bg a, .purple-bg a {
@@ -209,6 +209,14 @@ table tr:not(:has(th)):hover {
 .purple-bg {
   background-color: #732777;
   color: #fff;
+}
+
+.purple-border {
+  border: 2px solid #732777;
+}
+
+.green-border {
+  border: 2px solid #68A41E;
 }
 
 .light-purple-bg {
@@ -287,4 +295,7 @@ canvas {
   opacity: 1;
 }
 
+#info-content p {
+  margin-bottom: 1em;
+}
 
