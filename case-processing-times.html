@@ -4,84 +4,82 @@
 <body style="display:none;">
 
     <banner id="banner"></banner>
-  <!-- Top Navbar -->
-<nav id ="nav"></nav>
+    <!-- Top Navbar -->
+    <nav id ="nav"></nav>
 
-<div class="w-100 text-center current-page py-2">
-    The data on this page is administrative data collected through the NI Courts. They are published annually in xxxx. 
+    <div class="w-100 text-center current-page py-2">
+        The data on this page is administrative data collected through the NI Courts. They are published annually in xxxx. 
+    </div>
 
-
-</div>
-
-<div id="content" class="container-fluid">
-    <!-- Main Content -->
-    <main>
+    <div id="content" class="container-fluid">
+        <!-- Main Content -->
+        <main>
         
-        <div class = "py-2">
-            <!-- First row - cards -->
-<div class="row justify-content-center">
-                <div class="col-6 col-xl-3 py-2">
-                    <div class="card h-100 green-bg">
-                        <div class="card-body">
-                            <p class="display-6"><span id="sexual-case-processing"></span> days</p>
-                            <p>average processing time for sexual offence cases</p>
+            <div class = "py-2">
+                <!-- First row - cards -->
+                <div class="row justify-content-center">
+                    <div class="col-6 col-xl-3 py-2">
+                        <div class="card h-100 green-bg">
+                            <div class="card-body">
+                                <p class="display-6"><span id="sexual-case-processing"></span> days</p>
+                                <p>average processing time for sexual offence cases</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-6 col-xl-3 py-2">
-                    <div class="card h-100 green-bg">
-                        <div class="card-body">
-                            <p class="display-6"><span id="domestic-days"></span> days</p>
-                            <p>average processing time for domestic abuse related cases</p>
+                    <div class="col-6 col-xl-3 py-2">
+                        <div class="card h-100 green-bg">
+                            <div class="card-body">
+                                <p class="display-6"><span id="domestic-days"></span> days</p>
+                                <p>average processing time for domestic abuse related cases</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-6 col-xl-3 py-2">
-                    <div class="card h-100 green-bg">
-                        <div class="card-body">
-                            <p class="display-6"><span id="all-case-processing"></span> days</p>
-                            <p>average processing time for all cases</p>
+                    <div class="col-6 col-xl-3 py-2">
+                        <div class="card h-100 green-bg">
+                            <div class="card-body">
+                                <p class="display-6"><span id="all-case-processing"></span> days</p>
+                                <p>average processing time for all cases</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
            <!-- Second row - tables and charts -->
-<div class="row py-4">
-    <div class="col-12 col-xl-6">
-        <div class="card h-100">
-            <div class="card-header">
-                Case processing time <span class="first-year"></span> to <span class="latest-year"></span>
-            </div>
-            <div class="card-body">
-                <canvas id="case-processing-sexual-line"></canvas> 
-            </div>
-        </div>
-    </div>
+            <div class="row py-4">
+                <div class="col-12 col-xl-6">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            Case processing time <span class="first-year"></span> to <span class="latest-year"></span>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="case-processing-sexual-line"></canvas> 
+                        </div>
+                    </div>
+                </div>
     
-    <div class="col-12 col-xl-6">
-        <div class="card h-100">
-            <div class="card-header">
-                Time taken for domestic abuse related cases and all criminal cases from date incident reported/detected to disposal at court, 2022/23 to <span class="latest-year"></span>
+                <div class="col-12 col-xl-6">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            Time taken for domestic abuse related cases and all criminal cases from date incident reported/detected to disposal at court, 2022/23 to <span class="latest-year"></span>
+                        </div>
+                    <div class="card-body">
+                        <canvas id="case-processing-domestic-line"></canvas> 
+                    </div>
+                    </div>
+                </div>
             </div>
-            <div class="card-body">
-                <canvas id="case-processing-domestic-line"></canvas> 
-            </div>
-        </div>
-    </div>
-</div>
 
             <!-- Third row - Definitions -->
             <div id="info-boxes"></div>
 
-        </div>
+            </div>
         
-    </main>
-</div>
+        </main>
+    </div>
 
-<footer id = "footer"></footer>
+    <footer id = "footer"></footer>
 
-<script type = "module" src="src/case-processing-times.js"></script>
-
+    <script type="module" src="src/case-processing-times.js"></script>
 
 </body>
