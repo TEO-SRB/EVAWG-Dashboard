@@ -44,6 +44,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         label_1: "Female",
         line_2: ["Sexual offences", "All ages", "Male"],
         label_2: "Male",
+        unit: "Victims",
         canvas_id: "sexual-offences-line"
     });
 
@@ -56,6 +57,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         label_1: "Female",
         line_2: ["Stalking and harassment", "All ages", "Male"],
         label_2: "Male",
+        unit: "Victims",
         canvas_id: "stalking-line"
     });
    

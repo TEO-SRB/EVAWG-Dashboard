@@ -34,6 +34,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         line_2: ["Offence category - Sexual"],
         label_1: "All criminal cases",
         label_2: "Sexual offence cases",
+        unit: "Days",
         canvas_id: "case-processing-sexual-line",
     });
 
@@ -47,6 +48,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         line_1: ["All criminal cases"],
         label_2: "Domestic abuse related cases",
         label_1: "All criminal cases",
+        unit: "Days",
         canvas_id: "case-processing-domestic-line",
     });
 

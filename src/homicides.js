@@ -47,6 +47,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         label_1: "Female",
         line_2: ["Under 18 years", "Male"],
         label_2: "Male",
+        unit: "Victims",
         canvas_id: "under-18-homicide-line"
     });
 
@@ -58,6 +59,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         label_1: "Female",
         line_2: ["18+ years", "Male"],
         label_2: "Male",
+        unit: "Victims",
         canvas_id: "18-plus-homicide-line"
     });
 

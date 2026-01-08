@@ -52,7 +52,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         }]
     },
     options: {
-        responsive: true,
+        maintainAspectRatio: false,
         plugins: {
             legend: {
                 position: 'bottom'
@@ -60,22 +60,21 @@ window.addEventListener("DOMContentLoaded", async () => {
             tooltip: {
                 callbacks: {
                     label: function (context) {
-                    const value = context.raw;
+                        const value = context.raw;
 
-                    // Get all values in this dataset
-                    const data = context.dataset.data;
-                    const total = data.reduce((sum,val) => sum + val, 0);
+                        // Get all values in this dataset
+                        const data = context.dataset.data;
+                        const total = data.reduce((sum,val) => sum + val, 0);
 
-                    const percentage = ((value / total) * 100).toFixed(1);
+                        const percentage = ((value / total) * 100).toFixed(1);
 
-                    return `${percentage}%`;
+                        return `${percentage}%`;
                     }
                 }
             }
         }
     }
-    })
-    ;
+    });
 
      createLineChart({
             data,
@@ -85,6 +84,7 @@ window.addEventListener("DOMContentLoaded", async () => {
             line_2: ["Violence against the person offences (Total)"],
             label_1: "All domestic abuse",
             label_2: "Violence against the person",
+            unit: "Incidents",
             canvas_id: "domestic-abuse-line"
         });
 

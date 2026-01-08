@@ -5,7 +5,7 @@ import { getNested } from "./get-nested.js";
 
 export const chart_colours = ["#3878c5", "#00205B", "#68A41E", "#732777", "#ce70d2", "#434700", "#a88f8f", "#3b3b3b", "#e64791", "#400b23"];
 
-export function createLineChart({data, stat, years, line_1, line_2, label_1 = "Female", label_2 = "Male", canvas_id}) {
+export function createLineChart({data, stat, years, line_1, line_2, label_1 = "Female", label_2 = "Male", unit = "%", canvas_id}) {
 
     const line_canvas = document.getElementById(canvas_id);
 
@@ -69,9 +69,22 @@ export function createLineChart({data, stat, years, line_1, line_2, label_1 = "F
                         display: false
                     }
                 }
+            },
+            plugins: {
+              tooltip: {
+                callbacks: {
+                    label: function (context) {
+                    const value = context.raw;
+                    if (unit === "%") {
+                      return `${value}%`;
+                    } else {
+                      return Number(value).toLocaleString();
+                    }
+                }
+            }
             }
         }
-    };
+    }};
 
     const ctx_line = line_canvas.getContext('2d');
     const line_chart = new Chart(ctx_line, config_line);

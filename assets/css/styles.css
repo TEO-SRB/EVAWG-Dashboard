@@ -249,7 +249,7 @@ table tr:not(:has(th)):hover {
 }
 
 canvas {
-  min-height: 30vh;
+  height: 30vh !important;
 }
 
 /* Only when expanded (i.e., NOT collapsed) */
@@ -299,3 +299,9 @@ canvas {
   margin-bottom: 1em;
 }
 
+.y-label {
+  position: absolute;
+  left: 2.5em;
+  color: #666666;
+  font-size: 0.75rem
+}
