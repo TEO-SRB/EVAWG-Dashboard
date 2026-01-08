@@ -248,7 +248,7 @@ table tr:not(:has(th)):hover {
   cursor: pointer;
 }
 
-canvas {
+.chart-canvas {
   height: 30vh !important;
 }
 
