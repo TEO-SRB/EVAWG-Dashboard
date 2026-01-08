@@ -1,8 +1,9 @@
 import { insertHeader, insertFooter, insertNavButtons, insertHead } from "./utils/page-layout.js"
 import { insertValue } from "./utils/insert-value.js";
 import { readData } from "./utils/read-data.js";
-import { latest_year, updateYearSpans } from "./utils/update-years.js";
-import { chart_colours } from "./utils/charts.js";
+import { latest_year, updateYearSpans, years } from "./utils/update-years.js";
+import { chart_colours, createLineChart } from "./utils/charts.js";
+import { populateInfoBoxes } from "./utils/info-boxes.js";
 
 window.addEventListener("DOMContentLoaded", async () => {
 
@@ -14,7 +15,11 @@ window.addEventListener("DOMContentLoaded", async () => {
     const stat = "All domestic abuse crimes";
     updateYearSpans(data, stat);
 
+    console.log(data.data[stat][latest_year]);
+
     insertValue("domestic-abuse-count", data.data[stat][latest_year]["Total crime (domestic abuse motivation)"].toLocaleString());
+    insertValue("violence-with-injury-count", data.data[stat][latest_year]["Violence with injury (including homicide and death or serious injury-unlawful driving)"].toLocaleString());
+    insertValue("violence-no-injury-count", data.data[stat][latest_year]["Violence without injury"].toLocaleString());
 
     let pie_values = data.data[stat][latest_year];
     
@@ -72,6 +77,33 @@ window.addEventListener("DOMContentLoaded", async () => {
     })
     ;
 
+     createLineChart({
+            data,
+            stat,
+            years,
+            line_1: ["Total crime (domestic abuse motivation)"],
+            line_2: ["Violence against the person offences (Total)"],
+            label_1: "All domestic abuse",
+            label_2: "Violence against the person",
+            canvas_id: "domestic-abuse-line"
+        });
+
+        // Populate info boxes
+        const update_date = new Date(data.updated).toLocaleDateString("en-GB",
+            {
+                day: "2-digit", 
+                month: "long",
+                year: "numeric"
+            });
+    
+        populateInfoBoxes(
+            ["Definitions", "Source", "What does the data mean?"],
+            [
+            ``,
+            ``,
+            ``
+            ]
+        );
     
 
 

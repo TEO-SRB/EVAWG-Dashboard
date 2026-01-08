@@ -23,23 +23,23 @@
                     <div class="card h-100 purple-bg">
                         <div class="card-body">
                             <p id="domestic-abuse-count" class="display-6"></p>
-                            <p>number of domestic abuse crimes in 2024/25</p>
+                            <p>number of domestic abuse crimes in <span class="latest-year"></span></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-6 col-xl-3 py-2">
                     <div class="card h-100 light-purple-bg">
                         <div class="card-body">
-                            <p class="display-6">x</p>
-                            <p>incidents of violence without injury</p>
+                            <p id="violence-no-injury-count" class="display-6"></p>
+                            <p>incidents of violence without injury in <span class="latest-year"></span></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-6 col-xl-3 py-2">
                     <div class="card h-100 light-purple-bg">
                         <div class="card-body">
-                            <p class="display-6">x</p>
-                            <p>incidents of violence with injury</p>
+                            <p id="violence-with-injury-count" class="display-6"></p>
+                            <p>incidents of violence with injury in <span class="latest-year"></span></p>
                         </div>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
     <div class="col-12 col-xl-6">
         <div class="card h-100">
             <div class="card-header">
-                Percentage of police recorded domestc abuse in 2024/25, by crime type
+                Percentage of police recorded domestic abuse in <span class="latest-year"></span>, by crime type
             </div>
             <div class="card-body">
                 <canvas id="domestic-abuse-pie"></canvas>
@@ -61,63 +61,19 @@
     <div class="col-12 col-xl-6">
         <div class="card h-100">
             <div class="card-header">
-                Trends in domestic abuse incidents recorded by the police since 2004/05
+                Domestic abuse incidents recorded by the police, <span class="first-year"></span> to <span class="latest-year"></span>
             </div>
             <div class="card-body">
-                Line chart goes here
+                <canvas id="domestic-abuse-line"></canvas>
             </div>
         </div>
     </div>
 </div>
 
             <!-- Third row - Definitions -->
+           <div id="info-boxes"></div>
 
-            <div class="accordion py-4" id="infoAccordion">
-                <div class="row g-3">
-
-                <!-- Definitions Button -->
-                <div class="col-6">
-                    <h2 class="accordion-header" id="def-heading">
-                        <button class="accordion-button collapsed navy-bg" type="button"
-                            data-bs-toggle="collapse" data-bs-target="#def-collapse"
-                            aria-expanded="false" aria-controls="def-collapse">
-                            Definitions
-                        </button>
-                    </h2>
-                </div>
-
-                <!-- What does this mean Button -->
-                <div class="col-6">
-                    <h2 class="accordion-header" id="mean-heading">
-                        <button class="accordion-button collapsed navy-bg" type="button"
-                            data-bs-toggle="collapse" data-bs-target="#mean-collapse"
-                            aria-expanded="false" aria-controls="mean-collapse">
-                            What does this mean?
-                        </button>
-                    </h2>
-                </div>
-
-            </div>
-
-            <!-- CONTENT AREAS -->
-
-            <div id="def-collapse" class="accordion-collapse collapse"
-                aria-labelledby="def-heading" data-bs-parent="#infoAccordion">
-                <div class="accordion-body">
-                    <h2>Definitions</h2>
-                     <p>Definitions goes here....</p>
-                </div>
-            </div>
-
-            <div id="mean-collapse" class="accordion-collapse collapse"
-                aria-labelledby="mean-heading" data-bs-parent="#infoAccordion">
-                <div class="accordion-body">
-                    <h2>What does this mean?</h2>
-                    <p>What does this mean text goes here....</p>
-                </div>
-            </div>
-
-    </div>
+   
 
 
 
