@@ -5,7 +5,7 @@ import { getNested } from "./get-nested.js";
 
 export const chart_colours = ["#3878c5", "#00205B", "#68A41E", "#732777", "#ce70d2", "#434700", "#a88f8f", "#3b3b3b", "#e64791", "#400b23"];
 
-export function createLineChart({data, stat, years, line_1, line_2, label_1 = "Female", label_2 = "Male", canvas_id}) {
+export function createLineChart({data, stat, years, line_1, line_2, label_1 = "Female", label_2 = "Male", unit = "%", canvas_id}) {
 
     const line_canvas = document.getElementById(canvas_id);
 
@@ -69,9 +69,22 @@ export function createLineChart({data, stat, years, line_1, line_2, label_1 = "F
                         display: false
                     }
                 }
+            },
+            plugins: {
+              tooltip: {
+                callbacks: {
+                    label: function (context) {
+                    const value = context.raw;
+                    if (unit === "%") {
+                      return `${value}%`;
+                    } else {
+                      return Number(value).toLocaleString();
+                    }
+                }
+            }
             }
         }
-    };
+    }};
 
     const ctx_line = line_canvas.getContext('2d');
     const line_chart = new Chart(ctx_line, config_line);
@@ -95,79 +108,6 @@ export function createLineChart({data, stat, years, line_1, line_2, label_1 = "F
             line_chart.update();
         });
     }
-
-}
-
-
-export function createBarChartData({data, stat, year, categories}) {   
-
-    let female_bars = [];
-    let male_bars = [];
-    for (let i = 0; i < categories.length; i ++) {
-        let female_key = Object.keys(data.data[stat][year][categories[i]]).filter(x => x.includes("Female"));
-        let male_key = Object.keys(data.data[stat][year][categories[i]]).filter(x => x.includes("Male"));
-        female_bars.push(data.data[stat][year][categories[i]][female_key]);
-        male_bars.push(data.data[stat][year][categories[i]][male_key]);
-    }
-
-    return {female: female_bars,
-            male: male_bars};    
-
-}
-
-export function createPRCData ({data, stat, year, violence_types}) {   
-
-    let female_bars = [];
-    let male_bars = [];
-    for (let i = 0; i < violence_types.length; i ++) {
-             female_bars.push(data.data[stat][year]
-                [violence_types[i]]
-                ["All ages"]["Female"]);
-            male_bars.push(data.data[stat][year]
-                [violence_types[i]]
-                ["All ages"]["Male"]);
-    }
-
-    return {female: female_bars,
-            male: male_bars};    
-
-}
-
-// Domestic abuse specific functions
-// 
-export function createDAData({data, stat, year, time_periods, da_type}) {   
-
-    let female_bars = [];
-    let male_bars = [];
-    for (let i = 0; i < time_periods.length; i ++) {
-             female_bars.push(data.data[stat][year][da_type]
-                [time_periods[i]]
-                ["Female"]);
-            male_bars.push(data.data[stat][year][da_type]
-                [time_periods[i]]
-                ["Male"]);
-    }
-
-    return {female: female_bars,
-            male: male_bars};    
-
-}
-
-export function createDALast3Data({data, stat, year, da_types}) {   
-
-    let female_bars = [];
-    let male_bars = [];
-    for (let i = 0; i < da_types.length; i ++) {
-             female_bars.push(data.data[stat][year][da_types[i]]
-                [["Recent (last 3 years)"]]
-                ["Female"]);
-            male_bars.push(data.data[stat][year][da_types[i]]
-                [["Recent (last 3 years)"]]
-                ["Male"]);
-    }
-
-    return {female: female_bars,
-            male: male_bars};    
 
 }
 
@@ -248,6 +188,81 @@ export function createBarChart({ chart_data, categories, canvas_id, label_format
 
   return bar_chart;
 }
+
+
+export function createBarChartData({data, stat, year, categories}) {   
+
+    let female_bars = [];
+    let male_bars = [];
+    for (let i = 0; i < categories.length; i ++) {
+        let female_key = Object.keys(data.data[stat][year][categories[i]]).filter(x => x.includes("Female"));
+        let male_key = Object.keys(data.data[stat][year][categories[i]]).filter(x => x.includes("Male"));
+        female_bars.push(data.data[stat][year][categories[i]][female_key]);
+        male_bars.push(data.data[stat][year][categories[i]][male_key]);
+    }
+
+    return {female: female_bars,
+            male: male_bars};    
+
+}
+
+export function createPRCData ({data, stat, year, violence_types}) {   
+
+    let female_bars = [];
+    let male_bars = [];
+    for (let i = 0; i < violence_types.length; i ++) {
+             female_bars.push(data.data[stat][year]
+                [violence_types[i]]
+                ["All ages"]["Female"]);
+            male_bars.push(data.data[stat][year]
+                [violence_types[i]]
+                ["All ages"]["Male"]);
+    }
+
+    return {female: female_bars,
+            male: male_bars};    
+
+}
+
+// Domestic abuse specific functions
+// 
+export function createDAData({data, stat, year, time_periods, da_type}) {   
+
+    let female_bars = [];
+    let male_bars = [];
+    for (let i = 0; i < time_periods.length; i ++) {
+             female_bars.push(data.data[stat][year][da_type]
+                [time_periods[i]]
+                ["Female"]);
+            male_bars.push(data.data[stat][year][da_type]
+                [time_periods[i]]
+                ["Male"]);
+    }
+
+    return {female: female_bars,
+            male: male_bars};    
+
+}
+
+export function createDALast3Data({data, stat, year, da_types}) {   
+
+    let female_bars = [];
+    let male_bars = [];
+    for (let i = 0; i < da_types.length; i ++) {
+             female_bars.push(data.data[stat][year][da_types[i]]
+                [["Recent (last 3 years)"]]
+                ["Female"]);
+            male_bars.push(data.data[stat][year][da_types[i]]
+                [["Recent (last 3 years)"]]
+                ["Male"]);
+    }
+
+    return {female: female_bars,
+            male: male_bars};    
+
+}
+
+
 
 
 

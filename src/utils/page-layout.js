@@ -51,7 +51,7 @@ export function insertNavButtons() {
     { id: "violence-against-women-and-men-btn", href: "violence-against-women-and-men.html", text: "Violence against women and men" },
     { id: "violence-against-girls-and-boys-btn", href: "violence-against-girls-and-boys.html", text: "Violence against girls and boys" },
     { id: "police-recorded-crime-evawg-btn", href: "police-recorded-crime-evawg.html", text: "Police recorded crime - EVAWG" },
-    { id: "homicides-btn", href: "homicides.html", text: "Homicides" },
+    { id: "domestic-homicides-btn", href: "domestic-homicides.html", text: "Domestic homicides" },
     { id: "domestic-abuse-btn", href: "domestic-abuse.html", text: "Domestic abuse" },
     { id: "police-recorded-crime-domestic-abuse-btn", href: "police-recorded-crime-domestic-abuse.html", text: "Police recorded crime - Domestic abuse" },
     { id: "case-processing-times-btn", href: "case-processing-times.html", text: "Case processing times" },
@@ -134,7 +134,6 @@ export function insertFooter () {
     footer.classList.add("py-4");
     footer.classList.add("bg-nisra");
     footer.classList.add("text-nisra");
-
     
     footer.innerHTML = `<div class="container">
       <!-- 3 column section -->
@@ -178,6 +177,11 @@ export function insertFooter () {
                 <img src="assets/img/logo/linkedin-in-brands-solid-full.svg" title="LinkedIn" role="img" class="img-50"/>
               </a>
             </li>
+            <li class="list-inline-item">
+              <a href="https://www.instagram.com/nisra.gov.uk/">
+                <img src="assets/img/logo/instagram-brands-solid-full.svg" title="Instagram" role="img" class="img-50"/>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -195,8 +199,6 @@ export function insertFooter () {
         <li class="list-inline-item"><a href="https://datavis.nisra.gov.uk/dissemination/accessibility-statement-visualisations.html">Accessibility Statement</a></li>
       </ul>
     </div>`
-
-    
     
     function adjustFooterMargin() {
       const margin_needed = (window.innerHeight - document.getElementById("nav").clientHeight - document.getElementById("content").clientHeight - footer.clientHeight) - 4;
@@ -205,8 +207,6 @@ export function insertFooter () {
 
     adjustFooterMargin();
     window.addEventListener("resize", adjustFooterMargin); 
-
-
 
 }
 

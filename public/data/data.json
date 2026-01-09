@@ -34772,14 +34772,14 @@
   },
   "EXPVLADEQ": {
     "label": "Experience of gender-based violence - adults",
-    "updated": "2025-12-16",
+    "updated": "2026-01-08",
     "data": {
       "Adult victims of gender-based violence": {
         "2022": {
           "Physical violence": {
             "All respondents": 9,
-            "Sex - Female": 10,
-            "Sex - Male": 8,
+            "Gender - Female": 10,
+            "Gender - Male": 8,
             "Age 18-29": 16,
             "Age 30-39": 12,
             "Age 40-49": 5,
@@ -34792,8 +34792,8 @@
           },
           "Sexual violence": {
             "All respondents": 6,
-            "Sex - Female": 11,
-            "Sex - Male": 2,
+            "Gender - Female": 11,
+            "Gender - Male": 2,
             "Age 18-29": 14,
             "Age 30-39": 6,
             "Age 40-49": 5,
@@ -34806,8 +34806,8 @@
           },
           "Psychological violence": {
             "All respondents": 16,
-            "Sex - Female": 20,
-            "Sex - Male": 12,
+            "Gender - Female": 20,
+            "Gender - Male": 12,
             "Age 18-29": 28,
             "Age 30-39": 21,
             "Age 40-49": 14,
@@ -34820,8 +34820,8 @@
           },
           "Economic violence": {
             "All respondents": 3,
-            "Sex - Female": 3,
-            "Sex - Male": 3,
+            "Gender - Female": 3,
+            "Gender - Male": 3,
             "Age 18-29": 1,
             "Age 30-39": 5,
             "Age 40-49": 4,
@@ -34834,8 +34834,8 @@
           },
           "Online violence": {
             "All respondents": 9,
-            "Sex - Female": 10,
-            "Sex - Male": 8,
+            "Gender - Female": 10,
+            "Gender - Male": 8,
             "Age 18-29": 25,
             "Age 30-39": 11,
             "Age 40-49": 6,
@@ -34848,8 +34848,8 @@
           },
           "Other types of violence": {
             "All respondents": "NA",
-            "Sex - Female": "NA",
-            "Sex - Male": "NA",
+            "Gender - Female": "NA",
+            "Gender - Male": "NA",
             "Age 18-29": "NA",
             "Age 30-39": "NA",
             "Age 40-49": "NA",
@@ -34864,8 +34864,8 @@
         "2023": {
           "Physical violence": {
             "All respondents": 7,
-            "Sex - Female": 8,
-            "Sex - Male": 6,
+            "Gender - Female": 8,
+            "Gender - Male": 6,
             "Age 18-29": 18,
             "Age 30-39": 10,
             "Age 40-49": 4,
@@ -34878,8 +34878,8 @@
           },
           "Sexual violence": {
             "All respondents": 7,
-            "Sex - Female": 10,
-            "Sex - Male": 4,
+            "Gender - Female": 10,
+            "Gender - Male": 4,
             "Age 18-29": 25,
             "Age 30-39": 6,
             "Age 40-49": 4,
@@ -34892,8 +34892,8 @@
           },
           "Psychological violence": {
             "All respondents": 13,
-            "Sex - Female": 14,
-            "Sex - Male": 11,
+            "Gender - Female": 14,
+            "Gender - Male": 11,
             "Age 18-29": 30,
             "Age 30-39": 14,
             "Age 40-49": 12,
@@ -34906,8 +34906,8 @@
           },
           "Economic violence": {
             "All respondents": 3,
-            "Sex - Female": 3,
-            "Sex - Male": 4,
+            "Gender - Female": 3,
+            "Gender - Male": 4,
             "Age 18-29": 8,
             "Age 30-39": 5,
             "Age 40-49": 3,
@@ -34920,8 +34920,8 @@
           },
           "Online violence": {
             "All respondents": 7,
-            "Sex - Female": 8,
-            "Sex - Male": 6,
+            "Gender - Female": 8,
+            "Gender - Male": 6,
             "Age 18-29": 26,
             "Age 30-39": 6,
             "Age 40-49": 2,
@@ -34934,8 +34934,8 @@
           },
           "Other types of violence": {
             "All respondents": 1,
-            "Sex - Female": "NA",
-            "Sex - Male": "NA",
+            "Gender - Female": "NA",
+            "Gender - Male": "NA",
             "Age 18-29": "NA",
             "Age 30-39": "NA",
             "Age 40-49": "NA",
@@ -34950,8 +34950,8 @@
         "2024": {
           "Physical violence": {
             "All respondents": 7,
-            "Sex - Female": 8,
-            "Sex - Male": 7,
+            "Gender - Female": 8,
+            "Gender - Male": 7,
             "Age 18-29": 15,
             "Age 30-39": 10,
             "Age 40-49": 5,
@@ -34964,8 +34964,8 @@
           },
           "Sexual violence": {
             "All respondents": 5,
-            "Sex - Female": 8,
-            "Sex - Male": 3,
+            "Gender - Female": 8,
+            "Gender - Male": 3,
             "Age 18-29": 22,
             "Age 30-39": 5,
             "Age 40-49": 3,
@@ -34978,8 +34978,8 @@
           },
           "Psychological violence": {
             "All respondents": 15,
-            "Sex - Female": 18,
-            "Sex - Male": 10,
+            "Gender - Female": 18,
+            "Gender - Male": 10,
             "Age 18-29": 31,
             "Age 30-39": 19,
             "Age 40-49": 12,
@@ -34992,8 +34992,8 @@
           },
           "Economic violence": {
             "All respondents": 4,
-            "Sex - Female": 3,
-            "Sex - Male": 4,
+            "Gender - Female": 3,
+            "Gender - Male": 4,
             "Age 18-29": 7,
             "Age 30-39": 4,
             "Age 40-49": "NA",
@@ -35006,8 +35006,8 @@
           },
           "Online violence": {
             "All respondents": 8,
-            "Sex - Female": 8,
-            "Sex - Male": 7,
+            "Gender - Female": 8,
+            "Gender - Male": 7,
             "Age 18-29": 24,
             "Age 30-39": 7,
             "Age 40-49": 7,
@@ -35020,8 +35020,8 @@
           },
           "Other types of violence": {
             "All respondents": 1,
-            "Sex - Female": "NA",
-            "Sex - Male": "NA",
+            "Gender - Female": "NA",
+            "Gender - Male": "NA",
             "Age 18-29": "NA",
             "Age 30-39": "NA",
             "Age 40-49": "NA",
@@ -35038,14 +35038,14 @@
   },
   "EXPVLYTHEQ": {
     "label": "Experience of gender-based violence - 16 year olds",
-    "updated": "2025-12-16",
+    "updated": "2026-01-08",
     "data": {
       "Victims of gender-based violence": {
         "2023": {
           "Physical violence": {
             "All respondents": 19,
-            "Sex - Female": 15,
-            "Sex - Male": 23,
+            "Gender - Female": 15,
+            "Gender - Male": 23,
             "Religion - Catholic": 15,
             "Religion - Protestant and other Christian": 20,
             "Religion - Other/No religion": 22,
@@ -35056,8 +35056,8 @@
           },
           "Sexual violence": {
             "All respondents": 16,
-            "Sex - Female": 23,
-            "Sex - Male": 6,
+            "Gender - Female": 23,
+            "Gender - Male": 6,
             "Religion - Catholic": 12,
             "Religion - Protestant and other Christian": 13,
             "Religion - Other/No religion": 21,
@@ -35068,8 +35068,8 @@
           },
           "Psychological violence": {
             "All respondents": 26,
-            "Sex - Female": 31,
-            "Sex - Male": 17,
+            "Gender - Female": 31,
+            "Gender - Male": 17,
             "Religion - Catholic": 21,
             "Religion - Protestant and other Christian": 21,
             "Religion - Other/No religion": 34,
@@ -35080,8 +35080,8 @@
           },
           "Online violence": {
             "All respondents": 32,
-            "Sex - Female": 39,
-            "Sex - Male": 21,
+            "Gender - Female": 39,
+            "Gender - Male": 21,
             "Religion - Catholic": 27,
             "Religion - Protestant and other Christian": 28,
             "Religion - Other/No religion": 38,
@@ -35092,8 +35092,8 @@
           },
           "No violence": {
             "All respondents": 48,
-            "Sex - Female": 41,
-            "Sex - Male": 59,
+            "Gender - Female": 41,
+            "Gender - Male": 59,
             "Religion - Catholic": 53,
             "Religion - Protestant and other Christian": 51,
             "Religion - Other/No religion": 41,
@@ -35106,8 +35106,8 @@
         "2024": {
           "Physical violence": {
             "All respondents": 7,
-            "Sex - Female": 5,
-            "Sex - Male": 8,
+            "Gender - Female": 5,
+            "Gender - Male": 8,
             "Religion - Catholic": 6,
             "Religion - Protestant and other Christian": 9,
             "Religion - Other/No religion": 6,
@@ -35118,8 +35118,8 @@
           },
           "Sexual violence": {
             "All respondents": 11,
-            "Sex - Female": 17,
-            "Sex - Male": 3,
+            "Gender - Female": 17,
+            "Gender - Male": 3,
             "Religion - Catholic": 11,
             "Religion - Protestant and other Christian": 12,
             "Religion - Other/No religion": 10,
@@ -35130,8 +35130,8 @@
           },
           "Psychological violence": {
             "All respondents": 18,
-            "Sex - Female": 23,
-            "Sex - Male": 9,
+            "Gender - Female": 23,
+            "Gender - Male": 9,
             "Religion - Catholic": 18,
             "Religion - Protestant and other Christian": 16,
             "Religion - Other/No religion": 19,
@@ -35142,8 +35142,8 @@
           },
           "Online violence": {
             "All respondents": 19,
-            "Sex - Female": 26,
-            "Sex - Male": 9,
+            "Gender - Female": 26,
+            "Gender - Male": 9,
             "Religion - Catholic": 17,
             "Religion - Protestant and other Christian": 17,
             "Religion - Other/No religion": 22,
@@ -35154,8 +35154,8 @@
           },
           "No violence": {
             "All respondents": 61,
-            "Sex - Female": 51,
-            "Sex - Male": 75,
+            "Gender - Female": 51,
+            "Gender - Male": 75,
             "Religion - Catholic": 62,
             "Religion - Protestant and other Christian": 65,
             "Religion - Other/No religion": 58,
@@ -40480,7 +40480,7 @@
   },
   "EXPVLADAS": {
     "label": "Experience of gender-based violence - adults",
-    "updated": "2025-12-16",
+    "updated": "2026-01-09",
     "data": {
       "Adult victims of gender-based violence": {
         "2022": {
@@ -40535,6 +40535,16 @@
             }
           },
           "Other types of violence": {
+            "Females": {
+              "18-29": "NA",
+              "30+": "NA"
+            },
+            "Males": {
+              "18-29": "NA",
+              "30+": "NA"
+            }
+          },
+          "All types of violence": {
             "Females": {
               "18-29": "NA",
               "30+": "NA"
@@ -40605,6 +40615,16 @@
               "18-29": "NA",
               "30+": "NA"
             }
+          },
+          "All types of violence": {
+            "Females": {
+              "18-29": "NA",
+              "30+": "NA"
+            },
+            "Males": {
+              "18-29": "NA",
+              "30+": "NA"
+            }
           }
         },
         "2024": {
@@ -40666,6 +40686,16 @@
             "Males": {
               "18-29": "NA",
               "30+": "NA"
+            }
+          },
+          "All types of violence": {
+            "Females": {
+              "18-29": 5,
+              "30+": 8
+            },
+            "Males": {
+              "18-29": 2,
+              "30+": 7
             }
           }
         }

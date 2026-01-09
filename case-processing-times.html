@@ -4,8 +4,8 @@
 <body style="display:none;">
 
     <banner id="banner"></banner>
-  <!-- Top Navbar -->
-<nav id ="nav"></nav>
+    <!-- Top Navbar -->
+    <nav id ="nav"></nav>
 
 <!-- Main Content -->
 <main>
@@ -18,71 +18,77 @@
 <div id="content" class="container-fluid">
     
         
-        <div class = "py-2">
-            <!-- First row - cards -->
-<div class="row justify-content-center">
-                <div class="col-6 col-xl-3 py-2">
-                    <div class="card h-100 green-bg">
-                        <div class="card-body">
-                            <p class="display-6"><span id="sexual-case-processing"></span> days</p>
-                            <p>average processing time for sexual offence cases</p>
+            <div class = "py-2">
+                <!-- First row - cards -->
+                <div class="row justify-content-center">
+                    <div class="col-6 col-xl-3 py-2">
+                        <div class="card h-100 green-bg">
+                            <div class="card-body">
+                                <p class="display-6"><span id="sexual-case-processing"></span> days</p>
+                                <p>average processing time for sexual offence cases</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-6 col-xl-3 py-2">
-                    <div class="card h-100 green-bg">
-                        <div class="card-body">
-                            <p class="display-6"><span id="domestic-days"></span> days</p>
-                            <p>average processing time for domestic abuse related cases</p>
+                    <div class="col-6 col-xl-3 py-2">
+                        <div class="card h-100 green-bg">
+                            <div class="card-body">
+                                <p class="display-6"><span id="domestic-days"></span> days</p>
+                                <p>average processing time for domestic abuse related cases</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-6 col-xl-3 py-2">
-                    <div class="card h-100 green-bg">
-                        <div class="card-body">
-                            <p class="display-6"><span id="all-case-processing"></span> days</p>
-                            <p>average processing time for all cases</p>
+                    <div class="col-6 col-xl-3 py-2">
+                        <div class="card h-100 green-bg">
+                            <div class="card-body">
+                                <p class="display-6"><span id="all-case-processing"></span> days</p>
+                                <p>average processing time for all cases</p>
+                            
                         </div>
                     </div>
                 </div>
             </div>
 
            <!-- Second row - tables and charts -->
-<div class="row py-4">
-    <div class="col-12 col-xl-6">
-        <div class="card h-100">
-            <div class="card-header">
-                Case processing time <span class="first-year"></span> to <span class="latest-year"></span>
-            </div>
-            <div class="card-body">
-                <canvas id="case-processing-sexual-line"></canvas> 
-            </div>
-        </div>
-    </div>
+            <div class="row py-4">
+                <div class="col-12 col-xl-6">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            Case processing time <span class="first-year"></span> to <span class="latest-year"></span>
+                        </div>
+                        <div class="card-body">
+                            <div class="y-label">Days</div>
+                            <div>
+                                <canvas id="case-processing-sexual-line" class="chart-canvas"></canvas> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
     
-    <div class="col-12 col-xl-6">
-        <div class="card h-100">
-            <div class="card-header">
-                Time taken for domestic abuse related cases and all criminal cases from date incident reported/detected to disposal at court, 2022/23 to <span class="latest-year"></span>
+                <div class="col-12 col-xl-6">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            Case processing time taken for domestic abuse related cases and all criminal cases, 2022/23 to <span class="latest-year"></span>
+                        </div>
+                    <div class="card-body">
+                        <div class="y-label">Days</div>
+                        <div>
+                            <canvas id="case-processing-domestic-line" class="chart-canvas"></canvas> 
+                        </div>
+                    </div>
+                    </div>
+                </div>
             </div>
-            <div class="card-body">
-                <canvas id="case-processing-domestic-line"></canvas> 
-            </div>
-        </div>
-    </div>
-</div>
 
             <!-- Third row - Definitions -->
             <div id="info-boxes"></div>
 
-        </div>
+            </div>
         
-    </main>
-</div>
+        </main>
+    </div>
 
-<footer id = "footer"></footer>
+    <footer id = "footer"></footer>
 
-<script type = "module" src="src/case-processing-times.js"></script>
-
+    <script type="module" src="src/case-processing-times.js"></script>
 
 </body>

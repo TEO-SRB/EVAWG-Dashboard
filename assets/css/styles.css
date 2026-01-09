@@ -199,7 +199,7 @@ table tr:not(:has(th)):hover {
 .home {
   background-color: #fff;
   color: #00205B;
-  border: 2px solid #732777;
+  border: 2px solid #00205B;
 }
 
 .blue-bg a, .purple-bg a {
@@ -209,6 +209,14 @@ table tr:not(:has(th)):hover {
 .purple-bg {
   background-color: #732777;
   color: #fff;
+}
+
+.purple-border {
+  border: 2px solid #732777;
+}
+
+.green-border {
+  border: 2px solid #68A41E;
 }
 
 .light-purple-bg {
@@ -240,8 +248,8 @@ table tr:not(:has(th)):hover {
   cursor: pointer;
 }
 
-canvas {
-  min-height: 30vh;
+.chart-canvas {
+  height: 30vh !important;
 }
 
 /* Only when expanded (i.e., NOT collapsed) */
@@ -287,4 +295,13 @@ canvas {
   opacity: 1;
 }
 
+#info-content p {
+  margin-bottom: 1em;
+}
 
+.y-label {
+  position: absolute;
+  left: 2.5em;
+  color: #666666;
+  font-size: 0.75rem
+}

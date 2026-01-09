@@ -19,12 +19,19 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     updateYearSpans(data, stat);
 
-    insertValue("homicide-box1-female", data.data[stat][latest_year]["18+ years"]["Female"]);
-    insertValue("homicide-box1-male", data.data[stat][latest_year]["18+ years"]["Male"]);
-    insertValue("homicide-box2-female", data.data[stat][latest_year]["18+ years"]["Female"]);
-    insertValue("homicide-box2-male", data.data[stat][latest_year]["18+ years"]["Male"]);
-    insertValue("homicide-box3-girl", data.data[stat][latest_year]["Under 18 years"]["Female"]);
-    insertValue("homicide-box3-boy", data.data[stat][latest_year]["Under 18 years"]["Male"]);
+    // insertValue("homicide-box1-female", data.data[stat][latest_year]["18+ years"]["Female"]);
+    // insertValue("homicide-box1-male", data.data[stat][latest_year]["18+ years"]["Male"]);
+    // insertValue("homicide-box2-female", data.data[stat][latest_year]["18+ years"]["Female"]);
+    // insertValue("homicide-box2-male", data.data[stat][latest_year]["18+ years"]["Male"]);
+    // insertValue("homicide-box3-girl", data.data[stat][latest_year]["Under 18 years"]["Female"]);
+    // insertValue("homicide-box3-boy", data.data[stat][latest_year]["Under 18 years"]["Male"]);
+
+    insertValue("homicide-box1-female", "X");
+    insertValue("homicide-box1-male", "X");
+    insertValue("homicide-box2-female", "X");
+    insertValue("homicide-box2-male", "X");
+    insertValue("homicide-box3-girl", "X");
+    insertValue("homicide-box3-boy", "X");
 
     // Create bar chart
     const age_groups = Object.keys(data.data[stat][latest_year])
@@ -47,6 +54,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         label_1: "Female",
         line_2: ["Under 18 years", "Male"],
         label_2: "Male",
+        unit: "Victims",
         canvas_id: "under-18-homicide-line"
     });
 
@@ -58,6 +66,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         label_1: "Female",
         line_2: ["18+ years", "Male"],
         label_2: "Male",
+        unit: "Victims",
         canvas_id: "18-plus-homicide-line"
     });
 
@@ -72,7 +81,12 @@ window.addEventListener("DOMContentLoaded", async () => {
         populateInfoBoxes(
             ["Definitions", "Source", "What does the data mean?"],
             [
-            `<p>The Police Service for Northern Ireland defines homicide as murder, manslaughter, corporate manslaughter and infanticide. In certain cases, it is shown separately, for example murder is classified to homicide, attempted murder is classified to violence with injury and conspiracy to murder is classified to violence without injury.</p>`,
+            `<p>PSNI does not maintain a distinct formal definition of "domestic homicide." Instead, they classify a homicide as domestic when it involves a domestic motivation, meaning the victim and perpetrator had an intimate (current or former) or familial relationship. 
+PSNI’s broader definition of domestic abuse (which informs their classification of domestic violence and homicide) includes:
+Threatening, controlling, coercive behaviour, violence or abuse (psychological, virtual, physical, verbal, sexual, financial or emotional) inflicted on anyone by a current or former intimate partner or family member.
+Therefore, if a homicide arises within that relationship context (partner or family) and stems from behaviours aligned with domestic abuse it is recorded as a domestic-motivated homicide.
+
+</p>`,
 
 `<p>Statistics on police recorded crime in Northern Ireland are collated and produced by statisticians seconded to the Police Service of Northern Ireland (PSNI) from the Northern Ireland Statistics and Research Agency (NISRA).</p>
 <p>While the PSNI does not fall within the jurisdiction of the Home Office, the practices and procedures of the Home Office’s notable offence list are followed and applied within Northern Ireland.</p>

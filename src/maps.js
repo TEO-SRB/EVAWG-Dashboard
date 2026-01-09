@@ -8,15 +8,21 @@ window.addEventListener("DOMContentLoaded", async () => {
     await insertHead("Maps");
     insertHeader();
     insertNavButtons();
-    const data = await readData("PRCPD");
+    let data = await readData("PRCPD");
+    const da_data = await readData("DOMACLGD");
 
     let stat = "All crimes recorded by the police";
     const years = Object.keys(data.data[stat]);
     const latest_year = years[years.length - 1];
 
+    let lgds = Object.keys(data.data[stat][latest_year]);
+    for (let i = 0; i < lgds.length; i++) {
+        data.data[stat][latest_year][lgds[i]]["All domestic abuse crimes"] = da_data.data["All domestic abuse crimes"][latest_year][lgds[i]];
+    }
+
+
     const crime_filter = document.getElementById("crime-filter");
     let crime_type = crime_filter.value;
-    console.log(crime_type);
 
     // first draw
     plotMap(data, stat, latest_year, crime_type);

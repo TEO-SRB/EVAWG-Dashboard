@@ -5,6 +5,7 @@ import { readData } from "./utils/read-data.js";
 import { years, latest_year, updateYearSpans } from "./utils/update-years.js";
 import { insertValue } from "./utils/insert-value.js";
 import { populateInfoBoxes } from "./utils/info-boxes.js";
+import { violencePercentage } from "./utils/violence-percentage.js";
 
 window.addEventListener("DOMContentLoaded", async () => {
 
@@ -20,77 +21,19 @@ window.addEventListener("DOMContentLoaded", async () => {
     updateYearSpans(data, stat);
 
     //// Violence against the person
-    const violence_victims = data.data[stat][latest_year]
-        ["Violence with injury (including homicide & death/serious injury by unlawful driving)"]
-        ["All ages"]["All persons"] +
-        data.data[stat][latest_year]
-            ["Violence without injury"]
-            ["All ages"]["All persons"];
-
-    const female_violence_victims = data.data[stat][latest_year]
-        ["Violence with injury (including homicide & death/serious injury by unlawful driving)"]
-        ["All ages"]["Female"] +
-        data.data[stat][latest_year]
-            ["Violence without injury"]
-            ["All ages"]["Female"];
-
-    const male_violence_victims = data.data[stat][latest_year]
-        ["Violence with injury (including homicide & death/serious injury by unlawful driving)"]
-        ["All ages"]["Male"] +
-        data.data[stat][latest_year]
-            ["Violence without injury"]
-            ["All ages"]["Male"];    
-
-    insertValue("violence-female", Math.round(female_violence_victims / violence_victims * 100));
-    insertValue("violence-male", Math.round(male_violence_victims / violence_victims * 100));
+    insertValue("violence-female", violencePercentage(data, stat, latest_year, ["Violence with injury (including homicide & death/serious injury by unlawful driving)", "Violence without injury"], "Female"));
+    insertValue("violence-male", violencePercentage(data, stat, latest_year, ["Violence with injury (including homicide & death/serious injury by unlawful driving)", "Violence without injury"], "Male"));
 
     //// Stalking and harassment
-    const stalking_victims = data.data[stat][latest_year]
-        ["Stalking and harassment"]
-        ["All ages"]["All persons"];
-
-    const female_stalking_victims = data.data[stat][latest_year]
-        ["Stalking and harassment"]
-        ["All ages"]["Female"];
-
-    const male_stalking_victims = data.data[stat][latest_year]
-        ["Stalking and harassment"]
-        ["All ages"]["Male"]
-
-    insertValue("stalking-female", Math.round(female_stalking_victims / stalking_victims * 100));
-    insertValue("stalking-male", Math.round(male_stalking_victims / stalking_victims * 100));
+    insertValue("stalking-female", violencePercentage(data, stat, latest_year, "Stalking and harassment", "Female"));
+    insertValue("stalking-male", violencePercentage(data, stat, latest_year, "Stalking and harassment", "Male"));
 
     //// Sexual offences
-    const sex_victims = data.data[stat][latest_year]
-        ["Sexual offences"]
-        ["All ages"]["All persons"];
-
-    const female_sex_victims = data.data[stat][latest_year]
-        ["Sexual offences"]
-        ["All ages"]["Female"];
-
-    const male_sex_victims = data.data[stat][latest_year]
-        ["Sexual offences"]
-        ["All ages"]["Male"]
-
-    insertValue("sex-female", Math.round(female_sex_victims / sex_victims * 100));
-    insertValue("sex-male", Math.round(male_sex_victims / sex_victims * 100));
-
+    insertValue("sex-female", violencePercentage(data, stat, latest_year, "Sexual offences", "Female"));
+    insertValue("sex-male", violencePercentage(data, stat, latest_year, "Sexual offences", "Male"));
     //// Online violence
-    const online_victims = data.data[stat][latest_year]
-        ["Violence without injury"]
-        ["All ages"]["All persons"];
-
-    const female_online_victims = data.data[stat][latest_year]
-        ["Violence without injury"]
-        ["All ages"]["Female"];
-
-    const male_online_victims = data.data[stat][latest_year]
-        ["Violence without injury"]
-        ["All ages"]["Male"]
-
-    insertValue("online-female", Math.round(female_online_victims / online_victims * 100));
-    insertValue("online-male", Math.round(male_online_victims / online_victims * 100));
+    insertValue("online-female", violencePercentage(data, stat, latest_year, "Violence without injury", "Female"));
+    insertValue("online-male", violencePercentage(data, stat, latest_year, "Violence without injury", "Male"));
 
     // Sexual offences line chart
     createLineChart({
@@ -101,6 +44,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         label_1: "Female",
         line_2: ["Sexual offences", "All ages", "Male"],
         label_2: "Male",
+        unit: "Victims",
         canvas_id: "sexual-offences-line"
     });
 
@@ -113,6 +57,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         label_1: "Female",
         line_2: ["Stalking and harassment", "All ages", "Male"],
         label_2: "Male",
+        unit: "Victims",
         canvas_id: "stalking-line"
     });
    
@@ -123,7 +68,6 @@ window.addEventListener("DOMContentLoaded", async () => {
     ];
 
     const chart_data = createPRCData({data, stat, year: latest_year, violence_types});
-    console.log(chart_data)
     
     createBarChart({
         chart_data,
@@ -153,13 +97,13 @@ window.addEventListener("DOMContentLoaded", async () => {
 <p>All reported incidents of domestic abuse incidents and crime are reported, with no differentiation between gender-based violence. However, the data is available on the sex of the victim.</p>`,
 
 `<p>Statistics on police recorded crime in Northern Ireland are collated and produced by statisticians seconded to the Police Service of Northern Ireland (PSNI) from the Northern Ireland Statistics and Research Agency (NISRA).</p>
-<p>While the PSNI does not fall within the jurisdiction of the Home Office, the practices and procedures of the Home Office’s notable offence list are followed and applied within Northern Ireland.</p>
+<p>While the PSNI does not fall within the jurisdiction of the Home Office, the practices and procedures of the Home Office's notable offence list are followed and applied within Northern Ireland.</p>
 <p>The Crime recording process starts at the point at which an incident comes to the attention of police. This may be brought through a call for service from a member of the public, an incident being referred to the police by another agency or being identified by the police directly.</p>
 <p>This data is available on the <a href="https://ppdata.nisra.gov.uk/table/PRCVCTM" target="_blank">NISRA Data Portal</a>.</p>
 <p>Statistical publications can be found on the <a href="https://www.psni.police.uk/about-us/our-publications-and-reports/official-statistics/police-recorded-crime-statistics" target="_blank">relevant publication page</a>.</p>
 <p><strong>Updates:</strong> Data updated quarterly. <strong>Last update:</strong> ${update_date}.</p>`,
 
-`<p>This tab shows police-recorded offences where the victim’s sex is known, including sexual offences, stalking, and violent crimes with or without injury. These figures help us understand patterns of gender-based violence reported to the police.</p>
+`<p>This tab shows police-recorded offences where the victim's sex is known, including sexual offences, stalking, and violent crimes with or without injury. These figures help us understand patterns of gender-based violence reported to the police.</p>
 <ul>
     <li><strong>What it tells us:</strong> Women remain disproportionately affected by sexual offences and domestic violence, while men also experience significant levels of violence, particularly in certain offence categories.</li>
     <li><strong>Why it matters:</strong> These statistics reflect reported incidents only. They do not capture unreported cases, which research suggests are substantial, especially for sexual offences. Practitioners should interpret trends alongside survey data and community insights.</li>
