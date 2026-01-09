@@ -51,9 +51,34 @@ window.addEventListener("DOMContentLoaded", async () => {
         label_format: "%"
     });
     
-    const types_years = Object.keys(types_data.data[types_stat]);
+   
+
+    let age_data = await readData("EXPVLADAS");
+    const age_stat = "Adult victims of gender-based violence";
+    const age_groups = ["18-29", "30+"];
+
+    const age_chart_data = {
+        "female": [
+            age_data.data[age_stat][latest_year]["All types of violence"]["Females"]["18-29"],
+            age_data.data[age_stat][latest_year]["All types of violence"]["Females"]["30+"]
+        ],
+        "male": [
+            age_data.data[age_stat][latest_year]["All types of violence"]["Males"]["18-29"],
+            age_data.data[age_stat][latest_year]["All types of violence"]["Males"]["30+"]
+        ]
+    }
+
+    createBarChart({
+        chart_data: age_chart_data,
+        categories: age_groups,
+        canvas_id: "age-group-nilt-bar",
+        label_format: "%"
+    });
+    
+    
 
     // Create line chart
+    const types_years = Object.keys(types_data.data[types_stat]);
     // createLineChart({
     //         data: types_data,
     //         stat: types_stat,
