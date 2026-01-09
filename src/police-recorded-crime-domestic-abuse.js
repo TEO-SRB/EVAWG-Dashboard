@@ -56,59 +56,6 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     const ctx = document.getElementById('domestic-abuse-pie').getContext('2d');
 
-    // new Chart(ctx, {
-    // type: 'pie',
-    // data: {
-    //     labels: pie_labels,
-    //     datasets: [{
-    //     data: pie_data,
-    //     backgroundColor: chart_colours,
-    //     borderWidth: 1
-    //     }]
-    // },
-    // options: {
-    //     maintainAspectRatio: false,
-    //     plugins: {
-    //         legend: {
-    //             position: 'bottom'
-    //         },
-    //         tooltip: {
-    //             callbacks: {
-    //                 label: function (context) {
-    //                     const value = context.raw;
-
-    //                     // Get all values in this dataset
-    //                     const data = context.dataset.data;
-    //                     const total = data.reduce((sum,val) => sum + val, 0);
-
-    //                     const percentage = ((value / total) * 100).toFixed(1);
-
-    //                     return `${percentage}%`;
-    //                 }
-    //             }
-    //         },
-    //         datalabels: {
-    //             formatter: (value, context) => {
-    //             const data = context.dataset.data;
-    //             const total = data.reduce((sum, v) => sum + v, 0);
-    //             const pct = (value / total) * 100;
-
-    //             if (pct <= 5) return null; // hide if <= 5%
-
-    //             const label = context.chart.data.labels[context.dataIndex] || '';
-    //             return `${label}\n${pct.toFixed(1)}%`;
-    //             },
-    //             // Keep text readable; you can tweak these
-    //             clamp: true,
-    //             clip: false,
-    //             textAlign: 'center'
-    //         },
-    //     }
-    // },
-    // plugins: [ChartDataLabels]
-    // });
-
-
     new Chart(ctx, {
     type: "pie",
     data: {
@@ -136,6 +83,9 @@ window.addEventListener("DOMContentLoaded", async () => {
         },
 
         datalabels: {
+          font: {
+            size: 14,
+          },
   formatter: (value, context) => {
     const dataArr = context.dataset.data.map(v => Number(v) || 0);
     const total = dataArr.reduce((s, v) => s + v, 0);

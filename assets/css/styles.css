@@ -249,7 +249,7 @@ table tr:not(:has(th)):hover {
 }
 
 .chart-canvas {
-  height: 30vh !important;
+  height: 40vh !important;
 }
 
 /* Only when expanded (i.e., NOT collapsed) */
