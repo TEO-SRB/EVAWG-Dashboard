@@ -2,8 +2,10 @@ import { insertHeader, insertFooter, insertNavButtons, insertHead } from "./util
 import { insertValue } from "./utils/insert-value.js";
 import { readData } from "./utils/read-data.js";
 import { latest_year, updateYearSpans, years } from "./utils/update-years.js";
-import { chart_colours, createLineChart } from "./utils/charts.js";
+import { chart_colours, createLineChart, getContrastTextColour, getPct } from "./utils/charts.js";
 import { populateInfoBoxes } from "./utils/info-boxes.js";
+import { leaderLinePlugin } from "./utils/leader-line-plugin.js";
+import { wrapLabel } from "./utils/wrap-label.js";
 
 window.addEventListener("DOMContentLoaded", async () => {
 
@@ -15,34 +17,100 @@ window.addEventListener("DOMContentLoaded", async () => {
     const stat = "All domestic abuse crimes";
     updateYearSpans(data, stat);
 
-    console.log(data.data[stat][latest_year]);
-
     insertValue("domestic-abuse-count", data.data[stat][latest_year]["Total crime (domestic abuse motivation)"].toLocaleString());
     insertValue("violence-with-injury-count", data.data[stat][latest_year]["Violence with injury (including homicide and death or serious injury-unlawful driving)"].toLocaleString());
     insertValue("violence-no-injury-count", data.data[stat][latest_year]["Violence without injury"].toLocaleString());
 
     let pie_values = data.data[stat][latest_year];
-    
-    pie_values = Object.fromEntries(
-        Object.entries(pie_values)
-            .filter(([key]) => !key.toLowerCase().includes("total"))
-            .map(([key, value]) => {
-            if (key.startsWith("Violence with injury")) {
-                return ["Violence with injury", value];
-            }
-            return [key, value];
-            })
-    );
 
+    const KEEP_KEYS = new Set([
+    "Violence with injury",
+    "Violence without injury",
+    "Stalking and harassment",
+    "Sexual offences"
+    ]);
 
+    pie_values = Object.entries(pie_values)
+    // remove totals
+    .filter(([key]) => !key.toLowerCase().includes("total"))
+    // shorten the violence-with-injury label
+    .map(([key, value]) => {
+        if (key.startsWith("Violence with injury")) {
+        return ["Violence with injury", value];
+        }
+        return [key, value];
+    })
+    // group everything else into "All other offences"
+    .reduce((acc, [key, value]) => {
+        const v = Number(value) || 0; // defensive: ensure numeric
+        if (KEEP_KEYS.has(key)) {
+        acc[key] = (acc[key] || 0) + v;
+        } else {
+        acc["All other offences"] = (acc["All other offences"] || 0) + v;
+        }
+        return acc;
+    }, {});
 
     const pie_labels = Object.keys(pie_values);
     const pie_data = Object.values(pie_values);
 
     const ctx = document.getElementById('domestic-abuse-pie').getContext('2d');
 
+    // new Chart(ctx, {
+    // type: 'pie',
+    // data: {
+    //     labels: pie_labels,
+    //     datasets: [{
+    //     data: pie_data,
+    //     backgroundColor: chart_colours,
+    //     borderWidth: 1
+    //     }]
+    // },
+    // options: {
+    //     maintainAspectRatio: false,
+    //     plugins: {
+    //         legend: {
+    //             position: 'bottom'
+    //         },
+    //         tooltip: {
+    //             callbacks: {
+    //                 label: function (context) {
+    //                     const value = context.raw;
+
+    //                     // Get all values in this dataset
+    //                     const data = context.dataset.data;
+    //                     const total = data.reduce((sum,val) => sum + val, 0);
+
+    //                     const percentage = ((value / total) * 100).toFixed(1);
+
+    //                     return `${percentage}%`;
+    //                 }
+    //             }
+    //         },
+    //         datalabels: {
+    //             formatter: (value, context) => {
+    //             const data = context.dataset.data;
+    //             const total = data.reduce((sum, v) => sum + v, 0);
+    //             const pct = (value / total) * 100;
+
+    //             if (pct <= 5) return null; // hide if <= 5%
+
+    //             const label = context.chart.data.labels[context.dataIndex] || '';
+    //             return `${label}\n${pct.toFixed(1)}%`;
+    //             },
+    //             // Keep text readable; you can tweak these
+    //             clamp: true,
+    //             clip: false,
+    //             textAlign: 'center'
+    //         },
+    //     }
+    // },
+    // plugins: [ChartDataLabels]
+    // });
+
+
     new Chart(ctx, {
-    type: 'pie',
+    type: "pie",
     data: {
         labels: pie_labels,
         datasets: [{
@@ -54,27 +122,89 @@ window.addEventListener("DOMContentLoaded", async () => {
     options: {
         maintainAspectRatio: false,
         plugins: {
-            legend: {
-                position: 'bottom'
-            },
-            tooltip: {
-                callbacks: {
-                    label: function (context) {
-                        const value = context.raw;
+        legend: { position: "bottom" },
 
-                        // Get all values in this dataset
-                        const data = context.dataset.data;
-                        const total = data.reduce((sum,val) => sum + val, 0);
-
-                        const percentage = ((value / total) * 100).toFixed(1);
-
-                        return `${percentage}%`;
-                    }
-                }
+        tooltip: {
+            callbacks: {
+            label: function (context) {
+                const value = context.raw;
+                const dataArr = context.dataset.data;
+                const pct = getPct(value, dataArr).toFixed(1);
+                return `${pct}%`;
             }
+            }
+        },
+
+        datalabels: {
+  formatter: (value, context) => {
+    const dataArr = context.dataset.data.map(v => Number(v) || 0);
+    const total = dataArr.reduce((s, v) => s + v, 0);
+    const pct = total ? (Number(value) / total) * 100 : 0;
+
+    if (pct <= 5) return null; // hide if <= 5%
+
+    const label =
+      context.chart.data.labels[context.dataIndex] || "";
+
+    return [
+      ...wrapLabel(label, 15),          // wrapped label lines
+      `${pct.toFixed(1)}%`              // percentage on its own line
+    ];
+  },
+
+  // keep your existing inside / outside logic unchanged
+  anchor: (context) => {
+    const dataArr = context.dataset.data;
+    const value = Number(dataArr[context.dataIndex]) || 0;
+    const total = dataArr.reduce((s, v) => s + v, 0);
+    const pct = total ? (value / total) * 100 : 0;
+    return pct < 10 ? "end" : "center";
+  },
+
+  align: (context) => {
+    const dataArr = context.dataset.data;
+    const value = Number(dataArr[context.dataIndex]) || 0;
+    const total = dataArr.reduce((s, v) => s + v, 0);
+    const pct = total ? (value / total) * 100 : 0;
+    return pct < 10 ? "end" : "center";
+  },
+
+  offset: (context) => {
+    const dataArr = context.dataset.data;
+    const value = Number(dataArr[context.dataIndex]) || 0;
+    const total = dataArr.reduce((s, v) => s + v, 0);
+    const pct = total ? (value / total) * 100 : 0;
+    return pct < 10 ? 14 : 0;
+  },
+
+  color: (context) => {
+    const dataArr = context.dataset.data;
+    const value = Number(dataArr[context.dataIndex]) || 0;
+    const total = dataArr.reduce((s, v) => s + v, 0);
+    const pct = total ? (value / total) * 100 : 0;
+
+    if (pct < 10) return "#000"; // outside labels
+    const bg = context.dataset.backgroundColor?.[context.dataIndex];
+    return getContrastTextColour(bg);
+  },
+
+  textAlign: "center",
+  clamp: false,
+  clip: false
+},
+
+        // options for the leaderLinePlugin (registered above)
+        leaderLinePlugin: {
+            datasetIndex: 0,
+            color: "#666",
+            lineWidth: 1,
+            offset: 14
         }
-    }
+        }
+    },
+    plugins: [ChartDataLabels, leaderLinePlugin]
     });
+
 
      createLineChart({
             data,
