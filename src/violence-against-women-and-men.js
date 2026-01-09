@@ -68,12 +68,12 @@ window.addEventListener("DOMContentLoaded", async () => {
         ]
     }
 
-    createBarChart({
-        chart_data: age_chart_data,
-        categories: age_groups,
-        canvas_id: "age-group-nilt-bar",
-        label_format: "%"
-    });
+    // createBarChart({
+    //     chart_data: age_chart_data,
+    //     categories: age_groups,
+    //     canvas_id: "age-group-nilt-bar",
+    //     label_format: "%"
+    // });
     
     
 
