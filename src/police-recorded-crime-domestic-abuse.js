@@ -84,7 +84,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
         datalabels: {
           font: {
-            size: 14,
+            size: 16,
           },
   formatter: (value, context) => {
     const dataArr = context.dataset.data.map(v => Number(v) || 0);
