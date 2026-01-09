@@ -2,7 +2,6 @@ import { insertHeader, insertFooter, insertHead } from "./utils/page-layout.js";
 import { readData } from "./utils/read-data.js";
 import { insertValue } from "./utils/insert-value.js";
 import { latest_year, updateYearSpans } from "./utils/update-years.js";
-import { populateInfoBoxes } from "./utils/info-boxes.js";
 
 window.addEventListener("DOMContentLoaded", async () => {
 
