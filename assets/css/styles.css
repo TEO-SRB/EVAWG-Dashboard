@@ -305,3 +305,33 @@ table tr:not(:has(th)):hover {
   color: #666666;
   font-size: 0.75rem
 }
+
+.nisra-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #0b0c0c;
+  margin-top: 1rem;
+}
+
+.nisra-table caption {
+  caption-side: top;
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.nisra-table th,
+.nisra-table td {
+  border: 1px solid #b1b4b6;
+  padding: 0.6rem;
+  vertical-align: top;
+  text-align: left;
+}
+
+.nisra-table thead th {
+  background-color: #f3f2f1;
+}
+
+.nisra-table tbody th {
+  font-weight: 600;
+}
