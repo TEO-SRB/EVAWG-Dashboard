@@ -40480,7 +40480,7 @@
   },
   "EXPVLADAS": {
     "label": "Experience of gender-based violence - adults",
-    "updated": "2025-12-16",
+    "updated": "2026-01-09",
     "data": {
       "Adult victims of gender-based violence": {
         "2022": {
@@ -40535,6 +40535,16 @@
             }
           },
           "Other types of violence": {
+            "Females": {
+              "18-29": "NA",
+              "30+": "NA"
+            },
+            "Males": {
+              "18-29": "NA",
+              "30+": "NA"
+            }
+          },
+          "All types of violence": {
             "Females": {
               "18-29": "NA",
               "30+": "NA"
@@ -40605,6 +40615,16 @@
               "18-29": "NA",
               "30+": "NA"
             }
+          },
+          "All types of violence": {
+            "Females": {
+              "18-29": "NA",
+              "30+": "NA"
+            },
+            "Males": {
+              "18-29": "NA",
+              "30+": "NA"
+            }
           }
         },
         "2024": {
@@ -40666,6 +40686,16 @@
             "Males": {
               "18-29": "NA",
               "30+": "NA"
+            }
+          },
+          "All types of violence": {
+            "Females": {
+              "18-29": 5,
+              "30+": 8
+            },
+            "Males": {
+              "18-29": 2,
+              "30+": 7
             }
           }
         }

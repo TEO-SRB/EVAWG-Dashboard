@@ -7,16 +7,15 @@ export function insertHeader () {
     banner.style.backgroundColor = "#00205b";
     banner.innerHTML = `<div class="container-fluid d-flex flex-column align-items-stretch p-0">
     <!-- Banner row (full width) -->
-    <div class="w-100" style="background-color:#3878c5;">
+    <nav aria-label="Feedback" class="w-100" style="background-color:#3878c5;">
         <div class="text-white text-center py-2 px-3">
-            <strong>We welcome feedback from users through our 
-                <a href="https://dttselfserve.nidirect.gov.uk/NISRA/RateIt#/Gender_based_violence" target="_blank">short survey</a>
-            </strong>
+            We welcome feedback from users through our 
+                <a href="https://dttselfserve.nidirect.gov.uk/NISRA/RateIt#/Gender_based_violence" target="_blank" rel="noopener noreferrer">short survey</a>
+            
         </div>
-    </div>
-
+    </nav>
   <!-- Main navbar row -->
-<div class="d-flex row align-items-center justify-content-between w-100 py-3 px-2">
+<div role="banner" class="d-flex row align-items-center justify-content-between w-100 py-3 px-2">
 
   <!-- Left: NISRA logo -->
   <div class="col-12 col-xl-4 d-flex justify-content-center justify-content-xl-start">
