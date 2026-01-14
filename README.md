@@ -115,7 +115,7 @@ This regenerates `public/data/data.json` from NISRA PxStat API.
 
 ---
 
-## 7. Adding a New Page or Chart
+## 7. Adding a New Page
 1. Duplicate an existing HTML file.
 2. Create a matching JS module in `src/`.
 3. Import utilities and fetch data:
