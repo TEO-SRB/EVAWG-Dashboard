@@ -196,4 +196,16 @@ populateInfoBoxes([
 ```
 This will dynamically create accordion-style info boxes with your content.
 
+### Adding a New Value Using `insertValue`
+1. In the HTML page, create a `<span>` element with a unique ID:
+```html
+<p><span id="my-new-value"></span> new statistic</p>
+```
+2. In the JS file, after fetching data, call `insertValue`:
+```js
+import { insertValue } from "./utils/insert-value.js";
+insertValue("my-new-value", data.data["Your Stat"][latest_year]["Your Category"]);
+```
+This will insert the value dynamically into the span.
+
 ---
