@@ -87,7 +87,7 @@ populateInfoBoxes(["Definitions", "Source", "What does the data mean?"], [htmlCo
 ## 5. Getting Started (Recommended Workflow)
 
 ### Install VS Code
-Download from [Visual Studio Code](https://code.visualstudio.com/).
+Download and install from _Visual Studio Code_ from the ITAssist Store.
 
 ### Clone the Repo in VS Code
 - Open VS Code → `View > Command Palette` → `Git: Clone`
