@@ -2,8 +2,6 @@
 
 A static dashboard presenting indicators related to **Ending Violence Against Women and Girls (EVAWG)** in Northern Ireland. Built with HTML, modular JavaScript, and R for data preparation.
 
-> **Audience:** This guide is written for novice developers who can run basic commands and edit files but may be new to modular JavaScript and R-backed data workflows.
-
 ---
 
 ## 1. Overview
@@ -159,7 +157,43 @@ Each file in `src/utils/` provides reusable helpers:
 
 ---
 
-## 10. License
-© Crown Copyright. Consider adding an Open Government Licence (OGL) notice if applicable.
+## 10. How to Add a New Chart or Info Box
+
+### Adding a New Chart
+1. Identify the HTML page where you want the chart.
+2. Add a `<canvas>` element inside the appropriate section:
+```html
+<canvas id="my-new-chart" class="chart-canvas"></canvas>
+```
+3. In the corresponding JS file:
+   - Import chart utilities:
+```js
+import { createBarChart, createBarChartData } from "./utils/charts.js";
+```
+   - Fetch data and prepare chart data:
+```js
+const data = await readData("YOUR_MATRIX_CODE");
+const chart_data = createBarChartData({ data, stat: "Your Stat", year: latest_year, categories: ["Category1", "Category2"] });
+```
+   - Render the chart:
+```js
+createBarChart({ chart_data, categories: ["Category1", "Category2"], canvas_id: "my-new-chart", label_format: "%" });
+```
+
+### Adding a New Info Box
+1. In the HTML page, ensure there is a container for info boxes:
+```html
+<div id="info-boxes"></div>
+```
+2. In the JS file, use `populateInfoBoxes`:
+```js
+populateInfoBoxes([
+  "Title 1", "Title 2"
+], [
+  "<p>Content for box 1</p>",
+  "<p>Content for box 2</p>"
+]);
+```
+This will dynamically create accordion-style info boxes with your content.
 
 ---
