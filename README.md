@@ -1,161 +1,165 @@
-# EVAWG Quarto Dashboard
+# EVAWG Dashboard
 
-## PROJECT OVERVIEW
-This project facilitates the creation of a Quarto-based website for the *EVAWG Gender-based Violence - Prevalence* dashboard.   
+A static dashboard presenting indicators related to **Ending Violence Against Women and Girls (EVAWG)** in Northern Ireland. Built with HTML, modular JavaScript, and R for data preparation.
 
-Data for the dashboard is read in from data in the `data` folder and prepared in R files stored in the `data_prep` folder.  Once the data is read in and prepared, content (charts, maps, text etc) can be created on the various `.qmd` files within the `pages` folder. Once the publication content is created it can then be rendered and the output saved to the `docs` folder.
+> **Audience:** This guide is written for novice developers who can run basic commands and edit files but may be new to modular JavaScript and R-backed data workflows.
 
-## SOFTWARE SET-UP
+---
 
-- **R 4.4**, **RStudio 2024.04.1-748**, and **GIT for Windows** are required. All are available from IT Assist Store on your desktop.
-- All required R packages are listed in `config.R`. By correctly initializing and restoring `renv`, all necessary dependencies will be installed automatically.
-- Correct Git configuration on the user's machine. First time users need to run the following lines in the R terminal (updating log in credentials as necessary)
+## 1. Overview
+This dashboard provides interactive charts, maps, and summary statistics to monitor gender-based violence indicators. Data is sourced from official NISRA datasets and preprocessed using R.
+
+---
+
+## 2. Folder Structure
 ```
-git config --global http.sslVerify false
-git config --global user.name "GithubUsername"
-git config --global user.email firstname.lastname@daera-ni.gov.uk
+repo-root/
+├── assets/                # CSS, images, icons
+├── public/                # Data and map styles
+│   ├── data/data.json     # Preprocessed data for charts
+│   └── map/               # GeoJSON and map style
+├── src/                   # JavaScript source
+│   ├── utils/             # Reusable helper functions
+│   ├── *.js               # Page-specific scripts
+│   └── r/data.R           # R script for data preparation
+├── *.html                 # Dashboard pages
+└── 99-teo-evawg-dashboard.Rproj # RStudio project file
 ```
 
-## RENV
+---
 
-This project includes the `renv` package to manage R packages and dependencies. The `.Rprofile` file ensures that the appropriate repositories are set up, and `renv` is activated upon loading the project.
+## 3. How Modularisation Works
+Each HTML page loads a **corresponding JS module**:
+```html
+<script type="module" src="src/violence-against-women-and-men.js"></script>
+```
+The JS module:
+- Imports shared helpers from `src/utils/`
+- Fetches data from `public/data/data.json`
+- Builds charts/maps and wires up interactions
 
-#### First-Time Setup
-1. Open R in the project directory.
-2. Run `renv::restore()` to install the required packages from the lockfile.
-3. Ensure that binary package installations are preferred for efficiency (`renv.config.install.prefer.binary = TRUE`).
+---
 
-#### Repository Configuration
-The `.Rprofile` script dynamically configures package repositories based on available shared drives and includes a fallback to CRAN. This ensures that the correct versions of required packages are sourced from internal or public repositories.
+## 4. Worked Example: Violence Against Women and Men Page
 
-## RENDERING THE DASHBOARD
-   - Open the `render_dashboard.R` script.
-   - Ensure this line `quarto_render(input = here("pages")` is set to "pages".
-   - Click **Source** or press `Ctrl + Shift + S` to run the script and generate the updated website.
-   - After execution, the website will automatically open in your default web browser.
-   - The rendered html file will also be saved in your 'docs' folder. Open the `index.html` file to open the dashboard in a browser.
+### HTML Highlights
+- Dynamic header and footer placeholders:
+```html
+<banner id="banner"></banner>
+<nav id="nav"></nav>
+<footer id="footer"></footer>
+```
+- Main content includes:
+  - Cards showing key percentages
+  - Charts for prevalence and trends
+  - Info boxes for definitions and sources
 
-To render one page at a time, set this line in the `render_dashboard.R` file to the name of your page:
-  - `quarto_render(input = here("pages/NILT")`
+### JS Highlights
+Imports utilities:
+```js
+import { insertHeader, insertFooter, insertNavButtons, insertHead } from "./utils/page-layout.js";
+import { readData } from "./utils/read-data.js";
+import { maleComparison } from "./utils/male-comparison.js";
+import { createLineChart, createBarChartData, createBarChart } from "./utils/charts.js";
+import { updateYearSpans } from "./utils/update-years.js";
+import { insertValue } from "./utils/insert-value.js";
+import { populateInfoBoxes } from "./utils/info-boxes.js";
+```
 
-## DATA
-Data for this dashboard comes from 3 different sources:
-   - Data files (.xlsx and .sav) within the `data` folder.
-   - URL links
-   - NISRA Data Portal
+Fetches data and updates DOM:
+```js
+let data = await readData("EXPVLADEQ");
+updateYearSpans(data, "Adult victims of gender-based violence");
+insertValue("violence-female", 100 - types_data.data[types_stat][latest_year]["No forms of violence"]["Female"]);
+```
 
-### `data` folder
-The `data` folder should include the following data files:
-   - `nilt_historical_chart1.xlsx`
-   - `nilt_historical_chart2.xlsx`
-   - `nilt_historical_chart3.xlsx`
-   - `ylt_historical_chart1.xlsx`
-   - `ylt_historical_chart2.xlsx`
-   - `police_recorded_crime_historical_chart1.xlsx`
-   - `police_recorded_crime_historical_chart2.xlsx`
-   - The current years data for NILT e.g. `NILT23TEOv2.sav`
-   - The current years data for YLT e.g. `YLT2024.sav`
+Creates charts:
+```js
+createBarChart({ chart_data, categories: violence_types, canvas_id: "prevalence-nilt-bar", label_format: "%" });
+createLineChart({ data, stat, years, line_1: ["Physical violence", "Gender - Female"], line_2: ["Physical violence", "Gender - Male"], canvas_id: "prevalence-nilt-line" });
+```
 
-The `.xlsx` files in the `data` folder are all historical files that are read in each year before the new year's data is appended onto them and written out to form a new version of the file which is then read in again the next year. Never delete these historical data files. It is recommended you save a copy of them somewhere. 
+Populates info boxes:
+```js
+populateInfoBoxes(["Definitions", "Source", "What does the data mean?"], [htmlContent1, htmlContent2, htmlContent3]);
+```
 
-### URL links
-Data from URL links are read in on the `domabuse_data_prep.R` and `recordedcrime_data_prep.R` files. 
+---
 
-### NISRA Data Portal
-Data is pulled in from the Nisra Data Portal on the `pps_data_prep` file.
-   
+## 5. Getting Started (Recommended Workflow)
 
-### Data Prep and associated pages.
-There are 4 data prep files that read in, and prepare, all the data for the .qmd pages that contain charts or maps.
+### Install VS Code
+Download from [Visual Studio Code](https://code.visualstudio.com/).
 
-| Data prep file             | Page                                                                 |
-|-----------------------------|----------------------------------------------------------------------|
-| main_data_prep.R            | NILT.qmd<br>YLT.qmd                                                  |
-| recordedcrime_data_prep.R   | recorded-crime-police.qmd<br>recorded-crime-homicide.qmd<br>recorded-crime-victims.qmd<br>recorded-crime-policing-district.qmd |
-| domabuse_data_prep.R        | domestic-abuse.qmd                                                   |
-| pps_data_prep.R             | public-prosecution.qmd                                               |
+### Clone the Repo in VS Code
+- Open VS Code → `View > Command Palette` → `Git: Clone`
+- Paste the repo URL:
+```
+https://github.com/NISRA-Tech-Lab/99-teo-evawg-dashboard.git
+```
 
-The 'Home' page content is within the `index.qmd` file. Quarto dashboards always use the `index.qmd` file as it's home page and will be the default page that is used for links on the dashboard title etc.
+### Install Live Server Extension
+- In VS Code, go to Extensions → Search for **Live Server** → Install.
 
-## CONFIGURATION
-The `config.R` file contains information and settings that are required for the production of the dashboard to run smoothly:
-   - R package list.
-   - `data_folder`: This variable contains the directory location information for the data folder.   
-   - Current-year variables that need set each year for the various sections of the dashboard:   
-           - `currentyear`: The current year that the publication is being created in.   
-           - Other current-year variables that should be set to the current-year that you have the data for e.g. `nilt_currentyear` may be set to `2023` but `da_currentyear` (domestic abuse) may be set to `2024/25`.
-   - NISRA colour palette is set.
+### Run the Dashboard
+- Open `index.html` in VS Code.
+- Click **Go Live** (bottom-right corner).
+- The site will open in your browser with auto-refresh on changes.
 
-## .YML 
-The `_quarto.yml` file is swithin the `pages` folder and is responsible for:
-   - Setting dashboard title.
-   - Dashboard navigation set-up.
-   - Page titles.
-   - Setting icons on the menu (e.g the home icon)
+---
 
-`href` referes to the .qmd file that you want to be on the menu and dahsboard. `text` referes to the name of the page. For example:
-`href: index.qmd text: Home`
-This means that the `index.qmd` page is being read in but it will be called `Home` on the dashboard menu.
+## 6. Data Preparation (`data.R`)
+Run in RStudio:
+```r
+source("src/r/data.R")
+```
+This regenerates `public/data/data.json` from NISRA PxStat API.
 
-## CHECKLIST FOR NEW YEAR'S PUBLICATION
-| STEP             | NOTE                                                                 |
-|-----------------------------|----------------------------------------------------------------------|
-| Update data.            | Insert new `.sav` files for the current NILT & YLT year's data into the `data` folder. If any of these file names are different from the previous year then update the variables where this data is read in on the relevant data_prep pages (e.g. `main_data_prep`) . Update any URL or data portal links.                                                  |
-| Check `data_folder` variable.    | Located in `config.R`. It is recommened you store the project `data` folder in a shared drive. Update this variable with the link to the saved location. This ensures the data in the `data` folder can be read into the R project. |
-| Set current year varibales.        | Located in `config.R`. E.g. `ylt_currentyear`                                                   |
-| Update any relevant links & notes.             | Located under various charts throughout the dashboard on the .qmd pages (in `pages` folder).                                              |
+---
 
+## 7. Adding a New Page or Chart
+1. Duplicate an existing HTML file.
+2. Create a matching JS module in `src/`.
+3. Import utilities and fetch data:
+```js
+import { readData } from './utils/read-data.js';
+import { createBarChart } from './utils/charts.js';
+```
+4. Link the JS in your HTML:
+```html
+<script type="module" src="src/new-page.js"></script>
+```
 
+---
 
-## CHARTS
+## 8. Utilities Reference (`src/utils/`)
+Each file in `src/utils/` provides reusable helpers:
+- **charts.js**: Chart creation functions (`createLineChart`, `createBarChart`).
+- **read-data.js**: Loads preprocessed JSON data.
+- **update-years.js**: Updates year spans in DOM.
+- **insert-value.js**: Inserts values into elements.
+- **info-boxes.js**: Builds accordion-style info boxes.
+- **male-comparison.js**: Toggles gender views.
+- **page-layout.js**: Inserts header, footer, and navigation.
+- **plot-map.js**: Renders interactive maps.
+- **load-shapes.js**: Fetches GeoJSON shapes.
+- **leader-line-plugin.js**: Adds leader lines to pie charts.
+- **violence-percentage.js**: Calculates gender-based violence percentages.
+- **wrap-label.js**: Wraps long chart labels.
+- **get-nested.js**: Safely accesses nested object properties.
+- **get-selected-gender.js**: Reads selected gender from radio buttons.
 
-For the charts in the code the R charting package **Plotly** is used. Some
-helpful resources are below:
+---
 
-- [Pie Charts in R](https://plotly.com/r/pie-charts/)
-- [Plotly R Open Source Graphing Library](https://plotly.com/r/#:~:text=Plotly's%20R%20graphing%20library%20makes,3D%20(WebGL%20based)%20charts.)
-- [Plotly R Library Basic Charts](https://plotly.com/r/basic-charts/)
-- [Plotly R Library Statistical Charts](https://plotly.com/r/statistical-charts/)
-- [GitHub Plotly](<https://gist.github.com/aagarw30/800c4da26eebbe2331860872d31720c1>)
-- [Cheatsheets for Plotly](<https://images.plot.ly/plotly-documentation/images/r_cheat_sheet.pdf>)
+## 9. Accessibility & Best Practices
+- Use **high-contrast colours** (`getContrastTextColour()` helps).
+- Add **ARIA roles** for interactive elements.
+- Ensure charts have **text alternatives** for screen readers.
+- Test responsiveness on mobile and desktop.
 
-The code chunk for each chart generally follows a similar pattern. Normally a 
-data frame created earlier in one of the data prep files is fed into the `plotly` function
-and named, for example `homicide_plot`. Chart parameters are set like chart
-`type`, `label`, `values`, `x` and `y` variables, `markers` and `line` aesthetics
-like font, size and colour. Other details about the chart like name, label text
-and [hover text](https://plotly.com/r/hover-text-and-formatting/) are set next. 
+---
 
-Sometimes, in charts with multiple lines or bars, the
-[add_trace](https://plotly.com/r/creating-and-updating-figures/#adding-traces)
-function is used to add additional variables.
+## 10. License
+© Crown Copyright. Consider adding an Open Government Licence (OGL) notice if applicable.
 
-Following this there is a layout section that sets the aesthetics of the chart
-as a whole like axis styling, titles, legends, margins, fonts etc.
-[`layout` attributes in plotly](https://plotly.com/r/reference/layout/). Where
-required [chart annotations](https://plotly.com/r/text-and-annotations/) are
-added in the layout section. Annotations are used to label lines, bars and as
-axis titles to help meet accessibility requirements. After the layout section
-there is a line of code `config(displayModeBar = FALSE)` that removes `plotly`
-logos and other unnecessary tools.
-
-There are many different attributes that are used in the code that help to style
-and format the charts. The links below have more information on the different
-types of charts in the report and their corresponding styling attributes. There
-are more links on styling other charts also.
-
-- [Pie Charts in R](https://plotly.com/r/pie-charts/)
-- [Pie chart plolty R attributes](https://plotly.com/r/reference/pie/)
-- [Line Plots in R](https://plotly.com/r/line-charts/)
-- [Line chart plolty R attributes](https://plotly.com/r/reference/)
-- [Bar Charts in R](https://plotly.com/r/bar-charts/)
-- [Bar chart plolty R attributes](https://plotly.com/r/reference/bar/)
-- [Horizontal Bar Charts in R](https://plotly.com/r/horizontal-bar-charts/)
-
-## USEFUL LINKS
-- [Quarto dashboards](https://quarto.org/docs/dashboards/) - Help with dashboard layouts for individual pages
-- [Quarto websites](https://quarto.org/docs/websites/) - Help with programming over all navigation
-
-
-
-
+---
