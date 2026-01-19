@@ -34690,7 +34690,7 @@
   },
   "EXPDA": {
     "label": "Experience of domestic abuse",
-    "updated": "2025-12-08",
+    "updated": "2026-01-19",
     "data": {
       "Victims of domestic abuse": {
         "2018/19": {
@@ -34752,18 +34752,6 @@
               "Female": 6.7,
               "Male": 2.5,
               "All persons": 4.7
-            }
-          },
-          "All abuse types": {
-            "Lifetime (since age 16)": {
-              "Female": 80.8,
-              "Male": 38.6,
-              "All persons": 61
-            },
-            "Recent (last 3 years)": {
-              "Female": 39.5,
-              "Male": 25.3,
-              "All persons": 32.8
             }
           }
         }
@@ -40792,6 +40780,320 @@
           "Parent, step parent or foster parent": 0.9,
           "Another family member": 4.5,
           "Other": 22.7
+        }
+      }
+    }
+  },
+  "DAHVAG": {
+    "label": "Domestic abuse homicides recorded",
+    "updated": "2026-01-19",
+    "data": {
+      "Domestic abuse homicides": {
+        "2007/08": {
+          "Under 18 years": {
+            "Female": 4,
+            "Male": 2,
+            "All persons": 6
+          },
+          "18+ years": {
+            "Female": 3,
+            "Male": 2,
+            "All persons": 5
+          },
+          "All ages": {
+            "Female": 7,
+            "Male": 4,
+            "All persons": 11
+          }
+        },
+        "2008/09": {
+          "Under 18 years": {
+            "Female": 0,
+            "Male": 2,
+            "All persons": 2
+          },
+          "18+ years": {
+            "Female": 2,
+            "Male": 4,
+            "All persons": 6
+          },
+          "All ages": {
+            "Female": 2,
+            "Male": 6,
+            "All persons": 8
+          }
+        },
+        "2009/10": {
+          "Under 18 years": {
+            "Female": 1,
+            "Male": 1,
+            "All persons": 2
+          },
+          "18+ years": {
+            "Female": 2,
+            "Male": 4,
+            "All persons": 6
+          },
+          "All ages": {
+            "Female": 3,
+            "Male": 5,
+            "All persons": 8
+          }
+        },
+        "2010/11": {
+          "Under 18 years": {
+            "Female": 0,
+            "Male": 0,
+            "All persons": 0
+          },
+          "18+ years": {
+            "Female": 6,
+            "Male": 1,
+            "All persons": 7
+          },
+          "All ages": {
+            "Female": 6,
+            "Male": 1,
+            "All persons": 7
+          }
+        },
+        "2011/12": {
+          "Under 18 years": {
+            "Female": 0,
+            "Male": 0,
+            "All persons": 0
+          },
+          "18+ years": {
+            "Female": 2,
+            "Male": 3,
+            "All persons": 5
+          },
+          "All ages": {
+            "Female": 2,
+            "Male": 3,
+            "All persons": 5
+          }
+        },
+        "2012/13": {
+          "Under 18 years": {
+            "Female": 0,
+            "Male": 0,
+            "All persons": 0
+          },
+          "18+ years": {
+            "Female": 2,
+            "Male": 3,
+            "All persons": 5
+          },
+          "All ages": {
+            "Female": 2,
+            "Male": 3,
+            "All persons": 5
+          }
+        },
+        "2013/14": {
+          "Under 18 years": {
+            "Female": 1,
+            "Male": 1,
+            "All persons": 2
+          },
+          "18+ years": {
+            "Female": 5,
+            "Male": 1,
+            "All persons": 6
+          },
+          "All ages": {
+            "Female": 6,
+            "Male": 2,
+            "All persons": 8
+          }
+        },
+        "2014/15": {
+          "Under 18 years": {
+            "Female": 0,
+            "Male": 1,
+            "All persons": 1
+          },
+          "18+ years": {
+            "Female": 5,
+            "Male": 1,
+            "All persons": 6
+          },
+          "All ages": {
+            "Female": 5,
+            "Male": 2,
+            "All persons": 7
+          }
+        },
+        "2015/16": {
+          "Under 18 years": {
+            "Female": 0,
+            "Male": 0,
+            "All persons": 0
+          },
+          "18+ years": {
+            "Female": 1,
+            "Male": 0,
+            "All persons": 1
+          },
+          "All ages": {
+            "Female": 1,
+            "Male": 0,
+            "All persons": 1
+          }
+        },
+        "2016/17": {
+          "Under 18 years": {
+            "Female": 0,
+            "Male": 0,
+            "All persons": 0
+          },
+          "18+ years": {
+            "Female": 2,
+            "Male": 1,
+            "All persons": 3
+          },
+          "All ages": {
+            "Female": 2,
+            "Male": 1,
+            "All persons": 3
+          }
+        },
+        "2017/18": {
+          "Under 18 years": {
+            "Female": 1,
+            "Male": 2,
+            "All persons": 3
+          },
+          "18+ years": {
+            "Female": 6,
+            "Male": 2,
+            "All persons": 8
+          },
+          "All ages": {
+            "Female": 7,
+            "Male": 4,
+            "All persons": 11
+          }
+        },
+        "2018/19": {
+          "Under 18 years": {
+            "Female": 1,
+            "Male": 0,
+            "All persons": 1
+          },
+          "18+ years": {
+            "Female": 3,
+            "Male": 0,
+            "All persons": 3
+          },
+          "All ages": {
+            "Female": 4,
+            "Male": 0,
+            "All persons": 4
+          }
+        },
+        "2019/20": {
+          "Under 18 years": {
+            "Female": 1,
+            "Male": 2,
+            "All persons": 3
+          },
+          "18+ years": {
+            "Female": 1,
+            "Male": 1,
+            "All persons": 2
+          },
+          "All ages": {
+            "Female": 2,
+            "Male": 3,
+            "All persons": 5
+          }
+        },
+        "2020/21": {
+          "Under 18 years": {
+            "Female": 0,
+            "Male": 0,
+            "All persons": 0
+          },
+          "18+ years": {
+            "Female": 7,
+            "Male": 1,
+            "All persons": 8
+          },
+          "All ages": {
+            "Female": 7,
+            "Male": 1,
+            "All persons": 8
+          }
+        },
+        "2021/22": {
+          "Under 18 years": {
+            "Female": 1,
+            "Male": 1,
+            "All persons": 2
+          },
+          "18+ years": {
+            "Female": 3,
+            "Male": 4,
+            "All persons": 7
+          },
+          "All ages": {
+            "Female": 4,
+            "Male": 5,
+            "All persons": 9
+          }
+        },
+        "2022/23": {
+          "Under 18 years": {
+            "Female": 0,
+            "Male": 1,
+            "All persons": 1
+          },
+          "18+ years": {
+            "Female": 5,
+            "Male": 2,
+            "All persons": 7
+          },
+          "All ages": {
+            "Female": 5,
+            "Male": 3,
+            "All persons": 8
+          }
+        },
+        "2023/24": {
+          "Under 18 years": {
+            "Female": 0,
+            "Male": 0,
+            "All persons": 0
+          },
+          "18+ years": {
+            "Female": 1,
+            "Male": 2,
+            "All persons": 3
+          },
+          "All ages": {
+            "Female": 1,
+            "Male": 2,
+            "All persons": 3
+          }
+        },
+        "2024/25": {
+          "Under 18 years": {
+            "Female": 1,
+            "Male": 0,
+            "All persons": 1
+          },
+          "18+ years": {
+            "Female": 5,
+            "Male": 0,
+            "All persons": 5
+          },
+          "All ages": {
+            "Female": 6,
+            "Male": 0,
+            "All persons": 6
+          }
         }
       }
     }

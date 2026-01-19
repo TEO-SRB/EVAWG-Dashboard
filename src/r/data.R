@@ -17,7 +17,8 @@ matrix_list <- list(
     "DOMACLGD",
     "EXPVAS",
     "CPTDAC",
-    "DARPV"
+    "DARPV",
+    "DAHVAG"
   ),
   data_portal = c(
     "INDPRCASEEQ"

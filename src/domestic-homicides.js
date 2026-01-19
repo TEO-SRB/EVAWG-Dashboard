@@ -12,26 +12,26 @@ window.addEventListener("DOMContentLoaded", async () => {
     insertHeader();
     insertNavButtons();
     maleComparison();
-    let data = await readData("PRCHOM");
+    let data = await readData("DAHVAG");
 
     // Update values
-    const stat = "All homicides";
+    const stat = "Domestic abuse homicides";
 
     updateYearSpans(data, stat);
 
-    // insertValue("homicide-box1-female", data.data[stat][latest_year]["18+ years"]["Female"]);
-    // insertValue("homicide-box1-male", data.data[stat][latest_year]["18+ years"]["Male"]);
-    // insertValue("homicide-box2-female", data.data[stat][latest_year]["18+ years"]["Female"]);
-    // insertValue("homicide-box2-male", data.data[stat][latest_year]["18+ years"]["Male"]);
-    // insertValue("homicide-box3-girl", data.data[stat][latest_year]["Under 18 years"]["Female"]);
-    // insertValue("homicide-box3-boy", data.data[stat][latest_year]["Under 18 years"]["Male"]);
+     insertValue("homicide-box1-female", data.data[stat][latest_year]["All ages"]["Female"]);
+     insertValue("homicide-box1-male", data.data[stat][latest_year]["All ages"]["Male"]);
+     insertValue("homicide-box2-female", data.data[stat][latest_year]["18+ years"]["Female"]);
+     insertValue("homicide-box2-male", data.data[stat][latest_year]["18+ years"]["Male"]);
+     insertValue("homicide-box3-girl", data.data[stat][latest_year]["Under 18 years"]["Female"]);
+     insertValue("homicide-box3-boy", data.data[stat][latest_year]["Under 18 years"]["Male"]);
 
-    insertValue("homicide-box1-female", "X");
-    insertValue("homicide-box1-male", "X");
-    insertValue("homicide-box2-female", "X");
-    insertValue("homicide-box2-male", "X");
-    insertValue("homicide-box3-girl", "X");
-    insertValue("homicide-box3-boy", "X");
+    // insertValue("homicide-box1-female", "X");
+    // insertValue("homicide-box1-male", "X");
+    // insertValue("homicide-box2-female", "X");
+    // insertValue("homicide-box2-male", "X");
+    // insertValue("homicide-box3-girl", "X");
+    // insertValue("homicide-box3-boy", "X");
 
     // Create bar chart
     const age_groups = Object.keys(data.data[stat][latest_year])
