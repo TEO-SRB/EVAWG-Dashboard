@@ -141,7 +141,14 @@ export function createBarChart({ chart_data, categories, canvas_id, label_format
       }
     },
     scales: {
-      x: { beginAtZero: true },
+      x: { beginAtZero: true,
+        ticks : {
+          precision: 0,
+          maxRotation: 0,
+          minRotation: 0,
+          autoSkip: true
+        }
+       },
       y: {
         grid: { display: false },
         ticks: {
