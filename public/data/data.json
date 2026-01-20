@@ -41412,6 +41412,19 @@
       }
     }
   },
+  "LDARPG": {
+    "label": "Lifetime domestic abuse reported to the police",
+    "updated": "2026-01-19",
+    "data": {
+      "Proportion of any lifetime domestic abuse reported to the police": {
+        "2018/19": {
+          "Female": 32.1,
+          "Male": 9.7,
+          "All persons": 24.9
+        }
+      }
+    }
+  },
   "INDPRCASEEQ": {
     "label": "Indicator - Processing times for criminal cases",
     "updated": "2025-10-07",

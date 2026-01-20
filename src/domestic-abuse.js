@@ -14,6 +14,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     maleComparison();
     insertNavButtons();
     let data = await readData("EXPDA");
+    let reported_data = await readData("LDARPG");
 
      // Update values
     const stat = "Victims of domestic abuse";
@@ -35,8 +36,11 @@ window.addEventListener("DOMContentLoaded", async () => {
     insertValue("force-female", data.data[stat][latest_year]["Force"]["Lifetime (since age 16)"]["Female"].toFixed(1));
     insertValue("force-male",   data.data[stat][latest_year]["Force"]["Lifetime (since age 16)"]["Male"].toFixed(1));
 
-    insertValue("reported-female", "X");
-    insertValue("reported-male", "X");
+    const reported_stat = "Proportion of any lifetime domestic abuse reported to the police";
+    const reported_year = Object.keys(reported_data.data[reported_stat]).slice(-1);
+
+    insertValue("reported-female", reported_data.data[reported_stat][reported_year]["Female"].toFixed(1));
+    insertValue("reported-male", reported_data.data[reported_stat][reported_year]["Male"].toFixed(1));
 
     // Create bar charts
     const time_periods = Object.keys(data.data[stat][latest_year]["Any domestic abuse"]);

@@ -19,7 +19,8 @@ matrix_list <- list(
     "CPTDAC",
     "DARPV",
     "DAHVAG",
-    "DAHVGR"
+    "DAHVGR",
+    "LDARPG"
   ),
   data_portal = c(
     "INDPRCASEEQ"
