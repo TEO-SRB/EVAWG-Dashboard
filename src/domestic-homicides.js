@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     updateYearSpans(data, stat);
 
-    const last_5_years = years.splice(-5);
+    const last_5_years = years.slice(-5);
 
     let women_last_5 = 0;
     let men_last_5 = 0;

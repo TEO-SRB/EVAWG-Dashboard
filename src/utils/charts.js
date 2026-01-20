@@ -68,6 +68,14 @@ export function createLineChart({data, stat, years, line_1, line_2, label_1 = "F
                     grid: {
                         display: false
                     }
+                },
+                x: {
+                  ticks: {
+                    maxRotation: 0,
+                    minRotation: 0,
+                    autoSkip: true,
+                    autoSkipPadding: 4
+                  }
                 }
             },
             plugins: {
