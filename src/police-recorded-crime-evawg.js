@@ -32,8 +32,8 @@ window.addEventListener("DOMContentLoaded", async () => {
     insertValue("sex-female", violencePercentage(data, stat, latest_year, "Sexual offences", "Female"));
     insertValue("sex-male", violencePercentage(data, stat, latest_year, "Sexual offences", "Male"));
     //// Online violence
-    insertValue("online-female", violencePercentage(data, stat, latest_year, "Violence without injury", "Female"));
-    insertValue("online-male", violencePercentage(data, stat, latest_year, "Violence without injury", "Male"));
+    insertValue("online-female", "X");
+    insertValue("online-male", "X");
 
     // Sexual offences line chart
     createLineChart({

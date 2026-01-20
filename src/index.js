@@ -1,7 +1,7 @@
 import { insertHeader, insertFooter, insertHead } from "./utils/page-layout.js";
 import { readData } from "./utils/read-data.js";
 import { insertValue } from "./utils/insert-value.js";
-import { latest_year, updateYearSpans } from "./utils/update-years.js";
+import { years, latest_year, updateYearSpans } from "./utils/update-years.js";
 
 window.addEventListener("DOMContentLoaded", async () => {
 
@@ -47,11 +47,11 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     // % of stalking and harrassment victims are female
     const stalking_victims = PRCVCTM.data[PRCVCTM_stat][latest_year]
-        ["Sexual offences"]
+        ["Stalking and harassment"]
         ["All ages"]["All persons"];
 
     const female_stalking_victims = PRCVCTM.data[PRCVCTM_stat][latest_year]
-        ["Sexual offences"]
+        ["Stalking and harassment"]
         ["All ages"]["Female"];
 
     insertValue("stalking", Math.round(female_stalking_victims / stalking_victims * 100));
@@ -78,6 +78,19 @@ window.addEventListener("DOMContentLoaded", async () => {
         }
 
     }
+
+    // women killed by intimate partner
+    const DAHVGR = await readData("DAHVGR");
+    const DAHVGR_stat = "Domestic abuse homicides";
+    updateYearSpans(DAHVGR, DAHVGR_stat);
+
+    const last_5_years = years.slice(-5);
+    let domestic_homicicides = 0;
+    for (let i = 0; i < 5; i++) {
+        domestic_homicicides += DAHVGR.data[DAHVGR_stat][last_5_years[i]]["Female"]["Partner/ex-partner"];
+    }
+
+    insertValue("domestic-homicide", domestic_homicicides);
 
     // Initial resize
     mapResizeHandler();

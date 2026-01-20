@@ -35,6 +35,9 @@ window.addEventListener("DOMContentLoaded", async () => {
     insertValue("force-female", data.data[stat][latest_year]["Force"]["Lifetime (since age 16)"]["Female"].toFixed(1));
     insertValue("force-male",   data.data[stat][latest_year]["Force"]["Lifetime (since age 16)"]["Male"].toFixed(1));
 
+    insertValue("reported-female", "X");
+    insertValue("reported-male", "X");
+
     // Create bar charts
     const time_periods = Object.keys(data.data[stat][latest_year]["Any domestic abuse"]);
 

@@ -18,7 +18,8 @@ matrix_list <- list(
     "EXPVAS",
     "CPTDAC",
     "DARPV",
-    "DAHVAG"
+    "DAHVAG",
+    "DAHVGR"
   ),
   data_portal = c(
     "INDPRCASEEQ"
@@ -130,4 +131,4 @@ for (portal in matrix_list) {
 
 if (!dir.exists("public")) dir.create("public")
 if (!dir.exists("public/data")) dir.create("public/data")
-write_json(all_data, "public/data/data.json", pretty = TRUE, auto_unbox = TRUE)                 
+write_json(all_data, "public/data/data.json", pretty = TRUE, auto_unbox = TRUE)

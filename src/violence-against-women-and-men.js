@@ -68,33 +68,23 @@ window.addEventListener("DOMContentLoaded", async () => {
         ]
     }
 
-    // createBarChart({
-    //     chart_data: age_chart_data,
-    //     categories: age_groups,
-    //     canvas_id: "age-group-nilt-bar",
-    //     label_format: "%"
-    // });
+    createBarChart({
+        chart_data: age_chart_data,
+        categories: age_groups,
+        canvas_id: "age-group-nilt-bar",
+        label_format: "%"
+    });
     
     
 
     // Create line chart
     const types_years = Object.keys(types_data.data[types_stat]);
-    // createLineChart({
-    //         data: types_data,
-    //         stat: types_stat,
-    //         years: types_years,
-    //         line_1: ["No forms of violence", "Female"],
-    //         line_2: ["No forms of violence", "Male"],
-    //         canvas_id: "prevalence-nilt-line"
-    //     });
-
-    // Place holder chart - remove after demonstration on 06/01/2026
-      createLineChart({
-            data,
-            stat,
-            years,
-            line_1: ["Physical violence", "Gender - Female"],
-            line_2: ["Physical violence", "Gender - Male"],
+    createLineChart({
+            data: types_data,
+            stat: types_stat,
+            years: types_years,
+            line_1: ["No forms of violence", "Female"],
+            line_2: ["No forms of violence", "Male"],
             canvas_id: "prevalence-nilt-line"
         });
 

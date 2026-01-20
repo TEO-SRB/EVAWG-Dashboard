@@ -41098,6 +41098,320 @@
       }
     }
   },
+  "DAHVGR": {
+    "label": "Domestic abuse homicides recorded",
+    "updated": "2026-01-19",
+    "data": {
+      "Domestic abuse homicides": {
+        "2007/08": {
+          "Female": {
+            "Partner/ex-partner": 4,
+            "Other family relationship": 3,
+            "All relationships": 7
+          },
+          "Male": {
+            "Partner/ex-partner": 1,
+            "Other family relationship": 3,
+            "All relationships": 4
+          },
+          "All persons": {
+            "Partner/ex-partner": 5,
+            "Other family relationship": 6,
+            "All relationships": 11
+          }
+        },
+        "2008/09": {
+          "Female": {
+            "Partner/ex-partner": 2,
+            "Other family relationship": 0,
+            "All relationships": 2
+          },
+          "Male": {
+            "Partner/ex-partner": 4,
+            "Other family relationship": 2,
+            "All relationships": 6
+          },
+          "All persons": {
+            "Partner/ex-partner": 6,
+            "Other family relationship": 2,
+            "All relationships": 8
+          }
+        },
+        "2009/10": {
+          "Female": {
+            "Partner/ex-partner": 2,
+            "Other family relationship": 1,
+            "All relationships": 3
+          },
+          "Male": {
+            "Partner/ex-partner": 2,
+            "Other family relationship": 3,
+            "All relationships": 5
+          },
+          "All persons": {
+            "Partner/ex-partner": 4,
+            "Other family relationship": 4,
+            "All relationships": 8
+          }
+        },
+        "2010/11": {
+          "Female": {
+            "Partner/ex-partner": 6,
+            "Other family relationship": 0,
+            "All relationships": 6
+          },
+          "Male": {
+            "Partner/ex-partner": 0,
+            "Other family relationship": 1,
+            "All relationships": 1
+          },
+          "All persons": {
+            "Partner/ex-partner": 6,
+            "Other family relationship": 1,
+            "All relationships": 7
+          }
+        },
+        "2011/12": {
+          "Female": {
+            "Partner/ex-partner": 1,
+            "Other family relationship": 1,
+            "All relationships": 2
+          },
+          "Male": {
+            "Partner/ex-partner": 1,
+            "Other family relationship": 2,
+            "All relationships": 3
+          },
+          "All persons": {
+            "Partner/ex-partner": 2,
+            "Other family relationship": 3,
+            "All relationships": 5
+          }
+        },
+        "2012/13": {
+          "Female": {
+            "Partner/ex-partner": 2,
+            "Other family relationship": 0,
+            "All relationships": 2
+          },
+          "Male": {
+            "Partner/ex-partner": 0,
+            "Other family relationship": 3,
+            "All relationships": 3
+          },
+          "All persons": {
+            "Partner/ex-partner": 2,
+            "Other family relationship": 3,
+            "All relationships": 5
+          }
+        },
+        "2013/14": {
+          "Female": {
+            "Partner/ex-partner": 5,
+            "Other family relationship": 1,
+            "All relationships": 6
+          },
+          "Male": {
+            "Partner/ex-partner": 0,
+            "Other family relationship": 2,
+            "All relationships": 2
+          },
+          "All persons": {
+            "Partner/ex-partner": 5,
+            "Other family relationship": 3,
+            "All relationships": 8
+          }
+        },
+        "2014/15": {
+          "Female": {
+            "Partner/ex-partner": 3,
+            "Other family relationship": 2,
+            "All relationships": 5
+          },
+          "Male": {
+            "Partner/ex-partner": 0,
+            "Other family relationship": 2,
+            "All relationships": 2
+          },
+          "All persons": {
+            "Partner/ex-partner": 3,
+            "Other family relationship": 4,
+            "All relationships": 7
+          }
+        },
+        "2015/16": {
+          "Female": {
+            "Partner/ex-partner": 0,
+            "Other family relationship": 1,
+            "All relationships": 1
+          },
+          "Male": {
+            "Partner/ex-partner": 0,
+            "Other family relationship": 0,
+            "All relationships": 0
+          },
+          "All persons": {
+            "Partner/ex-partner": 0,
+            "Other family relationship": 1,
+            "All relationships": 1
+          }
+        },
+        "2016/17": {
+          "Female": {
+            "Partner/ex-partner": 2,
+            "Other family relationship": 0,
+            "All relationships": 2
+          },
+          "Male": {
+            "Partner/ex-partner": 0,
+            "Other family relationship": 1,
+            "All relationships": 1
+          },
+          "All persons": {
+            "Partner/ex-partner": 2,
+            "Other family relationship": 1,
+            "All relationships": 3
+          }
+        },
+        "2017/18": {
+          "Female": {
+            "Partner/ex-partner": 3,
+            "Other family relationship": 4,
+            "All relationships": 7
+          },
+          "Male": {
+            "Partner/ex-partner": 1,
+            "Other family relationship": 3,
+            "All relationships": 4
+          },
+          "All persons": {
+            "Partner/ex-partner": 4,
+            "Other family relationship": 7,
+            "All relationships": 11
+          }
+        },
+        "2018/19": {
+          "Female": {
+            "Partner/ex-partner": 3,
+            "Other family relationship": 1,
+            "All relationships": 4
+          },
+          "Male": {
+            "Partner/ex-partner": 0,
+            "Other family relationship": 0,
+            "All relationships": 0
+          },
+          "All persons": {
+            "Partner/ex-partner": 3,
+            "Other family relationship": 1,
+            "All relationships": 4
+          }
+        },
+        "2019/20": {
+          "Female": {
+            "Partner/ex-partner": 0,
+            "Other family relationship": 2,
+            "All relationships": 2
+          },
+          "Male": {
+            "Partner/ex-partner": 1,
+            "Other family relationship": 2,
+            "All relationships": 3
+          },
+          "All persons": {
+            "Partner/ex-partner": 1,
+            "Other family relationship": 4,
+            "All relationships": 5
+          }
+        },
+        "2020/21": {
+          "Female": {
+            "Partner/ex-partner": 5,
+            "Other family relationship": 2,
+            "All relationships": 7
+          },
+          "Male": {
+            "Partner/ex-partner": 1,
+            "Other family relationship": 0,
+            "All relationships": 1
+          },
+          "All persons": {
+            "Partner/ex-partner": 6,
+            "Other family relationship": 2,
+            "All relationships": 8
+          }
+        },
+        "2021/22": {
+          "Female": {
+            "Partner/ex-partner": 3,
+            "Other family relationship": 1,
+            "All relationships": 4
+          },
+          "Male": {
+            "Partner/ex-partner": 1,
+            "Other family relationship": 4,
+            "All relationships": 5
+          },
+          "All persons": {
+            "Partner/ex-partner": 4,
+            "Other family relationship": 5,
+            "All relationships": 9
+          }
+        },
+        "2022/23": {
+          "Female": {
+            "Partner/ex-partner": 3,
+            "Other family relationship": 2,
+            "All relationships": 5
+          },
+          "Male": {
+            "Partner/ex-partner": 2,
+            "Other family relationship": 1,
+            "All relationships": 3
+          },
+          "All persons": {
+            "Partner/ex-partner": 5,
+            "Other family relationship": 3,
+            "All relationships": 8
+          }
+        },
+        "2023/24": {
+          "Female": {
+            "Partner/ex-partner": 1,
+            "Other family relationship": 0,
+            "All relationships": 1
+          },
+          "Male": {
+            "Partner/ex-partner": 0,
+            "Other family relationship": 2,
+            "All relationships": 2
+          },
+          "All persons": {
+            "Partner/ex-partner": 1,
+            "Other family relationship": 2,
+            "All relationships": 3
+          }
+        },
+        "2024/25": {
+          "Female": {
+            "Partner/ex-partner": 3,
+            "Other family relationship": 3,
+            "All relationships": 6
+          },
+          "Male": {
+            "Partner/ex-partner": 0,
+            "Other family relationship": 0,
+            "All relationships": 0
+          },
+          "All persons": {
+            "Partner/ex-partner": 3,
+            "Other family relationship": 3,
+            "All relationships": 6
+          }
+        }
+      }
+    }
+  },
   "INDPRCASEEQ": {
     "label": "Indicator - Processing times for criminal cases",
     "updated": "2025-10-07",
