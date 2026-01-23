@@ -5,21 +5,25 @@ library(jsonlite)
 # List datasets ####
 matrix_list <- list(
   pp_portal = c(
-    "PRCHOM",
-    "PRCVCTM",
-    "DOMAC",
-    "EXPDA",
-    "EXPVLADEQ",
-    "EXPVLYTHEQ",
-    "PRCONL",
-    "PRCPD",
-    "DOMACLGD",
-    "EXPVAS",
+    "AFVAG",
     "CPTDAC",
-    "DARPV",
     "DAHVAG",
     "DAHVGR",
-    "LDARPG"
+    "DARPV",
+    "DOMACLGD",
+    "DOMACVAC",
+    "DOMACVG",
+    "EXPDA",
+    "EXPVLYTHEQ",
+    "LDARPG",
+    "PRCHOM",
+    "PRCONLCG",
+    "PRCPD",
+    "PRCVCTM",
+    "DOMAC",
+    "EXPVAS",
+    "EXPVLADEQ",
+    "PRCONL"
   ),
   data_portal = c(
     "INDPRCASEEQ"
