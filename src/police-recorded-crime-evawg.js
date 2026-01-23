@@ -6,6 +6,7 @@ import { years, latest_year, updateYearSpans } from "./utils/update-years.js";
 import { insertValue } from "./utils/insert-value.js";
 import { populateInfoBoxes } from "./utils/info-boxes.js";
 import { violencePercentage } from "./utils/violence-percentage.js";
+import { downloadButton } from "./utils/download-button.js";
 
 window.addEventListener("DOMContentLoaded", async () => {
 
@@ -14,6 +15,12 @@ window.addEventListener("DOMContentLoaded", async () => {
     insertNavButtons();
     maleComparison();
     let data = await readData("PRCVCTM");
+    const update_date = new Date(data.updated).toLocaleDateString("en-GB",
+            {
+                day: "2-digit", 
+                month: "long",
+                year: "numeric"
+            });
     
     // Update values
     const stat = "All crimes recorded by the police";
@@ -52,6 +59,8 @@ window.addEventListener("DOMContentLoaded", async () => {
         canvas_id: "sexual-offences-line"
     });
 
+    downloadButton("sexual-offences-line-capture", "PRCVCTM", update_date);
+
     // Stalking and harassment line chart
     createLineChart({
         data,
@@ -64,6 +73,8 @@ window.addEventListener("DOMContentLoaded", async () => {
         unit: "Victims",
         canvas_id: "stalking-line"
     });
+
+    downloadButton("stalking-line-capture", "PRCVCTM", update_date);
    
     // Create bar chart
     const violence_types = [
@@ -80,14 +91,9 @@ window.addEventListener("DOMContentLoaded", async () => {
         label_format: ","
     });
 
-       // Populate info boxes
-        const update_date = new Date(data.updated).toLocaleDateString("en-GB",
-            {
-                day: "2-digit", 
-                month: "long",
-                year: "numeric"
-            });
-    
+    downloadButton("violence-bar-capture", "PRCVCTM", update_date);
+
+       // Populate info boxes    
         populateInfoBoxes(
             ["Definitions", "Source", "What does the data mean?"],
             [

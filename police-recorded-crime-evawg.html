@@ -75,19 +75,23 @@
             <div class="row py-4">
                 <div class="col-12 col-xl-4">
                     <div class="card h-100">
-                        <div class="card-header">
-                            Victims of sexual offences, <span class="first-year"></span> to <span class="latest-year"></span>
-                        </div>
-                        <div class="card-body">
-                            <div class="y-label">Victims</div>
-                            <div>
-                                <canvas id="sexual-offences-line" class="chart-canvas"></canvas>
+                        <div id="sexual-offences-line-capture">
+                            <div class="card-header">
+                                Victims of sexual offences, <span class="first-year"></span> to <span class="latest-year"></span>
+                            </div>
+                            <div class="card-body">
+                                <div class="y-label">Victims</div>
+                                <div>
+                                    <canvas id="sexual-offences-line" class="chart-canvas"></canvas>
+                                </div>
                             </div>
                         </div>
+                        <div class="card-footer"></div>
                     </div>
                 </div>
                 <div class="col-12 col-xl-4">
                     <div class="card h-100">
+                        <div id="stalking-line-capture">
                         <div class="card-header">
                             Victims of stalking and harassment, <span class="first-year"></span> to <span class="latest-year"></span>
                         </div>
@@ -97,16 +101,21 @@
                                 <canvas id="stalking-line" class="chart-canvas"></canvas>
                             </div>
                         </div>
+                        </div>
+                        <div class="card-footer"></div>
                     </div>
                 </div>
                 <div class="col-12 col-xl-4">
                     <div class="card h-100">
-                        <div class="card-header">
-                            Victims of violent crimes, <span class="latest-year"></span>
+                        <div id="violence-bar-capture">
+                            <div class="card-header">
+                                Victims of violent crimes, <span class="latest-year"></span>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="violence-bar" class="chart-canvas"></canvas>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <canvas id="violence-bar" class="chart-canvas"></canvas>
-                        </div>
+                        <div class="card-footer"></div>
                     </div>
                 </div>
             </div>

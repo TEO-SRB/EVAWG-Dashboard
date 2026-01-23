@@ -68,6 +68,8 @@ window.addEventListener("DOMContentLoaded", async () => {
             canvas_id: "prevalence-ylt-line"
         });
 
+    downloadButton("prevalence-ylt-line-capture", "EXPVLYTHEQ", update_date);
+
     // Populate info boxes
         
     

@@ -4,7 +4,7 @@ export function downloadButton (capture_id, matrix, update_date) {
     const footer = capture.parentElement.querySelector(".card-footer");
 
     footer.innerHTML = `
-    <div class="dropdown"> Data last updated: ${update_date}. Download:
+    <div class="dropdown"><strong>Data last updated:</strong> ${update_date}.<br><strong>Download:</strong>
         <button class="btn btn-secondary dropdown-toggle btn-primary" type="button" id="${capture_id}-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
             Select type
         </button>

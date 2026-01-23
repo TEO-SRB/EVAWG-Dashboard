@@ -5,6 +5,7 @@ import { createLineChart, createBarChartData, createBarChart } from "./utils/cha
 import { years, latest_year, updateYearSpans } from "./utils/update-years.js";
 import { insertValue } from "./utils/insert-value.js";
 import { populateInfoBoxes } from "./utils/info-boxes.js";
+import { downloadButton } from "./utils/download-button.js";
 
 window.addEventListener("DOMContentLoaded", async () => {
 
@@ -14,6 +15,13 @@ window.addEventListener("DOMContentLoaded", async () => {
     insertNavButtons();
     let data = await readData("EXPVLADEQ");    
     let types_data = await readData("EXPVAS");
+
+     const update_date = new Date(data.updated).toLocaleDateString("en-GB",
+        {
+            day: "2-digit", 
+            month: "long",
+            year: "numeric"
+        });
     
 
     // Update values
@@ -50,30 +58,33 @@ window.addEventListener("DOMContentLoaded", async () => {
         canvas_id: "prevalence-nilt-bar",
         label_format: "%"
     });
-    
+
+    downloadButton("prevalence-nilt-bar-capture", "EXPVLADEQ", update_date);
    
 
-    let age_data = await readData("EXPVLADAS");
-    const age_stat = "Adult victims of gender-based violence";
-    const age_groups = ["18-29", "30+"];
+    // let age_data = await readData("EXPVLADAS");
+    // const age_stat = "Adult victims of gender-based violence";
+    // const age_groups = ["18-29", "30+"];
 
-    const age_chart_data = {
-        "female": [
-            age_data.data[age_stat][latest_year]["All types of violence"]["Females"]["18-29"],
-            age_data.data[age_stat][latest_year]["All types of violence"]["Females"]["30+"]
-        ],
-        "male": [
-            age_data.data[age_stat][latest_year]["All types of violence"]["Males"]["18-29"],
-            age_data.data[age_stat][latest_year]["All types of violence"]["Males"]["30+"]
-        ]
-    }
+    // const age_chart_data = {
+    //     "female": [
+    //         age_data.data[age_stat][latest_year]["All types of violence"]["Females"]["18-29"],
+    //         age_data.data[age_stat][latest_year]["All types of violence"]["Females"]["30+"]
+    //     ],
+    //     "male": [
+    //         age_data.data[age_stat][latest_year]["All types of violence"]["Males"]["18-29"],
+    //         age_data.data[age_stat][latest_year]["All types of violence"]["Males"]["30+"]
+    //     ]
+    // }
 
-    createBarChart({
-        chart_data: age_chart_data,
-        categories: age_groups,
-        canvas_id: "age-group-nilt-bar",
-        label_format: "%"
-    });
+    // createBarChart({
+    //     chart_data: age_chart_data,
+    //     categories: age_groups,
+    //     canvas_id: "age-group-nilt-bar",
+    //     label_format: "%"
+    // });
+
+    // downloadButton("age-group-nilt-bar-capture", "EXPVLADAS", update_date);
     
     
 
@@ -88,14 +99,9 @@ window.addEventListener("DOMContentLoaded", async () => {
             canvas_id: "prevalence-nilt-line"
         });
 
-    // Populate info boxes
-    const update_date = new Date(data.updated).toLocaleDateString("en-GB",
-        {
-            day: "2-digit", 
-            month: "long",
-            year: "numeric"
-        });
+    downloadButton("prevalence-nilt-line-capture", "EXPVAS", update_date);
 
+    // Populate info boxes
     populateInfoBoxes(
         ["Definitions", "Source", "What does the data mean?"],
         [
