@@ -45,8 +45,8 @@ fetch_dataset <- function(matrix,
     result <- tryCatch(
       {
         url <- paste0(
-          "https://", 
-          if (pp_portal) "pp", 
+          "https://",
+          if (pp_portal) "pp",
           "ws-data.nisra.gov.uk/public/api.restful/",
           "PxStat.Data.Cube_API.ReadDataset/",
           matrix,
