@@ -4,6 +4,7 @@ import { createLineChart } from "./utils/charts.js";
 import { years, latest_year, updateYearSpans } from "./utils/update-years.js";
 import { insertValue } from "./utils/insert-value.js";
 import { populateInfoBoxes } from "./utils/info-boxes.js";
+import { downloadButton } from "./utils/download-button.js";
 
 window.addEventListener("DOMContentLoaded", async () => {
 
@@ -12,6 +13,20 @@ window.addEventListener("DOMContentLoaded", async () => {
     insertNavButtons();
     let data = await readData("INDPRCASEEQ");
     let dom_data = await readData("CPTDAC");
+
+    const update_date = new Date(data.updated).toLocaleDateString("en-GB",
+        {
+            day: "2-digit", 
+            month: "long",
+            year: "numeric"
+        });
+
+    const dom_update_date = new Date(dom_data.updated).toLocaleDateString("en-GB",
+        {
+            day: "2-digit", 
+            month: "long",
+            year: "numeric"
+        });
 
         // Update values
     const stat = "Average time taken to complete criminal cases";
@@ -38,6 +53,8 @@ window.addEventListener("DOMContentLoaded", async () => {
         canvas_id: "case-processing-sexual-line",
     });
 
+    downloadButton("case-processing-sexual-line-capture", "INDPRCASEEQ", update_date)
+
     
 
     createLineChart({
@@ -52,13 +69,10 @@ window.addEventListener("DOMContentLoaded", async () => {
         canvas_id: "case-processing-domestic-line",
     });
 
+    downloadButton("case-processing-domestic-line-capture", "CPTDAC", dom_update_date)
+
     // Populate info boxes
-        const update_date = new Date(data.updated).toLocaleDateString("en-GB",
-            {
-                day: "2-digit", 
-                month: "long",
-                year: "numeric"
-            });
+       
     
         populateInfoBoxes(
             ["Definitions", "Source", "What does the data mean?"],
