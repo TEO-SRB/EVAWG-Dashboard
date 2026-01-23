@@ -6,6 +6,7 @@ import { chart_colours, createLineChart, getContrastTextColour, getPct } from ".
 import { populateInfoBoxes } from "./utils/info-boxes.js";
 import { leaderLinePlugin } from "./utils/leader-line-plugin.js";
 import { wrapLabel } from "./utils/wrap-label.js";
+import { downloadButton } from "./utils/download-button.js";
 
 window.addEventListener("DOMContentLoaded", async () => {
 
@@ -15,6 +16,14 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     const data = await readData("DOMAC");
     const stat = "All domestic abuse crimes";
+
+    const update_date = new Date(data.updated).toLocaleDateString("en-GB",
+            {
+                day: "2-digit", 
+                month: "long",
+                year: "numeric"
+            });
+
     updateYearSpans(data, stat);
 
     insertValue("domestic-abuse-count", data.data[stat][latest_year]["Total crime (domestic abuse motivation)"].toLocaleString());
@@ -24,10 +33,10 @@ window.addEventListener("DOMContentLoaded", async () => {
     let pie_values = data.data[stat][latest_year];
 
     const KEEP_KEYS = new Set([
-    "Violence with injury",
-    "Violence without injury",
-    "Stalking and harassment",
-    "Sexual offences"
+        "Violence with injury",
+        "Violence without injury",
+        "Stalking and harassment",
+        "Sexual offences"
     ]);
 
     pie_values = Object.entries(pie_values)
@@ -155,6 +164,8 @@ window.addEventListener("DOMContentLoaded", async () => {
     plugins: [ChartDataLabels, leaderLinePlugin]
     });
 
+    downloadButton("domestic-abuse-pie-capture", "DOMAC", update_date);
+
 
      createLineChart({
             data,
@@ -168,13 +179,10 @@ window.addEventListener("DOMContentLoaded", async () => {
             canvas_id: "domestic-abuse-line"
         });
 
+        downloadButton("domestic-abuse-line-capture", "DOMAC", update_date);
+
         // Populate info boxes
-        const update_date = new Date(data.updated).toLocaleDateString("en-GB",
-            {
-                day: "2-digit", 
-                month: "long",
-                year: "numeric"
-            });
+        
     
         populateInfoBoxes(
             ["Definitions", "Source", "What does the data mean?"],

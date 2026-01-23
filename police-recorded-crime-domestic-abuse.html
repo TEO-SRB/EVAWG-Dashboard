@@ -47,32 +47,38 @@
             </div>
 
            <!-- Second row - tables and charts -->
-<div class="row py-4">
-    <div class="col-12 col-xl-6">
-        <div class="card h-100">
-            <div class="card-header">
-                Percentage of police recorded domestic abuse in <span class="latest-year"></span>, by crime type
-            </div>
-            <div class="card-body">
-                <canvas id="domestic-abuse-pie" class="chart-canvas"></canvas>
-            </div>
-        </div>
-    </div>
-    
-    <div class="col-12 col-xl-6">
-        <div class="card h-100">
-            <div class="card-header">
-                Domestic abuse incidents recorded by the police, <span class="first-year"></span> to <span class="latest-year"></span>
-            </div>
-            <div class="card-body">
-                <div class="y-label">Incidents</div>
-                <div>
-                    <canvas id="domestic-abuse-line" class="chart-canvas"></canvas>
+            <div class="row py-4">
+                <div class="col-12 col-xl-6">
+                    <div class="card h-100">
+                        <div id="domestic-abuse-pie-capture">
+                            <div class="card-header">
+                                Percentage of police recorded domestic abuse in <span class="latest-year"></span>, by crime type
+                            </div>
+                            <div class="card-body">
+                                <canvas id="domestic-abuse-pie" class="chart-canvas"></canvas>
+                            </div>
+                        </div>
+                        <div class="card-footer"></div>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-xl-6">
+                    <div class="card h-100">
+                        <div id="domestic-abuse-line-capture">
+                            <div class="card-header">
+                                Domestic abuse incidents recorded by the police, <span class="first-year"></span> to <span class="latest-year"></span>
+                            </div>
+                            <div class="card-body">
+                                <div class="y-label">Incidents</div>
+                                <div>
+                                    <canvas id="domestic-abuse-line" class="chart-canvas"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
 
             <!-- Third row - Definitions -->
            <div id="info-boxes"></div>
