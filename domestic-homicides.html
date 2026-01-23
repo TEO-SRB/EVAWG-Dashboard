@@ -63,38 +63,47 @@
             <div class="row">
                 <div class="col-12 col-xl-4 py-2">
                     <div class="card h-100">
-                        <div class="card-header">
-                           Victims of domestic homicide, <span class="latest-year"></span>
+                        <div id="homicide-bar-capture">
+                            <div class="card-header">
+                            Victims of domestic homicide, <span class="latest-year"></span>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="homicide-bar" class="chart-canvas"></canvas> 
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <canvas id="homicide-bar" class="chart-canvas"></canvas> 
-                        </div>
+                        <div class="card-footer"></div>
                     </div>
                 </div>
                 <div class="col-12 col-xl-4 py-2">
                     <div class="card h-100">
-                        <div class="card-header">
-                            Victims of domestic homicide aged under 18, <span class="first-year"></span> to <span class="latest-year"></span>
-                        </div>
-                        <div class="card-body">
-                            <div class="y-label">Victims</div>
-                            <div>
-                                <canvas id="under-18-homicide-line" class="chart-canvas"></canvas>
+                        <div id="under-18-homicide-line-capture">
+                            <div class="card-header">
+                                Victims of domestic homicide aged under 18, <span class="first-year"></span> to <span class="latest-year"></span>
+                            </div>
+                            <div class="card-body">
+                                <div class="y-label">Victims</div>
+                                <div>
+                                    <canvas id="under-18-homicide-line" class="chart-canvas"></canvas>
+                                </div>
                             </div>
                         </div>
+                        <div class="card-footer"></div>
                     </div>
                 </div>
                 <div class="col-12 col-xl-4 py-2">
                     <div class="card h-100">
-                        <div class="card-header">
-                            Victims of domestic homicide aged 18+, <span class="first-year"></span> to <span class="latest-year"></span>
-                        </div>
-                        <div class="card-body">
-                            <div class="y-label">Victims</div>
-                            <div>
-                                <canvas id="18-plus-homicide-line" class="chart-canvas"></canvas>
+                        <div id="18-plus-homicide-line-capture">
+                            <div class="card-header">
+                                Victims of domestic homicide aged 18+, <span class="first-year"></span> to <span class="latest-year"></span>
+                            </div>
+                            <div class="card-body">
+                                <div class="y-label">Victims</div>
+                                <div>
+                                    <canvas id="18-plus-homicide-line" class="chart-canvas"></canvas>
+                                </div>
                             </div>
                         </div>
+                        <div class="card-footer"></div>
                     </div>
                 </div>
             </div>

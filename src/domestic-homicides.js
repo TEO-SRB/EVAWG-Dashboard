@@ -5,6 +5,7 @@ import { createLineChart, createBarChartData, createBarChart  } from "./utils/ch
 import { years, latest_year, updateYearSpans } from "./utils/update-years.js";
 import { insertValue } from "./utils/insert-value.js";
 import { populateInfoBoxes } from "./utils/info-boxes.js";
+import { downloadButton } from "./utils/download-button.js";
 
 window.addEventListener("DOMContentLoaded", async () => {
 
@@ -15,14 +16,19 @@ window.addEventListener("DOMContentLoaded", async () => {
     let data = await readData("DAHVAG");
     let relationship_data = await readData("DAHVGR");
 
+    const update_date = new Date(data.updated).toLocaleDateString("en-GB",
+        {
+            day: "2-digit", 
+            month: "long",
+            year: "numeric"
+        });
+
     // Update values
     const stat = "Domestic abuse homicides";
 
     updateYearSpans(data, stat);
 
     const last_5_years = years.slice(-5);
-
-    console.log(relationship_data.data[stat][last_5_years[0]]["Female"]["Partner/ex-partner"]);
 
     let women_last_5 = 0;
     let men_last_5 = 0;
@@ -71,8 +77,10 @@ window.addEventListener("DOMContentLoaded", async () => {
         categories: age_groups,
         canvas_id: "homicide-bar",
     });
+
+    downloadButton("homicide-bar-capture", "DAHVAG", update_date);
     
-    // Create line chart
+    // Create under 18 line chart
     createLineChart({
         data,
         stat,
@@ -85,6 +93,9 @@ window.addEventListener("DOMContentLoaded", async () => {
         canvas_id: "under-18-homicide-line"
     });
 
+    downloadButton("under-18-homicide-line-capture", "DAHVAG", update_date);
+
+    // Create 18+ line chart
     createLineChart({
         data,
         stat,
@@ -97,14 +108,9 @@ window.addEventListener("DOMContentLoaded", async () => {
         canvas_id: "18-plus-homicide-line"
     });
 
-       // Populate info boxes
-        const update_date = new Date(data.updated).toLocaleDateString("en-GB",
-            {
-                day: "2-digit", 
-                month: "long",
-                year: "numeric"
-            });
-    
+    downloadButton("18-plus-homicide-line-capture", "DAHVAG", update_date);
+
+       // Populate info boxes    
         populateInfoBoxes(
             ["Definitions", "Source", "What does the data mean?"],
             [
