@@ -66,6 +66,8 @@ window.addEventListener("DOMContentLoaded", async () => {
                 month: "long",
                 year: "numeric"
             });
+
+            insertValue("updated", update_date)
     
         populateInfoBoxes(
             ["Definitions", "Source", "What does the data mean?"],
@@ -97,7 +99,40 @@ window.addEventListener("DOMContentLoaded", async () => {
         );
 
         insertFooter();
-    
+
+document
+  .getElementById("download-prevalence-ylt-bar")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const card = document.getElementById("prevalence-ylt-bar-card");
+    const header = card.querySelector(".card-header");
+
+    // Generate filename from header text
+    const rawText = header.innerText || header.textContent;
+
+    const fileName = rawText
+      .toLowerCase()
+      .trim()
+      .replace(/[^a-z0-9\s-]/g, "")   // remove special characters
+      .replace(/\s+/g, "-")           // spaces → hyphens
+      .replace(/-+/g, "-");           // collapse multiple hyphens
+
+    html2canvas(card, {
+      backgroundColor: "#ffffff",
+      scale: 2,
+      useCORS: true
+    }).then((canvas) => {
+      const link = document.createElement("a");
+      link.download = `${fileName}.png`;
+      link.href = canvas.toDataURL("image/png");
+      link.click();
+    });
+  });
+
+
+
+                
 
 
 })

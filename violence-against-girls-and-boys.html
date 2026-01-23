@@ -71,11 +71,26 @@
 <div class="row py-4">
     <div class="col-12 col-xl-6">
         <div class="card h-100">
+            <div id="prevalence-ylt-bar-card">
             <div class="card-header">
                 Types of gender-based violence experienced by 16-year-olds, <span class="latest-year"></span>
             </div>
             <div class="card-body">
                 <canvas id="prevalence-ylt-bar" class="chart-canvas"></canvas>
+            </div>
+            </div>
+            <div class="card-footer">
+                
+                <div class="dropdown"> Data last updated: <span id="updated"></span>. Download:
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Select type
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="https://ppws-data.nisra.gov.uk/public/api.restful/PxStat.Data.Cube_API.ReadDataset/EXPVLYTHEQ/CSV/1.0/">data (in CSV format)</a></li>
+    <li><a class="dropdown-item" href="https://ppws-data.nisra.gov.uk/public/api.restful/PxStat.Data.Cube_API.ReadDataset/EXPVLYTHEQ/XLSX/2007/">data (in Excel format)</a></li>
+    <li><a class="dropdown-item" href="#" id="download-prevalence-ylt-bar">chart (as image)</a></li>
+  </ul>
+</div>
             </div>
         </div>
     </div>
