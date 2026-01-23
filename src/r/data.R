@@ -13,7 +13,6 @@ matrix_list <- list(
     "EXPVLYTHEQ",
     "PRCONL",
     "PRCPD",
-    "EXPVLADAS",
     "DOMACLGD",
     "EXPVAS",
     "CPTDAC",
