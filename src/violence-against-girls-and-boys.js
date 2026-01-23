@@ -5,6 +5,7 @@ import { createLineChart, createBarChart, createBarChartData } from "./utils/cha
 import { years, latest_year, updateYearSpans } from "./utils/update-years.js";
 import { insertValue } from "./utils/insert-value.js";
 import { populateInfoBoxes } from "./utils/info-boxes.js";
+import { downloadButton } from "./utils/download-button.js";
 
 
 window.addEventListener("DOMContentLoaded", async () => {
@@ -15,6 +16,12 @@ window.addEventListener("DOMContentLoaded", async () => {
     insertNavButtons();
 
     let data = await readData("EXPVLYTHEQ");
+    const update_date = new Date(data.updated).toLocaleDateString("en-GB",
+            {
+                day: "2-digit", 
+                month: "long",
+                year: "numeric"
+            });
     
     // Update values
 
@@ -49,6 +56,8 @@ window.addEventListener("DOMContentLoaded", async () => {
         label_format: "%"
     });
 
+    downloadButton("prevalence-ylt-bar-capture", "EXPVLYTHEQ", update_date);
+
     // Create line chart
     createLineChart({
             data,
@@ -60,14 +69,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         });
 
     // Populate info boxes
-        const update_date = new Date(data.updated).toLocaleDateString("en-GB",
-            {
-                day: "2-digit", 
-                month: "long",
-                year: "numeric"
-            });
-
-            insertValue("updated", update_date)
+        
     
         populateInfoBoxes(
             ["Definitions", "Source", "What does the data mean?"],
@@ -100,37 +102,9 @@ window.addEventListener("DOMContentLoaded", async () => {
 
         insertFooter();
 
-document
-  .getElementById("download-prevalence-ylt-bar")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-
-    const card = document.getElementById("prevalence-ylt-bar-card");
-    const header = card.querySelector(".card-header");
-
-    // Generate filename from header text
-    const rawText = header.innerText || header.textContent;
-
-    const fileName = rawText
-      .toLowerCase()
-      .trim()
-      .replace(/[^a-z0-9\s-]/g, "")   // remove special characters
-      .replace(/\s+/g, "-")           // spaces → hyphens
-      .replace(/-+/g, "-");           // collapse multiple hyphens
-
-    html2canvas(card, {
-      backgroundColor: "#ffffff",
-      scale: 2,
-      useCORS: true
-    }).then((canvas) => {
-      const link = document.createElement("a");
-      link.download = `${fileName}.png`;
-      link.href = canvas.toDataURL("image/png");
-      link.click();
-    });
-  });
 
 
+    
 
                 
 
