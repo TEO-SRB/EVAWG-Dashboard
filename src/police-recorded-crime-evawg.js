@@ -20,9 +20,13 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     updateYearSpans(data, stat);
 
-    //// Violence against the person
-    insertValue("violence-female", violencePercentage(data, stat, latest_year, ["Violence with injury (including homicide & death/serious injury by unlawful driving)", "Violence without injury"], "Female"));
-    insertValue("violence-male", violencePercentage(data, stat, latest_year, ["Violence with injury (including homicide & death/serious injury by unlawful driving)", "Violence without injury"], "Male"));
+    //// Violence with injury
+    insertValue("violence-female", violencePercentage(data, stat, latest_year, "Violence with injury (including homicide & death/serious injury by unlawful driving)", "Female"));
+    insertValue("violence-male", violencePercentage(data, stat, latest_year, "Violence with injury (including homicide & death/serious injury by unlawful driving)", "Male"));
+
+    //// Violence without injury
+    insertValue("without-injury-female", violencePercentage(data, stat, latest_year, "Violence without injury", "Female"));
+    insertValue("without-injury-male", violencePercentage(data, stat, latest_year, "Violence without injury", "Male"));
 
     //// Stalking and harassment
     insertValue("stalking-female", violencePercentage(data, stat, latest_year, "Stalking and harassment", "Female"));

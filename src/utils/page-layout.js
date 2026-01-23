@@ -51,7 +51,7 @@ export function insertNavButtons() {
     { id: "violence-against-women-and-men-btn", href: "violence-against-women-and-men.html", text: "Violence against women and men" },
     { id: "violence-against-girls-and-boys-btn", href: "violence-against-girls-and-boys.html", text: "Violence against girls and boys" },
     { id: "police-recorded-crime-evawg-btn", href: "police-recorded-crime-evawg.html", text: "Police recorded crime - EVAWG" },
-    { id: "domestic-homicides-btn", href: "domestic-homicides.html", text: "Domestic homicides" },
+    { id: "domestic-homicides-btn", href: "domestic-homicides.html", text: "Police recorded crime - Domestic homicides"},
     { id: "domestic-abuse-btn", href: "domestic-abuse.html", text: "Domestic abuse" },
     { id: "police-recorded-crime-domestic-abuse-btn", href: "police-recorded-crime-domestic-abuse.html", text: "Police recorded crime - Domestic abuse" },
     { id: "case-processing-times-btn", href: "case-processing-times.html", text: "Case processing times" },

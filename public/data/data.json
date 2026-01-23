@@ -34606,7 +34606,7 @@
   },
   "DOMAC": {
     "label": "Domestic abuse crimes and sanction outcomes",
-    "updated": "2025-11-13",
+    "updated": "2026-01-23",
     "data": {
       "All domestic abuse crimes": {
         "2023/24": {
@@ -34760,7 +34760,7 @@
   },
   "EXPVLADEQ": {
     "label": "Experience of gender-based violence - adults",
-    "updated": "2026-01-22",
+    "updated": "2026-01-23",
     "data": {
       "Adult victims of gender-based violence": {
         "2022": {
@@ -35158,7 +35158,7 @@
   },
   "PRCONL": {
     "label": "Police recorded crime - online crime",
-    "updated": "2025-12-18",
+    "updated": "2026-01-23",
     "data": {
       "All online crimes": {
         "2014/15": {
@@ -40490,7 +40490,7 @@
   },
   "EXPVAS": {
     "label": "Experience of gender based violence - adults",
-    "updated": "2025-12-19",
+    "updated": "2026-01-23",
     "data": {
       "Adult victims of violence": {
         "2024": {

@@ -8,7 +8,7 @@ import { populateInfoBoxes } from "./utils/info-boxes.js";
 
 window.addEventListener("DOMContentLoaded", async () => {
 
-    await insertHead("Homicides");
+    await insertHead("Police Recorded Crime - Domestic homicides");
     insertHeader();
     insertNavButtons();
     maleComparison();

@@ -27,14 +27,14 @@ window.addEventListener("DOMContentLoaded", async () => {
     insertValue("three-year-female", data.data[stat][latest_year]["Any domestic abuse"]["Recent (last 3 years)"]["Female"].toFixed(1));
     insertValue("three-year-male",   data.data[stat][latest_year]["Any domestic abuse"]["Recent (last 3 years)"]["Male"].toFixed(1));
 
-    insertValue("non-physical-female", data.data[stat][latest_year]["Non-physical abuse"]["Lifetime (since age 16)"]["Female"].toFixed(1));
-    insertValue("non-physical-male",   data.data[stat][latest_year]["Non-physical abuse"]["Lifetime (since age 16)"]["Male"].toFixed(1));
+    insertValue("non-physical-female", data.data[stat][latest_year]["Non-physical abuse"]["Recent (last 3 years)"]["Female"].toFixed(1));
+    insertValue("non-physical-male",   data.data[stat][latest_year]["Non-physical abuse"]["Recent (last 3 years)"]["Male"].toFixed(1));
 
-    insertValue("threats-female", data.data[stat][latest_year]["Threats"]["Lifetime (since age 16)"]["Female"].toFixed(1));
-    insertValue("threats-male",   data.data[stat][latest_year]["Threats"]["Lifetime (since age 16)"]["Male"].toFixed(1));
+    insertValue("threats-female", data.data[stat][latest_year]["Threats"]["Recent (last 3 years)"]["Female"].toFixed(1));
+    insertValue("threats-male",   data.data[stat][latest_year]["Threats"]["Recent (last 3 years)"]["Male"].toFixed(1));
 
-    insertValue("force-female", data.data[stat][latest_year]["Force"]["Lifetime (since age 16)"]["Female"].toFixed(1));
-    insertValue("force-male",   data.data[stat][latest_year]["Force"]["Lifetime (since age 16)"]["Male"].toFixed(1));
+    insertValue("force-female", data.data[stat][latest_year]["Force"]["Recent (last 3 years)"]["Female"].toFixed(1));
+    insertValue("force-male",   data.data[stat][latest_year]["Force"]["Recent (last 3 years)"]["Male"].toFixed(1));
 
     const reported_stat = "Proportion of any lifetime domestic abuse reported to the police";
     const reported_year = Object.keys(reported_data.data[reported_stat]).slice(-1);
