@@ -6,6 +6,7 @@ import { latest_year, updateYearSpans } from "./utils/update-years.js";
 import { insertValue } from "./utils/insert-value.js";
 import { populateInfoBoxes } from "./utils/info-boxes.js";
 import { wrapLabel } from "./utils/wrap-label.js";
+import { downloadButton } from "./utils/download-button.js";
 
 window.addEventListener("DOMContentLoaded", async () => {
 
@@ -15,6 +16,21 @@ window.addEventListener("DOMContentLoaded", async () => {
     insertNavButtons();
     let data = await readData("EXPDA");
     let reported_data = await readData("LDARPG");
+    const relationship_data = await readData("DARPV");
+
+    const update_date = new Date(data.updated).toLocaleDateString("en-GB",
+      {
+          day: "2-digit", 
+          month: "long",
+          year: "numeric"
+      });
+
+    const relationship_update_date = new Date(relationship_data.updated).toLocaleDateString("en-GB",
+      {
+          day: "2-digit", 
+          month: "long",
+          year: "numeric"
+      });
 
      // Update values
     const stat = "Victims of domestic abuse";
@@ -60,6 +76,8 @@ window.addEventListener("DOMContentLoaded", async () => {
         label_format: "%"
     });
 
+    downloadButton("domestic-abuse-1-bar-capture", "EXPDA", update_date);
+
     const da_types = ["Non-physical abuse", "Threats", "Force", "Any domestic abuse"];
 
     const chart_data_2 = createDALast3Data({
@@ -76,8 +94,10 @@ window.addEventListener("DOMContentLoaded", async () => {
         label_format: "%"
     }); 
 
+    downloadButton("domestic-abuse-2-bar-capture", "EXPDA", update_date);
+
     // Third bar chart - Relationship of perpetrator to victim
-  const relationship_data = await readData("DARPV");
+  
 
   const year = "2018/19";
   const seriesKey = "Percentage of perpetrators";
@@ -141,6 +161,8 @@ window.addEventListener("DOMContentLoaded", async () => {
     },
     plugins: [ChartDataLabels]
   });
+
+  downloadButton("domestic-abuse-3-bar-capture", "DARPV", relationship_update_date);
 
 
    // Populate info boxes
