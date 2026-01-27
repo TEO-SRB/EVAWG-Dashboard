@@ -46,15 +46,20 @@ window.addEventListener("DOMContentLoaded", async () => {
 );
 
     // % of stalking and harrassment victims are female
-    const stalking_victims = PRCVCTM.data[PRCVCTM_stat][latest_year]
-        ["Stalking and harassment"]
-        ["All ages"]["All persons"];
+    const DOMACVAC = await readData("DOMACVAC"); 
+    const DOMACVAC_stat = "All domestic abuse crimes"; 
+    updateYearSpans(DOMACVAC, DOMACVAC_stat);
 
-    const female_stalking_victims = PRCVCTM.data[PRCVCTM_stat][latest_year]
-        ["Stalking and harassment"]
-        ["All ages"]["Female"];
+const female_stalking_victims = DOMACVAC.data[DOMACVAC_stat][latest_year]
+ ["Female"] ["Stalking and harassment"];
+ 
+ const male_stalking_victims = DOMACVAC.data[DOMACVAC_stat][latest_year]
+  ["Male"] ["Stalking and harassment"]; 
+  
+  const total_stalking_victims = female_stalking_victims + male_stalking_victims;
+  
+  insertValue( "stalking", Math.round((female_stalking_victims / total_stalking_victims) * 100) );
 
-    insertValue("stalking", Math.round(female_stalking_victims / stalking_victims * 100));
 
     // Case processing times - average days to complete
     const INDPRCASEEQ = await readData("INDPRCASEEQ");
