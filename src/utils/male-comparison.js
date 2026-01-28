@@ -24,6 +24,7 @@ export function maleComparison () {
   const gender_form = document.getElementById("gender-form");
   const male_figs = document.getElementsByClassName("male-fig");
   const female_figs = document.getElementsByClassName("female-fig");
+  const no_gender = document.getElementsByClassName("no-gender");
   const all_comparison = document.getElementById("all-comparison");
   const female_comparison = document.getElementById("female-comparison");
   const male_comparison = document.getElementById("male-comparison");
@@ -55,6 +56,33 @@ export function maleComparison () {
     }
   }
 
+  function hideNoGender () {
+    const chart_row = document.getElementById("chart-row");
+    let cols;
+    if (chart_row) {
+      cols = chart_row.getElementsByClassName("col-12");
+    }
+    for (let i = 0; i < no_gender.length; i ++) {
+      if (selectedGender === "all") {
+          no_gender[i].classList.remove("d-none");
+          if (cols) {
+            for (let j = 0; j < cols.length; j ++) {
+              cols[j].classList.remove("col-xl-6");
+              cols[j].classList.add("col-xl-4");
+            }
+        }
+      } else {
+          no_gender[i].classList.add("d-none");
+          if (cols) {
+          for (let j = 0; j < cols.length; j ++) {
+            cols[j].classList.add("col-xl-6");
+            cols[j].classList.remove("col-xl-4");
+          }
+        }
+      }
+    }
+  }
+
   if (localStorage.getItem("genderSelection") == null) {
     localStorage.setItem("genderSelection", "all");
   } else {
@@ -70,6 +98,7 @@ export function maleComparison () {
     }
     hideFemaleFigs();
     hideMaleFigs();
+    hideNoGender();
   }
 
   gender_form.addEventListener("change", function () {
@@ -91,6 +120,7 @@ export function maleComparison () {
 
     hideFemaleFigs();
     hideMaleFigs();
+    hideNoGender();
     localStorage.setItem("genderSelection", selectedGender);
   });
 
