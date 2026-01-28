@@ -15,6 +15,19 @@ window.addEventListener("DOMContentLoaded", async () => {
     insertNavButtons();
     maleComparison();
     let data = await readData("PRCVCTM");
+    let online_data = await readData("PRCONLCG");
+
+
+    
+
+    const stat = "All crimes recorded by the police";
+    const online_stat = "Total recorded online crime";
+    const online_years = Object.keys(online_data.data[online_stat]);
+
+    for (let i = 0; i < online_years.length; i ++) {
+        data.data[stat][online_years[i]]["Online offences"] = {"All ages": online_data.data[online_stat][online_years[i]]};
+    }
+
     const update_date = new Date(data.updated).toLocaleDateString("en-GB",
             {
                 day: "2-digit", 
@@ -23,8 +36,6 @@ window.addEventListener("DOMContentLoaded", async () => {
             });
     
     // Update values
-    const stat = "All crimes recorded by the police";
-
     updateYearSpans(data, stat);
 
     //// Violence with injury
@@ -42,9 +53,11 @@ window.addEventListener("DOMContentLoaded", async () => {
     //// Sexual offences
     insertValue("sex-female", violencePercentage(data, stat, latest_year, "Sexual offences", "Female"));
     insertValue("sex-male", violencePercentage(data, stat, latest_year, "Sexual offences", "Male"));
+
     //// Online violence
-    insertValue("online-female", "X");
-    insertValue("online-male", "X");
+    insertValue("online-female", violencePercentage(data, stat, latest_year, "Online offences", "Female"));
+    insertValue("online-male", violencePercentage(data, stat, latest_year, "Online offences", "Male"));
+    
 
     // Sexual offences line chart
     createLineChart({
@@ -79,14 +92,15 @@ window.addEventListener("DOMContentLoaded", async () => {
     // Create bar chart
     const violence_types = [
         "Violence with injury (including homicide & death/serious injury by unlawful driving)",
-        "Violence without injury"
+        "Violence without injury",
+        "Online offences"
     ];
 
     const chart_data = createPRCData({data, stat, year: latest_year, violence_types});
     
     createBarChart({
         chart_data,
-        categories: ["Violence with injury", "Violence without injury"],
+        categories: ["Violence with injury", "Violence without injury", "Online offences"],
         canvas_id: "violence-bar",
         label_format: ","
     });
