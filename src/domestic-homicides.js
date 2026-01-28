@@ -1,11 +1,12 @@
 import { insertHeader, insertFooter, insertNavButtons, insertHead } from "./utils/page-layout.js";
 import { maleComparison } from "./utils/male-comparison.js";
 import { readData } from "./utils/read-data.js";
-import { createLineChart, createBarChartData, createBarChart  } from "./utils/charts.js";
+import { createLineChart, createBarChartData, createBarChart, chart_colours  } from "./utils/charts.js";
 import { years, latest_year, updateYearSpans } from "./utils/update-years.js";
 import { insertValue } from "./utils/insert-value.js";
 import { populateInfoBoxes } from "./utils/info-boxes.js";
 import { downloadButton } from "./utils/download-button.js";
+import { wrapLabel } from "./utils/wrap-label.js";
 
 window.addEventListener("DOMContentLoaded", async () => {
 
@@ -67,18 +68,22 @@ window.addEventListener("DOMContentLoaded", async () => {
      insertValue("homicide-box-4-boy", male_vicitm_under_18_string);
 
     // Create bar chart
-    const age_groups = Object.keys(data.data[stat][latest_year])
-        .filter(x => x !== "All ages");
+    const relationship_types = Object.keys(relationship_data.data[stat][latest_year].Female);
 
-    const chart_data = createBarChartData({data, stat, year: latest_year, categories: age_groups});
+    const chart_data = {
+        "female": Object.values(relationship_data.data[stat][latest_year].Female),
+        "male": Object.values(relationship_data.data[stat][latest_year].Male),
+    }
+
     
     createBarChart({
         chart_data,
-        categories: age_groups,
+        categories: relationship_types,
         canvas_id: "homicide-bar",
     });
 
-    downloadButton("homicide-bar-capture", "DAHVAG", update_date);
+    downloadButton("homicide-bar-capture", "DAHVGR", update_date);
+   
     
     // Create under 18 line chart
     createLineChart({
