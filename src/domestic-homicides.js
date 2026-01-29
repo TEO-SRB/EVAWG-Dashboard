@@ -1,19 +1,19 @@
 import { insertHeader, insertFooter, insertNavButtons, insertHead } from "./utils/page-layout.js";
-import { maleComparison } from "./utils/male-comparison.js";
+import { genderDisplay } from "./utils/gender-display.js";
 import { readData } from "./utils/read-data.js";
-import { createLineChart, createBarChartData, createBarChart, chart_colours  } from "./utils/charts.js";
+import { createLineChart, createBarChart  } from "./utils/charts.js";
 import { years, latest_year, updateYearSpans } from "./utils/update-years.js";
 import { insertValue } from "./utils/insert-value.js";
 import { populateInfoBoxes } from "./utils/info-boxes.js";
 import { downloadButton } from "./utils/download-button.js";
-import { wrapLabel } from "./utils/wrap-label.js";
 
 window.addEventListener("DOMContentLoaded", async () => {
 
     await insertHead("Police Recorded Crime - Domestic homicides");
     insertHeader();
     insertNavButtons();
-    maleComparison();
+    genderDisplay();
+    
     let data = await readData("DAHVAG");
     let relationship_data = await readData("DAHVGR");
 

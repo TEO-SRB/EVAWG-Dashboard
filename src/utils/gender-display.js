@@ -1,6 +1,6 @@
 import { getSelectedGender } from "./get-selected-gender.js";
 
-export function maleComparison () {
+export function genderDisplay () {
 
   const male_comparison_switch = document.getElementById("male-comparison-switch");
 

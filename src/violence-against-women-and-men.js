@@ -1,6 +1,6 @@
 import { insertHeader, insertFooter, insertNavButtons, insertHead } from "./utils/page-layout.js";
 import { readData } from "./utils/read-data.js"
-import { maleComparison } from "./utils/male-comparison.js";
+import { genderDisplay } from "./utils/gender-display.js";
 import { createLineChart, createBarChartData, createBarChart } from "./utils/charts.js";
 import { latest_year, updateYearSpans } from "./utils/update-years.js";
 import { insertValue } from "./utils/insert-value.js";
@@ -12,8 +12,9 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     await insertHead("Violence against women and men");
     insertHeader();
-    maleComparison();
+    genderDisplay();
     insertNavButtons();
+    
     let data = await readData("EXPVLADEQ");    
     let age_data = await readData("EXPGBVAG");
 
@@ -40,7 +41,6 @@ window.addEventListener("DOMContentLoaded", async () => {
     const age_years = Object.keys(age_data.data[age_stat]);
     const latest_age_year = age_years.slice(-1);
     
-
     insertValue("violence-female", age_data.data[age_stat][latest_age_year]["All ages"]["Female"]);    
     insertValue("violence-male", age_data.data[age_stat][latest_age_year]["All ages"]["Male"]);    
 
@@ -126,8 +126,8 @@ window.addEventListener("DOMContentLoaded", async () => {
         <p>The Violence Against Women and Girls (VAWG) module of NILT is sponsored by The Executive Office.</p>
         <p>This data is available on the <a href="${config.portal_url}" target="_blank">NISRA Data Portal</a> in the following tables:</p>
         <ul>
-            <li><a href="${config.portal_url}/table/EXPVLADEQ" target="_blank">Experience of gender-based violence - adults</a> - by violence type and equality group</li>
-            <li><a href="${config.portal_url}/table/EXPGBVAG" target="_blank">Experience of gender-based violence - adults</a> - by victim age and victim gender</li>
+            <li><a href="${config.portal_url}table/EXPVLADEQ" target="_blank">Experience of gender-based violence - adults</a> - by violence type and equality group</li>
+            <li><a href="${config.portal_url}table/EXPGBVAG" target="_blank">Experience of gender-based violence - adults</a> - by victim age and victim gender</li>
         </ul>
         <p>Statistical publications relating to the EVAWG stragegy can be found on the <a href="https://www.executiveoffice-ni.gov.uk/topics/ending-violence-against-women-and-girls-evawg" target="_blank">Executive Office website</a>.</p>
         <p><strong>Updates:</strong> Data updated annually. <strong>Last update:</strong> ${update_date}.</p>`,

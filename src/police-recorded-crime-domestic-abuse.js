@@ -5,14 +5,14 @@ import { latest_year, updateYearSpans } from "./utils/update-years.js";
 import { createLineChart, createBarChart } from "./utils/charts.js";
 import { populateInfoBoxes } from "./utils/info-boxes.js";
 import { downloadButton } from "./utils/download-button.js";
-import { maleComparison } from "./utils/male-comparison.js";
+import { genderDisplay } from "./utils/gender-display.js";
 
 window.addEventListener("DOMContentLoaded", async () => {
 
     await insertHead("Police recorded crime - Domestice abuse")
     insertHeader();
     insertNavButtons();
-    maleComparison();
+    genderDisplay();
 
     const data = await readData("DOMACVAC");
     const stat = "All domestic abuse crimes";

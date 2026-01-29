@@ -23,7 +23,7 @@ export function createLineChart({data, stat, years, line_1, line_2, label_1 = "F
             female_values.push(getNested(base, line_1));
             male_values.push(getNested(base, line_2));
         }
-    }    
+    }
 
     line_values.push({axis: "y",
         label: label_1,
@@ -240,7 +240,6 @@ export function createPRCData ({data, stat, year, violence_types}) {
 }
 
 // Domestic abuse specific functions
-// 
 export function createDAData({data, stat, year, time_periods, da_type}) {   
 
     let female_bars = [];
@@ -276,50 +275,3 @@ export function createDALast3Data({data, stat, year, da_types}) {
             male: male_bars};    
 
 }
-
-function parseColourToRgb(color) {
-  if (!color) return { r: 0, g: 0, b: 0 };
-
-  if (color.startsWith("#")) {
-    let hex = color.slice(1);
-    if (hex.length === 3) hex = hex.split("").map(c => c + c).join("");
-    const n = parseInt(hex, 16);
-    return { r: (n >> 16) & 255, g: (n >> 8) & 255, b: n & 255 };
-  }
-
-  const m = color.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/i);
-  if (m) return { r: +m[1], g: +m[2], b: +m[3] };
-
-  // fallback (named colors etc.)
-  return { r: 0, g: 0, b: 0 };
-}
-
-function relLuminance({ r, g, b }) {
-  const srgb = [r, g, b].map(v => {
-    const c = v / 255;
-    return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
-  });
-  return 0.2126 * srgb[0] + 0.7152 * srgb[1] + 0.0722 * srgb[2];
-}
-
-// Relative luminance -> pick black/white for readability
-export function getContrastTextColour(bgColor) {
-  const rgb = parseColourToRgb(bgColor);
-  const L = relLuminance(rgb);
-
-  const contrastWhite = (1.0 + 0.05) / (L + 0.05);
-  const contrastBlack = (L + 0.05) / 0.05;
-
-  return contrastBlack >= contrastWhite ? "#000" : "#fff";
-}
-
-export function getPct(value, datasetData) {
-  const total = datasetData.reduce((sum, v) => sum + Number(v || 0), 0);
-  return total ? (Number(value || 0) / total) * 100 : 0;
-}
-
-
-
-
-
-

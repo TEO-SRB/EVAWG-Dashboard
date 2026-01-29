@@ -1,4 +1,4 @@
-import { maleComparison } from "./utils/male-comparison.js";
+import { genderDisplay } from "./utils/gender-display.js";
 import { createLineChart, createBarChart, createPRCData } from "./utils/charts.js";
 import { insertHeader, insertFooter, insertNavButtons, insertHead } from "./utils/page-layout.js";
 import { readData } from "./utils/read-data.js";
@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     await insertHead("Police recorded crime - EVAWG")
     insertHeader();
     insertNavButtons();
-    maleComparison();
+    genderDisplay();
     let data = await readData("PRCVCTM");
     let online_data = await readData("PRCONLCG");
 
