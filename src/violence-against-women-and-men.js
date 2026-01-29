@@ -6,6 +6,7 @@ import { latest_year, updateYearSpans } from "./utils/update-years.js";
 import { insertValue } from "./utils/insert-value.js";
 import { populateInfoBoxes } from "./utils/info-boxes.js";
 import { downloadButton } from "./utils/download-button.js";
+import { config } from "./config/config.js"
 
 window.addEventListener("DOMContentLoaded", async () => {
 
@@ -123,7 +124,11 @@ window.addEventListener("DOMContentLoaded", async () => {
         <p>Its mission is to monitor the attitudes and behaviour of people in Northern Ireland annually to provide a time-series and a public record of how our attitudes and behaviour develop on a wide range of social policy issues. </p>
         <p>Fieldwork for the NILT survey is carried out between September and January with approximately 1,200 respondents aged 18 years or over, interviewed annually. </p>
         <p>The Violence Against Women and Girls (VAWG) module of NILT is sponsored by The Executive Office.</p>
-        <p>This data is available on the <a href="https://ppdata.nisra.gov.uk/table/EXPVLADEQ" target="_blank">NISRA Data Portal</a>.</p>
+        <p>This data is available on the <a href="${config.portal_url}" target="_blank">NISRA Data Portal</a> in the following tables:</p>
+        <ul>
+            <li><a href="${config.portal_url}/table/EXPVLADEQ" target="_blank">Experience of gender-based violence - adults</a> - by violence type and equality group</li>
+            <li><a href="${config.portal_url}/table/EXPGBVAG" target="_blank">Experience of gender-based violence - adults</a> - by victim age and victim gender</li>
+        </ul>
         <p>Statistical publications relating to the EVAWG stragegy can be found on the <a href="https://www.executiveoffice-ni.gov.uk/topics/ending-violence-against-women-and-girls-evawg" target="_blank">Executive Office website</a>.</p>
         <p><strong>Updates:</strong> Data updated annually. <strong>Last update:</strong> ${update_date}.</p>`,
 
