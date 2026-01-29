@@ -16,31 +16,44 @@
 
 <div id="content" class="container-fluid">
     
+    <div id="male-comparison-switch"></div>
         
         <div class = "py-2">
             <!-- First row - cards -->
             <div class="row justify-content-center">
-                <div class="col-6 col-xl-3 py-2">
+                <div class="col-6 col-xl py-2">
                     <div class="card h-100 purple-bg">
                         <div class="card-body">
-                            <p id="domestic-abuse-count" class="display-6"></p>
-                            <p>number of domestic abuse crimes in <span class="latest-year"></span></p>
+                            <p class="display-6 female-fig"><span id="domestic-abuse-female"></span> females</p>
+                            <p class="male-fig"><span id="domestic-abuse-male"></span> males</p>
+                            <p>were vicitms of domestic abuse in <span class="latest-year"></span></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-xl-3 py-2">
+                <div class="col-6 col-xl py-2">
                     <div class="card h-100 light-purple-bg">
                         <div class="card-body">
-                            <p id="violence-no-injury-count" class="display-6"></p>
-                            <p>incidents of violence without injury in <span class="latest-year"></span></p>
+                            <p class="display-6 female-fig"><span id="violence-injury-female"></span> females</p>
+                            <p class="male-fig"><span id="violence-injury-male"></span> males</p>
+                            <p>were victims of violence with injury in <span class="latest-year"></span></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-xl-3 py-2">
+                 <div class="col-6 col-xl py-2">
                     <div class="card h-100 light-purple-bg">
                         <div class="card-body">
-                            <p id="violence-with-injury-count" class="display-6"></p>
-                            <p>incidents of violence with injury in <span class="latest-year"></span></p>
+                            <p class="display-6 female-fig"><span id="violence-no-injury-female"></span> females</p>
+                            <p class="male-fig"><span id="violence-no-injury-male"></span> males</p>
+                            <p>were victims of violence without injury in <span class="latest-year"></span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-xl py-2">
+                    <div class="card h-100 light-purple-bg">
+                        <div class="card-body">
+                            <p class="display-6 female-fig"><span id="stalking-female"></span> females</p>
+                            <p class="male-fig"><span id="stalking-male"></span> males</p>
+                            <p>were victims of stalking and harassment in <span class="latest-year"></span></p>
                         </div>
                     </div>
                 </div>
@@ -48,6 +61,24 @@
 
            <!-- Second row - tables and charts -->
             <div class="row py-4">
+
+                <div class="col-12 col-xl-6">
+                    <div class="card h-100">
+                        <div id="domestic-abuse-line-capture">
+                            <div class="card-header">
+                                Victims of domestic abuse crimes, <span class="first-year"></span> to <span class="latest-year"></span>
+                            </div>
+                            <div class="card-body">
+                                <div class="y-label">Victims</div>
+                                <div>
+                                    <canvas id="domestic-abuse-line" class="chart-canvas"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer"></div>
+                    </div>
+                </div>
+
                 <div class="col-12 col-xl-6">
                     <div class="card h-100">
                         <div id="domestic-abuse-pie-capture">
@@ -62,22 +93,6 @@
                     </div>
                 </div>
                 
-                <div class="col-12 col-xl-6">
-                    <div class="card h-100">
-                        <div id="domestic-abuse-line-capture">
-                            <div class="card-header">
-                                Domestic abuse incidents recorded by the police, <span class="first-year"></span> to <span class="latest-year"></span>
-                            </div>
-                            <div class="card-body">
-                                <div class="y-label">Incidents</div>
-                                <div>
-                                    <canvas id="domestic-abuse-line" class="chart-canvas"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer"></div>
-                    </div>
-                </div>
             </div>
 
             <!-- Third row - Definitions -->
