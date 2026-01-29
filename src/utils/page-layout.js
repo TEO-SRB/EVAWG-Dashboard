@@ -1,3 +1,5 @@
+import { config } from "../config/config.js";
+
 export function insertHeader () {
 
     const banner = document.getElementById("banner");
@@ -27,7 +29,7 @@ export function insertHeader () {
 
   <!-- Center: Page title -->
   <div class="col-12 col-xl-4 d-flex justify-content-center">
-    <h1 class="mb-0 text-white fs-2 app-title text-center">Gender-based violence</h1>
+    <h1 class="mb-0 text-white fs-2 app-title text-center">${config.title}</h1>
   </div>
 
   <!-- Right: TEO logo -->
@@ -46,18 +48,7 @@ export function insertHeader () {
 export function insertNavButtons() {
   const nav = document.getElementById("nav");
 
-  const links = [
-    { id: "home-btn", href: "index.html", text: "Home" },
-    { id: "violence-against-women-and-men-btn", href: "violence-against-women-and-men.html", text: "Violence against women and men" },
-    { id: "violence-against-girls-and-boys-btn", href: "violence-against-girls-and-boys.html", text: "Violence against girls and boys" },
-    { id: "police-recorded-crime-evawg-btn", href: "police-recorded-crime-evawg.html", text: "Police recorded crime - EVAWG" },
-    { id: "domestic-homicides-btn", href: "domestic-homicides.html", text: "Police recorded crime - Domestic homicides"},
-    { id: "domestic-abuse-btn", href: "domestic-abuse.html", text: "Domestic abuse" },
-    { id: "police-recorded-crime-domestic-abuse-btn", href: "police-recorded-crime-domestic-abuse.html", text: "Police recorded crime - Domestic abuse" },
-    { id: "case-processing-times-btn", href: "case-processing-times.html", text: "Case processing times" },
-    { id: "maps-btn", href: "maps.html", text: "Maps" },
-    { id: "information-btn", href: "information.html", text: "Information" },
-  ];
+  const links = config.navigation;
 
   const pathname = window.location.pathname;
   const file = pathname.slice(pathname.lastIndexOf("/") + 1) || "index.html";
@@ -86,8 +77,8 @@ export function insertNavButtons() {
             .map(
               (l) => `
                 <li>
-                  <a class="dropdown-item ${l.id === `${pageKey}-btn` ? "active" : ""}"
-                    id="${l.id}-mobile"
+                  <a class="dropdown-item ${l.href.replace(".html", "-btn") === `${pageKey}-btn` ? "active" : ""}"
+                    id="${l.href.replace(".html", "-btn")}-mobile"
                     href="${l.href}">
                     ${l.text}
                   </a>
@@ -105,7 +96,7 @@ export function insertNavButtons() {
           ${links
             .map(
               (l) => `
-                <a id="${l.id}" class="col nav-btn d-flex justify-content-center align-items-center text-center" href="${l.href}">
+                <a id="${l.href.replace(".html", "-btn")}" class="col nav-btn d-flex justify-content-center align-items-center text-center" href="${l.href}">
                   ${l.text}
                 </a>`
             )
@@ -217,7 +208,7 @@ export async function insertHead(title) {
   head.innerHTML = `
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Gender-based Violence - ${title}</title>
+    <title>${config.title} - ${title}</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
