@@ -8,7 +8,7 @@ export function downloadButton (capture_id, matrix, update_date) {
     let data_sub = "";
 
     if (config.portal_url == "https://ppdata.nisra.gov.uk/") {
-        data_sub = "ppws-"
+        data_sub = "pp"
     }
 
     footer.innerHTML = `
@@ -17,8 +17,8 @@ export function downloadButton (capture_id, matrix, update_date) {
                 Select type
             </button>
             <ul class="dropdown-menu" aria-labelledby="${capture_id}-dropdown">
-                <li><a class="dropdown-item" href="https://${data_sub}data.nisra.gov.uk/public/api.restful/PxStat.Data.Cube_API.ReadDataset/${matrix}/CSV/1.0/">data (in CSV format)</a></li>
-                <li><a class="dropdown-item" href="https://${data_sub}data.nisra.gov.uk/public/api.restful/PxStat.Data.Cube_API.ReadDataset/${matrix}/XLSX/2007/">data (in Excel format)</a></li>
+                <li><a class="dropdown-item" href="https://${data_sub}ws-data.nisra.gov.uk/public/api.restful/PxStat.Data.Cube_API.ReadDataset/${matrix}/CSV/1.0/">data (in CSV format)</a></li>
+                <li><a class="dropdown-item" href="https://${data_sub}ws-data.nisra.gov.uk/public/api.restful/PxStat.Data.Cube_API.ReadDataset/${matrix}/XLSX/2007/">data (in Excel format)</a></li>
                 <li><a class="dropdown-item" href="#" id="download-${capture_id}">chart (as image)</a></li>
             </ul>
         </div>
