@@ -1,54 +1,4 @@
 {
-  "AFVAG": {
-    "label": "Any form of violence",
-    "updated": "2026-01-23",
-    "data": {
-      "Any form violence in the last 5 years": {
-        "2022": {
-          "Age 18-29": {
-            "Female": "NA",
-            "Male": "NA"
-          },
-          "Age 30+": {
-            "Female": "NA",
-            "Male": "NA"
-          },
-          "All ages": {
-            "Female": 27,
-            "Male": 18
-          }
-        },
-        "2023": {
-          "Age 18-29": {
-            "Female": "NA",
-            "Male": "NA"
-          },
-          "Age 30+": {
-            "Female": "NA",
-            "Male": "NA"
-          },
-          "All ages": {
-            "Female": 23,
-            "Male": 16
-          }
-        },
-        "2024": {
-          "Age 18-29": {
-            "Female": 42,
-            "Male": 41
-          },
-          "Age 30+": {
-            "Female": 18,
-            "Male": 15
-          },
-          "All ages": {
-            "Female": 24,
-            "Male": 18
-          }
-        }
-      }
-    }
-  },
   "CPTDAC": {
     "label": "Processing times for domestic abuse cases",
     "updated": "2025-12-19",
@@ -963,6 +913,56 @@
               "Male": 2.5,
               "All persons": 4.7
             }
+          }
+        }
+      }
+    }
+  },
+  "EXPGBVAG": {
+    "label": "Experience of gender-based violence - adults",
+    "updated": "2026-01-23",
+    "data": {
+      "Adult victims of violence": {
+        "2022": {
+          "Age 18-29": {
+            "Female": "NA",
+            "Male": "NA"
+          },
+          "Age 30+": {
+            "Female": "NA",
+            "Male": "NA"
+          },
+          "All ages": {
+            "Female": 27,
+            "Male": 18
+          }
+        },
+        "2023": {
+          "Age 18-29": {
+            "Female": "NA",
+            "Male": "NA"
+          },
+          "Age 30+": {
+            "Female": "NA",
+            "Male": "NA"
+          },
+          "All ages": {
+            "Female": 23,
+            "Male": 16
+          }
+        },
+        "2024": {
+          "Age 18-29": {
+            "Female": 42,
+            "Male": 41
+          },
+          "Age 30+": {
+            "Female": 18,
+            "Male": 15
+          },
+          "All ages": {
+            "Female": 24,
+            "Male": 18
           }
         }
       }

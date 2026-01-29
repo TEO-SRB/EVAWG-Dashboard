@@ -36,8 +36,8 @@ window.addEventListener("DOMContentLoaded", async () => {
     let women_partner_last_5 = 0;
     let men_partner_last_5 = 0;
     for (let i = 0; i < 5; i++) {
-        women_last_5 += data.data[stat][last_5_years[i]]["18+ years"]["Female"];
-        men_last_5 += data.data[stat][last_5_years[i]]["18+ years"]["Male"];
+        women_last_5 += data.data[stat][last_5_years[i]]["All ages"]["Female"];
+        men_last_5 += data.data[stat][last_5_years[i]]["All ages"]["Male"];
         women_partner_last_5 += relationship_data.data[stat][last_5_years[i]]["Female"]["Partner/ex-partner"];
         men_partner_last_5 += relationship_data.data[stat][last_5_years[i]]["Male"]["Partner/ex-partner"];
     }
@@ -75,7 +75,6 @@ window.addEventListener("DOMContentLoaded", async () => {
         "male": Object.values(relationship_data.data[stat][latest_year].Male),
     }
 
-    
     createBarChart({
         chart_data,
         categories: relationship_types,

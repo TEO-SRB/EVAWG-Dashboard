@@ -14,9 +14,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     maleComparison();
     insertNavButtons();
     let data = await readData("EXPVLADEQ");    
-    let age_data = await readData("AFVAG");
-    
-    
+    let age_data = await readData("EXPGBVAG");
 
     const update_date = new Date(data.updated).toLocaleDateString("en-GB",
         {
@@ -35,7 +33,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     // Update values
     const stat = "Adult victims of gender-based violence";
-    const age_stat = "Any form violence in the last 5 years";
+    const age_stat = "Adult victims of violence";
     
     updateYearSpans(data, stat);
     const age_years = Object.keys(age_data.data[age_stat]);
@@ -94,7 +92,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         label_format: "%"
     });
 
-    downloadButton("age-group-nilt-bar-capture", "AFVAG", age_update_date);    
+    downloadButton("age-group-nilt-bar-capture", "EXPGBVAG", age_update_date);    
 
     // Create line chart
     createLineChart({
@@ -106,7 +104,7 @@ window.addEventListener("DOMContentLoaded", async () => {
             canvas_id: "prevalence-nilt-line"
         });
 
-    downloadButton("prevalence-nilt-line-capture", "AFVAG", age_update_date);
+    downloadButton("prevalence-nilt-line-capture", "EXPGBVAG", age_update_date);
 
     // Populate info boxes
     populateInfoBoxes(

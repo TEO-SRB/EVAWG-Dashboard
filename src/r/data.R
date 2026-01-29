@@ -5,7 +5,6 @@ library(jsonlite)
 # List datasets ####
 matrix_list <- list(
   pp_portal = c(
-    "AFVAG",
     "CPTDAC",
     "DAHVAG",
     "DAHVGR",
@@ -14,6 +13,7 @@ matrix_list <- list(
     "DOMACVAC",
     "DOMACVG",
     "EXPDA",
+    "EXPGBVAG",
     "EXPVLYTHEQ",
     "LDARPG",
     "PRCHOM",

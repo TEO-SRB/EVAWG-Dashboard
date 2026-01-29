@@ -1,11 +1,9 @@
 import { insertHeader, insertFooter, insertNavButtons, insertHead } from "./utils/page-layout.js"
 import { insertValue } from "./utils/insert-value.js";
 import { readData } from "./utils/read-data.js";
-import { latest_year, updateYearSpans, years } from "./utils/update-years.js";
-import { chart_colours, createLineChart, getContrastTextColour, getPct } from "./utils/charts.js";
+import { latest_year, updateYearSpans } from "./utils/update-years.js";
+import { createLineChart, createBarChart } from "./utils/charts.js";
 import { populateInfoBoxes } from "./utils/info-boxes.js";
-import { leaderLinePlugin } from "./utils/leader-line-plugin.js";
-import { wrapLabel } from "./utils/wrap-label.js";
 import { downloadButton } from "./utils/download-button.js";
 import { maleComparison } from "./utils/male-comparison.js";
 
@@ -21,7 +19,6 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     const trend_data = await readData("DOMACVG");
     const trend_years = Object.keys(trend_data.data[stat]);
-    console.log(trend_data)
 
     const update_date = new Date(data.updated).toLocaleDateString("en-GB",
             {
@@ -39,11 +36,11 @@ window.addEventListener("DOMContentLoaded", async () => {
     insertValue("violence-no-injury-female", data.data[stat][latest_year]["Female"]["Violence without injury"].toLocaleString());
     insertValue("violence-no-injury-male", data.data[stat][latest_year]["Male"]["Violence without injury"].toLocaleString());
     insertValue("stalking-female", data.data[stat][latest_year]["Female"]["Stalking and harassment"].toLocaleString());
-    insertValue("stalking-male", data.data[stat][latest_year]["Male"]["Stalking and harassment"].toLocaleString());
+    insertValue("stalking-male", data.data[stat][latest_year]["Male"]["Stalking and harassment"].toLocaleString());  
 
-    
+    // Charts
 
-
+    // Line chart
      createLineChart({
             data: trend_data,
             stat,
@@ -56,9 +53,52 @@ window.addEventListener("DOMContentLoaded", async () => {
 
         downloadButton("domestic-abuse-line-capture", "DOMACVG", update_date);
 
-        // Populate info boxes
+        // Bar chart
+        const KEEP_KEYS = new Set([
+                "Violence with injury",
+                "Violence without injury",
+                "Stalking and harassment",
+                "Sexual offences"
+            ]);
+
+        const sexes = ["Female", "Male"];
+
+        let chart_data = {};
+        let categories = [];
+
+        for (let i = 0; i < sexes.length; i ++) {
+            const bars = Object.entries(data.data[stat][latest_year][sexes[i]])
+                .filter(([key]) => key !== "Total all offences")
+                .map(([key, value]) => {
+                    if (key.startsWith("Violence with injury")) {
+                    return ["Violence with injury", value];
+                    }
+                    return [key, value];
+                })
+                .reduce((acc, [key, value]) => {
+                    const v = Number(value) || 0; // defensive: ensure numeric
+                    if (KEEP_KEYS.has(key)) {
+                        acc[key] = (acc[key] || 0) + v;
+                    } else {
+                        acc["All other offences"] = (acc["All other offences"] || 0) + v;
+                    }
+                    return acc;
+                }, {});
+
+            chart_data[sexes[i].toLowerCase()] = Object.values(bars);
+            categories = Object.keys(bars);
+        }
         
-    
+        createBarChart({
+            chart_data,
+            categories,
+            canvas_id: "domestic-abuse-bar",
+            label_format: ","
+        })
+
+        downloadButton("domestic-abuse-bar-capture", "DOMACVG", update_date);
+
+        // Populate info boxes    
         populateInfoBoxes(
             ["Definitions", "Source", "What does the data mean?"],
             [
@@ -80,9 +120,7 @@ window.addEventListener("DOMContentLoaded", async () => {
             <li><strong>Limitations:</strong> Data depends on police identification and victim disclosure; some cases may not be flagged as domestic abuse.</li>
         </ul>`
             ]
-        );
-    
-
+        );   
 
     insertFooter();
 })
