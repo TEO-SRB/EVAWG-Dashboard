@@ -5,7 +5,7 @@ export function downloadButton (capture_id, matrix, update_date) {
 
     footer.innerHTML = `
         <div class="dropdown"><strong>Data last updated:</strong> ${update_date}.<br><strong>Download:</strong>
-            <button class="btn btn-secondary dropdown-toggle btn-primary" type="button" id="${capture_id}-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-secondary dropdown-toggle btn-primary mt-2" type="button" id="${capture_id}-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
                 Select type
             </button>
             <ul class="dropdown-menu" aria-labelledby="${capture_id}-dropdown">
