@@ -6,6 +6,7 @@ import { years, latest_year, updateYearSpans } from "./utils/update-years.js";
 import { insertValue } from "./utils/insert-value.js";
 import { populateInfoBoxes } from "./utils/info-boxes.js";
 import { downloadButton } from "./utils/download-button.js";
+import { config } from "./config/config.js"
 
 
 window.addEventListener("DOMContentLoaded", async () => {
@@ -87,7 +88,10 @@ window.addEventListener("DOMContentLoaded", async () => {
 `<p>The <strong>Young Life and Times (YLT) Survey</strong> records the attitudes and opinions of 16-year-olds in Northern Ireland about the issues that concern them. It is a representative annual survey that has been running since 2003.</p>
 <p>To assess experiences of, and attitudes to, violence against women and girls, The Executive Office (TEO) sponsored the inclusion of relevant questions in the YLT survey from 2023.</p>
 <p>The survey is completed online between April and May each year. Due to demand for questions, the survey is split into two versions; the version containing the Violence Against Women and Girls (VAWG) module is completed by approximately 1,000 16-year-olds annually.</p>
-<p>This data is available on the <a href="https://ppdata.nisra.gov.uk/table/EXPVLYTHEQ" target="_blank">NISRA Data Portal</a>.</p>
+ <p>This data is available on the <a href="${config.portal_url}" target="_blank">NISRA Data Portal</a> in the following tables:</p>
+        <ul>
+            <li><a href="${config.portal_url}table/EXPVLYTHEQ" target="_blank">Experience of gender-based violence - 16 year olds</a></li>
+        </ul>
 <p>Related publications can be found via the <a href="https://www.executiveoffice-ni.gov.uk/topics/ending-violence-against-women-and-girls-evawg" target="_blank">relevant publication page</a>.</p>
 <p><strong>Updates:</strong> Data updated annually. <strong>Last update:</strong> ${update_date}.</p>`,
 

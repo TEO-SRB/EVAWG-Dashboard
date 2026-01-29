@@ -7,6 +7,7 @@ import { insertValue } from "./utils/insert-value.js";
 import { populateInfoBoxes } from "./utils/info-boxes.js";
 import { wrapLabel } from "./utils/wrap-label.js";
 import { downloadButton } from "./utils/download-button.js";
+import { config } from "./config/config.js"
 
 window.addEventListener("DOMContentLoaded", async () => {
 
@@ -180,7 +181,12 @@ window.addEventListener("DOMContentLoaded", async () => {
     <p>A self-completion module capturing respondents' experiences of domestic abuse, was asked as part of the NISCS in 2018-19. The findings below relate to the 2,135 respondents aged between 16 and 74 years, who completed the domestic abuse module.</p>
     <p>The survey has adopted the definition of domestic abuse as outlined in the Northern Ireland Government Strategy 'Stopping Domestic and Sexual Violence and Abuse in Northern Ireland'.</p>
     <p>Two measures of domestic abuse are adopted: lifetime; and the last three years. Lifetime prevalence is a good indicator of the percentage of NISCS respondents who have experienced domestic abuse at some point in their lives since age 16.</p>
-    <p>This data is available on the <a href="https://ppdata.nisra.gov.uk/table/EXPDA" target="_blank">NISRA Data Portal</a>.</p>
+  <p>This data is available on the <a href="${config.portal_url}" target="_blank">NISRA Data Portal</a> in the following tables:</p>
+        <ul>
+            <li><a href="${config.portal_url}table/EXPDA" target="_blank">Experience of domestic abuse</a></li>
+            <li><a href="${config.portal_url}table/LDARPG" target="_blank">Lifetime domestic abuse reported to the police</a></li>
+            <li><a href="${config.portal_url}table/DARPV" target="_blank">Domestic abuse - relationship of perpetrator to victim</a></li>        
+        </ul>
     <p>Statistical publications can be found on the <a href="https://www.justice-ni.gov.uk/sites/default/files/publications/justice/experience%20of%20domestic%20abuse%20findings%20from%20the%20201819%20niscs.pdf" target="_blank">relevant publication page</a>.</p>
     <p><strong>Updates:</strong> NA</p>`,
 

@@ -7,6 +7,7 @@ import { insertValue } from "./utils/insert-value.js";
 import { populateInfoBoxes } from "./utils/info-boxes.js";
 import { violencePercentage } from "./utils/violence-percentage.js";
 import { downloadButton } from "./utils/download-button.js";
+import { config } from "./config/config.js"
 
 window.addEventListener("DOMContentLoaded", async () => {
 
@@ -123,7 +124,11 @@ window.addEventListener("DOMContentLoaded", async () => {
 `<p>Statistics on police recorded crime in Northern Ireland are collated and produced by statisticians seconded to the Police Service of Northern Ireland (PSNI) from the Northern Ireland Statistics and Research Agency (NISRA).</p>
 <p>While the PSNI does not fall within the jurisdiction of the Home Office, the practices and procedures of the Home Office's notable offence list are followed and applied within Northern Ireland.</p>
 <p>The Crime recording process starts at the point at which an incident comes to the attention of police. This may be brought through a call for service from a member of the public, an incident being referred to the police by another agency or being identified by the police directly.</p>
-<p>This data is available on the <a href="https://ppdata.nisra.gov.uk/table/PRCVCTM" target="_blank">NISRA Data Portal</a>.</p>
+ <p>This data is available on the <a href="${config.portal_url}" target="_blank">NISRA Data Portal</a> in the following tables:</p>
+        <ul>
+            <li><a href="${config.portal_url}table/PRCVCTM" target="_blank">Police recorded crime - victims of crime</a></li>
+            <li><a href="${config.portal_url}table/PRCONLCG" target="_blank">Police recorded crime - online crime</a></li>
+        </ul>
 <p>Statistical publications can be found on the <a href="https://www.psni.police.uk/about-us/our-publications-and-reports/official-statistics/police-recorded-crime-statistics" target="_blank">relevant publication page</a>.</p>
 <p><strong>Updates:</strong> Data updated quarterly. <strong>Last update:</strong> ${update_date}.</p>`,
 

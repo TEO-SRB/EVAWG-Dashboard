@@ -6,6 +6,7 @@ import { createLineChart, createBarChart } from "./utils/charts.js";
 import { populateInfoBoxes } from "./utils/info-boxes.js";
 import { downloadButton } from "./utils/download-button.js";
 import { genderDisplay } from "./utils/gender-display.js";
+import { config } from "./config/config.js"
 
 window.addEventListener("DOMContentLoaded", async () => {
 
@@ -108,7 +109,11 @@ window.addEventListener("DOMContentLoaded", async () => {
         `<p>Statistics on police recorded crime in Northern Ireland are collated and produced by statisticians seconded to the <strong>Police Service of Northern Ireland (PSNI)</strong> from the <strong>Northern Ireland Statistics and Research Agency (NISRA)</strong>.</p>
         <p>While the PSNI does not fall within the jurisdiction of the Home Office, the practices and procedures of the Home Office's notable offence list are followed and applied within Northern Ireland.</p>
         <p>The crime recording process starts at the point at which an incident comes to the attention of police. This may be brought through a call for service from a member of the public, an incident being referred to the police by another agency or being identified by the police directly.</p>
-        <p>This data is available on the <a href="https://ppdata.nisra.gov.uk/table/DOMAC" target="_blank">data portal</a>.</p>
+  <p>This data is available on the <a href="${config.portal_url}" target="_blank">NISRA Data Portal</a> in the following tables:</p>
+        <ul>
+            <li><a href="${config.portal_url}table/DOMACVAC" target="_blank">Domestic abuse crimes</a> - by victim gender and offence type</li>
+            <li><a href="${config.portal_url}table/DOMACVG" target="_blank">Domestic abuse crimes</a> - by victim gender</li>      
+        </ul>
         <p>Related publications can be found via the <a href="https://www.psni.police.uk/about-us/our-publications-and-reports/official-statistics/police-recorded-crime-statistics" target="_blank">relevant publication page</a>.</p>
         <p><strong>Updates:</strong> Data updated quarterly. <strong>Last updated:</strong> ${update_date}.</p>`,
 
