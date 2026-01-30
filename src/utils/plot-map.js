@@ -1,6 +1,6 @@
 import { loadShapes } from "./load-shapes.js";
 
-let map;               // cache map between calls
+export let map;               // cache map between calls
 let geojsonData;       // cache shapes between calls
 
 export async function plotMap(data, stat, latest_year, crimeType) {
@@ -88,7 +88,8 @@ export async function plotMap(data, stat, latest_year, crimeType) {
       minZoom: initial_zoom,
       maxZoom: initial_zoom + 7,
       maxBounds: bounds,
-      attributionControl: false
+      attributionControl: false,
+      preerveDrawingBuffer: true
   });
 
   map.addControl(

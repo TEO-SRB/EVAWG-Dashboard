@@ -3,6 +3,7 @@ import { readData } from "./utils/read-data.js";
 import { plotMap } from "./utils/plot-map.js";
 import { populateInfoBoxes } from "./utils/info-boxes.js";
 import { downloadButton } from "./utils/download-button.js";
+import { config } from "./config/config.js";
 
 window.addEventListener("DOMContentLoaded", async () => {
 
@@ -42,7 +43,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         plotMap(data, stat, latest_year, crime_type);
     });
 
-    downloadButton("map-capture", "PRCPD", update_date)
+    downloadButton("map-capture", "PRCPD", update_date, true)
 
     // Populate info boxes
     populateInfoBoxes(
@@ -59,7 +60,11 @@ window.addEventListener("DOMContentLoaded", async () => {
             `<p>Statistics on police recorded crime in Northern Ireland are collated and produced by statisticians seconded to the Police Service of Northern Ireland (PSNI) from the Northern Ireland Statistics and Research Agency (NISRA).</p>
             <p>While the PSNI does not fall within the jurisdiction of the Home Office, the practices and procedures of the Home Office’s notable offence list are followed and applied within Northern Ireland.</p>
             <p>The Crime recording process starts at the point at which an incident comes to the attention of police. This may be brought through a call for service from a member of the public, an incident being referred to the police by another agency or being identified by the police directly.</p>
-            <p>This data is available on the <a href="https://ppdata.nisra.gov.uk/table/PRCPD" target="_blank">NISRA Data Portal</a>.</p>
+            <p>This data is available on the <a href="${config.portal_url}" target="_blank">NISRA Data Portal</a> in the following tables:</p>
+            <ul>
+                <li><a href="${config.portal_url}table/PRCPD" target="_blank">Police recorded crime and sanction outcomes</a></li>
+                <li><a href="${config.portal_url}table/DOMACLGD" target="_blank">Domestic abuse offences</a></li> 
+            </ul>
             <p>Statistical publications can be found on the <a href="https://www.psni.police.uk/about-us/our-publications-and-reports/official-statistics/police-recorded-crime-statistics" target="_blank">relevant publication page</a>.</p>
             <p><strong>Updates:</strong> Data updated quarterly. <strong>Last update:</strong> ${update_date}.</p>`,
 
