@@ -14,7 +14,7 @@ export function populateInfoBoxes(labels, content) {
         }
         
         buttons += `
-        <div class="col-${12 / labels.length} p-0">
+        <div class="col p-0">
                     <h2 class="accordion-header h-100" id="def-heading" role="heading">
                         <button class="accordion-button collapsed h-100" type="button" role="button"
                             style="${button_style}"

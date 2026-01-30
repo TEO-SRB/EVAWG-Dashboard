@@ -9,7 +9,7 @@ export function downloadButton (capture_id, matrix, update_date, map_plot = fals
     let data_sub = "";
 
     if (config.portal_url == "https://ppdata.nisra.gov.uk/" & matrix != "INDPRCASEEQ") {
-        data_sub = "pp"
+        data_sub = "pp";
     }
 
     const link_label = map_plot ? "map" : "chart";

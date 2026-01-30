@@ -35,6 +35,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
      // Update values
     const stat = "Victims of domestic abuse";
+    const relationship_stat = "Percentage of perpetrators";
 
     updateYearSpans(data, stat);
 
@@ -98,14 +99,13 @@ window.addEventListener("DOMContentLoaded", async () => {
     downloadButton("domestic-abuse-2-bar-capture", "EXPDA", update_date);
 
     // Third bar chart - Relationship of perpetrator to victim
-  
+    const relationship_years = Object.keys(relationship_data.data[relationship_stat]);
+    const relationship_year = relationship_years[relationship_years.length - 1];
+    
+    const year_data = relationship_data.data[relationship_stat][relationship_year];
 
-  const year = "2018/19";
-  const seriesKey = "Percentage of perpetrators";
-  const yearData = relationship_data.data[seriesKey][year];
-
-  const labels = Object.keys(yearData);
-  const values = Object.values(yearData);
+    const labels = Object.keys(year_data);
+    const values = Object.values(year_data);
 
   // If chart_colours is shorter than the number of bars, repeat it
   const colours = labels.map((_, i) => chart_colours[i % chart_colours.length]);
@@ -118,7 +118,7 @@ window.addEventListener("DOMContentLoaded", async () => {
       labels,
       datasets: [
         {
-          label: `${relationship_data.label} (${year})`,
+          label: `${relationship_data.label} (${relationship_year})`,
           data: values,
           backgroundColor: colours,
           borderWidth: 0
