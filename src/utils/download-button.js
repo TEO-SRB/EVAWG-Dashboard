@@ -8,7 +8,7 @@ export function downloadButton (capture_id, matrix, update_date, map_plot = fals
 
     let data_sub = "";
 
-    if (config.portal_url == "https://ppdata.nisra.gov.uk/") {
+    if (config.portal_url == "https://ppdata.nisra.gov.uk/" & matrix != "INDPRCASEEQ") {
         data_sub = "pp"
     }
 
