@@ -94,7 +94,7 @@ export function downloadButton (capture_id, matrix, update_date, map_plot = fals
 
 async function exportCardWithMap(cardEl, map, mapContainerEl, filename) {
   // Wait until map is fully rendered
-  await new Promise((resolve) => map.once("idle", resolve));
+  await waitForMapReady(map);
 
   // Snapshot the WebGL canvas
   const mapCanvas = map.getCanvas();
@@ -117,32 +117,36 @@ async function exportCardWithMap(cardEl, map, mapContainerEl, filename) {
     windowWidth: document.documentElement.clientWidth,
     windowHeight: document.documentElement.clientHeight,
 
-    onclone: (clonedDoc) => {
-      // Find the equivalents in the cloned DOM
-      const clonedCard = clonedDoc.getElementById(cardEl.id);
-      const clonedMapContainer = clonedDoc.getElementById(mapContainerEl.id);
+  onclone: (clonedDoc) => {
+    // Find the equivalents in the cloned DOM
+    const clonedCard = clonedDoc.getElementById(cardEl.id);
+    const clonedMapContainer = clonedDoc.getElementById(mapContainerEl.id);
 
-      if (!clonedCard || !clonedMapContainer) return;
+    if (!clonedCard || !clonedMapContainer) return;
 
-      // Make sure the cloned map container keeps its size
-      const w = mapContainerEl.clientWidth;
-      const h = mapContainerEl.clientHeight;
-      clonedMapContainer.style.width = `${w}px`;
-      clonedMapContainer.style.height = `${h}px`;
+    // ✅ Remove/hide footer in the CLONE so it doesn't appear in the export
+    const clonedFooter = clonedCard.querySelector(".card-footer");
+    if (clonedFooter) clonedFooter.remove(); // or: clonedFooter.style.display = "none";
 
-      // Replace the cloned map container contents with the snapshot image
-      clonedMapContainer.innerHTML = "";
-      const img = clonedDoc.createElement("img");
-      img.src = dataUrl;
-      img.style.width = "100%";
-      img.style.height = "100%";
-      img.style.display = "block";
-      clonedMapContainer.appendChild(img);
+    // Make sure the cloned map container keeps its size
+    const w = mapContainerEl.clientWidth;
+    const h = mapContainerEl.clientHeight;
+    clonedMapContainer.style.width = `${w}px`;
+    clonedMapContainer.style.height = `${h}px`;
 
-      // (Optional) If your capture area is inside a responsive container,
-      // lock the cloned card width to the real rendered width.
-      clonedCard.style.width = `${cardEl.getBoundingClientRect().width}px`;
-    }
+    // Replace the cloned map container contents with the snapshot image
+    clonedMapContainer.innerHTML = "";
+    const img = clonedDoc.createElement("img");
+    img.src = dataUrl;
+    img.style.width = "100%";
+    img.style.height = "100%";
+    img.style.display = "block";
+    clonedMapContainer.appendChild(img);
+
+    // Lock cloned card width
+    clonedCard.style.width = `${cardEl.getBoundingClientRect().width}px`;
+  }
+
   });
 
   // Download
@@ -210,5 +214,29 @@ async function addLogoUnderCanvas(originalCanvas, logoSrc, options = {}) {
 
   return newCanvas;
 }
+
+async function waitForMapReady(map) {
+  // Make sure MapLibre has the correct size (important if container/layout changed)
+  map.resize();
+
+  // If it's already loaded and not moving, don't wait for an event that may never fire
+  const alreadyReady =
+    (map.loaded?.() || map.isStyleLoaded?.()) &&
+    !map.isMoving?.() &&
+    (map.areTilesLoaded ? map.areTilesLoaded() : true);
+
+  if (alreadyReady) return;
+
+  // Otherwise wait for idle, but also force a render cycle
+  await new Promise((resolve) => {
+    const done = () => resolve();
+
+    map.once("idle", done);
+
+    // Nudge a render so 'idle' can happen without needing a manual resize
+    if (map.triggerRepaint) map.triggerRepaint();
+  });
+}
+
 
 

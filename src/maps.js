@@ -43,7 +43,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         plotMap(data, stat, latest_year, crime_type);
     });
 
-    downloadButton("map-capture", "PRCPD", update_date, true)
+    downloadButton("map-card", "PRCPD", update_date, true)
 
     // Populate info boxes
     populateInfoBoxes(

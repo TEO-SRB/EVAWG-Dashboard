@@ -66,7 +66,26 @@ export async function plotMap(data, stat, latest_year, crimeType) {
   // If map already exists, just update the source and return
   // =========================================================
 
-  renderTable(lgds, values);
+
+  function hasPreserveDrawingBuffer(m) {
+  try {
+    const c = m.getCanvas();
+    const gl = c.getContext("webgl2") || c.getContext("webgl");
+    return !!gl?.getContextAttributes()?.preserveDrawingBuffer;
+  } catch {
+    return false;
+  }
+}
+
+renderTable(lgds, values);
+
+// If we already have a map but it wasn't created with preserveDrawingBuffer,
+// we MUST rebuild it (can't change after creation).
+if (map && !hasPreserveDrawingBuffer(map)) {
+  map.remove();
+  map = null;
+}
+
   
   if (map && map.getSource("shapes")) {
       map.getSource("shapes").setData(styledGeojson);
@@ -80,6 +99,11 @@ export async function plotMap(data, stat, latest_year, crimeType) {
   let bounds = [[-9.3, 53.58], [-4.3, 55.72]];
   let centre = [(bounds[0][0] + bounds[1][0]) / 2, (bounds[0][1] + bounds[1][1]) / 2];
 
+  if (map) {
+    map.remove();
+    map = null;
+  }
+
   map = new maplibregl.Map({
       container: 'map-container',
       style: 'public/map/style-omt.json',
@@ -89,7 +113,8 @@ export async function plotMap(data, stat, latest_year, crimeType) {
       maxZoom: initial_zoom + 7,
       maxBounds: bounds,
       attributionControl: false,
-      preerveDrawingBuffer: true
+      preserveDrawingBuffer: true,
+      canvasContextAttributes: { preserveDrawingBuffer: true }
   });
 
   map.addControl(
