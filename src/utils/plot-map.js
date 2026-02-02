@@ -95,27 +95,26 @@ if (map && !hasPreserveDrawingBuffer(map)) {
   // =========================================================
   // Otherwise, create map once, add layers, events, etc.
   // =========================================================
-  let initial_zoom = 7;
-  let bounds = [[-9.3, 53.58], [-4.3, 55.72]];
-  let centre = [(bounds[0][0] + bounds[1][0]) / 2, (bounds[0][1] + bounds[1][1]) / 2];
+  const XL = 1200;
+const initial_zoom = window.innerWidth < XL ? 6 : 7;
 
-  if (map) {
-    map.remove();
-    map = null;
-  }
+const bounds = [[-8.5, 54.0], [-5.3, 55.45]];
+const centre = [-6.7, 54.7];
 
-  map = new maplibregl.Map({
-      container: 'map-container',
-      style: 'public/map/style-omt.json',
-      center: centre,
-      zoom: initial_zoom - 1,
-      minZoom: initial_zoom,
-      maxZoom: initial_zoom + 7,
-      maxBounds: bounds,
-      attributionControl: false,
-      preserveDrawingBuffer: true,
-       canvasContextAttributes: { preserveDrawingBuffer: true }
-  });
+if (map) { map.remove(); map = null; }
+
+map = new maplibregl.Map({
+  container: 'map-container',
+  style: 'public/map/style-omt.json',
+  center: centre,
+  zoom: initial_zoom,
+  attributionControl: false,
+  preserveDrawingBuffer: true,
+  canvasContextAttributes: { preserveDrawingBuffer: true }
+});
+
+
+
 
   map.addControl(
     new maplibregl.NavigationControl({
@@ -126,100 +125,102 @@ if (map && !hasPreserveDrawingBuffer(map)) {
     'top-right'
   );
 
-  map.on("load", () => {
+map.on('load', () => {
+  // --- zoom + bounds locking ---
+  map.setMinZoom(initial_zoom - 1);
+  map.setMaxZoom(initial_zoom + 4);
+  map.setRenderWorldCopies(false);
+  map.setMaxBounds(bounds);
 
-    map.addSource('shapes', {
-        type: 'geojson',
-        data: styledGeojson,
-        generateId: true
-    });
-
-    map.addLayer({
-        id: 'shapes-fill',
-        type: 'fill',
-        source: 'shapes',
-        paint: {
-          'fill-color': [
-              'case',
-              ['boolean', ['get', 'nisra_hasValue'], false],
-              ['get', 'nisra_fill'],
-              '#eeeeee'
-          ],
-          'fill-opacity': [
-              'case',
-              ['boolean', ['feature-state', 'hover'], false],
-              0.8,
-              0.7
-          ]
-        }
-    });
-
-    map.addLayer({
-        id: 'shapes-outline',
-        type: 'line',
-        source: 'shapes',
-        paint: {
-          'line-color': [
-              'case',
-              ['boolean', ['feature-state', 'hover'], false],
-              '#222222',
-              '#555555'
-          ],
-          'line-width': [
-              'case',
-              ['boolean', ['feature-state', 'hover'], false],
-              2,
-              1
-          ],
-          'line-opacity': 0.9
-        }
-    });
-
-    // --- hover interactivity (unchanged) ---
-    let hoveredId = null;
-    const popup = new maplibregl.Popup({
-        closeButton: false,
-        closeOnClick: false,
-        offset: [0, -6],
-        className: 'nisra-popup'
-    });
-
-    map.on('mousemove', 'shapes-fill', (e) => {
-        map.getCanvas().style.cursor = 'pointer';
-        const f = e.features && e.features[0];
-        if (!f) return;
-
-        if (hoveredId !== null) {
-          map.setFeatureState({ source: 'shapes', id: hoveredId }, { hover: false });
-        }
-        hoveredId = f.id;
-        map.setFeatureState({ source: 'shapes', id: hoveredId }, { hover: true });
-
-        const p = f.properties;
-        const valueStr = (p.nisra_value == null)
-          ? 'Not available'
-          : Number(p.nisra_value).toLocaleString('en-GB');
-
-        const html = `
-          <div>
-            <strong>${p.nisra_label}</strong> (${p.nisra_year}): 
-            <strong>${valueStr}</strong>
-          </div>
-        `.trim();
-
-        popup.setLngLat(e.lngLat).setHTML(html).addTo(map);
-    });
-
-    map.on('mouseleave', 'shapes-fill', () => {
-        map.getCanvas().style.cursor = '';
-        if (hoveredId !== null) {
-          map.setFeatureState({ source: 'shapes', id: hoveredId }, { hover: false });
-          hoveredId = null;
-        }
-        popup.remove();
-    });
-
+  // --- source + layers ---
+  map.addSource('shapes', {
+    type: 'geojson',
+    data: styledGeojson,
+    generateId: true
   });
+
+  map.addLayer({
+    id: 'shapes-fill',
+    type: 'fill',
+    source: 'shapes',
+    paint: {
+      'fill-color': [
+        'case',
+        ['boolean', ['get', 'nisra_hasValue'], false],
+        ['get', 'nisra_fill'],
+        '#eeeeee'
+      ],
+      'fill-opacity': [
+        'case',
+        ['boolean', ['feature-state', 'hover'], false],
+        0.8,
+        0.7
+      ]
+    }
+  });
+
+  map.addLayer({
+    id: 'shapes-outline',
+    type: 'line',
+    source: 'shapes',
+    paint: {
+      'line-color': [
+        'case',
+        ['boolean', ['feature-state', 'hover'], false],
+        '#222222',
+        '#555555'
+      ],
+      'line-width': [
+        'case',
+        ['boolean', ['feature-state', 'hover'], false],
+        2,
+        1
+      ],
+      'line-opacity': 0.9
+    }
+  });
+
+  // --- hover interactivity ---
+  let hoveredId = null;
+  const popup = new maplibregl.Popup({
+    closeButton: false,
+    closeOnClick: false,
+    offset: [0, -6],
+    className: 'nisra-popup'
+  });
+
+  map.on('mousemove', 'shapes-fill', (e) => {
+    map.getCanvas().style.cursor = 'pointer';
+    const f = e.features && e.features[0];
+    if (!f) return;
+
+    if (hoveredId !== null) {
+      map.setFeatureState({ source: 'shapes', id: hoveredId }, { hover: false });
+    }
+    hoveredId = f.id;
+    map.setFeatureState({ source: 'shapes', id: hoveredId }, { hover: true });
+
+    const p = f.properties;
+    const valueStr = (p.nisra_value == null)
+      ? 'Not available'
+      : Number(p.nisra_value).toLocaleString('en-GB');
+
+    popup
+      .setLngLat(e.lngLat)
+      .setHTML(`<div><strong>${p.nisra_label}</strong> (${p.nisra_year}): <strong>${valueStr}</strong></div>`)
+      .addTo(map);
+  });
+
+  map.on('mouseleave', 'shapes-fill', () => {
+    map.getCanvas().style.cursor = '';
+    if (hoveredId !== null) {
+      map.setFeatureState({ source: 'shapes', id: hoveredId }, { hover: false });
+      hoveredId = null;
+    }
+    popup.remove();
+  });
+});
+
 
 }
 

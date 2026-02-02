@@ -76,7 +76,19 @@ main a[target="_blank"]::after {
 .colour-block:last-child { border-right: 1px #555555 solid; }
 
 /* Map container min height for small vs large screens */
-#map-container { min-height: 725px }
+/* The element you pass as `container: 'map-container'` */
+#map-container{
+  width: 100%;
+  height: 820px;                 /* desktop default */
+}
+
+@media (max-width: 1199.98px){
+  #map-container{
+    height: 360px;               /* mobile/tablet shorter */
+  }
+}
+
+
 
 /* ===========================
    Chart sizing
