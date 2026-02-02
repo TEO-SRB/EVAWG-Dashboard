@@ -223,7 +223,6 @@ export async function insertHead(title) {
     <meta name="apple-mobile-web-app-title" content="Gender-based violence - ${title}" />
 
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.2/dist/maplibre-gl.css">
-    <link href="https://cdn.jsdelivr.net/npm/@watergis/maplibre-gl-export@4.1.0/dist/maplibre-gl-export.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="assets/css/styles.css">
   `;
@@ -244,7 +243,6 @@ export async function insertHead(title) {
   await loadScript("https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/3.0.1/chartjs-plugin-annotation.min.js");
   await loadScript("https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2");
   await loadScript("https://unpkg.com/maplibre-gl@5.6.2/dist/maplibre-gl.js");
-  await loadScript("https://cdn.jsdelivr.net/npm/@watergis/maplibre-gl-export@4.1.0/dist/maplibre-gl-export.umd.js");
   await loadScript("https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js");
 
   document.body.removeAttribute("style");

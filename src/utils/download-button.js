@@ -68,12 +68,23 @@ export function downloadButton (capture_id, matrix, update_date, map_plot = fals
                         backgroundColor: "#ffffff",
                         scale: 2,
                         useCORS: true
-                    }).then((canvas) => {
+                    }).then(async (canvas) => {
+
+                        const finalCanvas = await addLogoUnderCanvas(
+                            canvas,
+                            "assets/img/logo/nisra-only-colour.png",
+                            {
+                            logoHeight: 70,
+                            padding: 24
+                            }
+                        );
+
                         const link = document.createElement("a");
                         link.download = `${fileName}.png`;
-                        link.href = canvas.toDataURL("image/png");
+                        link.href = finalCanvas.toDataURL("image/png");
                         link.click();
                     });
+
                 });
     }
 
@@ -137,6 +148,67 @@ async function exportCardWithMap(cardEl, map, mapContainerEl, filename) {
   // Download
   const link = document.createElement("a");
   link.download = filename;
-  link.href = canvas.toDataURL("image/png");
+  const finalCanvas = await addLogoUnderCanvas(
+    canvas,
+    "assets/img/logo/nisra-only-colour.png",
+    {
+        logoHeight: 70,
+        padding: 24
+    }
+    );
+
+    link.href = finalCanvas.toDataURL("image/png");
   link.click();
 }
+
+async function addLogoUnderCanvas(originalCanvas, logoSrc, options = {}) {
+  const {
+    padding = 24,
+    logoHeight = 60
+  } = options;
+
+  const logo = new Image();
+  logo.src = logoSrc;
+  logo.crossOrigin = "anonymous";
+
+  await new Promise((resolve, reject) => {
+    logo.onload = resolve;
+    logo.onerror = reject;
+  });
+
+  // Scale logo proportionally
+  const scale = logoHeight / logo.height;
+  const logoWidth = logo.width * scale;
+
+  const newCanvas = document.createElement("canvas");
+  newCanvas.width = originalCanvas.width;
+  newCanvas.height =
+    originalCanvas.height + padding * 2 + logoHeight;
+
+  const ctx = newCanvas.getContext("2d");
+
+  // White background
+  ctx.fillStyle = "#ffffff";
+  ctx.fillRect(0, 0, newCanvas.width, newCanvas.height);
+
+  // Draw original capture
+  ctx.drawImage(originalCanvas, 0, 0);
+
+  // Bottom-right position
+  const x =
+    newCanvas.width - logoWidth - padding;
+  const y =
+    originalCanvas.height + padding;
+
+  ctx.drawImage(
+    logo,
+    x,
+    y,
+    logoWidth,
+    logoHeight
+  );
+
+  return newCanvas;
+}
+
+
