@@ -108,13 +108,13 @@ if (map && !hasPreserveDrawingBuffer(map)) {
       container: 'map-container',
       style: 'public/map/style-omt.json',
       center: centre,
-      zoom: initial_zoom,
+      zoom: initial_zoom - 1,
       minZoom: initial_zoom,
       maxZoom: initial_zoom + 7,
       maxBounds: bounds,
       attributionControl: false,
       preserveDrawingBuffer: true,
-      canvasContextAttributes: { preserveDrawingBuffer: true }
+       canvasContextAttributes: { preserveDrawingBuffer: true }
   });
 
   map.addControl(
