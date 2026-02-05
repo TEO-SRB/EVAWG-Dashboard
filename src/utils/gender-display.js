@@ -5,8 +5,12 @@ export function genderDisplay () {
   const male_comparison_switch = document.getElementById("male-comparison-switch");
 
   male_comparison_switch.innerHTML = `
-    <form id="gender-form" class="d-flex justify-content-end" role="radiogroup" aria-labelledby="gender-label">
-    <span id="gender-label" class="me-3">Display figures for:</span>
+  <div class="row justify-content-end">
+  <div class="col col-xl-5">
+  <div class="card mt-2">
+  <div class="card-body d-flex justify-content-center">
+    <form id="gender-form" class="d-flex" role="radiogroup" aria-labelledby="gender-label">
+    <strong id="gender-label" class="me-3">Display figures for:</strong>
     <div class="form-check me-2">
         <input class="form-check-input" type="radio" role="radio" name="gender-select" id="all-comparison" value="all" checked aria-checked="true">
         <label class="form-check-label" for="all-comparison" aria-label="All persons">All persons</label>
@@ -20,6 +24,10 @@ export function genderDisplay () {
         <label class="form-check-label" for="male-comparison" aria-label="Male only">Male only</label>
     </div>
     </form>
+    </div>
+    </div>
+    </div>
+    </div>
   `
   const gender_form = document.getElementById("gender-form");
   const male_figs = document.getElementsByClassName("male-fig");
