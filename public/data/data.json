@@ -970,7 +970,7 @@
   },
   "EXPVLYTHEQ": {
     "label": "Experience of gender-based violence - 16 year olds",
-    "updated": "2026-01-08",
+    "updated": "2026-02-05",
     "data": {
       "Victims of gender-based violence": {
         "2023": {
@@ -1022,17 +1022,17 @@
             "Sexual Orientation - Straight or heterosexual": 27,
             "Sexual Orientation - Other": 46
           },
-          "No violence": {
-            "All respondents": 48,
-            "Gender - Female": 41,
-            "Gender - Male": 59,
-            "Religion - Catholic": 53,
-            "Religion - Protestant and other Christian": 51,
-            "Religion - Other/No religion": 41,
-            "Disability - Disabled": 30,
-            "Disability - Not disabled": 51,
-            "Sexual Orientation - Straight or heterosexual": 53,
-            "Sexual Orientation - Other": 33
+          "Any type of violence": {
+            "All respondents": "NA",
+            "Gender - Female": 52,
+            "Gender - Male": 36,
+            "Religion - Catholic": "NA",
+            "Religion - Protestant and other Christian": "NA",
+            "Religion - Other/No religion": "NA",
+            "Disability - Disabled": "NA",
+            "Disability - Not disabled": "NA",
+            "Sexual Orientation - Straight or heterosexual": "NA",
+            "Sexual Orientation - Other": "NA"
           }
         },
         "2024": {
@@ -1084,17 +1084,17 @@
             "Sexual Orientation - Straight or heterosexual": 15,
             "Sexual Orientation - Other": 33
           },
-          "No violence": {
-            "All respondents": 61,
-            "Gender - Female": 51,
-            "Gender - Male": 75,
-            "Religion - Catholic": 62,
-            "Religion - Protestant and other Christian": 65,
-            "Religion - Other/No religion": 58,
-            "Disability - Disabled": 47,
-            "Disability - Not disabled": 63,
-            "Sexual Orientation - Straight or heterosexual": 66,
-            "Sexual Orientation - Other": 44
+          "Any type of violence": {
+            "All respondents": "NA",
+            "Gender - Female": 41,
+            "Gender - Male": 18,
+            "Religion - Catholic": "NA",
+            "Religion - Protestant and other Christian": "NA",
+            "Religion - Other/No religion": "NA",
+            "Disability - Disabled": "NA",
+            "Disability - Not disabled": "NA",
+            "Sexual Orientation - Straight or heterosexual": "NA",
+            "Sexual Orientation - Other": "NA"
           }
         }
       }
