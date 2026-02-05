@@ -50,49 +50,54 @@ export function createLineChart({data, stat, years, line_1, line_2, label_1 = "F
     };
 
     const config_line = {
-        type: 'line',
-        data: line_data,
-        options: {
-            maintainAspectRatio: false,   // let the canvas size control the chart
-            layout: {
-                padding: {
-                    right: 40             // extra room for end labels
-                }
+      type: 'line',
+      data: line_data,
+      options: {
+        maintainAspectRatio: false,
+        layout: {
+          padding: {
+            right: 40
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              precision: 0,
             },
-            scales: {
-                y: {
-                  beginAtZero: true,
-                  ticks: {
-                    precision: 0,
-                  },
-                    grid: {
-                        display: false
-                    }
-                },
-                x: {
-                  ticks: {
-                    maxRotation: 0,
-                    minRotation: 0,
-                    autoSkip: true,
-                    autoSkipPadding: 4
-                  }
-                }
-            },
-            plugins: {
-              tooltip: {
-                callbacks: {
-                    label: function (context) {
-                    const value = context.raw;
-                    if (unit === "%") {
-                      return `${value}%`;
-                    } else {
-                      return Number(value).toLocaleString();
-                    }
-                }
+            grid: {
+              display: false
             }
+          },
+          x: {
+            ticks: {
+              maxRotation: 0,
+              minRotation: 0,
+              autoSkip: true,
+              autoSkipPadding: 4
             }
+          }
+        },
+        plugins: {
+          legend: {
+            onClick: () => {}  
+          },
+          tooltip: {
+            callbacks: {
+              label: function (context) {
+                const value = context.raw;
+                if (unit === "%") {
+                  return `${value}%`;
+                } else {
+                  return Number(value).toLocaleString();
+                }
+              }
+            }
+          }
         }
-    }};
+      }
+    };
+
 
     const ctx_line = line_canvas.getContext('2d');
     const line_chart = new Chart(ctx_line, config_line);
@@ -136,6 +141,9 @@ export function createBarChart({ chart_data, categories, canvas_id, label_format
     maintainAspectRatio: false,
     layout: { padding: { right: 40 } },
     plugins: {
+      legend: {
+            onClick: () => {}  
+          },
       datalabels: {
         anchor: "end",
         align: "right",
