@@ -15,15 +15,18 @@ export function downloadButton (capture_id, matrix, update_date, map_plot = fals
     const link_label = map_plot ? "map" : "chart";
 
     footer.innerHTML = `
-        <div class="dropdown"><strong>Data last updated:</strong> ${update_date}.<br><strong>Download:</strong>
+        <div class="dropdown"><strong>Data last updated:</strong> ${update_date}.
+        <div>
             <button class="btn btn-secondary dropdown-toggle btn-primary mt-2" type="button" id="${capture_id}-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                Select type
+                Download
             </button>
+            
             <ul class="dropdown-menu" aria-labelledby="${capture_id}-dropdown">
                 <li><a class="dropdown-item" href="https://${data_sub}ws-data.nisra.gov.uk/public/api.restful/PxStat.Data.Cube_API.ReadDataset/${matrix}/CSV/1.0/">data (in CSV format)</a></li>
                 <li><a class="dropdown-item" href="https://${data_sub}ws-data.nisra.gov.uk/public/api.restful/PxStat.Data.Cube_API.ReadDataset/${matrix}/XLSX/2007/">data (in Excel format)</a></li>
                 <li><a class="dropdown-item" href="#" id="download-${capture_id}">${link_label} (as image)</a></li>
             </ul>
+            </div>
         </div>
     `;
 
