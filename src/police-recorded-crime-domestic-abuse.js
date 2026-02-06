@@ -28,7 +28,7 @@ window.addEventListener("DOMContentLoaded", async () => {
                 year: "numeric"
             });
 
-    updateYearSpans(data, stat);
+    updateYearSpans(trend_data, stat);
 
     insertValue("domestic-abuse-female", data.data[stat][latest_year]["Female"]["Total all offences"].toLocaleString());
     insertValue("domestic-abuse-male", data.data[stat][latest_year]["Male"]["Total all offences"].toLocaleString());
