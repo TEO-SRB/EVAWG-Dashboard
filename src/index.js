@@ -42,7 +42,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     const EXPDA_stat = "Victims of domestic abuse";
     updateYearSpans(EXPDA, EXPDA_stat);
 
-    insertValue("domestic-abuse",Math.round(EXPDA.data[EXPDA_stat][latest_year]["Any domestic abuse"]["Lifetime (since age 16)"]["Female"])
+    insertValue("domestic-abuse", Math.round(EXPDA.data[EXPDA_stat][latest_year]["Any domestic abuse"]["Lifetime (since age 16)"]["Female"])
 );
 
     // % of stalking and harrassment victims are female
