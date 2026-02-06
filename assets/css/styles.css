@@ -402,3 +402,6 @@ table tr:not(:has(th)):hover {
   border-radius: 0.25rem; /* optional, if you want */
 }
 
+.male-fig {
+  font-size: 1.5rem;
+}

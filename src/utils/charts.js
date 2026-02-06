@@ -29,8 +29,8 @@ export function createLineChart({data, stat, years, line_1, line_2, label_1 = "F
         label: label_1,
         data: female_values,
         fill: false,
-        backgroundColor: chart_colours[0],
-        borderColor: chart_colours[0],
+        backgroundColor: chart_colours[2],
+        borderColor: chart_colours[2],
         borderWidth: 2
     });
 
@@ -38,8 +38,8 @@ export function createLineChart({data, stat, years, line_1, line_2, label_1 = "F
         label: label_2,
         data: male_values,
         fill: false,
-        backgroundColor: chart_colours[1],
-        borderColor: chart_colours[1],
+        backgroundColor: chart_colours[5],
+        borderColor: chart_colours[5],
         borderWidth: 2
     });
 
@@ -132,7 +132,7 @@ export function createBarChart({ chart_data, categories, canvas_id, label_format
     label: `${gender === "female" ? "Female" : "Male"}`,
     data: gender === "female" ? chart_data.female : chart_data.male,
     fill: false,
-    backgroundColor: gender === "female" ? chart_colours[0] : chart_colours[1],
+    backgroundColor: gender === "female" ? chart_colours[2] : chart_colours[5],
     borderWidth: 1
   });
 

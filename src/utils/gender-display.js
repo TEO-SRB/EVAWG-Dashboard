@@ -46,9 +46,10 @@ export function genderDisplay () {
       } else {
           male_figs[i].classList.remove("d-none");
           if (selectedGender === "male") {
-            male_figs[i].classList.add("display-6");
+            male_figs[i].style.fontSize="3rem";
+            male_figs[i].style.fontWeight="300";
           } else {
-            male_figs[i].classList.remove("display-6");
+            male_figs[i].removeAttribute("style");
           }
       }
     }
