@@ -30,8 +30,10 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     updateYearSpans(data, stat);
 
-    insertValue("violence-girl", 100 - data.data[stat][latest_year]["No violence"]["Gender - Female"]);
-    insertValue("violence-boy",  100 - data.data[stat][latest_year]["No violence"]["Gender - Male"]);
+    console.log(data)
+
+    insertValue("violence-girl", data.data[stat][latest_year]["Any type of violence"]["Gender - Female"]);
+    insertValue("violence-boy",  data.data[stat][latest_year]["Any type of violence"]["Gender - Male"]);
 
     insertValue("online-girl", data.data[stat][latest_year]["Online violence"]["Gender - Female"]);
     insertValue("online-boy",  data.data[stat][latest_year]["Online violence"]["Gender - Male"]);
@@ -46,7 +48,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     // Create bar chart
     const violence_types = Object.keys(data.data[stat][latest_year])
-        .filter(x => x !== "No violence");
+        .filter(x => x !== "Any type of violence");
 
     const chart_data = createBarChartData({data, stat, year: latest_year, categories: violence_types});
     
@@ -64,8 +66,8 @@ window.addEventListener("DOMContentLoaded", async () => {
             data,
             stat,
             years,
-            line_1: ["No violence", "Gender - Female"],
-            line_2: ["No violence", "Gender - Male"],
+            line_1: ["Any type of violence", "Gender - Female"],
+            line_2: ["Any type of violence", "Gender - Male"],
             canvas_id: "prevalence-ylt-line"
         });
 
