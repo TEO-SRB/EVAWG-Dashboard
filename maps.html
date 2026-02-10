@@ -16,20 +16,11 @@
 <div id="content" class="container-fluid">
     
         
-        <div class = "py-2">
 
-           <!-- Second row - tables and charts -->
-<div class="row py-4">
-    
-    <div class="col-12">
-        <div id="map-card" class="card h-100">
-
-            <div class="card-header">
-                Maps
-            </div>
-            <div class="card-body">
-                <div class="row">
-                <div class="col-12 col-xl-3">
+    <div class="row justify-content-end py-2">
+        <div class="col-12 col-xl-4">
+            <div class="card">
+                <div class="card-body">
                     <label for="crime-filter" class="form-label fw-bold">Crime type</label>
                     <select id="crime-filter" class="form-select">
                         <option value="Sexual offences" selected>Sexual offences</option>
@@ -42,29 +33,48 @@
                     <small class="text-muted d-block mt-2">
                         Choose a crime type to update the map.
                     </small>
+                    
+                    </div>
+            </div>
+        </div>
+    </div>
+
+           
+    <div class="row">
+        
+        <div class="col-12 col-xl-8 py-2">
+            <div id="map-card" class="card h-100">
+                <div id="map-title" class="card-header">
+                    Map
+                </div>
+                <div class="card-body">
+                    <div id="map-legend" class="mt-3"></div>
                     <small class="text-muted d-block mt-2">
                         Hover over individual areas on the map to see more details.
                     </small>
-
-                    <div id="map-legend" class="mt-3"></div>
-                    <table id="map-data-table" class="table mt-3"></table>
-                </div>
-                <div class="col-12 col-xl-9">
-                    <div id="map-title" class="w-100 text-center display-6"></div>
                     <div id="map-container" class="map"></div>
                 </div>
+    
+                <div class="card-footer"></div>
+            </div>
+        </div>
+
+         <div class="col-12 col-xl-4 py-2">
+            <div class="card h-100">
+                <div class="card-header">
+                    Data
+                </div>
+                <div class="card-body">
+                    <table id="map-data-table" class="table mt-3"></table>
                 </div>
             </div>
-  
-            <div class="card-footer"></div>
-        </div>
-    </div>
+        </div>            
+        
 </div>
 
             <!-- Third row - Definitions -->
             <div id="info-boxes"></div>
 
-        </div>
         
     </main>
 </div>

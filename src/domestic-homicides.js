@@ -6,7 +6,8 @@ import { years, latest_year, updateYearSpans } from "./utils/update-years.js";
 import { insertValue } from "./utils/insert-value.js";
 import { populateInfoBoxes } from "./utils/info-boxes.js";
 import { downloadButton } from "./utils/download-button.js";
-import { config } from "./config/config.js"
+import { config } from "./config/config.js";
+import { gender_string } from "./utils/gender-string.js";
 
 window.addEventListener("DOMContentLoaded", async () => {
 
@@ -43,30 +44,33 @@ window.addEventListener("DOMContentLoaded", async () => {
         men_partner_last_5 += relationship_data.data[stat][last_5_years[i]]["Male"]["Partner/ex-partner"];
     }
 
+    const women_last_5_string = gender_string(women_last_5, "female");
+    const men_last_5_string = gender_string(men_last_5, "male");
+    const women_partner_last_5_string = gender_string(women_partner_last_5, "female");
+    const men_partner_last_5_string = gender_string(men_partner_last_5, "male");
+    
+
     const female_victim_under_18 = data.data[stat][latest_year]["Under 18 years"]["Female"];
-    const male_vicitm_under_18 = data.data[stat][latest_year]["Under 18 years"]["Male"];
-    let female_victim_under_18_string;
-    let male_vicitm_under_18_string;
-    if (female_victim_under_18 === 1) {
-        female_victim_under_18_string = "1 female";
-    } else {
-        female_victim_under_18_string = `${female_victim_under_18} females`;
-    }
+    const male_victim_under_18 = data.data[stat][latest_year]["Under 18 years"]["Male"];
 
-    if (male_vicitm_under_18 === 1) {
-        male_vicitm_under_18_string = "1 male";
-    } else {
-        male_vicitm_under_18_string = `${male_vicitm_under_18} males`;
-    }
+    const female_victim_under_18_string = gender_string(female_victim_under_18, "female");
+    const male_victim_under_18_string = gender_string(male_victim_under_18, "male");
+   
+    const female_victim_over_18 = data.data[stat][latest_year]["18+ years"]["Female"];
+    const male_victim_over_18 = data.data[stat][latest_year]["18+ years"]["Male"];
 
-     insertValue("homicide-box-1-female", women_last_5);
-     insertValue("homicide-box-1-male", men_last_5);
-     insertValue("homicide-box-2-female", women_partner_last_5);
-     insertValue("homicide-box-2-male", men_partner_last_5);
-     insertValue("homicide-box-3-female", data.data[stat][latest_year]["18+ years"]["Female"]);
-     insertValue("homicide-box-3-male", data.data[stat][latest_year]["18+ years"]["Male"]);
+    const female_victim_over_18_string = gender_string(female_victim_over_18, "female");
+    const male_victim_over_18_string = gender_string(male_victim_over_18, "male");
+   
+
+     insertValue("homicide-box-1-female", women_last_5_string);
+     insertValue("homicide-box-1-male", men_last_5_string);
+     insertValue("homicide-box-2-female", women_partner_last_5_string);
+     insertValue("homicide-box-2-male", men_partner_last_5_string);
+     insertValue("homicide-box-3-female", female_victim_over_18_string);
+     insertValue("homicide-box-3-male", male_victim_over_18_string);
      insertValue("homicide-box-4-girl", female_victim_under_18_string);
-     insertValue("homicide-box-4-boy", male_vicitm_under_18_string);
+     insertValue("homicide-box-4-boy", male_victim_under_18_string);
 
     // Create bar chart
     const relationship_types = Object.keys(relationship_data.data[stat][latest_year].Female);

@@ -95,8 +95,8 @@ if (map && !hasPreserveDrawingBuffer(map)) {
   // =========================================================
   // Otherwise, create map once, add layers, events, etc.
   // =========================================================
-  const XL = 1200;
-const initial_zoom = window.innerWidth < XL ? 6 : 7;
+const XL = 1200;
+const initial_zoom = window.innerWidth < XL ? 6 : 7.5;
 
 const bounds = [[-8.5, 54.0], [-5.3, 55.45]];
 const centre = [-6.7, 54.7];
@@ -130,7 +130,7 @@ map.on('load', () => {
   map.setMinZoom(initial_zoom - 1);
   map.setMaxZoom(initial_zoom + 4);
   map.setRenderWorldCopies(false);
-  map.setMaxBounds(bounds);
+  // map.setMaxBounds(bounds);
 
   // --- source + layers ---
   map.addSource('shapes', {
