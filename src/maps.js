@@ -13,6 +13,8 @@ window.addEventListener("DOMContentLoaded", async () => {
     let data = await readData("PRCPD");
     const da_data = await readData("DOMACLGD");
 
+    console.log(data)
+
     const update_date = new Date(data.updated).toLocaleDateString("en-GB",
         {
             day: "2-digit", 
@@ -28,6 +30,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     let lgds = Object.keys(data.data[stat][latest_year]);
     for (let i = 0; i < lgds.length; i++) {
         data.data[stat][latest_year][lgds[i]]["All domestic abuse crimes"] = da_data.data["All domestic abuse crimes"][latest_year][lgds[i]];
+        data.data[stat][latest_year][lgds[i]]["Violence with injury"] = data.data[stat][latest_year][lgds[i]]["Violence with injury (including homicide & death/serious injury by unlawful driving)"];
     }
 
 

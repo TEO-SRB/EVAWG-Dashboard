@@ -62,7 +62,6 @@ window.addEventListener("DOMContentLoaded", async () => {
     const female_victim_over_18_string = gender_string(female_victim_over_18, "female");
     const male_victim_over_18_string = gender_string(male_victim_over_18, "male");
    
-
      insertValue("homicide-box-1-female", women_last_5_string);
      insertValue("homicide-box-1-male", men_last_5_string);
      insertValue("homicide-box-2-female", women_partner_last_5_string);
