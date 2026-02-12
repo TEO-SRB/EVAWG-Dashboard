@@ -32,15 +32,11 @@ export function genderDisplay () {
   const gender_form = document.getElementById("gender-form");
   const male_figs = document.getElementsByClassName("male-fig");
   const female_figs = document.getElementsByClassName("female-fig");
-  const no_gender = document.getElementsByClassName("no-gender");
   const all_comparison = document.getElementById("all-comparison");
   const female_comparison = document.getElementById("female-comparison");
   const male_comparison = document.getElementById("male-comparison");
-
   const female_cols = document.getElementsByClassName("female-col");
   const male_cols = document.getElementsByClassName("male-col");
-
-  console.log(female_cols, male_cols)
 
   let selectedGender = getSelectedGender(); 
   

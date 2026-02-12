@@ -148,6 +148,10 @@ window.addEventListener("DOMContentLoaded", async () => {
       scales: {
         x: {
           beginAtZero: true,
+          title: {
+            display: true,
+            text: "% of victims"
+          }
         },
         y: {
           grid: { display: false },
