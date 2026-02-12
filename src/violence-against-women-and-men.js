@@ -6,7 +6,8 @@ import { latest_year, updateYearSpans } from "./utils/update-years.js";
 import { insertValue } from "./utils/insert-value.js";
 import { populateInfoBoxes } from "./utils/info-boxes.js";
 import { downloadButton } from "./utils/download-button.js";
-import { config } from "./config/config.js"
+import { config } from "./config/config.js";
+import { insertExpandButtons } from "./utils/expand-buttons.js";
 
 window.addEventListener("DOMContentLoaded", async () => {
 
@@ -14,6 +15,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     insertHeader();
     genderDisplay();
     insertNavButtons();
+     insertExpandButtons();
     
     let data = await readData("EXPVLADEQ");    
     let age_data = await readData("EXPGBVAG");
@@ -70,6 +72,13 @@ window.addEventListener("DOMContentLoaded", async () => {
         label_format: "%"
     });
 
+    createBarChart({
+        chart_data,
+        categories: violence_types,
+        canvas_id: "prevalence-nilt-bar-expanded",
+        label_format: "%"
+    });
+
     downloadButton("prevalence-nilt-bar-capture", "EXPVLADEQ", update_date);
 
     
@@ -93,6 +102,13 @@ window.addEventListener("DOMContentLoaded", async () => {
         label_format: "%"
     });
 
+    createBarChart({
+        chart_data: age_chart_data,
+        categories: age_groups,
+        canvas_id: "age-group-nilt-bar-expanded",
+        label_format: "%"
+    });
+
     downloadButton("age-group-nilt-bar-capture", "EXPGBVAG", age_update_date);    
 
     // Create line chart
@@ -105,7 +121,18 @@ window.addEventListener("DOMContentLoaded", async () => {
             canvas_id: "prevalence-nilt-line"
         });
 
+        createLineChart({
+            data: age_data,
+            stat: age_stat,
+            years: age_years,
+            line_1: ["All ages", "Female"],
+            line_2: ["All ages", "Male"],
+            canvas_id: "prevalence-nilt-line-expanded"
+        });
+
     downloadButton("prevalence-nilt-line-capture", "EXPGBVAG", age_update_date);
+
+   
 
     // Populate info boxes
     populateInfoBoxes(
