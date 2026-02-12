@@ -56,7 +56,7 @@ export function insertNavButtons() {
 
   // Desktop: row of buttons (lg+). Mobile: hamburger dropdown (<lg).
   nav.innerHTML += `
-    <div class="container-fluid px-2">
+    <div class="container-fluid px-1">
 
       <!-- Mobile only -->
 

@@ -37,6 +37,11 @@ export function genderDisplay () {
   const female_comparison = document.getElementById("female-comparison");
   const male_comparison = document.getElementById("male-comparison");
 
+  const female_cols = document.getElementsByClassName("female-col");
+  const male_cols = document.getElementsByClassName("male-col");
+
+  console.log(female_cols, male_cols)
+
   let selectedGender = getSelectedGender(); 
   
   function hideMaleFigs () {
@@ -52,6 +57,13 @@ export function genderDisplay () {
           }
       }
     }
+    for (let i = 0; i < male_cols.length; i ++) {
+      if (selectedGender === "female") {
+        male_cols[i].classList.add("d-none");
+      } else {
+        male_cols[i].classList.remove("d-none");
+      }
+    }
   }
 
   function hideFemaleFigs () {
@@ -62,31 +74,25 @@ export function genderDisplay () {
           female_figs[i].classList.remove("d-none");
       }
     }
+    for (let i = 0; i < female_cols.length; i ++) {
+      if (selectedGender === "male") {
+        female_cols[i].classList.add("d-none");
+      } else {
+        female_cols[i].classList.remove("d-none");
+      }
+    }
   }
 
-  function hideNoGender () {
+  function resizeRows () {
     const chart_row = document.getElementById("chart-row");
-    let cols;
+
     if (chart_row) {
-      cols = chart_row.getElementsByClassName("col-12");
-    }
-    for (let i = 0; i < no_gender.length; i ++) {
-      if (selectedGender === "all") {
-          no_gender[i].classList.remove("d-none");
-          if (cols) {
-            for (let j = 0; j < cols.length; j ++) {
-              cols[j].classList.remove("col-xl-6");
-              cols[j].classList.add("col-xl-4");
-            }
-        }
+      if (selectedGender != "all") {
+        chart_row.classList.remove("row-cols-xl-3");
+        chart_row.classList.add("row-cols-xl-2");
       } else {
-          no_gender[i].classList.add("d-none");
-          if (cols) {
-          for (let j = 0; j < cols.length; j ++) {
-            cols[j].classList.add("col-xl-6");
-            cols[j].classList.remove("col-xl-4");
-          }
-        }
+        chart_row.classList.add("row-cols-xl-3");
+        chart_row.classList.remove("row-cols-xl-2");
       }
     }
   }
@@ -106,7 +112,7 @@ export function genderDisplay () {
     }
     hideFemaleFigs();
     hideMaleFigs();
-    hideNoGender();
+    resizeRows();
   }
 
   gender_form.addEventListener("change", function () {
@@ -128,7 +134,7 @@ export function genderDisplay () {
 
     hideFemaleFigs();
     hideMaleFigs();
-    hideNoGender();
+    resizeRows();
     localStorage.setItem("genderSelection", selectedGender);
   });
 
