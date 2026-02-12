@@ -264,6 +264,12 @@ table tr:not(:has(th)):hover {
   height: 40vh !important;
 }
 
+@media (max-width: 1200px) { 
+  .chart-canvas {
+    height: 80vh !important;
+  } 
+}
+
 /* Only when expanded (i.e., NOT collapsed) */
 .accordion-button:not(.collapsed) {
   background-color: #00205B;
