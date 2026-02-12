@@ -141,7 +141,7 @@ export function insertFooter () {
           <h3 class="h5">Corporate</h3>
           <ul class="list-unstyled">
             <li><a href="https://www.nisra.gov.uk/">NISRA Website</a></li>
-            <li><a href="https://www.nisra.gov.uk/statistics/about-nisra/careers">Careers</a></li>
+            <li><a href="https://www.nisra.gov.uk/about-us/careers">Careers</a></li>
             <li><a href="https://www.nisra.gov.uk/contact">Contact</a></li>
           </ul>
         </div>
