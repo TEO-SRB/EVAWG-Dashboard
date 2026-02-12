@@ -26,9 +26,16 @@ window.addEventListener("DOMContentLoaded", async () => {
     const latest_year = years[years.length - 1];
 
     let lgds = Object.keys(data.data[stat][latest_year]);
+    const oldKey = "Violence with injury (including homicide & death/serious injury by unlawful driving)";
+    const newKey = "Violence with injury";
     for (let i = 0; i < lgds.length; i++) {
-        data.data[stat][latest_year][lgds[i]]["All domestic abuse crimes"] = da_data.data["All domestic abuse crimes"][latest_year][lgds[i]];
+        const obj = data.data[stat][latest_year][lgds[i]];
+        obj["Domestic abuse"] = da_data.data["All domestic abuse crimes"][latest_year][lgds[i]];
+        obj[newKey] = obj[oldKey];
+        delete obj[oldKey];
     }
+
+    console.log(data)
 
 
     const crime_filter = document.getElementById("crime-filter");
