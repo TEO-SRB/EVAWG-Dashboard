@@ -6,7 +6,8 @@ import { years, latest_year, updateYearSpans } from "./utils/update-years.js";
 import { insertValue } from "./utils/insert-value.js";
 import { populateInfoBoxes } from "./utils/info-boxes.js";
 import { downloadButton } from "./utils/download-button.js";
-import { config } from "./config/config.js"
+import { config } from "./config/config.js";
+import { insertExpandButtons } from "./utils/expand-buttons.js";
 
 window.addEventListener("DOMContentLoaded", async () => {
 
@@ -14,6 +15,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     insertHeader();
     insertNavButtons();
     genderDisplay();
+    insertExpandButtons();
     
     let data = await readData("DAHVAG");
     let relationship_data = await readData("DAHVGR");
@@ -82,6 +84,12 @@ window.addEventListener("DOMContentLoaded", async () => {
         canvas_id: "homicide-bar",
     });
 
+    createBarChart({
+        chart_data,
+        categories: relationship_types,
+        canvas_id: "homicide-bar-expanded",
+    });
+
     downloadButton("homicide-bar-capture", "DAHVGR", update_date);
    
     
@@ -98,6 +106,18 @@ window.addEventListener("DOMContentLoaded", async () => {
         canvas_id: "under-18-homicide-line"
     });
 
+    createLineChart({
+        data,
+        stat,
+        years,
+        line_1: ["Under 18 years", "Female"],
+        label_1: "Female",
+        line_2: ["Under 18 years", "Male"],
+        label_2: "Male",
+        unit: "Victims",
+        canvas_id: "under-18-homicide-line-expanded"
+    });
+
     downloadButton("under-18-homicide-line-capture", "DAHVAG", update_date);
 
     // Create 18+ line chart
@@ -111,6 +131,18 @@ window.addEventListener("DOMContentLoaded", async () => {
         label_2: "Male",
         unit: "Victims",
         canvas_id: "18-plus-homicide-line"
+    });
+
+    createLineChart({
+        data,
+        stat,
+        years,
+        line_1: ["18+ years", "Female"],
+        label_1: "Female",
+        line_2: ["18+ years", "Male"],
+        label_2: "Male",
+        unit: "Victims",
+        canvas_id: "18-plus-homicide-line-expanded"
     });
 
     downloadButton("18-plus-homicide-line-capture", "DAHVAG", update_date);

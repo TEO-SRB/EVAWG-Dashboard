@@ -6,7 +6,8 @@ import { createLineChart, createBarChart } from "./utils/charts.js";
 import { populateInfoBoxes } from "./utils/info-boxes.js";
 import { downloadButton } from "./utils/download-button.js";
 import { genderDisplay } from "./utils/gender-display.js";
-import { config } from "./config/config.js"
+import { config } from "./config/config.js";
+import { insertExpandButtons } from "./utils/expand-buttons.js";
 
 window.addEventListener("DOMContentLoaded", async () => {
 
@@ -14,6 +15,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     insertHeader();
     insertNavButtons();
     genderDisplay();
+    insertExpandButtons();
 
     const data = await readData("DOMACVAC");
     const stat = "All domestic abuse crimes";
@@ -50,6 +52,16 @@ window.addEventListener("DOMContentLoaded", async () => {
             line_2: ["Male"],
             unit: "Victims",
             canvas_id: "domestic-abuse-line"
+        });
+
+    createLineChart({
+            data: trend_data,
+            stat,
+            years: trend_years,
+            line_1: ["Female"],
+            line_2: ["Male"],
+            unit: "Victims",
+            canvas_id: "domestic-abuse-line-expanded"
         });
 
         downloadButton("domestic-abuse-line-capture", "DOMACVG", update_date);
@@ -97,6 +109,13 @@ window.addEventListener("DOMContentLoaded", async () => {
             label_format: ","
         })
 
+        createBarChart({
+            chart_data,
+            categories,
+            canvas_id: "domestic-abuse-bar-expanded",
+            label_format: ","
+        })
+
         downloadButton("domestic-abuse-bar-capture", "DOMACVG", update_date);
 
         // Populate info boxes    
@@ -110,7 +129,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         <p>While the PSNI does not fall within the jurisdiction of the Home Office, the practices and procedures of the Home Office's notable offence list are followed and applied within Northern Ireland.</p>
         <p>The crime recording process starts at the point at which an incident comes to the attention of police. This may be brought through a call for service from a member of the public, an incident being referred to the police by another agency or being identified by the police directly.</p>
         <p>The time series chart 'Victims of domestic abuse crimes, 2004/05 to ${latest_year}' includes victims of all ages. However, the bar chart 'Adult victims of domestic abuse crimes ${latest_year}, by crime type' only includes adult victims (18+).</p>
-        <p>In the bar chart titled 'Adult victims of domestic abuse crimes ${latest_year}, by crime type', the category ‘All other offences’ includes the PSNI crime types: <em>Theft (inc burglary), Criminal damage,</em> and <em>All other offences.</em></p>
+        <p>In the bar chart titled 'Adult victims of domestic abuse crimes ${latest_year}, by crime type', the category 'All other offences' includes the PSNI crime types: <em>Theft (inc burglary), Criminal damage,</em> and <em>All other offences.</em></p>
         <p>This data is available on the <a href="${config.portal_url}" target="_blank">NISRA Data Portal</a> in the following tables:</p>
         <ul>
             <li><a href="${config.portal_url}table/DOMACVAC" target="_blank">Domestic abuse crimes</a> - by victim gender and offence type</li>

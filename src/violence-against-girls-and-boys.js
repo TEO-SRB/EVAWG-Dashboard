@@ -7,6 +7,7 @@ import { insertValue } from "./utils/insert-value.js";
 import { populateInfoBoxes } from "./utils/info-boxes.js";
 import { downloadButton } from "./utils/download-button.js";
 import { config } from "./config/config.js"
+import { insertExpandButtons } from "./utils/expand-buttons.js";
 
 
 window.addEventListener("DOMContentLoaded", async () => {
@@ -15,6 +16,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     insertHeader();
     genderDisplay();
     insertNavButtons();
+    insertExpandButtons();
 
     let data = await readData("EXPVLYTHEQ");
     const update_date = new Date(data.updated).toLocaleDateString("en-GB",
@@ -29,8 +31,6 @@ window.addEventListener("DOMContentLoaded", async () => {
     const stat = "Victims of gender-based violence";
 
     updateYearSpans(data, stat);
-
-    console.log(data)
 
     insertValue("violence-girl", data.data[stat][latest_year]["Any type of violence"]["Gender - Female"]);
     insertValue("violence-boy",  data.data[stat][latest_year]["Any type of violence"]["Gender - Male"]);
@@ -59,6 +59,13 @@ window.addEventListener("DOMContentLoaded", async () => {
         label_format: "%"
     });
 
+    createBarChart({
+        chart_data,
+        categories: violence_types,
+        canvas_id: "prevalence-ylt-bar-expanded",
+        label_format: "%"
+    });
+
     downloadButton("prevalence-ylt-bar-capture", "EXPVLYTHEQ", update_date);
 
     // Create line chart
@@ -69,6 +76,15 @@ window.addEventListener("DOMContentLoaded", async () => {
             line_1: ["Any type of violence", "Gender - Female"],
             line_2: ["Any type of violence", "Gender - Male"],
             canvas_id: "prevalence-ylt-line"
+        });
+
+     createLineChart({
+            data,
+            stat,
+            years,
+            line_1: ["Any type of violence", "Gender - Female"],
+            line_2: ["Any type of violence", "Gender - Male"],
+            canvas_id: "prevalence-ylt-line-expanded"
         });
 
     downloadButton("prevalence-ylt-line-capture", "EXPVLYTHEQ", update_date);

@@ -39,7 +39,7 @@ export function insertExpandButtons () {
             </div>
         </div>
         `
-        canvas.parentNode.appendChild(modal)
+        canvas.parentNode.appendChild(modal);
     }
 
 }

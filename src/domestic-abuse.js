@@ -7,7 +7,8 @@ import { insertValue } from "./utils/insert-value.js";
 import { populateInfoBoxes } from "./utils/info-boxes.js";
 import { wrapLabel } from "./utils/wrap-label.js";
 import { downloadButton } from "./utils/download-button.js";
-import { config } from "./config/config.js"
+import { config } from "./config/config.js";
+import { insertExpandButtons } from "./utils/expand-buttons.js";
 
 window.addEventListener("DOMContentLoaded", async () => {
 
@@ -15,6 +16,8 @@ window.addEventListener("DOMContentLoaded", async () => {
     insertHeader();
     genderDisplay();
     insertNavButtons();
+    insertExpandButtons();
+
     let data = await readData("EXPDA");
     let reported_data = await readData("LDARPG");
     const relationship_data = await readData("DARPV");
@@ -78,6 +81,13 @@ window.addEventListener("DOMContentLoaded", async () => {
         label_format: "%"
     });
 
+    createBarChart({
+        chart_data,
+        categories: time_periods,
+        canvas_id: "domestic-abuse-1-bar-expanded",
+        label_format: "%"
+    });
+
     downloadButton("domestic-abuse-1-bar-capture", "EXPDA", update_date);
 
     const da_types = ["Non-physical abuse", "Threats", "Force", "Any domestic abuse"];
@@ -93,6 +103,13 @@ window.addEventListener("DOMContentLoaded", async () => {
         chart_data: chart_data_2,
         categories: da_types,
         canvas_id: "domestic-abuse-2-bar",
+        label_format: "%"
+    });
+
+    createBarChart({
+        chart_data: chart_data_2,
+        categories: da_types,
+        canvas_id: "domestic-abuse-2-bar-expanded",
         label_format: "%"
     }); 
 
@@ -113,6 +130,63 @@ window.addEventListener("DOMContentLoaded", async () => {
   const ctx = document.getElementById("domestic-abuse-3-bar").getContext("2d");
 
   new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels,
+      datasets: [
+        {
+          label: `${relationship_data.label} (${relationship_year})`,
+          data: values,
+          backgroundColor: colours,
+          borderWidth: 0
+        }
+      ]
+    },
+    options: {
+      indexAxis: "y",              // <-- horizontal
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        datalabels: {
+          anchor: "end",
+          align: "right",
+          formatter: (v) => {
+            return `${v}%`;
+          },
+          color: "#000",
+          clamp: true
+        },
+        tooltip: {
+          callbacks: {
+            label: (context) => `${context.parsed.x}%` // <-- horizontal bar uses x for value
+          }
+        }
+      },
+      scales: {
+        x: {
+          beginAtZero: true,
+          title: {
+            display: true,
+            text: "% of victims"
+          }
+        },
+        y: {
+          grid: { display: false },
+          ticks: {
+            callback: function (value) {
+              const label = this.getLabelForValue(value);
+              return wrapLabel(label, 20); // <-- same wrapping as your function
+            }
+          }
+        }
+      }
+    },
+    plugins: [ChartDataLabels]
+  });
+
+  const ctx_expand = document.getElementById("domestic-abuse-3-bar-expanded").getContext("2d");
+
+  new Chart(ctx_expand, {
     type: "bar",
     data: {
       labels,

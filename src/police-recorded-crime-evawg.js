@@ -7,7 +7,8 @@ import { insertValue } from "./utils/insert-value.js";
 import { populateInfoBoxes } from "./utils/info-boxes.js";
 import { violencePercentage } from "./utils/violence-percentage.js";
 import { downloadButton } from "./utils/download-button.js";
-import { config } from "./config/config.js"
+import { config } from "./config/config.js";
+import { insertExpandButtons } from "./utils/expand-buttons.js";
 
 window.addEventListener("DOMContentLoaded", async () => {
 
@@ -15,11 +16,10 @@ window.addEventListener("DOMContentLoaded", async () => {
     insertHeader();
     insertNavButtons();
     genderDisplay();
+    insertExpandButtons()
+
     let data = await readData("PRCVCTM");
     let online_data = await readData("PRCONLCG");
-
-
-    
 
     const stat = "All crimes recorded by the police";
     const online_stat = "Total recorded online crime";
@@ -30,11 +30,11 @@ window.addEventListener("DOMContentLoaded", async () => {
     }
 
     const update_date = new Date(data.updated).toLocaleDateString("en-GB",
-            {
-                day: "2-digit", 
-                month: "long",
-                year: "numeric"
-            });
+        {
+            day: "2-digit", 
+            month: "long",
+            year: "numeric"
+        });
     
     // Update values
     updateYearSpans(data, stat);
@@ -73,6 +73,18 @@ window.addEventListener("DOMContentLoaded", async () => {
         canvas_id: "sexual-offences-line"
     });
 
+    createLineChart({
+        data,
+        stat,
+        years,
+        line_1: ["Sexual offences", "All ages", "Female"],
+        label_1: "Female",
+        line_2: ["Sexual offences", "All ages", "Male"],
+        label_2: "Male",
+        unit: "Victims",
+        canvas_id: "sexual-offences-line-expanded"
+    });
+
     downloadButton("sexual-offences-line-capture", "PRCVCTM", update_date);
 
     // Stalking and harassment line chart
@@ -86,6 +98,18 @@ window.addEventListener("DOMContentLoaded", async () => {
         label_2: "Male",
         unit: "Victims",
         canvas_id: "stalking-line"
+    });
+
+    createLineChart({
+        data,
+        stat,
+        years,
+        line_1: ["Stalking and harassment", "All ages", "Female"],
+        label_1: "Female",
+        line_2: ["Stalking and harassment", "All ages", "Male"],
+        label_2: "Male",
+        unit: "Victims",
+        canvas_id: "stalking-line-expanded"
     });
 
     downloadButton("stalking-line-capture", "PRCVCTM", update_date);
@@ -103,6 +127,13 @@ window.addEventListener("DOMContentLoaded", async () => {
         chart_data,
         categories: ["Violence with injury", "Violence without injury", "Online offences"],
         canvas_id: "violence-bar",
+        label_format: ","
+    });
+
+     createBarChart({
+        chart_data,
+        categories: ["Violence with injury", "Violence without injury", "Online offences"],
+        canvas_id: "violence-bar-expanded",
         label_format: ","
     });
 

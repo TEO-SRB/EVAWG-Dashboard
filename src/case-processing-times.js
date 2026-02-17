@@ -6,12 +6,15 @@ import { insertValue } from "./utils/insert-value.js";
 import { populateInfoBoxes } from "./utils/info-boxes.js";
 import { downloadButton } from "./utils/download-button.js";
 import { config } from "./config/config.js"
+import { insertExpandButtons } from "./utils/expand-buttons.js";
 
 window.addEventListener("DOMContentLoaded", async () => {
 
     await insertHead("Case processing times")
     insertHeader();
     insertNavButtons();
+    insertExpandButtons();
+
     let data = await readData("INDPRCASEEQ");
     let dom_data = await readData("CPTDAC");
 
@@ -54,6 +57,18 @@ window.addEventListener("DOMContentLoaded", async () => {
         canvas_id: "case-processing-sexual-line",
     });
 
+     createLineChart({
+        data,
+        stat,
+        years,
+        line_1: ["Northern Ireland"],
+        line_2: ["Offence category - Sexual"],
+        label_1: "All criminal cases",
+        label_2: "Sexual offence cases",
+        unit: "Days",
+        canvas_id: "case-processing-sexual-line-expanded",
+    });
+
     downloadButton("case-processing-sexual-line-capture", "INDPRCASEEQ", update_date)
 
     
@@ -68,6 +83,18 @@ window.addEventListener("DOMContentLoaded", async () => {
         label_1: "All criminal cases",
         unit: "Days",
         canvas_id: "case-processing-domestic-line",
+    });
+
+    createLineChart({
+        data: dom_data,
+        stat: dom_stat,
+        years: dom_years,
+        line_2: ["All domestic abuse cases"],
+        line_1: ["All criminal cases"],
+        label_2: "Domestic abuse related cases",
+        label_1: "All criminal cases",
+        unit: "Days",
+        canvas_id: "case-processing-domestic-line-expanded",
     });
 
     downloadButton("case-processing-domestic-line-capture", "CPTDAC", dom_update_date)
