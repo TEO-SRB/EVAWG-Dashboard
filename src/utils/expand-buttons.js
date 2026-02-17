@@ -13,10 +13,13 @@ export function insertExpandButtons () {
         button.setAttribute("data-bs-target", `#${canvas.id}-modal`);
         button.setAttribute("title", "Expand chart");
         button.setAttribute("data-bs-placement", "left");
+        button.style.marginTop = "-50px";
+        button.style.marginBottom = "20px";
+        button.style.marginLeft = "80px";
         new bootstrap.Tooltip(button);
-        canvas.parentElement.appendChild(button);
+        canvas.parentElement.parentElement.parentElement.parentElement.querySelector(".card-footer").appendChild(button);
 
-        const chart_title = canvas.parentElement.parentElement.parentElement.querySelector(".card-header").textContent;
+        const chart_title = canvas.parentElement.parentElement.parentElement.querySelector(".card-header").innerHTML;
 
         const modal = document.createElement("div");
         modal.classList.add("modal", "fade");
@@ -25,16 +28,16 @@ export function insertExpandButtons () {
         modal.setAttribute("aria-hidden", "true");
         modal.innerHTML = `
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-                        <div class="modal-content">
-                        <div class="modal-header">
-                            <p class="h5 modal-title">${chart_title}</p>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <canvas id="${canvas.id}-expanded"></canvas>
-                        </div>
-                        </div>
-                    </div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="h5 modal-title">${chart_title}</p>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <canvas id="${canvas.id}-expanded"></canvas>
+                </div>
+            </div>
+        </div>
         `
         canvas.parentNode.appendChild(modal)
     }

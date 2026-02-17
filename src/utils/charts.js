@@ -8,6 +8,7 @@ export const chart_colours = ["#3878c5", "#00205B", "#68A41E", "#732777", "#ce70
 export function createLineChart({data, stat, years, line_1, line_2, label_1 = "Female", label_2 = "Male", unit = "%", canvas_id}) {
 
     const line_canvas = document.getElementById(canvas_id);
+    line_canvas.style.marginBottom = "25px";
 
     let line_values = [];
     let female_values = [];
