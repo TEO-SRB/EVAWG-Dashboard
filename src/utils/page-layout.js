@@ -1,4 +1,5 @@
 import { config } from "../config/config.js";
+import { initCookieConsent } from "./cookies.js";
 
 export function insertHeader () {
 
@@ -7,7 +8,9 @@ export function insertHeader () {
     banner.classList.add("navbar");
     banner.classList.add("p-0");
     banner.style.backgroundColor = "#00205b";
-    banner.innerHTML = `<div class="container-fluid d-flex flex-column align-items-stretch p-0">
+    banner.innerHTML = `
+    <div id="cookie-banner"></div>
+    <div class="container-fluid d-flex flex-column align-items-stretch p-0">
     <!-- Banner row (full width) -->
     <div aria-label="Feedback" class="w-100" style="background-color:#3878c5;">
         <div class="text-white text-center py-2 px-3">
@@ -16,33 +19,35 @@ export function insertHeader () {
             
         </div>
     </div>
-  <!-- Main navbar row -->
-<div role="banner" class="d-flex row align-items-center justify-content-between w-100 py-3 px-2">
+    <!-- Main navbar row -->
+  <div role="banner" class="d-flex row align-items-center justify-content-between w-100 py-3 px-2">
 
-  <!-- Left: NISRA logo -->
-  <div class="col-12 col-xl-4 d-flex justify-content-center justify-content-xl-start">
-    <a class="navbar-brand ps-2 d-flex align-items-center" href="https://www.nisra.gov.uk/">
-      <img src="assets/img/logo/nisra-only-white.svg"
-           alt="NISRA logo" height="60" class="me-3" role="img" title="NISRA">
-    </a>
+    <!-- Left: NISRA logo -->
+    <div class="col-12 col-xl-4 d-flex justify-content-center justify-content-xl-start">
+      <a class="navbar-brand ps-2 d-flex align-items-center" href="https://www.nisra.gov.uk/">
+        <img src="assets/img/logo/nisra-only-white.svg"
+            alt="NISRA logo" height="60" class="me-3" role="img" title="NISRA">
+      </a>
+    </div>
+
+    <!-- Center: Page title -->
+    <div class="col-12 col-xl-4 d-flex justify-content-center">
+      <h1 class="mb-0 text-white fs-2 app-title text-center">${config.title}</h1>
+    </div>
+
+    <!-- Right: TEO logo -->
+    <div class="col-12 col-xl-4 d-flex justify-content-center justify-content-xl-end">
+      <a class="navbar-brand pe-2 d-flex align-items-center" href="./">
+        <img src="assets/img/logo/teo-white.png"
+            alt="TEO logo" height="60" class="ms-3">
+      </a>
+    </div>
+
   </div>
+  `
 
-  <!-- Center: Page title -->
-  <div class="col-12 col-xl-4 d-flex justify-content-center">
-    <h1 class="mb-0 text-white fs-2 app-title text-center">${config.title}</h1>
-  </div>
+  initCookieConsent()
 
-  <!-- Right: TEO logo -->
-  <div class="col-12 col-xl-4 d-flex justify-content-center justify-content-xl-end">
-    <a class="navbar-brand pe-2 d-flex align-items-center" href="./">
-      <img src="assets/img/logo/teo-white.png"
-           alt="TEO logo" height="60" class="ms-3">
-    </a>
-  </div>
-
-</div>
-
-`
 }
 
 export function insertNavButtons() {
