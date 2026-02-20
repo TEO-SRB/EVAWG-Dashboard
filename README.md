@@ -17,6 +17,7 @@ repo-root/
 │   ├── data/data.json     # Preprocessed data for charts
 │   └── map/               # GeoJSON and map style
 ├── src/                   # JavaScript source
+│   ├── config/            # Project level configuration
 │   ├── utils/             # Reusable helper functions
 │   ├── *.js               # Page-specific scripts
 │   └── r/data.R           # R script for data preparation
