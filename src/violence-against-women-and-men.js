@@ -46,8 +46,8 @@ window.addEventListener("DOMContentLoaded", async () => {
     insertValue("violence-female", age_data.data[age_stat][latest_age_year]["All ages"]["Female"]);    
     insertValue("violence-male", age_data.data[age_stat][latest_age_year]["All ages"]["Male"]);    
 
-    insertValue("economic-female", data.data[stat][latest_year]["Economic violence"]["Gender - Female"]);
-    insertValue("economic-male", data.data[stat][latest_year]["Economic violence"]["Gender - Male"]);
+    insertValue("young-female",age_data.data[age_stat][latest_age_year]["Age 18-29"]["Female"]);
+    insertValue("old-female", age_data.data[age_stat][latest_age_year]["Age 30+"]["Female"]);
 
     insertValue("sexual-female", data.data[stat][latest_year]["Sexual violence"]["Gender - Female"]);
     insertValue("sexual-male", data.data[stat][latest_year]["Sexual violence"]["Gender - Male"]);
@@ -57,8 +57,8 @@ window.addEventListener("DOMContentLoaded", async () => {
     insertValue("psychological-female", data.data[stat][latest_year]["Psychological violence"]["Gender - Female"]);
     insertValue("psychological-male", data.data[stat][latest_year]["Psychological violence"]["Gender - Male"]);
 
-    insertValue("online-female", data.data[stat][latest_year]["Online violence"]["Gender - Female"]);
-    insertValue("online-male", data.data[stat][latest_year]["Online violence"]["Gender - Male"]);
+    insertValue("young-male",age_data.data[age_stat][latest_age_year]["Age 18-29"]["Male"]);
+    insertValue("old-male", age_data.data[age_stat][latest_age_year]["Age 30+"]["Male"]);
     // Create bar chart
     const violence_types = Object.keys(data.data[stat][latest_year])
         .filter(x => x !== "Other types of violence")
