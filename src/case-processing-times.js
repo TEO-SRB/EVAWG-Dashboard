@@ -115,7 +115,11 @@ window.addEventListener("DOMContentLoaded", async () => {
         <li><a href="https://data.nisra.gov.uk/table/INDPRCASEEQ" target="_blank">Processing times for criminal cases</a></li>
         <li><a href="${config.portal_url}table/CPTDAC" target="_blank">Processing times for domestic abuse cases</a></li>      
     </ul>
-<p>Statistical publications can be found on the <a href="https://www.justice-ni.gov.uk/articles/case-processing-times" target="_blank">relevant publication page</a>.</p>
+<p>Statistical publications can be found on the relevant publication page:
+    <ul>
+        <li><a href="https://www.justice-ni.gov.uk/articles/case-processing-times" target="_blank">Criminal cases</a>
+        <li><a href="https://www.justice-ni.gov.uk/articles/domestic-abuse-prosecutions-convictions-and-case-processing-time-statistics" target="_blank">Domestic abuse cases</a>
+    </ul>
 <p><strong>Updates:</strong> Data updated quarterly. <strong>Last update:</strong> ${update_date}.</p>`,
 
 `<p>This tab shows how long it takes for cases related to violence and abuse to progress through the court system, from initial charge to final outcome.</p>
