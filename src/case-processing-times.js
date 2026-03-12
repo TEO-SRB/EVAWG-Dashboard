@@ -105,9 +105,10 @@ window.addEventListener("DOMContentLoaded", async () => {
         populateInfoBoxes(
             ["Definitions", "Source", "What does the data mean?"],
             [
-            `<p>The Case Processing Time is based on the principal offence (main offence) at disposal. Where an offender is prosecuted or convicted of several offences on the same occasion, only one offence, the principal offence, is counted. Statistical coverage is restricted to those criminal prosecutions which were brought on behalf of the Police Service for Northern Ireland, the National Crime Agency, the Airport Constabulary or Harbour Police.</p>`,
+            `<p>For case processing times data, sexual offence cases are based on cases where the principal offence (main offence) at disposal was a sexual offence. Where an offender is prosecuted or convicted of several offences on the same occasion, only one offence, the principal offence, is counted. Statistical coverage is restricted to those criminal prosecutions which were brought on behalf of the Police Service for Northern Ireland, the National Crime Agency, the Airport Constabulary or Harbour Police.</p>
+            <p>For domestic abuse related cases, the average case processing time relates to cases where at least one offence in the case was prosecuted under the Domestic Abuse and Civil Proceedings Act (Northern Ireland) 2021.</p>`,
 
-`<p>The most recent average Case Processing Times for Criminal Cases dealt with in the Crown and magistrates’ courts in Northern Ireland are annually and refers to the time from which the offence was reported to, or detected by, the police.</p>
+`<p>The most recent average Case Processing Times for Criminal Cases dealt with in the Crown Court and in magistrates’ courts in Northern Ireland is for cases completed in 2024/25 and refers to the time from which the offence was reported to, or detected by, the police.</p>
 <p>This data is based on all court cases – Crown Court, adult magistrates’ court, and youth magistrates’ court.</p>
 <p>Average is measured as the median number of days taken, i.e., the number of days at which 50% of those cases included under counting rules has been completed. This is an overview of the time taken for a case to be disposed at court from the date that case began its journey through the criminal justice system, based on a start point of the date the offence was reported to, or detected by, the PSNI.</p>
   <p>This data is available on the <a href="${config.portal_url}" target="_blank">NISRA Data Portal</a> in the following tables:</p>
@@ -124,10 +125,10 @@ window.addEventListener("DOMContentLoaded", async () => {
 
 `<p>This tab shows how long it takes for cases related to violence and abuse to progress through the court system, from initial charge to final outcome.</p>
 <ul>
-    <li><strong>What it tells us:</strong> It highlights average and median processing times for different types of cases, giving insight into how quickly justice is delivered.</li>
+    <li><strong>What it tells us:</strong> It highlights average (median) processing times for different types of cases, giving insight into how quickly justice is delivered.</li>
     <li><strong>Why it matters:</strong> Delays in case processing can impact victims' confidence in the justice system and prolong trauma. Understanding these timelines helps identify where improvements are needed.</li>
     <li><strong>How to use it:</strong> Use this data to inform discussions on court efficiency, resource allocation, and victim support during lengthy proceedings. It can also guide policy aimed at reducing delays.</li>
-    <li><strong>Limitations:</strong> Figures reflect completed cases only and may be influenced by case complexity, availability of court resources, and procedural requirements. They do not capture informal resolutions or cases withdrawn before trial.</li>
+    <li><strong>Limitations:</strong> Figures reflect completed cases only and may be influenced by, for example, case complexity, availability of court resources, and procedural requirements. They do not capture cases that result in informal resolutions or cases withdrawn before trial.</li>
 </ul>`
 
 

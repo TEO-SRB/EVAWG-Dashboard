@@ -59,8 +59,10 @@ window.addEventListener("DOMContentLoaded", async () => {
             `<p>The tab presents data on offences as reported through the PSNI Recorded Crime System:</p>
             <ul>
                 <li>Sexual offences;</li>
-                <li>Violence against the person; and</li>
                 <li>Stalking and harassment;</li>
+                <li>Violence with injury;</li>
+                <li>Violence without injury; and</li>
+                <li>Domestic abuse;</li>
             </ul>
             <p>The location is based on where the offences take place.</p>`,
 
