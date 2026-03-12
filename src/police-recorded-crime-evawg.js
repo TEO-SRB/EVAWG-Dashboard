@@ -146,9 +146,9 @@ window.addEventListener("DOMContentLoaded", async () => {
             `<p>The tab presents data on victims of the following offences as reported through the PSNI Recorded Crime System:</p>
 <ul>
     <li>Sexual offences;</li>
+    <li>Stalking and harassment;</li>
     <li>Violence with injury;</li>
-    <li>Violence without injury;</li>
-    <li>Stalking and harassment; and</li>
+    <li>Violence without injury; and</li>
     <li>Online crime.</li>
 </ul>
 <p>All reported incidents of domestic abuse incidents and crime are reported, with no differentiation between gender-based violence. However, the data is available on the sex of the victim.</p>`,
@@ -166,8 +166,8 @@ window.addEventListener("DOMContentLoaded", async () => {
 
 `<p>This tab shows police-recorded offences where the victim's sex is known, including sexual offences, stalking, and violent crimes with or without injury. These figures help us understand patterns of gender-based violence reported to the police.</p>
 <ul>
-    <li><strong>What it tells us:</strong> Women remain disproportionately affected by sexual offences and domestic abuse, while men also experience significant levels of violence, particularly in certain offence categories.</li>
-    <li><strong>Why it matters:</strong> These statistics reflect reported incidents only. They do not capture unreported cases, which research suggests are substantial, especially for sexual offences. Practitioners should interpret trends alongside survey data and community insights.</li>
+    <li><strong>What it tells us:</strong> Women remain disproportionately affected by sexual offences and stalking and harrassment, while men also experience significant levels of violence, particularly in certain offence categories.</li>
+    <li><strong>Why it matters:</strong> These statistics reflect reported crimes only. They do not capture unreported cases, which research suggests are substantial, especially for sexual offences. Practitioners should interpret trends alongside survey data and community insights.</li>
     <li><strong>How to use it:</strong> Use these figures to identify priority areas for prevention and support services. For example, spikes in stalking or sexual offences may indicate emerging risks requiring targeted interventions.</li>
     <li><strong>Limitations:</strong> Data depends on police recording practices and victim willingness to report. Changes in legislation or reporting campaigns can influence trends, so consider these factors when comparing over time.</li>
     <li>In 2022, the PSNI published its first <a href="https://www.psni.police.uk/safety-and-support/keeping-safe/tackling-violence-against-women-and-girls/violence-against-women#:~:text=As%20part%20of%20our%20commitment%20to%20tackling%20VAWG%2C%20we%20launched,from%20fear%2C%20intimidation%20and%20harassment." target=" blank">Tackling Violence against Women and Girls Action Plan</a>, setting out how the force planned to address this issue locally.</li>
