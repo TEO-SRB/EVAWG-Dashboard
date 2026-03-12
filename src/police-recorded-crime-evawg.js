@@ -165,7 +165,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
 `<p>This tab shows police-recorded offences where the victim's sex is known, including sexual offences, stalking, and violent crimes with or without injury. These figures help us understand patterns of gender-based violence reported to the police.</p>
 <ul>
-    <li><strong>What it tells us:</strong> Women remain disproportionately affected by sexual offences and domestic violence, while men also experience significant levels of violence, particularly in certain offence categories.</li>
+    <li><strong>What it tells us:</strong> Women remain disproportionately affected by sexual offences and domestic abuse, while men also experience significant levels of violence, particularly in certain offence categories.</li>
     <li><strong>Why it matters:</strong> These statistics reflect reported incidents only. They do not capture unreported cases, which research suggests are substantial, especially for sexual offences. Practitioners should interpret trends alongside survey data and community insights.</li>
     <li><strong>How to use it:</strong> Use these figures to identify priority areas for prevention and support services. For example, spikes in stalking or sexual offences may indicate emerging risks requiring targeted interventions.</li>
     <li><strong>Limitations:</strong> Data depends on police recording practices and victim willingness to report. Changes in legislation or reporting campaigns can influence trends, so consider these factors when comparing over time.</li>

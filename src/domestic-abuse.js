@@ -268,10 +268,10 @@ window.addEventListener("DOMContentLoaded", async () => {
     <p>Statistical publications can be found on the <a href="https://www.justice-ni.gov.uk/sites/default/files/publications/justice/experience%20of%20domestic%20abuse%20findings%20from%20the%20201819%20niscs.pdf" target="_blank">relevant publication page</a>.</p>
     <p><strong>Updates:</strong> NA</p>`,
 
-    `<p>This tab provides an overview of how common domestic violence is, based on self-reported experiences from survey respondents.</p>
+    `<p>This tab provides an overview of how common domestic abuse is, based on self-reported experiences from survey respondents.</p>
     <ul>
-        <li><strong>What it tells us:</strong> It shows the proportion of people who say they have experienced domestic violence, offering insight into the scale of the issue beyond what is reported to authorities.</li>
-        <li><strong>Why it matters:</strong> Understanding prevalence helps practitioners gauge the hidden burden of domestic violence and plan services accordingly. It highlights that many cases remain unreported, reinforcing the need for proactive outreach and support.</li>
+        <li><strong>What it tells us:</strong> It shows the proportion of people who say they have experienced domestic abuse, offering insight into the scale of the issue beyond what is reported to authorities.</li>
+        <li><strong>Why it matters:</strong> Understanding prevalence helps practitioners gauge the hidden burden of domestic abuse and plan services accordingly. It highlights that many cases remain unreported, reinforcing the need for proactive outreach and support.</li>
         <li><strong>How to use it:</strong> Use these figures to inform policy development, prevention strategies, and resource allocation for victim support. They can also guide awareness campaigns aimed at encouraging reporting and help-seeking.</li>
         <li><strong>Limitations:</strong> Self-reported data can be affected by stigma or reluctance to disclose, so actual prevalence may be higher. Interpret these figures alongside administrative data for a complete picture.</li>
     </ul>`          
