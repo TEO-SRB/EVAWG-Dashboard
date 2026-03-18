@@ -42,26 +42,26 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     updateYearSpans(data, stat);
 
-    insertValue("lifetime-female", data.data[stat][latest_year]["Any domestic abuse"]["Lifetime (since age 16)"]["Female"].toFixed(1));
-    insertValue("lifetime-male",   data.data[stat][latest_year]["Any domestic abuse"]["Lifetime (since age 16)"]["Male"].toFixed(1));
+    insertValue("lifetime-female", data.data[stat][latest_year]["Any domestic abuse"]["Lifetime (since age 16)"]["Female"]);
+    insertValue("lifetime-male",   data.data[stat][latest_year]["Any domestic abuse"]["Lifetime (since age 16)"]["Male"]);
 
-    insertValue("three-year-female", data.data[stat][latest_year]["Any domestic abuse"]["Recent (last 3 years)"]["Female"].toFixed(1));
-    insertValue("three-year-male",   data.data[stat][latest_year]["Any domestic abuse"]["Recent (last 3 years)"]["Male"].toFixed(1));
+    insertValue("three-year-female", data.data[stat][latest_year]["Any domestic abuse"]["Recent (last 3 years)"]["Female"]);
+    insertValue("three-year-male",   data.data[stat][latest_year]["Any domestic abuse"]["Recent (last 3 years)"]["Male"]);
 
-    insertValue("non-physical-female", data.data[stat][latest_year]["Non-physical abuse"]["Recent (last 3 years)"]["Female"].toFixed(1));
-    insertValue("non-physical-male",   data.data[stat][latest_year]["Non-physical abuse"]["Recent (last 3 years)"]["Male"].toFixed(1));
+    insertValue("non-physical-female", data.data[stat][latest_year]["Non-physical abuse"]["Recent (last 3 years)"]["Female"]);
+    insertValue("non-physical-male",   data.data[stat][latest_year]["Non-physical abuse"]["Recent (last 3 years)"]["Male"]);
 
-    insertValue("threats-female", data.data[stat][latest_year]["Threats"]["Recent (last 3 years)"]["Female"].toFixed(1));
-    insertValue("threats-male",   data.data[stat][latest_year]["Threats"]["Recent (last 3 years)"]["Male"].toFixed(1));
+    insertValue("threats-female", data.data[stat][latest_year]["Threats"]["Recent (last 3 years)"]["Female"]);
+    insertValue("threats-male",   data.data[stat][latest_year]["Threats"]["Recent (last 3 years)"]["Male"]);
 
-    insertValue("force-female", data.data[stat][latest_year]["Force"]["Recent (last 3 years)"]["Female"].toFixed(1));
-    insertValue("force-male",   data.data[stat][latest_year]["Force"]["Recent (last 3 years)"]["Male"].toFixed(1));
+    insertValue("force-female", data.data[stat][latest_year]["Force"]["Recent (last 3 years)"]["Female"]);
+    insertValue("force-male",   data.data[stat][latest_year]["Force"]["Recent (last 3 years)"]["Male"]);
 
     const reported_stat = "Proportion of any lifetime domestic abuse reported to the police";
     const reported_year = Object.keys(reported_data.data[reported_stat]).slice(-1);
 
-    insertValue("reported-female", reported_data.data[reported_stat][reported_year]["Female"].toFixed(1));
-    insertValue("reported-male", reported_data.data[reported_stat][reported_year]["Male"].toFixed(1));
+    insertValue("reported-female", reported_data.data[reported_stat][reported_year]["Female"]);
+    insertValue("reported-male", reported_data.data[reported_stat][reported_year]["Male"]);
 
     // Create bar charts
     const time_periods = Object.keys(data.data[stat][latest_year]["Any domestic abuse"]);
