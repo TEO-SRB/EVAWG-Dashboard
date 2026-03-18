@@ -49,13 +49,13 @@ window.addEventListener("DOMContentLoaded", async () => {
     insertValue("young-female",age_data.data[age_stat][latest_age_year]["Age 18-29"]["Female"]);
     insertValue("old-female", age_data.data[age_stat][latest_age_year]["Age 30+"]["Female"]);
 
-    insertValue("sexual-female", data.data[stat][latest_year]["Sexual violence"]["Gender - Female"]);
-    insertValue("sexual-male", data.data[stat][latest_year]["Sexual violence"]["Gender - Male"]);
-    insertValue("physical-female", data.data[stat][latest_year]["Physical violence"]["Gender - Female"]);
-    insertValue("physical-male", data.data[stat][latest_year]["Physical violence"]["Gender - Male"]);
+    insertValue("sexual-female", data.data[stat][latest_year]["Sexual violence"]["Sex - Female"]);
+    insertValue("sexual-male", data.data[stat][latest_year]["Sexual violence"]["Sex - Male"]);
+    insertValue("physical-female", data.data[stat][latest_year]["Physical violence"]["Sex - Female"]);
+    insertValue("physical-male", data.data[stat][latest_year]["Physical violence"]["Sex - Male"]);
 
-    insertValue("psychological-female", data.data[stat][latest_year]["Psychological violence"]["Gender - Female"]);
-    insertValue("psychological-male", data.data[stat][latest_year]["Psychological violence"]["Gender - Male"]);
+    insertValue("psychological-female", data.data[stat][latest_year]["Psychological violence"]["Sex - Female"]);
+    insertValue("psychological-male", data.data[stat][latest_year]["Psychological violence"]["Sex - Male"]);
 
     insertValue("young-male",age_data.data[age_stat][latest_age_year]["Age 18-29"]["Male"]);
     insertValue("old-male", age_data.data[age_stat][latest_age_year]["Age 30+"]["Male"]);
