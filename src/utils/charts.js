@@ -89,7 +89,6 @@ export function createLineChart({data, stat, years, line_1, line_2, label_1 = "F
             callbacks: {
               label: function (context) {
                 const value = context.raw;
-                console.log(context)
                 if (unit === "%") {
                   return `${context.dataset.label}: ${value}%`;
                 } else {
