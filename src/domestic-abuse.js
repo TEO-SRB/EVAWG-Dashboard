@@ -178,7 +178,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         },
         tooltip: {
           callbacks: {
-            label: (context) => `${context.parsed.x}%` // <-- horizontal bar uses x for value
+            label: (context) => `${context.parsed.x}` // <-- horizontal bar uses x for value
           }
         }
       },
