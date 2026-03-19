@@ -246,7 +246,7 @@ window.addEventListener("DOMContentLoaded", async () => {
             <li><a href="${config.portal_url}table/LDARPG" target="_blank">Lifetime domestic abuse reported to the police</a></li>
             <li><a href="${config.portal_url}table/DARPV" target="_blank">Domestic abuse - relationship of perpetrator to victim</a></li>        
         </ul>
-    <p>Statistical publications can be found on the <a href="https://www.justice-ni.gov.uk/sites/default/files/publications/justice/experience%20of%20domestic%20abuse%20findings%20from%20the%20201819%20niscs.pdf" target="_blank">relevant publication page</a>.</p>
+    <p>Statistical publications can be found on the <a href="https://www.justice-ni.gov.uk/publications/experience-domestic-abuse-findings-201819-northern-ireland-safe-community-survey" target="_blank">relevant publication page</a>.</p>
     <p><strong>Updates:</strong> NA</p>`,
 
     `<p>This tab provides an overview of how common domestic abuse is, based on self-reported experiences from survey respondents.</p>
