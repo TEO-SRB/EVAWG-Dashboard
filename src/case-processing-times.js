@@ -118,8 +118,8 @@ window.addEventListener("DOMContentLoaded", async () => {
     </ul>
 <p>Statistical publications can be found on the relevant publication page:
     <ul>
-        <li><a href="https://www.justice-ni.gov.uk/articles/case-processing-times" target="_blank">Criminal cases</a>
-        <li><a href="https://www.justice-ni.gov.uk/articles/domestic-abuse-prosecutions-convictions-and-case-processing-time-statistics" target="_blank">Domestic abuse cases</a>
+        <li><a href="https://www.justice-ni.gov.uk/articles/case-processing-times" target="_blank">Criminal cases</a></li>
+        <li><a href="https://www.justice-ni.gov.uk/articles/domestic-abuse-prosecutions-convictions-and-case-processing-time-statistics" target="_blank">Domestic abuse cases</a></li>
     </ul>
 <p><strong>Updates:</strong> Data updated quarterly. <strong>Last update:</strong> ${update_date}.</p>`,
 
