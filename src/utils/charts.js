@@ -65,9 +65,6 @@ export function createLineChart({data, stat, years, line_1, line_2, label_1 = "F
             beginAtZero: true,
             ticks: {
               precision: 0,
-            },
-            grid: {
-              display: false
             }
           },
           x: {
@@ -76,6 +73,9 @@ export function createLineChart({data, stat, years, line_1, line_2, label_1 = "F
               minRotation: 0,
               autoSkip: true,
               autoSkipPadding: 4
+            },
+            grid: {
+              display: false
             }
           }
         },
@@ -84,18 +84,25 @@ export function createLineChart({data, stat, years, line_1, line_2, label_1 = "F
             onClick: () => {}  
           },
           tooltip: {
+            mode: "index",
+            intersect: false,
             callbacks: {
               label: function (context) {
                 const value = context.raw;
+                console.log(context)
                 if (unit === "%") {
-                  return `${value}%`;
+                  return `${context.dataset.label}: ${value}%`;
                 } else {
-                  return Number(value).toLocaleString();
+                  return `${context.dataset.label}: ${Number(value).toLocaleString()}`;
                 }
               }
             }
           }
         }
+      },
+      interaction: {
+        mode: "index",
+        intersect: false
       }
     };
 
