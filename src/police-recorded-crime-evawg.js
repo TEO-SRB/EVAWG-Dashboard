@@ -151,7 +151,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     <li>Violence without injury; and</li>
     <li>Online crime.</li>
 </ul>
-<p>All reported incidents of domestic abuse incidents and crime are reported, with no differentiation between gender-based violence. However, the data is available on the sex of the victim.</p>`,
+<p>All reported incidents of domestic abuse incidents and crime are reported, with no differentiation between gender-based violence. However, the data is available on the gender of the victim.</p>`,
 
 `<p>Statistics on police recorded crime in Northern Ireland are collated and produced by statisticians seconded to the Police Service of Northern Ireland (PSNI) from the Northern Ireland Statistics and Research Agency (NISRA).</p>
 <p>While the PSNI does not fall within the jurisdiction of the Home Office, the practices and procedures of the Home Office's notable offence list are followed and applied within Northern Ireland.</p>
@@ -164,7 +164,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 <p>Statistical publications can be found on the <a href="https://www.psni.police.uk/about-us/our-publications-and-reports/official-statistics/police-recorded-crime-statistics" target="_blank">relevant publication page</a>.</p>
 <p><strong>Updates:</strong> Data updated quarterly. <strong>Last update:</strong> ${update_date}.</p>`,
 
-`<p>This tab shows police-recorded offences where the victim's sex is known, including sexual offences, stalking, and violent crimes with or without injury. These figures help us understand patterns of gender-based violence reported to the police.</p>
+`<p>This tab shows police-recorded offences where the victim's gender is known, including sexual offences, stalking, and violent crimes with or without injury. These figures help us understand patterns of gender-based violence reported to the police.</p>
 <ul>
     <li><strong>What it tells us:</strong> Women remain disproportionately affected by sexual offences and stalking and harrassment, while men also experience significant levels of violence, particularly in certain offence categories.</li>
     <li><strong>Why it matters:</strong> These statistics reflect reported crimes only. They do not capture unreported cases, which research suggests are substantial, especially for sexual offences. Practitioners should interpret trends alongside survey data and community insights.</li>
