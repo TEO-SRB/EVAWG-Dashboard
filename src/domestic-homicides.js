@@ -151,10 +151,9 @@ window.addEventListener("DOMContentLoaded", async () => {
         populateInfoBoxes(
             ["Definitions", "Source", "What does the data mean?"],
             [
-            `<p>PSNI does not maintain a distinct formal definition of "domestic homicide." Instead, they classify a homicide as domestic when it involves a domestic motivation, meaning the victim and perpetrator had an intimate (current or former) or familial relationship. 
-PSNI's broader definition of domestic abuse (which informs their classification of domestic violence and homicide) includes:
-Threatening, controlling, coercive behaviour, violence or abuse (psychological, virtual, physical, verbal, sexual, financial or emotional) inflicted on anyone by a current or former intimate partner or family member.
-Therefore, if a homicide arises within that relationship context (partner or family) and stems from behaviours aligned with domestic abuse it is recorded as a domestic-motivated homicide.
+            `<p>Within police recorded crime, the offences of murder, manslaughter, infanticide and corporate manslaughter are classified as homicide.<br>
+A domestic abuse homicide is one which involves a domestic motivation, meaning the victim and perpetrator had an intimate (current or former) or familial relationship. The PSNI has adopted the definition of domestic abuse as outlined in the Northern Ireland Government Strategy ‘Stopping Domestic and Sexual Violence and Abuse in Northern Ireland’ as: Threatening, controlling, coercive behaviour, violence or abuse (psychological, virtual, physical, verbal, sexual, financial or emotional) inflicted on anyone (irrespective of age, ethnicity, religion, gender, gender identify, sexual orientation or any form of disability)by a current or former intimate partner or family member. Therefore, if a homicide arises within that relationship context (partner or family) and stems from behaviours aligned with domestic abuse it is recorded as a domestic abuse motivated homicide.<br>
+
 
 </p>`,
 
@@ -174,7 +173,8 @@ Therefore, if a homicide arises within that relationship context (partner or fam
     <li><strong>What it tells us:</strong> Homicide is rare but represents the most severe outcome of gender-based violence. Women are disproportionately victims in domestic-related cases.</li>
     <li><strong>Why it matters:</strong> These figures underline the importance of early intervention and risk assessment to prevent escalation.</li>
     <li><strong>How to use it:</strong> Incorporate insights into high-risk case management and multi-agency safeguarding approaches.</li>
-    <li><strong>Limitations:</strong> Small numbers mean trends should be interpreted cautiously.</li>
+    <li><strong>Limitations:</strong> Small numbers mean trends should be interpreted cautiously.<br>
+    The year in which a homicide is recorded for crime recording purposes is based on the date it is established as homicide; the date of death may have occurred in a previous year. </li>
 </ul>`
             
             ]

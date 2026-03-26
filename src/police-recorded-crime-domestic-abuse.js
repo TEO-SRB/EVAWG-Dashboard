@@ -123,7 +123,8 @@ window.addEventListener("DOMContentLoaded", async () => {
             ["Definitions", "Source", "What does the data mean?"],
             [
         `<p>The <strong>Police Service of Northern Ireland (PSNI)</strong> has adopted the definition of domestic violence and abuse as outlined in the 2016 Northern Ireland Government Strategy <em>“Stopping Domestic and Sexual Violence and Abuse in Northern Ireland”</em> as:</p>
-        <p>“Threatening, controlling, coercive behaviour, violence or abuse (psychological, virtual, physical, verbal, sexual, financial or emotional) inflicted on anyone (irrespective of age, ethnicity, religion, gender, gender identity, sexual orientation or any form of disability) by a current or former partner or family member.”</p>`,
+        <p>“Threatening, controlling, coercive behaviour, violence or abuse (psychological, virtual, physical, verbal, sexual, financial or emotional) inflicted on anyone (irrespective of age, ethnicity, religion, gender, gender identity, sexual orientation or any form of disability) by a current or former partner or family member.”</p>
+        <p>Violence with injury includes homicide and death/serious injury by unlawful driving.</p>`,
 
         `<p>Statistics on police recorded crime in Northern Ireland are collated and produced by statisticians seconded to the <strong>Police Service of Northern Ireland (PSNI)</strong> from the <strong>Northern Ireland Statistics and Research Agency (NISRA)</strong>.</p>
         <p>While the PSNI does not fall within the jurisdiction of the Home Office, the practices and procedures of the Home Office's notable offence list are followed and applied within Northern Ireland.</p>
@@ -143,7 +144,8 @@ window.addEventListener("DOMContentLoaded", async () => {
             <li><strong>What it tells us:</strong> Domestic abuse is a major component of gender-based violence, with women more frequently recorded as victims, though men are also affected.</li>
             <li><strong>Why it matters:</strong> Highlights the need for tailored support services and prevention strategies within families and relationships.</li>
             <li><strong>How to use it:</strong> Use these figures to inform domestic abuse strategies and training for frontline staff.</li>
-            <li><strong>Limitations:</strong> Data depends on police identification and victim disclosure; some cases may not be flagged as domestic abuse.</li>
+            <li><strong>Limitations:</strong> Data depends on police identification and victim disclosure; some cases may not be flagged as domestic abuse.<br>
+            It is widely accepted that there is under-reporting of domestic abuse incidents to the police and so these publications only provide an indication of the true extent of domestic abuse.</li>
         </ul>`
             ]
         );   
