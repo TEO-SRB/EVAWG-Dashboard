@@ -55,9 +55,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     insertValue("sex-female", violencePercentage(data, stat, latest_year, "Sexual offences", "Female"));
     insertValue("sex-male", violencePercentage(data, stat, latest_year, "Sexual offences", "Male"));
 
-    //// Online violence
-    insertValue("online-female", violencePercentage(data, stat, latest_year, "Online offences", "Female"));
-    insertValue("online-male", violencePercentage(data, stat, latest_year, "Online offences", "Male"));
+
     
 
     // Sexual offences line chart
@@ -118,21 +116,21 @@ window.addEventListener("DOMContentLoaded", async () => {
     const violence_types = [
         "Violence with injury (including homicide & death/serious injury by unlawful driving)",
         "Violence without injury",
-        "Online offences"
+        
     ];
 
     const chart_data = createPRCData({data, stat, year: latest_year, violence_types});
     
     createBarChart({
         chart_data,
-        categories: ["Violence with injury", "Violence without injury", "Online offences"],
+        categories: ["Violence with injury", "Violence without injury"],
         canvas_id: "violence-bar",
         label_format: ","
     });
 
      createBarChart({
         chart_data,
-        categories: ["Violence with injury", "Violence without injury", "Online offences"],
+        categories: ["Violence with injury", "Violence without injury"],
         canvas_id: "violence-bar-expanded",
         label_format: ","
     });
@@ -147,11 +145,12 @@ window.addEventListener("DOMContentLoaded", async () => {
 <ul>
     <li>Sexual offences;</li>
     <li>Stalking and harassment;</li>
-    <li>Violence with injury;</li>
-    <li>Violence without injury; and</li>
-    <li>Online crime.</li>
+    <li>Violence with injury; and</li>
+    <li>Violence without injury;</li>
+
 </ul>
-<p>All reported incidents of domestic abuse incidents and crime are reported, with no differentiation between gender-based violence. However, the data is available on the gender of the victim.</p>`,
+<p>All reported incidents of domestic abuse incidents and crime are reported, with no differentiation between gender-based violence. However, the data is available on the gender of the victim.<br>
+Violence with injury includes homicide and death/serious injury by unlawful driving. </p>`,
 
 `<p>Statistics on police recorded crime in Northern Ireland are collated and produced by statisticians seconded to the Police Service of Northern Ireland (PSNI) from the Northern Ireland Statistics and Research Agency (NISRA).</p>
 <p>While the PSNI does not fall within the jurisdiction of the Home Office, the practices and procedures of the Home Office's notable offence list are followed and applied within Northern Ireland.</p>
