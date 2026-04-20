@@ -64,7 +64,8 @@ window.addEventListener("DOMContentLoaded", async () => {
                 <li>Violence without injury; and</li>
                 <li>Domestic abuse;</li>
             </ul>
-            <p>The location is based on where the offences take place.</p>`,
+            <p>The location is based on where the offences take place.<br>
+            Violence with injury includes homicide and death/serious injury by unlawful driving.</p>`,
 
             `<p>Statistics on police recorded crime in Northern Ireland are collated and produced by statisticians seconded to the Police Service of Northern Ireland (PSNI) from the Northern Ireland Statistics and Research Agency (NISRA).</p>
             <p>While the PSNI does not fall within the jurisdiction of the Home Office, the practices and procedures of the Home Office’s notable offence list are followed and applied within Northern Ireland.</p>
@@ -82,7 +83,7 @@ window.addEventListener("DOMContentLoaded", async () => {
                 <li><strong>What it tells us:</strong> It highlights the geographic location of the offence itself, not where the victim lives. This distinction is important because offences can happen away from home—for example, in public spaces or workplaces.</li>
                 <li><strong>Why it matters:</strong> Understanding where offences occur helps identify hotspots and inform targeted prevention efforts, policing strategies, and community safety initiatives.</li>
                 <li><strong>How to use it:</strong> Use these maps to guide local interventions, resource deployment, and awareness campaigns in areas with higher recorded incidents.</li>
-                <li><strong>Limitations:</strong> Location data reflects where the offence was recorded, which may differ from where it began or where the victim resides. It does not indicate risk for individuals living in that area.</li>
+                <li><strong>Limitations:</strong> Location data reflects where the offence occurred, which may differ from where the victim resides. It can, but does not always, indicate risk for individuals living in that area.</li>
             </ul>`            
         ]
     );

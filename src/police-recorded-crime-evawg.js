@@ -169,11 +169,11 @@ Violence with injury includes homicide and death/serious injury by unlawful driv
     <li><strong>Why it matters:</strong> These statistics reflect reported crimes only. They do not capture unreported cases, which research suggests are substantial, especially for sexual offences. Practitioners should interpret trends alongside survey data and community insights.</li>
     <li><strong>How to use it:</strong> Use these figures to identify priority areas for prevention and support services. </li>
     <li><strong>Limitations:</strong> These statistics reflect only those crimes reported to police; they do not capture unreported crimes. Data also depends on police recording practices and a victim’s willingness to report to police. Changes in legislation, changes in rules governing crime recording, or reporting campaigns can influence trends so consider these factors when comparing over time. Practitioners should also interpret trends alongside survey data and community insights. <br></li>
-    <li>Changes in legislation and crime‑recording practices should be considered when interpreting trends in stalking and harassment.
+Changes in legislation and crime‑recording practices should be considered when interpreting trends in stalking and harassment.
 The Protection from Stalking Act (NI) 2022 introduced a new specific stalking offence and an offence of threatening or abusive behaviour from April 2022, increasing identification and reporting.
 Between Apr 2018–Apr 2023, Home Office rules required recording both a conduct offence and any additional offence in the same incident, leading to some double‑counting.
 From May 2023, this was reversed so that the conduct/behaviour offence is recorded only if it is the most serious offence, contributing to falls seen in 2023/24.<br>
-These factors should be taken into account when comparing trends over time. </li>
+These factors should be taken into account when comparing trends over time.
     <li>In 2022, the PSNI published its first <a href="https://www.psni.police.uk/safety-and-support/keeping-safe/tackling-violence-against-women-and-girls/violence-against-women#:~:text=As%20part%20of%20our%20commitment%20to%20tackling%20VAWG%2C%20we%20launched,from%20fear%2C%20intimidation%20and%20harassment." target=" blank">Tackling Violence against Women and Girls Action Plan</a>, setting out how the force planned to address this issue locally.</li>
     <li>For further detail on how police recorded crime statistics are collected and processed, please refer to the <a href="https://www.psni.police.uk/sites/default/files/2025-11/Police%20Recorded%20Crime%20User%20Guide.pdf" target=" blank">PSNI Recorded Crime User Guide</a>.</li>
 </ul>`
