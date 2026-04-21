@@ -62,7 +62,7 @@ window.addEventListener("DOMContentLoaded", async () => {
                 <li>Stalking and harassment;</li>
                 <li>Violence with injury;</li>
                 <li>Violence without injury; and</li>
-                <li>Domestic abuse;</li>
+                <li>Crimes with a domestic abuse motivation;</li>
             </ul>
             <p>The location is based on where the offences take place.<br>
             Violence with injury includes homicide and death/serious injury by unlawful driving.</p>`,
