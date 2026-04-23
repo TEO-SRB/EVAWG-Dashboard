@@ -125,7 +125,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         `<p>The <strong>Police Service of Northern Ireland (PSNI)</strong> has adopted the definition of domestic violence and abuse as outlined in the 2016 Northern Ireland Government Strategy <em>“Stopping Domestic and Sexual Violence and Abuse in Northern Ireland”</em> as:</p>
         <p>“Threatening, controlling, coercive behaviour, violence or abuse (psychological, virtual, physical, verbal, sexual, financial or emotional) inflicted on anyone (irrespective of age, ethnicity, religion, gender, gender identity, sexual orientation or any form of disability) by a current or former partner or family member.”</p>
         <p>Violence with injury includes homicide and death/serious injury by unlawful driving.</p>
-        <p>Data on this page includes those circumstances where domestic abuse forms part of the offence. Victim gender is available, however police recorded domestic abuse crime does not identify gender-based violence.</p>`,
+        <p>Police recorded crime data on this page includes those circumstances where domestic abuse forms part of the offence. Victim gender is available, however police recorded domestic abuse crime does not identify gender-based violence.</p>`,
 
         `<p>Statistics on police recorded crime in Northern Ireland are collated and produced by statisticians seconded to the <strong>Police Service of Northern Ireland (PSNI)</strong> from the <strong>Northern Ireland Statistics and Research Agency (NISRA)</strong>.</p>
         <p>While the PSNI does not fall within the jurisdiction of the Home Office, the practices and procedures of the Home Office's notable offence list are followed and applied within Northern Ireland.</p>

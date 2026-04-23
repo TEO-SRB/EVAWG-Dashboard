@@ -78,7 +78,7 @@ window.addEventListener("DOMContentLoaded", async () => {
             <p>Statistical publications can be found on the <a href="https://www.psni.police.uk/about-us/our-publications-and-reports/official-statistics/police-recorded-crime-statistics" target="_blank">relevant publication page</a>.</p>
             <p><strong>Updates:</strong> Data updated quarterly. <strong>Last update:</strong> ${update_date}.</p>`,
 
-            `<p>This tab displays maps showing where offences occurred, based on police-recorded data.</p>
+            `<p>This tab displays maps showing where offences occurred, based on police recorded crime data.</p>
             <ul>
                 <li><strong>What it tells us:</strong> It highlights the geographic location of the offence itself, not where the victim lives. This distinction is important because offences can happen away from home—for example, in public spaces or workplaces.</li>
                 <li><strong>Why it matters:</strong> Understanding where offences occur helps identify hotspots and inform targeted prevention efforts, policing strategies, and community safety initiatives.</li>

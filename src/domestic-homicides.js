@@ -168,7 +168,7 @@ A domestic abuse homicide is one which involves a domestic motivation, meaning t
 <p>Statistical publications can be found on the <a href="https://www.psni.police.uk/about-us/our-publications-and-reports/official-statistics/police-recorded-crime-statistics" target="_blank">relevant publication page</a>.</p>
 <p><strong>Updates:</strong> Data updated quarterly. <strong>Last update:</strong> ${update_date}.</p>`,
 
-`<p>This tab presents data on homicide victims by sex, including cases linked to domestic abuse.</p>
+`<p>This tab presents police recorded crime data on homicide victims by sex, including cases linked to domestic abuse.</p>
 <ul>
     <li><strong>What it tells us:</strong> Homicide is rare but represents the most severe outcome of gender-based violence. Women are disproportionately victims in domestic-related cases.</li>
     <li><strong>Why it matters:</strong> These figures underline the importance of early intervention and risk assessment to prevent escalation.</li>
