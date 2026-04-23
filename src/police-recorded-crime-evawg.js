@@ -149,7 +149,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     <li>Violence without injury;</li>
 
 </ul>
-<p>All reported incidents of domestic abuse incidents and crime are reported, with no differentiation between gender-based violence. However, the data is available on the gender of the victim.<br>
+<p>Victim gender is available, however police recorded crime does not identify gender-based violence.<br>
 Violence with injury includes homicide and death/serious injury by unlawful driving. </p>`,
 
 `<p>Statistics on police recorded crime in Northern Ireland are collated and produced by statisticians seconded to the Police Service of Northern Ireland (PSNI) from the Northern Ireland Statistics and Research Agency (NISRA).</p>
