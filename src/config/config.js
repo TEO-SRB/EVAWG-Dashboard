@@ -1,6 +1,6 @@
 export const config = {
     // Dashboard title
-    "title": "Gender-based violence",
+    "title": "Gender-Based Violence",
 
     // Set order of page links and display text in navigation bar
     "navigation": [

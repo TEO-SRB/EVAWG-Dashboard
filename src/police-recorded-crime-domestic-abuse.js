@@ -142,7 +142,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
         `<p>This tab focuses on incidents flagged as domestic abuse, broken down by sex of victim and type of offence.</p>
         <ul>
-            <li><strong>What it tells us:</strong> Domestic abuse is a major component of gender-based violence, with women more frequently recorded as victims, though men are also affected.</li>
+            <li><strong>What it tells us:</strong> It shows the distribution of police recorded domestic abuse offences by gender, indicating higher numbers recorded for women while showing that men are also victims.</li>
             <li><strong>Why it matters:</strong> Highlights the need for tailored support services and prevention strategies within families and relationships.</li>
             <li><strong>How to use it:</strong> Use these figures to inform domestic abuse strategies and training for frontline staff.</li>
             <li><strong>Limitations:</strong> Data depends on police identification and victim disclosure; some cases may not be flagged as domestic abuse.<br>
