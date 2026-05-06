@@ -150,7 +150,8 @@ window.addEventListener("DOMContentLoaded", async () => {
 
 </ul>
 <p>Victim gender is available, however police recorded crime does not identify gender-based violence.<br>
-Violence with injury includes homicide and death/serious injury by unlawful driving. </p>`,
+Violence with injury includes homicide and death/serious injury by unlawful driving.<br>
+Some of these offences may be flagged by the police as domestic abuse‑related where they meet the domestic abuse definition. These flagged offences are part of overall police recorded crime and are also included within domestic abuse statistics. </p>`,
 
 `<p>Statistics on police recorded crime in Northern Ireland are collated and produced by statisticians seconded to the Police Service of Northern Ireland (PSNI) from the Northern Ireland Statistics and Research Agency (NISRA).</p>
 <p>While the PSNI does not fall within the jurisdiction of the Home Office, the practices and procedures of the Home Office's notable offence list are followed and applied within Northern Ireland.</p>
