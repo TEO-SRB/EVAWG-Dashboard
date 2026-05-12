@@ -162,7 +162,7 @@ Some of these offences may be flagged by the police as domestic abuse‑related 
             <li><a href="${config.portal_url}table/PRCONLCG" target="_blank">Police recorded crime - online crime</a></li>
         </ul>
 <p>Statistical publications can be found on the <a href="https://www.psni.police.uk/about-us/our-publications-and-reports/official-statistics/police-recorded-crime-statistics" target="_blank">relevant publication page</a>.</p>
-<p><strong>Updates:</strong> Data updated quarterly. <strong>Last update:</strong> ${update_date}.</p>`,
+<p><strong>Updates:</strong> Data updated annually each May.</p>`,
 
 `<p>This tab shows police-recorded offences where the victim's gender is known, including sexual offences, stalking and harassment, and violence with or without injury. These figures help us understand patterns of gender-based violence reported to the police.</p>
 <ul>

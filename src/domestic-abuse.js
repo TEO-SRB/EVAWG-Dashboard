@@ -248,7 +248,7 @@ window.addEventListener("DOMContentLoaded", async () => {
             <li><a href="${config.portal_url}table/DARPV" target="_blank">Domestic abuse - relationship of perpetrator to victim</a></li>        
         </ul>
     <p>Statistical publications can be found on the <a href="https://www.justice-ni.gov.uk/publications/experience-domestic-abuse-findings-201819-northern-ireland-safe-community-survey" target="_blank">relevant publication page</a>.</p>
-    <p><strong>Updates:</strong> NA</p>`,
+    <p><strong>Updates:</strong> Next update due in 2026; data will be updated biennially thereafter.</p>`,
 
     `<p>This tab provides an overview of how common domestic abuse is, based on self-reported experiences from survey respondents.</p>
     <ul>

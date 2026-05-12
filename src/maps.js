@@ -76,7 +76,7 @@ window.addEventListener("DOMContentLoaded", async () => {
                 <li><a href="${config.portal_url}table/DOMACLGD" target="_blank">Domestic abuse offences</a></li> 
             </ul>
             <p>Statistical publications can be found on the <a href="https://www.psni.police.uk/about-us/our-publications-and-reports/official-statistics/police-recorded-crime-statistics" target="_blank">relevant publication page</a>.</p>
-            <p><strong>Updates:</strong> Data updated quarterly. <strong>Last update:</strong> ${update_date}.</p>`,
+            <p><strong>Updates:</strong> Data updated annually each May.</p>`,
 
             `<p>This tab displays maps showing where offences occurred, based on police recorded crime data.</p>
             <ul>
