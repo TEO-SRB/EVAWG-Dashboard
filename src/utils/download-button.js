@@ -18,7 +18,7 @@ export function downloadButton (capture_id, matrix, update_date, map_plot = fals
     footerContent.classList.add("dropdown");
 
     footerContent.innerHTML = `
-        <strong>Data last updated:</strong> ${update_date}.
+        
         <div>
             <button class="btn btn-secondary dropdown-toggle btn-primary mt-2" type="button" id="${capture_id}-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
                 Download
