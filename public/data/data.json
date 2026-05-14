@@ -649,7 +649,7 @@
   },
   "DARPV": {
     "label": "Domestic abuse - relationship of perpetrator to victim",
-    "updated": "2026-03-27",
+    "updated": "2026-05-14",
     "data": {
       "Percentage of perpetrators": {
         "2018/19": {
@@ -1118,7 +1118,7 @@
   },
   "LDARPG": {
     "label": "Lifetime domestic abuse reported to the police",
-    "updated": "2026-03-27",
+    "updated": "2026-05-14",
     "data": {
       "Proportion of any lifetime domestic abuse reported to the police": {
         "2018/19": {
