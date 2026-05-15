@@ -20,8 +20,8 @@
     }
   },
   "DAHVAG": {
-    "label": "Domestic abuse homicides recorded",
-    "updated": "2026-03-27",
+    "label": "Police recorded domestic abuse homicides",
+    "updated": "2026-05-15",
     "data": {
       "Domestic abuse homicides": {
         "2007/08": {
@@ -334,8 +334,8 @@
     }
   },
   "DAHVGR": {
-    "label": "Domestic abuse homicides recorded",
-    "updated": "2026-03-27",
+    "label": "Police recorded domestic abuse homicides",
+    "updated": "2026-05-15",
     "data": {
       "Domestic abuse homicides": {
         "2007/08": {
@@ -665,8 +665,8 @@
     }
   },
   "DOMACLGD": {
-    "label": "Domestic abuse offences",
-    "updated": "2026-05-01",
+    "label": "Police recorded domestic abuse crimes",
+    "updated": "2026-05-15",
     "data": {
       "All domestic abuse crimes": {
         "2024/25": {
@@ -703,8 +703,8 @@
     }
   },
   "DOMACVAC": {
-    "label": "Domestic abuse crimes",
-    "updated": "2026-03-27",
+    "label": "Police recorded domestic abuse crimes",
+    "updated": "2026-05-15",
     "data": {
       "All domestic abuse crimes": {
         "2024/25": {
@@ -936,7 +936,7 @@
   },
   "EXPGBVAG": {
     "label": "Experience of gender-based violence - adults",
-    "updated": "2026-03-27",
+    "updated": "2026-05-15",
     "data": {
       "Adult victims of violence": {
         "2022": {
