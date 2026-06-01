@@ -21,31 +21,43 @@ window.addEventListener("DOMContentLoaded", async () => {
         }
     );
 
-    let stat = "All crimes recorded by the police";
-    const years = Object.keys(data.data[stat]);
+    const allCrimesStat = "All crimes recorded by the police";
+    const crimeRateStat = "Crime population rate (per 1000 population)";
+    const years = Object.keys(data.data[allCrimesStat]);
     const latest_year = years[years.length - 1];
 
-    let lgds = Object.keys(data.data[stat][latest_year]);
+    let lgds = Object.keys(data.data[allCrimesStat][latest_year]);
     const oldKey = "Violence with injury (including homicide & death/serious injury by unlawful driving)";
     const newKey = "Violence with injury";
     for (let i = 0; i < lgds.length; i++) {
-        const obj = data.data[stat][latest_year][lgds[i]];
-        // obj["Domestic abuse"] = da_data.data["All domestic abuse crimes"][latest_year][lgds[i]];
+        const obj = data.data[allCrimesStat][latest_year][lgds[i]];
         obj[newKey] = obj[oldKey];
         delete obj[oldKey];
+
+        const rateObj = data.data[crimeRateStat][latest_year][lgds[i]];
+        rateObj[newKey] = rateObj[oldKey];
+        delete rateObj[oldKey];
     }
 
-
     const crime_filter = document.getElementById("crime-filter");
+    const metricRadios = document.querySelectorAll('input[name="map-metric"]');
     let crime_type = crime_filter.value;
+    let mapMetric = document.querySelector('input[name="map-metric"]:checked')?.value || "rate";
 
     // first draw
-    plotMap(data, stat, latest_year, crime_type);
+    plotMap(data, latest_year, crime_type, mapMetric);
 
     // redraw when filter changes
     crime_filter.addEventListener("change", (e) => {
         crime_type = e.target.value;
-        plotMap(data, stat, latest_year, crime_type);
+        plotMap(data, latest_year, crime_type, mapMetric);
+    });
+
+    metricRadios.forEach((radio) => {
+        radio.addEventListener("change", (e) => {
+            mapMetric = e.target.value;
+            plotMap(data, latest_year, crime_type, mapMetric);
+        });
     });
 
     downloadButton("map-card", "PRCPD", update_date, true)

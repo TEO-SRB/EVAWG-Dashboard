@@ -3,28 +3,41 @@ import { loadShapes } from "./load-shapes.js";
 export let map;               // cache map between calls
 let geojsonData;       // cache shapes between calls
 
-export async function plotMap(data, stat, latest_year, crimeType) {
+export async function plotMap(data, latest_year, crimeType, metric = "rate") {
+  const countStat = "All crimes recorded by the police";
+  const rateStat = "Crime population rate (per 1000 population)";
+  const stat = metric === "rate" ? rateStat : countStat;
+  const titleSuffix = metric === "rate"
+    ? "Crime population rate (per 1000 population)"
+    : "All crimes recorded by the police";
+  const legendUnit = metric === "rate" ? "Per 1000 population" : "Crimes recorded";
 
   document.getElementById("map-title").innerText =
-    `Police recorded crime - ${crimeType} by Local Government District, ${latest_year}`;
+    `Police recorded crime - ${titleSuffix} - ${crimeType} by Local Government District, ${latest_year}`;
 
-  const lgds = Object.keys(data.data[stat][latest_year])
+  const lgds = Object.keys(data.data[countStat][latest_year])
         .filter(lgd => lgd !== "Northern Ireland");
 
   // --- build values array based on selected crime type ---
-  const values = lgds.map(lgd => 
-      data.data[stat][latest_year][lgd][crimeType]
+  const values = lgds.map(lgd =>
+      data.data[stat][latest_year][lgd]?.[crimeType]
+  );
+  const countValues = lgds.map(lgd =>
+      data.data[countStat][latest_year][lgd]?.[crimeType]
+  );
+  const rateValues = lgds.map(lgd =>
+      data.data[rateStat][latest_year][lgd]?.[crimeType]
   );
 
   // --- ranges & normalized colours ---
   let range_min = Math.floor(Math.min(...values.filter(v => v != null)));
   let range_max = Math.ceil(Math.max(...values.filter(v => v != null)));
 
-  updateLegend(range_min, range_max, "Crimes recorded");
+  updateLegend(range_min, range_max, legendUnit);
 
   const range = range_max - range_min || 1;
 
-  let colours = values.map(v => 
+  let colours = values.map(v =>
       v == null ? -1 : (v - range_min) / range
   );
 
@@ -77,7 +90,7 @@ export async function plotMap(data, stat, latest_year, crimeType) {
   }
 }
 
-renderTable(lgds, values);
+renderTable(lgds, countValues, rateValues);
 
 // If we already have a map but it wasn't created with preserveDrawingBuffer,
 // we MUST rebuild it (can't change after creation).
@@ -262,7 +275,7 @@ function updateLegend(range_min, range_max, unitLabel = "") {
 }
 
 
-function renderTable(lgds, values) {
+function renderTable(lgds, countValues, rateValues) {
   const table = document.getElementById("map-data-table");
   if (!table) return;
 
@@ -279,8 +292,13 @@ function renderTable(lgds, values) {
   th2.style.textAlign = "right";
   th2.innerText = "Crimes recorded";
 
+  const th3 = document.createElement("th");
+  th3.style.textAlign = "right";
+  th3.innerText = "Crime population rate (per 1000 population)";
+
   trh.appendChild(th1);
   trh.appendChild(th2);
+  trh.appendChild(th3);
   thead.appendChild(trh);
   table.appendChild(thead);
 
@@ -293,10 +311,15 @@ function renderTable(lgds, values) {
 
     const td2 = document.createElement("td");
     td2.style.textAlign = "right";
-    td2.innerText = (values[i] == null) ? "n/a" : Number(values[i]).toLocaleString("en-GB");
+    td2.innerText = (countValues[i] == null) ? "n/a" : Number(countValues[i]).toLocaleString("en-GB");
+
+    const td3 = document.createElement("td");
+    td3.style.textAlign = "right";
+    td3.innerText = (rateValues[i] == null) ? "n/a" : Number(rateValues[i]).toLocaleString("en-GB");
 
     tr.appendChild(td1);
     tr.appendChild(td2);
+    tr.appendChild(td3);
     tbody.appendChild(tr);
   }
   table.appendChild(tbody);
