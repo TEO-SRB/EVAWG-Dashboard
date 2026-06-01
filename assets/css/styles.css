@@ -114,6 +114,18 @@ main a[target="_blank"]::after {
 .app-title { font-weight: 700; letter-spacing: 0.2px; }
 .img-50 { width: 50px; height: 50px; }
 
+.card-body img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+#map-img {
+  max-width: 100%;
+  width: auto;
+  max-height: 140px;
+}
+
 /* ===========================
    Footer
    =========================== */
@@ -357,6 +369,7 @@ table tr:not(:has(th)):hover {
 
 .card-footer {
   margin-top: auto;
+  text-align: center;
 }
 
 /* Clear, consistent focus style for keyboard users */

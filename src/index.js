@@ -97,12 +97,20 @@ const female_stalking_victims = DOMACVAC.data[DOMACVAC_stat][latest_year]
 
     insertValue("domestic-homicide", domestic_homicicides);
 
-    // Initial resize
-    mapResizeHandler();
-
-    // Resize on window resize
-    window.addEventListener("resize", mapResizeHandler);
+    let PRCHOM = await readData("PRCHOM"); 
+    const PRCHOM_stat = "All homicides";
     
+    let homicide_victims = 0;
+
+    const PRCHOM_years = Object.keys(PRCHOM.data[PRCHOM_stat]);
+
+    for (let i = PRCHOM_years.length - 5; i < PRCHOM_years.length; i ++) {
+        homicide_victims += PRCHOM.data[PRCHOM_stat][PRCHOM_years[i]]["All ages"]["Female"];
+        
+    }
+
+    insertValue("homicide-victims", homicide_victims);
+
     insertFooter();
 
 })
