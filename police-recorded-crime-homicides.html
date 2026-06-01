@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body style="display:none;">
+
+    <banner id="banner"></banner>
+  <!-- Top Navbar -->
+<nav id ="nav"></nav>
+
+<!-- Main Content -->
+<main>
+<div class="w-100 text-center current-page py-2">
+    Crime data on this page is recorded by the police on their administrative system. This relates to the VAWG Strategy. 
+</div>
+
+<div id="content" class="container-fluid">
+    
+
+        <div id="male-comparison-switch"></div>
+        <div class = "py-2">
+            <!-- First row - cards -->
+            <div class="row justify-content-center">
+                <div class="col-6 col-xl py-2">
+                    <div class="card h-100 navy-bg">
+                        <div class="card-body">
+                            <p class="female-fig display-6"><span id="victims-female"></span> females</p>
+                            <p class="male-fig"><span id="victims-male"></span> males</p>
+                            <p>were victims of homicide in the last five year</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-xl py-2">
+                    <div class="card h-100 blue-bg">
+                        <div class="card-body">
+                            <p class="female-fig display-6"><span id="victims-women"></span> 18+</p>
+                            <p class="male-fig"><span id="victims-men"></span> 18+</p>
+                            <p>were victims of homicide in <span class="latest-year"></span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-xl py-2">
+                    <div class="card h-100 blue-bg">
+                        <div class="card-body">
+                            <p class="female-fig display-6"><span id="victims-girls"></span> under 18</p>
+                            <p class="male-fig"><span id="victims-boys"></span> under 18</p>
+                            <p>were victims of homicide in <span class="latest-year"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <!-- Second row - tables and charts -->
+    <div class="row">
+        <div class="col-12 col-xl-6 py-2">
+            <div class="card h-100">
+                <div id="under-18-line-capture">
+                    <div class="card-header">
+                        Victims of homicide aged under 18, <span class="first-year"></span> to <span class="latest-year"></span>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="under-18-line" class="chart-canvas"></canvas>
+                    </div>
+                </div>
+                <div class="card-footer"></div>
+            </div>
+        </div>
+    
+        <div class="col-12 col-xl-6 py-2">
+            <div class="card h-100">
+                <div id="18-plus-line-capture">
+                    <div class="card-header">
+                        Victims of homicide aged 18+, <span class="first-year"></span> to <span class="latest-year"></span>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <canvas id="18-plus-line" class="chart-canvas"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer"></div>
+            </div>
+        </div>
+    </div>
+
+            <!-- Third row - Definitions -->
+    <div id="info-boxes"></div>
+
+    </div>
+        
+    </main>
+</div>
+
+<footer id = "footer"></footer>
+
+<script type = "module" src="src/police-recorded-crime-homicides.js"></script>
+
+
+</body>
