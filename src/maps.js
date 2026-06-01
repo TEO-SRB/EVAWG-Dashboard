@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     insertHeader();
     insertNavButtons();
     let data = await readData("PRCPD");
-    const da_data = await readData("DOMACLGD");
+    // const da_data = await readData("DOMACLGD");
 
     const update_date = new Date(data.updated).toLocaleDateString("en-GB",
         {
@@ -30,12 +30,10 @@ window.addEventListener("DOMContentLoaded", async () => {
     const newKey = "Violence with injury";
     for (let i = 0; i < lgds.length; i++) {
         const obj = data.data[stat][latest_year][lgds[i]];
-        obj["Domestic abuse"] = da_data.data["All domestic abuse crimes"][latest_year][lgds[i]];
+        // obj["Domestic abuse"] = da_data.data["All domestic abuse crimes"][latest_year][lgds[i]];
         obj[newKey] = obj[oldKey];
         delete obj[oldKey];
     }
-
-    console.log(data)
 
 
     const crime_filter = document.getElementById("crime-filter");
