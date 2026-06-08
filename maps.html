@@ -14,43 +14,58 @@
  </div>
 
 <div id="content" class="container-fluid">
-    
-        
+           
 
-    <div class="row justify-content-end py-2">
-        <div class="col-12 col-xl-4">
+    <div class="row py-2">
+        <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <label for="crime-filter" class="form-label fw-bold">Crime type</label>
-                    <select id="crime-filter" class="form-select">
-                        <option value="Sexual offences" selected>Sexual offences</option>
-                        <option value="Stalking & Harassment">Stalking & Harassment</option>
-                        <option value="Violence with injury">Violence with injury</option>
-                        <option value="Violence without injury">Violence without injury</option>
-                        <!-- <option value="Domestic abuse">Crimes with a domestic abuse motivation</option> -->
-                    </select>
-
-                    <div class="mt-3">
-                        <div class="form-label fw-bold">Map metric</div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="map-metric" id="metric-rate" value="rate" checked>
-                            <label class="form-check-label" for="metric-rate">
-                                Crime rate (per 1000 population)
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="map-metric" id="metric-count" value="count">
-                            <label class="form-check-label" for="metric-count">
-                                All crimes recorded
-                            </label>
-                        </div>
-                    </div>
-
-                    <small class="text-muted d-block mt-2">
-                        Choose a crime type to update the map.
+                    <small class="text-muted d-block mb-2">
+                        Choose a crime type, statistic and year to update the map.
                     </small>
-                    
-                    </div>
+        <div class="row align-items-end g-3">
+        <div class="col-12 col-md-4">
+            <label for="crime-filter" class="form-label fw-bold">Crime type</label>
+            <select id="crime-filter" class="form-select">
+                <option value="Sexual offences" selected>Sexual offences</option>
+                <option value="Stalking & Harassment">Stalking & Harassment</option>
+                <option value="Violence with injury">Violence with injury</option>
+                <option value="Violence without injury">Violence without injury</option>
+            </select>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <div class="form-label fw-bold px-4">Crime statistic</div>
+
+            <div class="d-flex gap-4 px-4">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="map-metric" id="metric-count" value="count" checked>
+                <label class="form-check-label" for="metric-count">
+                    All crimes recorded
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="map-metric" id="metric-rate" value="rate">
+                <label class="form-check-label" for="metric-rate">
+                    Crime rate (per 1000 population)
+                </label>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row align-items-center g-3 mt-3">
+    <div class="col-12 col-md-4">
+        <label for="year-slider" class="form-label">
+            <span class="fw-bold">Year: </span><span id="year-slider-value"></span>
+        </label>
+        <input id="year-slider" class="form-range" type="range">
+    </div>
+</div>
+
+    
+</div>
             </div>
         </div>
     </div>

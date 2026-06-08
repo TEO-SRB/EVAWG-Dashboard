@@ -3,7 +3,7 @@ import { loadShapes } from "./load-shapes.js";
 export let map;               // cache map between calls
 let geojsonData;       // cache shapes between calls
 
-export async function plotMap(data, latest_year, crimeType, metric = "rate") {
+export async function plotMap(data, selectedYear, crimeType, metric = "count", scaleYears = null) {
   const countStat = "All crimes recorded by the police";
   const rateStat = "Crime population rate (per 1000 population)";
   const stat = metric === "rate" ? rateStat : countStat;
@@ -13,25 +13,34 @@ export async function plotMap(data, latest_year, crimeType, metric = "rate") {
   const legendUnit = metric === "rate" ? "Per 1000 population" : "Crimes recorded";
 
   document.getElementById("map-title").innerText =
-    `Police recorded crime - ${titleSuffix} - ${crimeType} by Local Government District, ${latest_year}`;
+    `Police recorded crime - ${titleSuffix} - ${crimeType} by Local Government District, ${selectedYear}`;
 
-  const lgds = Object.keys(data.data[countStat][latest_year])
+  const lgds = Object.keys(data.data[countStat][selectedYear])
         .filter(lgd => lgd !== "Northern Ireland");
 
   // --- build values array based on selected crime type ---
   const values = lgds.map(lgd =>
-      data.data[stat][latest_year][lgd]?.[crimeType]
+      data.data[stat][selectedYear][lgd]?.[crimeType]
   );
   const countValues = lgds.map(lgd =>
-      data.data[countStat][latest_year][lgd]?.[crimeType]
+      data.data[countStat][selectedYear][lgd]?.[crimeType]
   );
   const rateValues = lgds.map(lgd =>
-      data.data[rateStat][latest_year][lgd]?.[crimeType]
+      data.data[rateStat][selectedYear][lgd]?.[crimeType]
   );
 
   // --- ranges & normalized colours ---
-  let range_min = Math.floor(Math.min(...values.filter(v => v != null)));
-  let range_max = Math.ceil(Math.max(...values.filter(v => v != null)));
+  const yearsForScale = scaleYears || [selectedYear];
+
+  const scaleValues = yearsForScale.flatMap(year =>
+    Object.keys(data.data[stat][year])
+      .filter(lgd => lgd !== "Northern Ireland")
+      .map(lgd => data.data[stat][year][lgd]?.[crimeType])
+      .filter(v => v != null)
+  );
+
+  let range_min = Math.floor(Math.min(...scaleValues));
+  let range_max = Math.ceil(Math.max(...scaleValues));
 
   updateLegend(range_min, range_max, legendUnit);
 
@@ -66,7 +75,7 @@ export async function plotMap(data, latest_year, crimeType, metric = "rate") {
           nisra_code: code,
           nisra_value: rawValue,
           nisra_label: label,
-          nisra_year: latest_year,
+          nisra_year: selectedYear,
           nisra_fill: fillHex,
           nisra_hasValue: rawValue !== null && rawValue !== undefined
         }

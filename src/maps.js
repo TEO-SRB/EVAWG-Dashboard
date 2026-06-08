@@ -26,6 +26,9 @@ window.addEventListener("DOMContentLoaded", async () => {
     const years = Object.keys(data.data[allCrimesStat]);
     const latest_year = years[years.length - 1];
 
+    const recentYears = years.slice(-5);
+    let selectedYear = latest_year;
+
     let lgds = Object.keys(data.data[allCrimesStat][latest_year]);
     const oldKey = "Violence with injury (including homicide & death/serious injury by unlawful driving)";
     const newKey = "Violence with injury";
@@ -44,20 +47,35 @@ window.addEventListener("DOMContentLoaded", async () => {
     let crime_type = crime_filter.value;
     let mapMetric = document.querySelector('input[name="map-metric"]:checked')?.value || "rate";
 
+    const yearSlider = document.getElementById("year-slider");
+    const yearSliderValue = document.getElementById("year-slider-value");
+
+    yearSlider.min = 0;
+    yearSlider.max = recentYears.length - 1;
+    yearSlider.step = 1;
+    yearSlider.value = recentYears.length - 1;
+    yearSliderValue.innerText = selectedYear;
+
     // first draw
-    plotMap(data, latest_year, crime_type, mapMetric);
+    plotMap(data, selectedYear, crime_type, mapMetric, recentYears);
 
     // redraw when filter changes
     crime_filter.addEventListener("change", (e) => {
         crime_type = e.target.value;
-        plotMap(data, latest_year, crime_type, mapMetric);
+        plotMap(data, selectedYear, crime_type, mapMetric, recentYears);
     });
 
     metricRadios.forEach((radio) => {
         radio.addEventListener("change", (e) => {
             mapMetric = e.target.value;
-            plotMap(data, latest_year, crime_type, mapMetric);
+            plotMap(data, selectedYear, crime_type, mapMetric, recentYears);
         });
+    });
+
+    yearSlider.addEventListener("input", (e) => {
+        selectedYear = recentYears[Number(e.target.value)];
+        yearSliderValue.innerText = selectedYear;
+        plotMap(data, selectedYear, crime_type, mapMetric, recentYears);
     });
 
     downloadButton("map-card", "PRCPD", update_date, true)
