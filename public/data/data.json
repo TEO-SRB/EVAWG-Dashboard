@@ -500,27 +500,47 @@
   },
   "DOMACVAC": {
     "label": "Police recorded domestic abuse crimes",
-    "updated": "2026-05-15",
+    "updated": "2026-06-11",
     "data": {
       "All domestic abuse crimes": {
         "2024/25": {
           "Female": {
-            "Violence with injury (inc homicide & death / serious injury by unlawful driving)": 2565,
-            "Violence without injury": 3032,
-            "Stalking and harassment": 2486,
-            "Theft (inc burglary)": 566,
-            "Criminal damage": 952,
-            "All other offences": 669,
-            "Total all offences": 10270
+            "Violence with injury (inc homicide & death / serious injury by unlawful driving)": 2564,
+            "Violence without injury": 3031,
+            "Stalking and harassment": 2481,
+            "Theft (inc burglary)": 567,
+            "Criminal damage": 951,
+            "All other offences": 657,
+            "Total all offences": 10251
           },
           "Male": {
             "Violence with injury (inc homicide & death / serious injury by unlawful driving)": 1364,
             "Violence without injury": 1683,
-            "Stalking and harassment": 744,
+            "Stalking and harassment": 742,
             "Theft (inc burglary)": 245,
             "Criminal damage": 328,
             "All other offences": 124,
-            "Total all offences": 4488
+            "Total all offences": 4486
+          }
+        },
+        "2025/26": {
+          "Female": {
+            "Violence with injury (inc homicide & death / serious injury by unlawful driving)": 2580,
+            "Violence without injury": 3035,
+            "Stalking and harassment": 2623,
+            "Theft (inc burglary)": 567,
+            "Criminal damage": 906,
+            "All other offences": 750,
+            "Total all offences": 10461
+          },
+          "Male": {
+            "Violence with injury (inc homicide & death / serious injury by unlawful driving)": 1336,
+            "Violence without injury": 1768,
+            "Stalking and harassment": 812,
+            "Theft (inc burglary)": 266,
+            "Criminal damage": 364,
+            "All other offences": 102,
+            "Total all offences": 4648
           }
         }
       }
@@ -528,7 +548,7 @@
   },
   "DOMACVG": {
     "label": "Police recorded domestic abuse crimes",
-    "updated": "2026-05-18",
+    "updated": "2026-06-11",
     "data": {
       "All domestic abuse crimes": {
         "2004/05": {
@@ -604,10 +624,10 @@
           "All persons": 13048
         },
         "2016/17": {
-          "Female": 9038,
-          "Male": 4047,
+          "Female": 9037,
+          "Male": 4046,
           "Unknown/missing": 6,
-          "All persons": 13091
+          "All persons": 13089
         },
         "2017/18": {
           "Female": 9319,
@@ -628,10 +648,10 @@
           "All persons": 17709
         },
         "2020/21": {
-          "Female": 12526,
+          "Female": 12525,
           "Male": 5529,
           "Unknown/missing": 17,
-          "All persons": 18072
+          "All persons": 18071
         },
         "2021/22": {
           "Female": 14189,
@@ -646,16 +666,22 @@
           "All persons": 21421
         },
         "2023/24": {
-          "Female": 12725,
+          "Female": 12724,
           "Male": 6293,
           "Unknown/missing": 24,
-          "All persons": 19042
+          "All persons": 19041
         },
         "2024/25": {
-          "Female": 11893,
-          "Male": 5747,
+          "Female": 11873,
+          "Male": 5743,
           "Unknown/missing": 19,
-          "All persons": 17659
+          "All persons": 17635
+        },
+        "2025/26": {
+          "Female": 12172,
+          "Male": 5817,
+          "Unknown/missing": 18,
+          "All persons": 18007
         }
       }
     }
