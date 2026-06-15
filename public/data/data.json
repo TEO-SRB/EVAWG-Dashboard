@@ -2572,1336 +2572,804 @@
   },
   "PRCVCTM": {
     "label": "Police recorded crime - victims of crime",
-    "updated": "2026-06-10",
+    "updated": "2026-06-15",
     "data": {
       "All crimes recorded by the police": {
         "2007/08": {
-          "Female": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 5156
-            },
-            "Violence without injury": {
-              "All ages": 4860
-            },
-            "Stalking and harassment": {
-              "All ages": 1036
-            },
-            "Sexual offences": {
-              "All ages": 1452
-            },
-            "Total police recorded crime": {
-              "All ages": 33195
+          "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
+            "All ages": {
+              "Female": 5156,
+              "Male": 9729,
+              "Unknown": 8,
+              "All persons": 14893
             }
           },
-          "Male": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 9729
-            },
-            "Violence without injury": {
-              "All ages": 5071
-            },
-            "Stalking and harassment": {
-              "All ages": 685
-            },
-            "Sexual offences": {
-              "All ages": 244
-            },
-            "Total police recorded crime": {
-              "All ages": 41257
+          "Violence without injury": {
+            "All ages": {
+              "Female": 4860,
+              "Male": 5071,
+              "Unknown": 13,
+              "All persons": 9944
             }
           },
-          "Unknown": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 8
-            },
-            "Violence without injury": {
-              "All ages": 13
-            },
-            "Stalking and harassment": {
-              "All ages": 1
-            },
-            "Sexual offences": {
-              "All ages": 1
-            },
-            "Total police recorded crime": {
-              "All ages": 123
+          "Stalking and harassment": {
+            "All ages": {
+              "Female": 1036,
+              "Male": 685,
+              "Unknown": 1,
+              "All persons": 1722
             }
           },
-          "All persons": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 14893
-            },
-            "Violence without injury": {
-              "All ages": 9944
-            },
-            "Stalking and harassment": {
-              "All ages": 1722
-            },
-            "Sexual offences": {
-              "All ages": 1697
-            },
-            "Total police recorded crime": {
-              "All ages": 74575
+          "Sexual offences": {
+            "All ages": {
+              "Female": 1452,
+              "Male": 244,
+              "Unknown": 1,
+              "All persons": 1697
+            }
+          },
+          "Total police recorded crime": {
+            "All ages": {
+              "Female": 33195,
+              "Male": 41257,
+              "Unknown": 123,
+              "All persons": 74575
             }
           }
         },
         "2008/09": {
-          "Female": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 5238
-            },
-            "Violence without injury": {
-              "All ages": 4687
-            },
-            "Stalking and harassment": {
-              "All ages": 1129
-            },
-            "Sexual offences": {
-              "All ages": 1508
-            },
-            "Total police recorded crime": {
-              "All ages": 33015
+          "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
+            "All ages": {
+              "Female": 5238,
+              "Male": 9275,
+              "Unknown": 8,
+              "All persons": 14521
             }
           },
-          "Male": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 9275
-            },
-            "Violence without injury": {
-              "All ages": 5234
-            },
-            "Stalking and harassment": {
-              "All ages": 697
-            },
-            "Sexual offences": {
-              "All ages": 272
-            },
-            "Total police recorded crime": {
-              "All ages": 41205
+          "Violence without injury": {
+            "All ages": {
+              "Female": 4687,
+              "Male": 5234,
+              "Unknown": 17,
+              "All persons": 9938
             }
           },
-          "Unknown": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 8
-            },
-            "Violence without injury": {
-              "All ages": 17
-            },
-            "Stalking and harassment": {
-              "All ages": 0
-            },
-            "Sexual offences": {
-              "All ages": 2
-            },
-            "Total police recorded crime": {
-              "All ages": 85
+          "Stalking and harassment": {
+            "All ages": {
+              "Female": 1129,
+              "Male": 697,
+              "Unknown": 0,
+              "All persons": 1826
             }
           },
-          "All persons": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 14521
-            },
-            "Violence without injury": {
-              "All ages": 9938
-            },
-            "Stalking and harassment": {
-              "All ages": 1826
-            },
-            "Sexual offences": {
-              "All ages": 1782
-            },
-            "Total police recorded crime": {
-              "All ages": 74305
+          "Sexual offences": {
+            "All ages": {
+              "Female": 1508,
+              "Male": 272,
+              "Unknown": 2,
+              "All persons": 1782
+            }
+          },
+          "Total police recorded crime": {
+            "All ages": {
+              "Female": 33015,
+              "Male": 41205,
+              "Unknown": 85,
+              "All persons": 74305
             }
           }
         },
         "2009/10": {
-          "Female": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 5244
-            },
-            "Violence without injury": {
-              "All ages": 4737
-            },
-            "Stalking and harassment": {
-              "All ages": 1266
-            },
-            "Sexual offences": {
-              "All ages": 1472
-            },
-            "Total police recorded crime": {
-              "All ages": 32609
+          "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
+            "All ages": {
+              "Female": 5244,
+              "Male": 9298,
+              "Unknown": 10,
+              "All persons": 14552
             }
           },
-          "Male": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 9298
-            },
-            "Violence without injury": {
-              "All ages": 4976
-            },
-            "Stalking and harassment": {
-              "All ages": 741
-            },
-            "Sexual offences": {
-              "All ages": 259
-            },
-            "Total police recorded crime": {
-              "All ages": 40660
+          "Violence without injury": {
+            "All ages": {
+              "Female": 4737,
+              "Male": 4976,
+              "Unknown": 10,
+              "All persons": 9723
             }
           },
-          "Unknown": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 10
-            },
-            "Violence without injury": {
-              "All ages": 10
-            },
-            "Stalking and harassment": {
-              "All ages": 2
-            },
-            "Sexual offences": {
-              "All ages": 1
-            },
-            "Total police recorded crime": {
-              "All ages": 95
+          "Stalking and harassment": {
+            "All ages": {
+              "Female": 1266,
+              "Male": 741,
+              "Unknown": 2,
+              "All persons": 2009
             }
           },
-          "All persons": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 14552
-            },
-            "Violence without injury": {
-              "All ages": 9723
-            },
-            "Stalking and harassment": {
-              "All ages": 2009
-            },
-            "Sexual offences": {
-              "All ages": 1732
-            },
-            "Total police recorded crime": {
-              "All ages": 73364
+          "Sexual offences": {
+            "All ages": {
+              "Female": 1472,
+              "Male": 259,
+              "Unknown": 1,
+              "All persons": 1732
+            }
+          },
+          "Total police recorded crime": {
+            "All ages": {
+              "Female": 32609,
+              "Male": 40660,
+              "Unknown": 95,
+              "All persons": 73364
             }
           }
         },
         "2010/11": {
-          "Female": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 5257
-            },
-            "Violence without injury": {
-              "All ages": 4644
-            },
-            "Stalking and harassment": {
-              "All ages": 1205
-            },
-            "Sexual offences": {
-              "All ages": 1538
-            },
-            "Total police recorded crime": {
-              "All ages": 31640
+          "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
+            "All ages": {
+              "Female": 5257,
+              "Male": 8933,
+              "Unknown": 22,
+              "All persons": 14212
             }
           },
-          "Male": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 8933
-            },
-            "Violence without injury": {
-              "All ages": 4797
-            },
-            "Stalking and harassment": {
-              "All ages": 729
-            },
-            "Sexual offences": {
-              "All ages": 331
-            },
-            "Total police recorded crime": {
-              "All ages": 38700
+          "Violence without injury": {
+            "All ages": {
+              "Female": 4644,
+              "Male": 4797,
+              "Unknown": 15,
+              "All persons": 9456
             }
           },
-          "Unknown": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 22
-            },
-            "Violence without injury": {
-              "All ages": 15
-            },
-            "Stalking and harassment": {
-              "All ages": 6
-            },
-            "Sexual offences": {
-              "All ages": 2
-            },
-            "Total police recorded crime": {
-              "All ages": 116
+          "Stalking and harassment": {
+            "All ages": {
+              "Female": 1205,
+              "Male": 729,
+              "Unknown": 6,
+              "All persons": 1940
             }
           },
-          "All persons": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 14212
-            },
-            "Violence without injury": {
-              "All ages": 9456
-            },
-            "Stalking and harassment": {
-              "All ages": 1940
-            },
-            "Sexual offences": {
-              "All ages": 1871
-            },
-            "Total police recorded crime": {
-              "All ages": 70456
+          "Sexual offences": {
+            "All ages": {
+              "Female": 1538,
+              "Male": 331,
+              "Unknown": 2,
+              "All persons": 1871
+            }
+          },
+          "Total police recorded crime": {
+            "All ages": {
+              "Female": 31640,
+              "Male": 38700,
+              "Unknown": 116,
+              "All persons": 70456
             }
           }
         },
         "2011/12": {
-          "Female": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 5249
-            },
-            "Violence without injury": {
-              "All ages": 5009
-            },
-            "Stalking and harassment": {
-              "All ages": 1225
-            },
-            "Sexual offences": {
-              "All ages": 1448
-            },
-            "Total police recorded crime": {
-              "All ages": 31349
+          "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
+            "All ages": {
+              "Female": 5249,
+              "Male": 9396,
+              "Unknown": 22,
+              "All persons": 14667
             }
           },
-          "Male": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 9396
-            },
-            "Violence without injury": {
-              "All ages": 5202
-            },
-            "Stalking and harassment": {
-              "All ages": 708
-            },
-            "Sexual offences": {
-              "All ages": 337
-            },
-            "Total police recorded crime": {
-              "All ages": 38434
+          "Violence without injury": {
+            "All ages": {
+              "Female": 5009,
+              "Male": 5202,
+              "Unknown": 10,
+              "All persons": 10221
             }
           },
-          "Unknown": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 22
-            },
-            "Violence without injury": {
-              "All ages": 10
-            },
-            "Stalking and harassment": {
-              "All ages": 2
-            },
-            "Sexual offences": {
-              "All ages": 1
-            },
-            "Total police recorded crime": {
-              "All ages": 89
+          "Stalking and harassment": {
+            "All ages": {
+              "Female": 1225,
+              "Male": 708,
+              "Unknown": 2,
+              "All persons": 1935
             }
           },
-          "All persons": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 14667
-            },
-            "Violence without injury": {
-              "All ages": 10221
-            },
-            "Stalking and harassment": {
-              "All ages": 1935
-            },
-            "Sexual offences": {
-              "All ages": 1786
-            },
-            "Total police recorded crime": {
-              "All ages": 69872
+          "Sexual offences": {
+            "All ages": {
+              "Female": 1448,
+              "Male": 337,
+              "Unknown": 1,
+              "All persons": 1786
+            }
+          },
+          "Total police recorded crime": {
+            "All ages": {
+              "Female": 31349,
+              "Male": 38434,
+              "Unknown": 89,
+              "All persons": 69872
             }
           }
         },
         "2012/13": {
-          "Female": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 5124
-            },
-            "Violence without injury": {
-              "All ages": 5310
-            },
-            "Stalking and harassment": {
-              "All ages": 1233
-            },
-            "Sexual offences": {
-              "All ages": 1494
-            },
-            "Total police recorded crime": {
-              "All ages": 31236
+          "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
+            "All ages": {
+              "Female": 5124,
+              "Male": 8602,
+              "Unknown": 11,
+              "All persons": 13737
             }
           },
-          "Male": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 8602
-            },
-            "Violence without injury": {
-              "All ages": 5615
-            },
-            "Stalking and harassment": {
-              "All ages": 688
-            },
-            "Sexual offences": {
-              "All ages": 400
-            },
-            "Total police recorded crime": {
-              "All ages": 36520
+          "Violence without injury": {
+            "All ages": {
+              "Female": 5310,
+              "Male": 5615,
+              "Unknown": 16,
+              "All persons": 10941
             }
           },
-          "Unknown": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 11
-            },
-            "Violence without injury": {
-              "All ages": 16
-            },
-            "Stalking and harassment": {
-              "All ages": 7
-            },
-            "Sexual offences": {
-              "All ages": 4
-            },
-            "Total police recorded crime": {
-              "All ages": 80
+          "Stalking and harassment": {
+            "All ages": {
+              "Female": 1233,
+              "Male": 688,
+              "Unknown": 7,
+              "All persons": 1928
             }
           },
-          "All persons": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 13737
-            },
-            "Violence without injury": {
-              "All ages": 10941
-            },
-            "Stalking and harassment": {
-              "All ages": 1928
-            },
-            "Sexual offences": {
-              "All ages": 1898
-            },
-            "Total police recorded crime": {
-              "All ages": 67836
+          "Sexual offences": {
+            "All ages": {
+              "Female": 1494,
+              "Male": 400,
+              "Unknown": 4,
+              "All persons": 1898
+            }
+          },
+          "Total police recorded crime": {
+            "All ages": {
+              "Female": 31236,
+              "Male": 36520,
+              "Unknown": 80,
+              "All persons": 67836
             }
           }
         },
         "2013/14": {
-          "Female": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 4950
-            },
-            "Violence without injury": {
-              "All ages": 6408
-            },
-            "Stalking and harassment": {
-              "All ages": 1858
-            },
-            "Sexual offences": {
-              "All ages": 1657
-            },
-            "Total police recorded crime": {
-              "All ages": 33260
+          "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
+            "All ages": {
+              "Female": 4950,
+              "Male": 8292,
+              "Unknown": 6,
+              "All persons": 13247
             }
           },
-          "Male": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 8292
-            },
-            "Violence without injury": {
-              "All ages": 6474
-            },
-            "Stalking and harassment": {
-              "All ages": 1190
-            },
-            "Sexual offences": {
-              "All ages": 523
-            },
-            "Total police recorded crime": {
-              "All ages": 37325
+          "Violence without injury": {
+            "All ages": {
+              "Female": 6408,
+              "Male": 6474,
+              "Unknown": 11,
+              "All persons": 12893
             }
           },
-          "Unknown": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 6
-            },
-            "Violence without injury": {
-              "All ages": 11
-            },
-            "Stalking and harassment": {
-              "All ages": 1
-            },
-            "Sexual offences": {
-              "All ages": 2
-            },
-            "Total police recorded crime": {
-              "All ages": 54
+          "Stalking and harassment": {
+            "All ages": {
+              "Female": 1858,
+              "Male": 1190,
+              "Unknown": 1,
+              "All persons": 3049
             }
           },
-          "All persons": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 13247
-            },
-            "Violence without injury": {
-              "All ages": 12893
-            },
-            "Stalking and harassment": {
-              "All ages": 3049
-            },
-            "Sexual offences": {
-              "All ages": 2182
-            },
-            "Total police recorded crime": {
-              "All ages": 70638
+          "Sexual offences": {
+            "All ages": {
+              "Female": 1657,
+              "Male": 523,
+              "Unknown": 2,
+              "All persons": 2182
+            }
+          },
+          "Total police recorded crime": {
+            "All ages": {
+              "Female": 33260,
+              "Male": 37325,
+              "Unknown": 54,
+              "All persons": 70638
             }
           }
         },
         "2014/15": {
-          "Female": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 5245
-            },
-            "Violence without injury": {
-              "All ages": 6948
-            },
-            "Stalking and harassment": {
-              "All ages": 2188
-            },
-            "Sexual offences": {
-              "All ages": 2175
-            },
-            "Total police recorded crime": {
-              "All ages": 34740
+          "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
+            "All ages": {
+              "Female": 5245,
+              "Male": 8369,
+              "Unknown": 6,
+              "All persons": 13620
             }
           },
-          "Male": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 8369
-            },
-            "Violence without injury": {
-              "All ages": 7121
-            },
-            "Stalking and harassment": {
-              "All ages": 1336
-            },
-            "Sexual offences": {
-              "All ages": 513
-            },
-            "Total police recorded crime": {
-              "All ages": 37657
+          "Violence without injury": {
+            "All ages": {
+              "Female": 6948,
+              "Male": 7121,
+              "Unknown": 5,
+              "All persons": 14074
             }
           },
-          "Unknown": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 6
-            },
-            "Violence without injury": {
-              "All ages": 5
-            },
-            "Stalking and harassment": {
-              "All ages": 5
-            },
-            "Sexual offences": {
-              "All ages": 0
-            },
-            "Total police recorded crime": {
-              "All ages": 61
+          "Stalking and harassment": {
+            "All ages": {
+              "Female": 2188,
+              "Male": 1336,
+              "Unknown": 5,
+              "All persons": 3529
             }
           },
-          "All persons": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 13620
-            },
-            "Violence without injury": {
-              "All ages": 14074
-            },
-            "Stalking and harassment": {
-              "All ages": 3529
-            },
-            "Sexual offences": {
-              "All ages": 2688
-            },
-            "Total police recorded crime": {
-              "All ages": 72458
+          "Sexual offences": {
+            "All ages": {
+              "Female": 2175,
+              "Male": 513,
+              "Unknown": 0,
+              "All persons": 2688
+            }
+          },
+          "Total police recorded crime": {
+            "All ages": {
+              "Female": 34740,
+              "Male": 37657,
+              "Unknown": 61,
+              "All persons": 72458
             }
           }
         },
         "2015/16": {
-          "Female": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 5422
-            },
-            "Violence without injury": {
-              "All ages": 7309
-            },
-            "Stalking and harassment": {
-              "All ages": 1979
-            },
-            "Sexual offences": {
-              "All ages": 2391
-            },
-            "Total police recorded crime": {
-              "All ages": 35212
+          "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
+            "All ages": {
+              "Female": 5422,
+              "Male": 8794,
+              "Unknown": 11,
+              "All persons": 14227
             }
           },
-          "Male": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 8794
-            },
-            "Violence without injury": {
-              "All ages": 7740
-            },
-            "Stalking and harassment": {
-              "All ages": 1297
-            },
-            "Sexual offences": {
-              "All ages": 606
-            },
-            "Total police recorded crime": {
-              "All ages": 38219
+          "Violence without injury": {
+            "All ages": {
+              "Female": 7309,
+              "Male": 7740,
+              "Unknown": 16,
+              "All persons": 15065
             }
           },
-          "Unknown": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 11
-            },
-            "Violence without injury": {
-              "All ages": 16
-            },
-            "Stalking and harassment": {
-              "All ages": 2
-            },
-            "Sexual offences": {
-              "All ages": 0
-            },
-            "Total police recorded crime": {
-              "All ages": 52
+          "Stalking and harassment": {
+            "All ages": {
+              "Female": 1979,
+              "Male": 1297,
+              "Unknown": 2,
+              "All persons": 3278
             }
           },
-          "All persons": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 14227
-            },
-            "Violence without injury": {
-              "All ages": 15065
-            },
-            "Stalking and harassment": {
-              "All ages": 3278
-            },
-            "Sexual offences": {
-              "All ages": 2997
-            },
-            "Total police recorded crime": {
-              "All ages": 73483
+          "Sexual offences": {
+            "All ages": {
+              "Female": 2391,
+              "Male": 606,
+              "Unknown": 0,
+              "All persons": 2997
+            }
+          },
+          "Total police recorded crime": {
+            "All ages": {
+              "Female": 35212,
+              "Male": 38219,
+              "Unknown": 52,
+              "All persons": 73483
             }
           }
         },
         "2016/17": {
-          "Female": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 5200
-            },
-            "Violence without injury": {
-              "All ages": 7104
-            },
-            "Stalking and harassment": {
-              "All ages": 1753
-            },
-            "Sexual offences": {
-              "All ages": 2466
-            },
-            "Total police recorded crime": {
-              "All ages": 32890
+          "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
+            "All ages": {
+              "Female": 5200,
+              "Male": 8059,
+              "Unknown": 6,
+              "All persons": 13265
             }
           },
-          "Male": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 8059
-            },
-            "Violence without injury": {
-              "All ages": 7306
-            },
-            "Stalking and harassment": {
-              "All ages": 1118
-            },
-            "Sexual offences": {
-              "All ages": 662
-            },
-            "Total police recorded crime": {
-              "All ages": 35388
+          "Violence without injury": {
+            "All ages": {
+              "Female": 7104,
+              "Male": 7306,
+              "Unknown": 9,
+              "All persons": 14419
             }
           },
-          "Unknown": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 6
-            },
-            "Violence without injury": {
-              "All ages": 9
-            },
-            "Stalking and harassment": {
-              "All ages": 5
-            },
-            "Sexual offences": {
-              "All ages": 0
-            },
-            "Total police recorded crime": {
-              "All ages": 44
+          "Stalking and harassment": {
+            "All ages": {
+              "Female": 1753,
+              "Male": 1118,
+              "Unknown": 5,
+              "All persons": 2876
             }
           },
-          "All persons": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 13265
-            },
-            "Violence without injury": {
-              "All ages": 14419
-            },
-            "Stalking and harassment": {
-              "All ages": 2876
-            },
-            "Sexual offences": {
-              "All ages": 3128
-            },
-            "Total police recorded crime": {
-              "All ages": 68322
+          "Sexual offences": {
+            "All ages": {
+              "Female": 2466,
+              "Male": 662,
+              "Unknown": 0,
+              "All persons": 3128
+            }
+          },
+          "Total police recorded crime": {
+            "All ages": {
+              "Female": 32890,
+              "Male": 35388,
+              "Unknown": 44,
+              "All persons": 68322
             }
           }
         },
         "2017/18": {
-          "Female": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 5221
-            },
-            "Violence without injury": {
-              "All ages": 7230
-            },
-            "Stalking and harassment": {
-              "All ages": 2062
-            },
-            "Sexual offences": {
-              "All ages": 2634
-            },
-            "Total police recorded crime": {
-              "All ages": 32552
+          "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
+            "All ages": {
+              "Female": 5221,
+              "Male": 7854,
+              "Unknown": 8,
+              "All persons": 13083
             }
           },
-          "Male": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 7854
-            },
-            "Violence without injury": {
-              "All ages": 7409
-            },
-            "Stalking and harassment": {
-              "All ages": 1382
-            },
-            "Sexual offences": {
-              "All ages": 699
-            },
-            "Total police recorded crime": {
-              "All ages": 34083
+          "Violence without injury": {
+            "All ages": {
+              "Female": 7230,
+              "Male": 7409,
+              "Unknown": 18,
+              "All persons": 14657
             }
           },
-          "Unknown": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 8
-            },
-            "Violence without injury": {
-              "All ages": 18
-            },
-            "Stalking and harassment": {
-              "All ages": 1
-            },
-            "Sexual offences": {
-              "All ages": 2
-            },
-            "Total police recorded crime": {
-              "All ages": 52
+          "Stalking and harassment": {
+            "All ages": {
+              "Female": 2062,
+              "Male": 1382,
+              "Unknown": 1,
+              "All persons": 3445
             }
           },
-          "All persons": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 13083
-            },
-            "Violence without injury": {
-              "All ages": 14657
-            },
-            "Stalking and harassment": {
-              "All ages": 3445
-            },
-            "Sexual offences": {
-              "All ages": 3335
-            },
-            "Total police recorded crime": {
-              "All ages": 66687
+          "Sexual offences": {
+            "All ages": {
+              "Female": 2634,
+              "Male": 699,
+              "Unknown": 2,
+              "All persons": 3335
+            }
+          },
+          "Total police recorded crime": {
+            "All ages": {
+              "Female": 32552,
+              "Male": 34083,
+              "Unknown": 52,
+              "All persons": 66687
             }
           }
         },
         "2018/19": {
-          "Female": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 5626
-            },
-            "Violence without injury": {
-              "All ages": 7327
-            },
-            "Stalking and harassment": {
-              "All ages": 3242
-            },
-            "Sexual offences": {
-              "All ages": 2756
-            },
-            "Total police recorded crime": {
-              "All ages": 33516
+          "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
+            "All ages": {
+              "Female": 5626,
+              "Male": 7995,
+              "Unknown": 5,
+              "All persons": 13626
             }
           },
-          "Male": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 7995
-            },
-            "Violence without injury": {
-              "All ages": 7423
-            },
-            "Stalking and harassment": {
-              "All ages": 1748
-            },
-            "Sexual offences": {
-              "All ages": 771
-            },
-            "Total police recorded crime": {
-              "All ages": 34263
+          "Violence without injury": {
+            "All ages": {
+              "Female": 7327,
+              "Male": 7423,
+              "Unknown": 8,
+              "All persons": 14758
             }
           },
-          "Unknown": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 5
-            },
-            "Violence without injury": {
-              "All ages": 8
-            },
-            "Stalking and harassment": {
-              "All ages": 4
-            },
-            "Sexual offences": {
-              "All ages": 4
-            },
-            "Total police recorded crime": {
-              "All ages": 53
+          "Stalking and harassment": {
+            "All ages": {
+              "Female": 3242,
+              "Male": 1748,
+              "Unknown": 4,
+              "All persons": 4994
             }
           },
-          "All persons": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 13626
-            },
-            "Violence without injury": {
-              "All ages": 14758
-            },
-            "Stalking and harassment": {
-              "All ages": 4994
-            },
-            "Sexual offences": {
-              "All ages": 3531
-            },
-            "Total police recorded crime": {
-              "All ages": 67832
+          "Sexual offences": {
+            "All ages": {
+              "Female": 2756,
+              "Male": 771,
+              "Unknown": 4,
+              "All persons": 3531
+            }
+          },
+          "Total police recorded crime": {
+            "All ages": {
+              "Female": 33516,
+              "Male": 34263,
+              "Unknown": 53,
+              "All persons": 67832
             }
           }
         },
         "2019/20": {
-          "Female": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 5422
-            },
-            "Violence without injury": {
-              "All ages": 7670
-            },
-            "Stalking and harassment": {
-              "All ages": 6256
-            },
-            "Sexual offences": {
-              "All ages": 2829
-            },
-            "Total police recorded crime": {
-              "All ages": 37024
+          "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
+            "All ages": {
+              "Female": 5422,
+              "Male": 7490,
+              "Unknown": 9,
+              "All persons": 12921
             }
           },
-          "Male": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 7490
-            },
-            "Violence without injury": {
-              "All ages": 7755
-            },
-            "Stalking and harassment": {
-              "All ages": 3431
-            },
-            "Sexual offences": {
-              "All ages": 701
-            },
-            "Total police recorded crime": {
-              "All ages": 35491
+          "Violence without injury": {
+            "All ages": {
+              "Female": 7670,
+              "Male": 7755,
+              "Unknown": 22,
+              "All persons": 15447
             }
           },
-          "Unknown": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 9
-            },
-            "Violence without injury": {
-              "All ages": 22
-            },
-            "Stalking and harassment": {
-              "All ages": 5
-            },
-            "Sexual offences": {
-              "All ages": 4
-            },
-            "Total police recorded crime": {
-              "All ages": 88
+          "Stalking and harassment": {
+            "All ages": {
+              "Female": 6256,
+              "Male": 3431,
+              "Unknown": 5,
+              "All persons": 9692
             }
           },
-          "All persons": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 12921
-            },
-            "Violence without injury": {
-              "All ages": 15447
-            },
-            "Stalking and harassment": {
-              "All ages": 9692
-            },
-            "Sexual offences": {
-              "All ages": 3534
-            },
-            "Total police recorded crime": {
-              "All ages": 72603
+          "Sexual offences": {
+            "All ages": {
+              "Female": 2829,
+              "Male": 701,
+              "Unknown": 4,
+              "All persons": 3534
+            }
+          },
+          "Total police recorded crime": {
+            "All ages": {
+              "Female": 37024,
+              "Male": 35491,
+              "Unknown": 88,
+              "All persons": 72603
             }
           }
         },
         "2020/21": {
-          "Female": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 4904
-            },
-            "Violence without injury": {
-              "All ages": 7244
-            },
-            "Stalking and harassment": {
-              "All ages": 6957
-            },
-            "Sexual offences": {
-              "All ages": 2672
-            },
-            "Total police recorded crime": {
-              "All ages": 34291
+          "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
+            "All ages": {
+              "Female": 4904,
+              "Male": 6022,
+              "Unknown": 8,
+              "All persons": 10934
             }
           },
-          "Male": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 6022
-            },
-            "Violence without injury": {
-              "All ages": 6636
-            },
-            "Stalking and harassment": {
-              "All ages": 4020
-            },
-            "Sexual offences": {
-              "All ages": 688
-            },
-            "Total police recorded crime": {
-              "All ages": 31274
+          "Violence without injury": {
+            "All ages": {
+              "Female": 7244,
+              "Male": 6636,
+              "Unknown": 22,
+              "All persons": 13902
             }
           },
-          "Unknown": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 8
-            },
-            "Violence without injury": {
-              "All ages": 22
-            },
-            "Stalking and harassment": {
-              "All ages": 13
-            },
-            "Sexual offences": {
-              "All ages": 5
-            },
-            "Total police recorded crime": {
-              "All ages": 86
+          "Stalking and harassment": {
+            "All ages": {
+              "Female": 6957,
+              "Male": 4020,
+              "Unknown": 13,
+              "All persons": 10990
             }
           },
-          "All persons": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 10934
-            },
-            "Violence without injury": {
-              "All ages": 13902
-            },
-            "Stalking and harassment": {
-              "All ages": 10990
-            },
-            "Sexual offences": {
-              "All ages": 3365
-            },
-            "Total police recorded crime": {
-              "All ages": 65651
+          "Sexual offences": {
+            "All ages": {
+              "Female": 2672,
+              "Male": 688,
+              "Unknown": 5,
+              "All persons": 3365
+            }
+          },
+          "Total police recorded crime": {
+            "All ages": {
+              "Female": 34291,
+              "Male": 31274,
+              "Unknown": 86,
+              "All persons": 65651
             }
           }
         },
         "2021/22": {
-          "Female": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 5787
-            },
-            "Violence without injury": {
-              "All ages": 9035
-            },
-            "Stalking and harassment": {
-              "All ages": 8852
-            },
-            "Sexual offences": {
-              "All ages": 3209
-            },
-            "Total police recorded crime": {
-              "All ages": 39475
+          "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
+            "All ages": {
+              "Female": 5787,
+              "Male": 7954,
+              "Unknown": 19,
+              "All persons": 13760
             }
           },
-          "Male": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 7954
-            },
-            "Violence without injury": {
-              "All ages": 8899
-            },
-            "Stalking and harassment": {
-              "All ages": 5011
-            },
-            "Sexual offences": {
-              "All ages": 876
-            },
-            "Total police recorded crime": {
-              "All ages": 36517
+          "Violence without injury": {
+            "All ages": {
+              "Female": 9035,
+              "Male": 8899,
+              "Unknown": 23,
+              "All persons": 17957
             }
           },
-          "Unknown": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 19
-            },
-            "Violence without injury": {
-              "All ages": 23
-            },
-            "Stalking and harassment": {
-              "All ages": 21
-            },
-            "Sexual offences": {
-              "All ages": 12
-            },
-            "Total police recorded crime": {
-              "All ages": 111
+          "Stalking and harassment": {
+            "All ages": {
+              "Female": 8852,
+              "Male": 5011,
+              "Unknown": 21,
+              "All persons": 13884
             }
           },
-          "All persons": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 13760
-            },
-            "Violence without injury": {
-              "All ages": 17957
-            },
-            "Stalking and harassment": {
-              "All ages": 13884
-            },
-            "Sexual offences": {
-              "All ages": 4097
-            },
-            "Total police recorded crime": {
-              "All ages": 76103
+          "Sexual offences": {
+            "All ages": {
+              "Female": 3209,
+              "Male": 876,
+              "Unknown": 12,
+              "All persons": 4097
+            }
+          },
+          "Total police recorded crime": {
+            "All ages": {
+              "Female": 39475,
+              "Male": 36517,
+              "Unknown": 111,
+              "All persons": 76103
             }
           }
         },
         "2022/23": {
-          "Female": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 6091
-            },
-            "Violence without injury": {
-              "All ages": 9465
-            },
-            "Stalking and harassment": {
-              "All ages": 8809
-            },
-            "Sexual offences": {
-              "All ages": 3283
-            },
-            "Total police recorded crime": {
-              "All ages": 39961
+          "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
+            "All ages": {
+              "Female": 6091,
+              "Male": 7940,
+              "Unknown": 23,
+              "All persons": 14054
             }
           },
-          "Male": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 7940
-            },
-            "Violence without injury": {
-              "All ages": 9193
-            },
-            "Stalking and harassment": {
-              "All ages": 4597
-            },
-            "Sexual offences": {
-              "All ages": 1035
-            },
-            "Total police recorded crime": {
-              "All ages": 36753
+          "Violence without injury": {
+            "All ages": {
+              "Female": 9465,
+              "Male": 9193,
+              "Unknown": 53,
+              "All persons": 18711
             }
           },
-          "Unknown": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 23
-            },
-            "Violence without injury": {
-              "All ages": 53
-            },
-            "Stalking and harassment": {
-              "All ages": 20
-            },
-            "Sexual offences": {
-              "All ages": 5
-            },
-            "Total police recorded crime": {
-              "All ages": 142
+          "Stalking and harassment": {
+            "All ages": {
+              "Female": 8809,
+              "Male": 4597,
+              "Unknown": 20,
+              "All persons": 13426
             }
           },
-          "All persons": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 14054
-            },
-            "Violence without injury": {
-              "All ages": 18711
-            },
-            "Stalking and harassment": {
-              "All ages": 13426
-            },
-            "Sexual offences": {
-              "All ages": 4323
-            },
-            "Total police recorded crime": {
-              "All ages": 76856
+          "Sexual offences": {
+            "All ages": {
+              "Female": 3283,
+              "Male": 1035,
+              "Unknown": 5,
+              "All persons": 4323
+            }
+          },
+          "Total police recorded crime": {
+            "All ages": {
+              "Female": 39961,
+              "Male": 36753,
+              "Unknown": 142,
+              "All persons": 76856
             }
           }
         },
         "2023/24": {
-          "Female": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 5989
-            },
-            "Violence without injury": {
-              "All ages": 8128
-            },
-            "Stalking and harassment": {
-              "All ages": 6284
-            },
-            "Sexual offences": {
-              "All ages": 3070
-            },
-            "Total police recorded crime": {
-              "All ages": 34895
+          "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
+            "All ages": {
+              "Female": 5989,
+              "Male": 7632,
+              "Unknown": 22,
+              "All persons": 13643
             }
           },
-          "Male": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 7632
-            },
-            "Violence without injury": {
-              "All ages": 8581
-            },
-            "Stalking and harassment": {
-              "All ages": 3474
-            },
-            "Sexual offences": {
-              "All ages": 1056
-            },
-            "Total police recorded crime": {
-              "All ages": 33934
+          "Violence without injury": {
+            "All ages": {
+              "Female": 8128,
+              "Male": 8581,
+              "Unknown": 35,
+              "All persons": 16744
             }
           },
-          "Unknown": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 22
-            },
-            "Violence without injury": {
-              "All ages": 35
-            },
-            "Stalking and harassment": {
-              "All ages": 25
-            },
-            "Sexual offences": {
-              "All ages": 6
-            },
-            "Total police recorded crime": {
-              "All ages": 124
+          "Stalking and harassment": {
+            "All ages": {
+              "Female": 6284,
+              "Male": 3474,
+              "Unknown": 25,
+              "All persons": 9783
             }
           },
-          "All persons": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 13643
-            },
-            "Violence without injury": {
-              "All ages": 16744
-            },
-            "Stalking and harassment": {
-              "All ages": 9783
-            },
-            "Sexual offences": {
-              "All ages": 4132
-            },
-            "Total police recorded crime": {
-              "All ages": 68953
+          "Sexual offences": {
+            "All ages": {
+              "Female": 3070,
+              "Male": 1056,
+              "Unknown": 6,
+              "All persons": 4132
+            }
+          },
+          "Total police recorded crime": {
+            "All ages": {
+              "Female": 34895,
+              "Male": 33934,
+              "Unknown": 124,
+              "All persons": 68953
             }
           }
         },
         "2024/25": {
-          "Female": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 5410
-            },
-            "Violence without injury": {
-              "All ages": 7657
-            },
-            "Stalking and harassment": {
-              "All ages": 5877
-            },
-            "Sexual offences": {
-              "All ages": 3131
-            },
-            "Total police recorded crime": {
-              "All ages": 32230
+          "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
+            "All ages": {
+              "Female": 5410,
+              "Male": 7370,
+              "Unknown": 20,
+              "All persons": 12800
             }
           },
-          "Male": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 7370
-            },
-            "Violence without injury": {
-              "All ages": 8140
-            },
-            "Stalking and harassment": {
-              "All ages": 3253
-            },
-            "Sexual offences": {
-              "All ages": 1064
-            },
-            "Total police recorded crime": {
-              "All ages": 31329
+          "Violence without injury": {
+            "All ages": {
+              "Female": 7657,
+              "Male": 8140,
+              "Unknown": 47,
+              "All persons": 15844
             }
           },
-          "Unknown": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 20
-            },
-            "Violence without injury": {
-              "All ages": 47
-            },
-            "Stalking and harassment": {
-              "All ages": 24
-            },
-            "Sexual offences": {
-              "All ages": 5
-            },
-            "Total police recorded crime": {
-              "All ages": 161
+          "Stalking and harassment": {
+            "All ages": {
+              "Female": 5877,
+              "Male": 3253,
+              "Unknown": 24,
+              "All persons": 9154
             }
           },
-          "All persons": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 12800
-            },
-            "Violence without injury": {
-              "All ages": 15844
-            },
-            "Stalking and harassment": {
-              "All ages": 9154
-            },
-            "Sexual offences": {
-              "All ages": 4200
-            },
-            "Total police recorded crime": {
-              "All ages": 63720
+          "Sexual offences": {
+            "All ages": {
+              "Female": 3131,
+              "Male": 1064,
+              "Unknown": 5,
+              "All persons": 4200
+            }
+          },
+          "Total police recorded crime": {
+            "All ages": {
+              "Female": 32230,
+              "Male": 31329,
+              "Unknown": 161,
+              "All persons": 63720
             }
           }
         },
         "2025/26": {
-          "Female": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 5258
-            },
-            "Violence without injury": {
-              "All ages": 7487
-            },
-            "Stalking and harassment": {
-              "All ages": 5824
-            },
-            "Sexual offences": {
-              "All ages": 3284
-            },
-            "Total police recorded crime": {
-              "All ages": 31540
+          "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
+            "All ages": {
+              "Female": 5258,
+              "Male": 6796,
+              "Unknown": 13,
+              "All persons": 12067
             }
           },
-          "Male": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 6796
-            },
-            "Violence without injury": {
-              "All ages": 7946
-            },
-            "Stalking and harassment": {
-              "All ages": 3330
-            },
-            "Sexual offences": {
-              "All ages": 1064
-            },
-            "Total police recorded crime": {
-              "All ages": 30227
+          "Violence without injury": {
+            "All ages": {
+              "Female": 7487,
+              "Male": 7946,
+              "Unknown": 25,
+              "All persons": 15458
             }
           },
-          "Unknown": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 13
-            },
-            "Violence without injury": {
-              "All ages": 25
-            },
-            "Stalking and harassment": {
-              "All ages": 22
-            },
-            "Sexual offences": {
-              "All ages": 8
-            },
-            "Total police recorded crime": {
-              "All ages": 129
+          "Stalking and harassment": {
+            "All ages": {
+              "Female": 5824,
+              "Male": 3330,
+              "Unknown": 22,
+              "All persons": 9176
             }
           },
-          "All persons": {
-            "Violence with injury (including homicide & death/serious injury by unlawful driving)": {
-              "All ages": 12067
-            },
-            "Violence without injury": {
-              "All ages": 15458
-            },
-            "Stalking and harassment": {
-              "All ages": 9176
-            },
-            "Sexual offences": {
-              "All ages": 4356
-            },
-            "Total police recorded crime": {
-              "All ages": 61896
+          "Sexual offences": {
+            "All ages": {
+              "Female": 3284,
+              "Male": 1064,
+              "Unknown": 8,
+              "All persons": 4356
+            }
+          },
+          "Total police recorded crime": {
+            "All ages": {
+              "Female": 31540,
+              "Male": 30227,
+              "Unknown": 129,
+              "All persons": 61896
             }
           }
         }
