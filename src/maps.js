@@ -90,9 +90,9 @@ window.addEventListener("DOMContentLoaded", async () => {
                 <li>Stalking and harassment;</li>
                 <li>Violence with injury;</li>
                 <li>Violence without injury; and</li>
-                <li>Crimes with a domestic abuse motivation;</li>
             </ul>
             <p>The location is based on where the offences take place.<br>
+            Crime population rates are calculated using the Northern Ireland mid-year population estimates published by NISRA.<br>
             Violence with injury includes homicide and death/serious injury by unlawful driving.</p>`,
 
             `<p>Statistics on police recorded crime in Northern Ireland are collated and produced by statisticians seconded to the Police Service of Northern Ireland (PSNI) from the Northern Ireland Statistics and Research Agency (NISRA).</p>
