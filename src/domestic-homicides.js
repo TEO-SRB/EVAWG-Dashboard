@@ -166,7 +166,7 @@ window.addEventListener("DOMContentLoaded", async () => {
             <li><a href="${config.portal_url}table/DAHVAG" target="_blank">Domestic abuse homicides recorded</a> - by victim age and gender</li>
             <li><a href="${config.portal_url}table/DAHVGR" target="_blank">Domestic abuse homicides recorded</a> - by victim gender and relationship of victim to offender</li>
         </ul>
-<p>Statistical publications can be found on the <a href="https://www.psni.police.uk/about-us/our-publications-and-reports/official-statistics/police-recorded-crime-statistics" target="_blank">relevant publication page</a>.</p>
+<p>Statistical publications can be found on the <a href="https://www.psni.police.uk/about-us/our-publications-and-reports/official-statistics/domestic-abuse-statistics" target="_blank">relevant publication page</a>.</p>
 <p><strong>Updates:</strong> Data updated annually each May.</p>`,
 
 `<p>This tab presents police recorded crime data on homicide victims by sex, including cases linked to domestic abuse.</p>
