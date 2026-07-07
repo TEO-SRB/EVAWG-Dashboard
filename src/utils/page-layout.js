@@ -12,6 +12,7 @@ export function insertHeader () {
     <div id="cookie-banner"></div>
     <div class="container-fluid d-flex flex-column align-items-stretch p-0">
     <!-- Banner row (full width) -->
+    <div id="skip-link" class="bg-warning py-2 d-none"><a class="text-black" href="#content">Skip to main content</a></div>
     <div aria-label="Feedback" class="w-100" style="background-color:#3878c5;">
         <div class="text-white text-center py-2 px-3">
             We welcome feedback from users through our 
@@ -37,14 +38,21 @@ export function insertHeader () {
 
     <!-- Right: TEO logo -->
     <div class="col-12 col-xl-4 d-flex justify-content-center justify-content-xl-end">
-      <a class="navbar-brand pe-2 d-flex align-items-center" href="./">
-        <img src="assets/img/logo/teo-evawg.png"
+      <a class="d-flex align-items-center" href="./">
+        <img src="assets/img/logo/ni-exec-evawg.svg"
             alt="TEO logo" height="60" class="ms-3">
       </a>
     </div>
 
   </div>
   `
+
+  window.addEventListener("keydown", (e) => {
+    if (e.keyCode === 9) {
+      document.getElementById("skip-link").classList.add("d-flex");
+      document.getElementById("skip-link").classList.remove("d-none");
+    }
+  })
 
   initCookieConsent()
 
