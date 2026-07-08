@@ -95,7 +95,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         populateInfoBoxes(
             ["Definitions", "Source", "What does the data mean?"],
             [
-            `<p>The <strong>Young Life and Times (YLT) Survey</strong> defines gender-based violence as "violence, abuse and harm directed against a person because of that person's gender, or violence that affects people of a particular gender disproportionately."</p>
+            `<p>The <strong>Young Life and Times (YLT) Survey</strong> defines gender-based violence as "violence, abuse and harm directed against a person because of that person's gender, or violence that affects people of a particular gender disproportionately".</p>
 <ul>
     <li><strong>Physical Violence:</strong> Being beaten, slapped, pushed, or restrained.</li>
     <li><strong>Sexual Violence:</strong> Upskirting, unwanted touching, or being coerced into sexual acts.</li>
@@ -105,13 +105,13 @@ window.addEventListener("DOMContentLoaded", async () => {
 
 `<p>The <strong>Young Life and Times (YLT) Survey</strong> records the attitudes and opinions of 16-year-olds in Northern Ireland about the issues that concern them. It is a representative annual survey that has been running since 2003.</p>
 <p>To assess experiences of, and attitudes to, violence against women and girls, The Executive Office (TEO) sponsored the inclusion of relevant questions in the YLT survey from 2023.</p>
-<p>The survey is completed online between April and May each year. Due to demand for questions, the survey is split into two versions; the version containing the Violence Against Women and Girls (VAWG) module is completed by approximately 1,000 16-year-olds annually.</p>
+<p>The YLT Survey is completed online between April and May each year. Due to demand for questions, the survey is split into two versions; the version containing the Violence Against Women and Girls (VAWG) module is completed by approximately 1,000 16-year-olds annually.</p>
 <p>In the time series above labelled "Trend in prevalence of gender-based violence among 16-year-olds, 2023 to 2024", caution is required around comparing 2023 and 2024 data due to slight differences in question wording. In 2023 the question was, "Based on this definition, and regardless of your gender, have you personally experienced any of the following in the last year?" whereas in 2024 the question was "Based on this definition, and regardless of your gender, have you personally experienced any of the following in the last year because of your gender?"</p>
  <p>This data is available on the <a href="${config.portal_url}" target="_blank">NISRA Data Portal</a> in the following tables:</p>
         <ul>
-            <li><a href="${config.portal_url}table/EXPVLYTHEQ" target="_blank">Experience of gender-based violence - 16 year olds</a></li>
+            <li><a href="${config.portal_url}table/EXPVLYTHEQ" target="_blank">Experience of gender-based violence - 16 year olds</a> - by violence type and equality group</li>
         </ul>
-<p>Related publications can be found via the <a href="https://www.executiveoffice-ni.gov.uk/topics/ending-violence-against-women-and-girls-evawg" target="_blank">relevant publication page</a>.</p>
+<p>Statistical publications relating to the EVAWG Stragegy can be found on <a href="https://www.executiveoffice-ni.gov.uk/topics/ending-violence-against-women-and-girls-evawg" target="_blank">The Executive Office website</a>.</p>
 <p><strong>Updates:</strong> Data updated annually.</p>`,
 
 `<p>This tab presents findings from the Young Life and Times survey, capturing the views and experiences of young people in Northern Ireland regarding violence and abuse.</p>

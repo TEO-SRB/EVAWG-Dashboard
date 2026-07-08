@@ -158,10 +158,9 @@ Some of these offences may be flagged by the police as domestic abuse‑related 
 <p>The Crime recording process starts at the point at which an incident comes to the attention of police. This may be brought through a call for service from a member of the public, an incident being referred to the police by another agency or being identified by the police directly.</p>
  <p>This data is available on the <a href="${config.portal_url}" target="_blank">NISRA Data Portal</a> in the following tables:</p>
         <ul>
-            <li><a href="${config.portal_url}table/PRCVCTM" target="_blank">Police recorded crime - victims of crime</a></li>
-            <li><a href="${config.portal_url}table/PRCONLCG" target="_blank">Police recorded crime - online crime</a></li>
+            <li><a href="${config.portal_url}table/PRCVCTM" target="_blank">Police recorded crime - victims of crime</a>- by crime type and victim gender</li>
         </ul>
-<p>Statistical publications can be found on the <a href="https://www.psni.police.uk/about-us/our-publications-and-reports/official-statistics/police-recorded-crime-statistics" target="_blank">relevant publication page</a>.</p>
+<p>Statistical publications can be found on the <a href="https://www.psni.police.uk/about-us/our-publications-and-reports/official-statistics/police-recorded-crime-statistics" target="_blank">PSNI - Police Recorded Crime Statistics website</a>.</p>
 <p><strong>Updates:</strong> Data updated annually each May.</p>`,
 
 `<p>This tab shows police-recorded offences where the victim's gender is known, including sexual offences, stalking and harassment, and violence with or without injury. These figures help us understand patterns of gender-based violence reported to the police.</p>

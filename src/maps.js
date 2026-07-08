@@ -100,10 +100,9 @@ window.addEventListener("DOMContentLoaded", async () => {
             <p>The Crime recording process starts at the point at which an incident comes to the attention of police. This may be brought through a call for service from a member of the public, an incident being referred to the police by another agency or being identified by the police directly.</p>
             <p>This data is available on the <a href="${config.portal_url}" target="_blank">NISRA Data Portal</a> in the following tables:</p>
             <ul>
-                <li><a href="${config.portal_url}table/PRCPD" target="_blank">Police recorded crime and sanction outcomes</a></li>
-                <li><a href="${config.portal_url}table/DOMACLGD" target="_blank">Domestic abuse offences</a></li> 
+                <li><a href="${config.portal_url}table/PRCPD" target="_blank">Police recorded crime and sanction outcomes</a> - by Local Government District and crime type</li>
             </ul>
-            <p>Statistical publications can be found on the <a href="https://www.psni.police.uk/about-us/our-publications-and-reports/official-statistics/police-recorded-crime-statistics" target="_blank">relevant publication page</a>.</p>
+            <p>Statistical publications can be found on the <a href="https://www.psni.police.uk/about-us/our-publications-and-reports/official-statistics/police-recorded-crime-statistics" target="_blank">PSNI - Police Recorded Crime Statistics website</a>.</p>
             <p><strong>Updates:</strong> Data updated annually each May.</p>`,
 
             `<p>This tab displays maps showing where offences occurred, based on police recorded crime data.</p>

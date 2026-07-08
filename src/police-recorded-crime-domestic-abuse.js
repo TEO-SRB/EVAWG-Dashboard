@@ -122,7 +122,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         populateInfoBoxes(
             ["Definitions", "Source", "What does the data mean?"],
             [
-        `<p>The <strong>Police Service of Northern Ireland (PSNI)</strong> has adopted the definition of domestic violence and abuse as outlined in the 2016 Northern Ireland Government Strategy <em>“Stopping Domestic and Sexual Violence and Abuse in Northern Ireland”</em> as:</p>
+        `<p>The <strong>Police Service of Northern Ireland (PSNI)</strong> has adopted the definition of domestic violence and abuse as outlined in the 2016 Northern Ireland Government Strategy “Stopping Domestic and Sexual Violence and Abuse in Northern Ireland” as:</p>
         <p>“Threatening, controlling, coercive behaviour, violence or abuse (psychological, virtual, physical, verbal, sexual, financial or emotional) inflicted on anyone (irrespective of age, ethnicity, religion, gender, gender identity, sexual orientation or any form of disability) by a current or former partner or family member.”</p>
         <p>Violence with injury includes homicide and death/serious injury by unlawful driving.</p>
         <p>Police recorded crime data on this page includes those circumstances where domestic abuse forms part of the offence. Victim gender is available, however police recorded domestic abuse crime does not identify gender-based violence.</p>`,
@@ -137,7 +137,7 @@ window.addEventListener("DOMContentLoaded", async () => {
             <li><a href="${config.portal_url}table/DOMACVAC" target="_blank">Domestic abuse crimes</a> - by victim gender and offence type</li>
             <li><a href="${config.portal_url}table/DOMACVG" target="_blank">Domestic abuse crimes</a> - by victim gender</li>      
         </ul>
-        <p>Related publications can be found via the <a href="https://www.psni.police.uk/about-us/our-publications-and-reports/official-statistics/domestic-abuse-statistics" target="_blank">relevant publication page</a>.</p>
+        <p>Statistical publications can be found on the <a href="https://www.psni.police.uk/about-us/our-publications-and-reports/official-statistics/domestic-abuse-statistics" target="_blank">PSNI - Domestic Abuse Statistics website</a>.</p>
         <p><strong>Updates:</strong> Data updated annually each May.</p>`,
 
         `<p>This tab focuses on incidents flagged as domestic abuse, broken down by sex of victim and type of offence.</p>

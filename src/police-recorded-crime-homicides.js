@@ -125,7 +125,6 @@ window.addEventListener("DOMContentLoaded", async () => {
                    <p> The year in which a homicide is recorded for crime recording purposes is based on the date it is established as homicide; the date of death may have occurred in a previous year.</p>
                     <p> These figures are based on crimes reported to and recorded by the police, in line with the National Crime Recording Standard (NCRS) and Home Office Counting Rules (HOCR). Data are presented on a victim basis, with each victim counted once.</p>
                     <p> Homicide classifications may be revised as investigations progress or cases are concluded, and figures for recent years are therefore subject to revision. Revisions were made to the homicide time series for the period 2014/15 to 2023/24 following a review of this data in 2024/25.
-                    <p> The number of murders in 1998/99 includes the 29 persons killed in the Omagh bomb on 15 August 1998.<br></p>
                     <p>Changes in reporting behaviour, recording practices and data revisions should be considered when interpreting trends over time.
                 </p>`,
 
@@ -136,7 +135,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         <ul>
             <li><a href="${config.portal_url}table/PRCHOM" target="_blank">Victims of homicide recorded</a> - by victim age and gender</li>
         </ul>
-<p>Statistical publications can be found on the <a href="https://www.psni.police.uk/about-us/our-publications-and-reports/official-statistics/police-recorded-crime-statistics" target="_blank">relevant publication page</a>.</p>
+<p>Statistical publications can be found on the <a href="https://www.psni.police.uk/about-us/our-publications-and-reports/official-statistics/police-recorded-crime-statistics" target="_blank">PSNI - Police Recorded Crime Statistics website</a>.</p>
 <p><strong>Updates:</strong> Data updated annually each May.</p>
                 </p>`,
 

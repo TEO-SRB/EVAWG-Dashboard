@@ -243,11 +243,11 @@ window.addEventListener("DOMContentLoaded", async () => {
     <p>Two measures of domestic abuse are adopted: lifetime; and the last three years. Lifetime prevalence is a good indicator of the percentage of NISCS respondents who have experienced domestic abuse at some point in their lives since age 16. The previous three years is a good indicator of recent levels of domestic abuse. </p>
   <p>This data is available on the <a href="${config.portal_url}" target="_blank">NISRA Data Portal</a> in the following tables:</p>
         <ul>
-            <li><a href="${config.portal_url}table/EXPDA" target="_blank">Experience of domestic abuse</a></li>
-            <li><a href="${config.portal_url}table/LDARPG" target="_blank">Lifetime domestic abuse reported to the police</a></li>
-            <li><a href="${config.portal_url}table/DARPV" target="_blank">Domestic abuse - relationship of perpetrator to victim</a></li>        
+            <li><a href="${config.portal_url}table/EXPDA" target="_blank">Experience of domestic abuse</a> - by offence type, timeframe and victim gender</li>
+            <li><a href="${config.portal_url}table/LDARPG" target="_blank">Lifetime domestic abuse reported to the police</a> - by victim gender</li>
+            <li><a href="${config.portal_url}table/DARPV" target="_blank">Domestic abuse - relationship of perpetrator to victim</a> - </li>        
         </ul>
-    <p>Statistical publications can be found on the <a href="https://www.justice-ni.gov.uk/publications/experience-domestic-abuse-findings-201819-northern-ireland-safe-community-survey" target="_blank">relevant publication page</a>.</p>
+    <p>Statistical publications can be found on the <a href="https://www.justice-ni.gov.uk/publications/experience-domestic-abuse-findings-201819-northern-ireland-safe-community-survey" target="_blank">Department of Justice website</a>.</p>
     <p><strong>Updates:</strong> Next update due in 2026; data will be updated biennially thereafter.</p>`,
 
     `<p>This tab provides an overview of how common domestic abuse is, based on self-reported experiences from survey respondents.</p>

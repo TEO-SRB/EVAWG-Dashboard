@@ -113,10 +113,10 @@ window.addEventListener("DOMContentLoaded", async () => {
 <p>Average is measured as the median number of days taken, i.e., the number of days at which 50% of those cases included under counting rules has been completed. This is an overview of the time taken for a case to be disposed at court from the date that case began its journey through the criminal justice system, based on a start point of the date the offence was reported to, or detected by, the PSNI.</p>
   <p>This data is available on the <a href="${config.portal_url}" target="_blank">NISRA Data Portal</a> in the following tables:</p>
     <ul>
-        <li><a href="https://data.nisra.gov.uk/table/INDPRCASEEQ" target="_blank">Processing times for criminal cases</a></li>
-        <li><a href="${config.portal_url}table/CPTDAC" target="_blank">Processing times for domestic abuse cases</a></li>      
+        <li><a href="https://data.nisra.gov.uk/table/INDPRCASEEQ" target="_blank">Processing times for criminal cases</a> - by equality group</li>
+        <li><a href="${config.portal_url}table/CPTDAC" target="_blank">Processing times for domestic abuse cases</a> - by case type</li>      
     </ul>
-<p>Statistical publications can be found on the relevant publication page:
+<p>Statistical publications can be found on the Department of Justice website:
     <ul>
         <li><a href="https://www.justice-ni.gov.uk/articles/case-processing-times" target="_blank">Criminal cases</a></li>
         <li><a href="https://www.justice-ni.gov.uk/articles/domestic-abuse-prosecutions-convictions-and-case-processing-time-statistics" target="_blank">Domestic abuse cases</a></li>
