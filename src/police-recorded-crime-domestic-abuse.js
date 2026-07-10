@@ -137,6 +137,7 @@ window.addEventListener("DOMContentLoaded", async () => {
             <li><a href="${config.portal_url}table/DOMACVAC" target="_blank">Domestic abuse crimes</a> - by victim gender and offence type</li>
             <li><a href="${config.portal_url}table/DOMACVG" target="_blank">Domestic abuse crimes</a> - by victim gender</li>      
         </ul>
+        <p>The data presented on this page is sourced from the PSNI Domestic Abuse Statistics financial year update and was last updated in May. This page is updated twice annually: in May, following the publication of the PSNI Domestic Abuse Statistics financial year update, and in November, following the publication of the Domestic Abuse Annual Trends report. This ensures that the information presented reflects the latest available annual domestic abuse statistics published by the PSNI.</p>
         <p>Statistical publications can be found on the <a href="https://www.psni.police.uk/about-us/our-publications-and-reports/official-statistics/domestic-abuse-statistics" target="_blank">PSNI - Domestic Abuse Statistics website</a>.</p>
         <p><strong>Updates:</strong> Data updated annually each May.</p>`,
 

@@ -103,7 +103,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     <li><strong>Online Violence:</strong> Receiving threats online or via social media, online trolling, or being sent or asked for intimate images against your will.</li>
 </ul>`,
 
-`<p>The <strong>Young Life and Times (YLT) Survey</strong> records the attitudes and opinions of 16-year-olds in Northern Ireland about the issues that concern them. It is a representative annual survey that has been running since 2003.</p>
+`<p>The <strong>Young Life and Times (YLT) Survey</strong> records the attitudes and opinions of <strong>16-year-olds</strong> in Northern Ireland about the issues that concern them. It is a representative annual survey that has been running since 2003.</p>
 <p>To assess experiences of, and attitudes to, violence against women and girls, The Executive Office (TEO) sponsored the inclusion of relevant questions in the YLT survey from 2023.</p>
 <p>The YLT Survey is completed online between April and May each year. Due to demand for questions, the survey is split into two versions; the version containing the Violence Against Women and Girls (VAWG) module is completed by approximately 1,000 16-year-olds annually.</p>
 <p>In the time series above labelled "Trend in prevalence of gender-based violence among 16-year-olds, 2023 to 2024", caution is required around comparing 2023 and 2024 data due to slight differences in question wording. In 2023 the question was, "Based on this definition, and regardless of your gender, have you personally experienced any of the following in the last year?" whereas in 2024 the question was "Based on this definition, and regardless of your gender, have you personally experienced any of the following in the last year because of your gender?"</p>
@@ -111,7 +111,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         <ul>
             <li><a href="${config.portal_url}table/EXPVLYTHEQ" target="_blank">Experience of gender-based violence - 16 year olds</a> - by violence type and equality group</li>
         </ul>
-<p>Statistical publications relating to the EVAWG Stragegy can be found on <a href="https://www.executiveoffice-ni.gov.uk/topics/ending-violence-against-women-and-girls-evawg" target="_blank">The Executive Office website</a>.</p>
+<p>Statistical publications can be found on <a href="https://www.executiveoffice-ni.gov.uk/topics/ending-violence-against-women-and-girls-evawg" target="_blank">The Executive Office website</a>.</p>
 <p><strong>Updates:</strong> Data updated annually.</p>`,
 
 `<p>This tab presents findings from the Young Life and Times survey, capturing the views and experiences of young people in Northern Ireland regarding violence and abuse.</p>

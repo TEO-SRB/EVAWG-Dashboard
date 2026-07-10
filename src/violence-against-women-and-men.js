@@ -149,14 +149,14 @@ window.addEventListener("DOMContentLoaded", async () => {
 
         `<p>The <strong>Northern Ireland Life and Times (NILT) Survey</strong> records the attitudes, values, and beliefs of adults to a wide range of social policy issues.  This annual survey has been running since 1998 and is administered by ARK. ARK is Northern Ireland's social policy hub and is made up of academics across QUB and Ulster University.</p>
         <p>Its mission is to monitor the attitudes and behaviour of people in Northern Ireland annually to provide a time-series and a public record of how our attitudes and behaviour develop on a wide range of social policy issues. </p>
-        <p>Fieldwork for the NILT Survey is carried out annually between September and January with approximately 1,200 respondents aged 18 years or over. </p>
+        <p>Fieldwork for the NILT Survey is carried out annually between September and January with approximately 1,200 respondents aged <strong>18 years or over</strong>. </p>
         <p>The Violence Against Women and Girls (VAWG) module of NILT is sponsored by The Executive Office.</p>
         <p>This data is available on the <a href="${config.portal_url}" target="_blank">NISRA Data Portal</a> in the following tables:</p>
         <ul>
             <li><a href="${config.portal_url}table/EXPVLADEQ" target="_blank">Experience of gender-based violence - adults</a> - by violence type and equality group</li>
             <li><a href="${config.portal_url}table/EXPGBVAG" target="_blank">Experience of gender-based violence - adults</a> - by victim age and victim gender</li>
         </ul>
-        <p>Statistical publications relating to the EVAWG stragegy can be found on <a href="https://www.executiveoffice-ni.gov.uk/topics/ending-violence-against-women-and-girls-evawg" target="_blank">The Executive Office website</a>.</p>
+        <p>Statistical publications can be found on <a href="https://www.executiveoffice-ni.gov.uk/topics/ending-violence-against-women-and-girls-evawg" target="_blank">The Executive Office website</a>.</p>
         <p><strong>Updates:</strong> Data updated annually.</p>`,
 
         `<p>This tab presents findings from the Northern Ireland Life and Times survey, capturing self-reported experiences of violence and abuse among women and men.</p>

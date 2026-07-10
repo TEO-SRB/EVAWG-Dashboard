@@ -135,6 +135,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         <ul>
             <li><a href="${config.portal_url}table/PRCHOM" target="_blank">Victims of homicide recorded</a> - by victim age and gender</li>
         </ul>
+<p>The data presented on the page is sourced from the PSNI financial year update and was last updated in May. This page is updated twice annually: in May, following the publication of the PSNI financial year update, and in November, following the publication of the Annual Trends in Police Recorded Crime report. We do not update this page using the monthly PSNI releases. For the most up-to-date data, please refer to the link below.<p>
 <p>Statistical publications can be found on the <a href="https://www.psni.police.uk/about-us/our-publications-and-reports/official-statistics/police-recorded-crime-statistics" target="_blank">PSNI - Police Recorded Crime Statistics website</a>.</p>
 <p><strong>Updates:</strong> Data updated annually each May.</p>
                 </p>`,
