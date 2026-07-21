@@ -15,7 +15,7 @@ export function insertHeader () {
     <div id="skip-link" class="bg-warning py-2 d-none"><a class="text-black" href="#content">Skip to main content</a></div>
     <div aria-label="Feedback" class="w-100" style="background-color:#3878c5;">
         <div class="text-white text-center py-2 px-3">
-            We welcome feedback from users through our 
+           This is a prototype version provided for testing and feedback. Please share your views through our 
                 <a href="https://dttselfserve.nidirect.gov.uk/NISRA/RateIt#/Gender_based_violence" target="_blank" rel="noopener noreferrer">short survey</a>
             
         </div>
