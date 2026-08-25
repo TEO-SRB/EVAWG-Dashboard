@@ -489,3 +489,11 @@ a.cookiesbarlink {
   text-transform: none;
   font-size: 1.2em;
 }
+
+.display-6.unit {
+  font-size: 18pt;
+}
+
+.display-4.unit {
+  font-size: 26pt;
+}

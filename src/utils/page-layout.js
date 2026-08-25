@@ -132,6 +132,7 @@ export function insertNavButtons() {
 
 export function insertFooter () {
 
+    // ===== PREPARE THE FOOTER =====
     const footer = document.getElementById("footer");
 
     footer.classList.add("footer");
@@ -139,8 +140,9 @@ export function insertFooter () {
     footer.classList.add("bg-nisra");
     footer.classList.add("text-nisra");
     
+    // ===== INSERT THE FOOTER CONTENT =====
     footer.innerHTML = `<div class="container">
-      <!-- 3 column section -->
+      <!-- Main footer links -->
       <div class="row mb-3">
         <div class="col-md-4">
           <h3 class="h5">Data Tools</h3>
@@ -190,7 +192,7 @@ export function insertFooter () {
         </div>
       </div>
 
-      <!-- Horizontal list with separators -->
+      <!-- Legal and accessibility links -->
       <ul class="list-inline footer-links text-center mb-0">
         <li class="list-inline-item"><a href="https://www.nisra.gov.uk/crown-copyright">© Crown Copyright</a></li>
         <li class="list-inline-item">|</li>
@@ -203,14 +205,6 @@ export function insertFooter () {
         <li class="list-inline-item"><a href="https://datavis.nisra.gov.uk/dissemination/accessibility-statement-visualisations.html">Accessibility Statement</a></li>
       </ul>
     </div>`
-    
-    function adjustFooterMargin() {
-      const margin_needed = (window.innerHeight - document.getElementById("nav").clientHeight - document.getElementById("content").clientHeight - footer.clientHeight) - 4;
-      footer.style.marginTop = (margin_needed) > 0 ? `${margin_needed}px` : "0px";
-    }
-
-    adjustFooterMargin();
-    window.addEventListener("resize", adjustFooterMargin); 
 
 }
 
