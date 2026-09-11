@@ -116,14 +116,14 @@ window.addEventListener("DOMContentLoaded", async () => {
             label_format: ","
         })
 
-        downloadButton("domestic-abuse-bar-capture", "DOMACVG", update_date);
+        downloadButton("domestic-abuse-bar-capture", "DOMACVAC", update_date);
 
         // Populate info boxes    
         populateInfoBoxes(
             ["Definitions", "Source", "What does the data mean?"],
             [
-        `<p>The <strong>Police Service of Northern Ireland (PSNI)</strong> has adopted the definition of domestic violence and abuse as outlined in the 2016 Northern Ireland Government Strategy “Stopping Domestic and Sexual Violence and Abuse in Northern Ireland” as:</p>
-        <p>“Threatening, controlling, coercive behaviour, violence or abuse (psychological, virtual, physical, verbal, sexual, financial or emotional) inflicted on anyone (irrespective of age, ethnicity, religion, gender, gender identity, sexual orientation or any form of disability) by a current or former partner or family member.”</p>
+        `<p>The <strong>Police Service of Northern Ireland (PSNI)</strong> has adopted the definition of domestic violence and abuse as outlined in the 2016 Northern Ireland Government Strategy 'Stopping Domestic and Sexual Violence and Abuse in Northern Ireland' as:</p>
+        <p>'Threatening, controlling, coercive behaviour, violence or abuse (psychological, virtual, physical, verbal, sexual, financial or emotional) inflicted on anyone (irrespective of age, ethnicity, religion, gender, gender identity, sexual orientation or any form of disability) by a current or former partner or family member.'</p>
         <p>Violence with injury includes homicide and death/serious injury by unlawful driving.</p>
         <p>Police recorded crime data on this page includes those circumstances where domestic abuse forms part of the offence. Victim gender is available, however police recorded domestic abuse crime does not identify gender-based violence.</p>`,
 

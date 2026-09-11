@@ -221,7 +221,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
    let relationship_definitions = "";
    for (let i = 0; i < Object.keys(relationship_labels).length; i++) {
-    relationship_definitions += `<li><strong>${Object.values(relationship_labels)[i]}</strong> groups relationships that were recorded as "${Object.keys(relationship_labels)[i]}".</li>`;
+    relationship_definitions += `<li><strong>${Object.values(relationship_labels)[i]}</strong> groups relationships that were recorded as '${Object.keys(relationship_labels)[i]}'.</li>`;
    }
 
     

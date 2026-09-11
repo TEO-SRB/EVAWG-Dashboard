@@ -138,7 +138,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     populateInfoBoxes(
         ["Definitions", "Source", "What does the data mean?"],
         [
-        `<p>The <strong>Northern Ireland Life and Times (NILT) Survey</strong> defines gender-based violence as "violence directed against a person because of that person's gender, or violence that affects people of a particular gender disproportionately. It does not only relate to physical assaults but also includes words and actions that can cause someone to feel afraid, anxious or humiliated".</p>
+        `<p>The <strong>Northern Ireland Life and Times (NILT) Survey</strong> defines gender-based violence as 'violence directed against a person because of that person's gender, or violence that affects people of a particular gender disproportionately. It does not only relate to physical assaults but also includes words and actions that can cause someone to feel afraid, anxious or humiliated'.</p>
         <ul>
             <li><strong>Physical Violence:</strong> Being beaten, slapped, pushed, kicked, choked, restrained, a weapon or any other force being used against you in a way that causes harm.</li>
             <li><strong>Sexual Violence:</strong> Being forced or coerced into having sex against your will or into sexual practices or acts you didn't want to engage in, including unwanted attempted sex and sexual acts, or being choked or restrained.</li>
