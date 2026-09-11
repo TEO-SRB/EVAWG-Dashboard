@@ -13,7 +13,9 @@ window.addEventListener("DOMContentLoaded", async () => {
     const EXPVAS_stat = "Adult victims of violence";
     updateYearSpans(EXPVAS, EXPVAS_stat);
 
-    insertValue("violence-women", 100 - EXPVAS.data[EXPVAS_stat][latest_year]["No forms of violence"]["Female"]);   
+    insertValue("violence-women", 100 - EXPVAS.data[EXPVAS_stat][latest_year]["No forms of violence"]["Female"]);
+
+    insertValue("violence-women-year", latest_year);
 
     // % of 16-year-old girls have experienced violence
     const EXPVLYTHEQ = await readData("EXPVLYTHEQ");
@@ -21,6 +23,8 @@ window.addEventListener("DOMContentLoaded", async () => {
     updateYearSpans(EXPVLYTHEQ, EXPVLYTHEQ_stat);
 
     insertValue("violence-girl", EXPVLYTHEQ.data[EXPVLYTHEQ_stat][latest_year]["Any type of violence"]["Gender - Female"]);
+
+    insertValue("violence-girl-year", latest_year);
 
     // % of victims of sexual offences are women
     const PRCVCTM = await readData("PRCVCTM");
@@ -37,28 +41,31 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     insertValue("sexual-violence", Math.round(female_sex_victims / sex_victims * 100));
 
+    insertValue("sexual-violence-year", latest_year)
+
     // % of women have experienced domestic abuse
     const EXPDA = await readData("EXPDA");
     const EXPDA_stat = "Victims of domestic abuse";
     updateYearSpans(EXPDA, EXPDA_stat);
 
-    insertValue("domestic-abuse", Math.round(EXPDA.data[EXPDA_stat][latest_year]["Any domestic abuse"]["Lifetime (since age 16)"]["Female"])
-);
+    insertValue("domestic-abuse", Math.round(EXPDA.data[EXPDA_stat][latest_year]["Any domestic abuse"]["Lifetime (since age 16)"]["Female"]));
+
+    insertValue("domestic-abuse-year", latest_year);
 
     // % of stalking and harrassment victims are female
     const DOMACVAC = await readData("DOMACVAC"); 
     const DOMACVAC_stat = "All domestic abuse crimes"; 
     updateYearSpans(DOMACVAC, DOMACVAC_stat);
 
-const female_stalking_victims = DOMACVAC.data[DOMACVAC_stat][latest_year]
- ["Female"] ["Stalking and harassment"];
+    const female_stalking_victims = DOMACVAC.data[DOMACVAC_stat][latest_year]["Female"] ["Stalking and harassment"];
  
- const male_stalking_victims = DOMACVAC.data[DOMACVAC_stat][latest_year]
-  ["Male"] ["Stalking and harassment"]; 
+ const male_stalking_victims = DOMACVAC.data[DOMACVAC_stat][latest_year]["Male"] ["Stalking and harassment"]; 
   
   const total_stalking_victims = female_stalking_victims + male_stalking_victims;
   
   insertValue( "stalking", Math.round((female_stalking_victims / total_stalking_victims) * 100) );
+
+  insertValue("stalking-year", latest_year)
 
 
     // Case processing times - average days to complete
@@ -68,6 +75,8 @@ const female_stalking_victims = DOMACVAC.data[DOMACVAC_stat][latest_year]
 
     insertValue("sexual-days", INDPRCASEEQ.data[INDPRCASEEQ_stat][latest_year]["Offence category - Sexual"]);
     insertValue("all-days", INDPRCASEEQ.data[INDPRCASEEQ_stat][latest_year]["Northern Ireland"]);
+
+    insertValue("sexual-days-year", latest_year)
 
     function mapResizeHandler() {
 
@@ -96,6 +105,7 @@ const female_stalking_victims = DOMACVAC.data[DOMACVAC_stat][latest_year]
     }
 
     insertValue("domestic-homicide", domestic_homicicides);
+    insertValue("domestic-homicide-year", latest_year)
 
     let PRCHOM = await readData("PRCHOM"); 
     const PRCHOM_stat = "All homicides";
@@ -110,6 +120,7 @@ const female_stalking_victims = DOMACVAC.data[DOMACVAC_stat][latest_year]
     }
 
     insertValue("homicide-victims", homicide_victims);
+    insertValue("homicide-year", latest_year);
 
     insertFooter();
 

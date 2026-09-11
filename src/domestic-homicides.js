@@ -34,6 +34,12 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     const last_5_years = years.slice(-5);
 
+    const year_1 = document.getElementsByClassName("year-1");
+
+    for (let i = 0; i < year_1.length; i ++) {
+        year_1[i].innerHTML = last_5_years[0]
+    }
+
     let women_last_5 = 0;
     let men_last_5 = 0;
     let women_partner_last_5 = 0;
