@@ -145,7 +145,9 @@ window.addEventListener("DOMContentLoaded", async () => {
             <li><strong>Psychological Violence:</strong> Being insulted, stalked, harassed, threatened, humiliated, denigrated or controlled against your will.</li>
             <li><strong>Economic Violence:</strong> Someone controlling your finances and spending and other resources against your will.</li>
             <li><strong>Online Violence:</strong> Receiving threats online or via social media, online trolling, or being sent or being asked for intimate images against your will.</li>
-        </ul>`,
+</ul>
+        <p>While this definition of gender-based violence is provided, respondents must make their own assessment as to whether an experience occurred because of their gender. As a result, some respondents may not identify themselves as victims due to differences in awareness, understanding and perceptions of gender-based violence. Alternatively, some respondents may misunderstand and report as gender-based violence when the violence is not related to their gender. Figures should be interpreted alongside administrative data and qualitative evidence for a fuller picture.</p>
+        `,
 
         `<p>The <strong>Northern Ireland Life and Times (NILT) Survey</strong> records the attitudes, values, and beliefs of adults to a wide range of social policy issues.  This annual survey has been running since 1998 and is administered by ARK. ARK is Northern Ireland's social policy hub and is made up of academics across QUB and Ulster University.</p>
         <p>Its mission is to monitor the attitudes and behaviour of people in Northern Ireland annually to provide a time-series and a public record of how our attitudes and behaviour develop on a wide range of social policy issues. </p>

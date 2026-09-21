@@ -101,7 +101,9 @@ window.addEventListener("DOMContentLoaded", async () => {
     <li><strong>Sexual Violence:</strong> Upskirting, unwanted touching, or being coerced into sexual acts.</li>
     <li><strong>Psychological Violence:</strong> Being insulted, stalked, harassed, controlled against your will, or threatened with violence.</li>
     <li><strong>Online Violence:</strong> Receiving threats online or via social media, online trolling, or being sent or asked for intimate images against your will.</li>
-</ul>`,
+</ul>
+
+<p>While this definition of gender-based violence is provided, respondents must make their own assessment as to whether an experience occurred because of their gender. As a result, some respondents may not identify themselves as victims due to differences in awareness, understanding and perceptions of gender-based violence. Alternatively, some respondents may misunderstand and report as gender-based violence when the violence is not related to their gender. Figures should be interpreted alongside administrative data and qualitative evidence for a fuller picture.</p>`,
 
 `<p>The <strong>Young Life and Times (YLT) Survey</strong> records the attitudes and opinions of <strong>16-year-olds</strong> in Northern Ireland about the issues that concern them. It is a representative annual survey that has been running since 2003.</p>
 <p>To assess experiences of, and attitudes to, violence against women and girls, The Executive Office (TEO) sponsored the inclusion of relevant questions in the YLT survey from 2023.</p>
