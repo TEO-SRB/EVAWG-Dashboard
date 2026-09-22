@@ -121,7 +121,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     <li><strong>What it tells us:</strong> It highlights how young people perceive issues such as domestic abuse, coercive control, and gender-based violence, and whether they have experienced these behaviours themselves. These insights reveal emerging patterns and attitudes among younger age groups.</li>
     <li><strong>Why it matters:</strong> Early attitudes can shape future behaviours. Understanding young people's experiences and beliefs helps identify risks and opportunities for prevention before harmful norms become entrenched.</li>
     <li><strong>How to use it:</strong> Use this data to inform education programmes, awareness campaigns, and safeguarding policies in schools and youth settings. It can guide interventions that promote healthy relationships and challenge harmful behaviours.</li>
-    <li><strong>Limitations:</strong> Responses are self-reported and may understate sensitive experiences due to stigma or reluctance to disclose. Figures should be considered alongside qualitative research and other sources for a fuller picture.</li>
+    <li><strong>Strengths/Limitations:</strong> Please refer to the technical notes for further information on the strengths and limitations of the data.</li>
 </ul>`
             
             ]

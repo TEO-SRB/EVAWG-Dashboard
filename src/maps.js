@@ -113,7 +113,8 @@ window.addEventListener("DOMContentLoaded", async () => {
                 <li><strong>What it tells us:</strong> It highlights the geographic location of the offence itself, not where the victim lives. This distinction is important because offences can happen away from home—for example, in public spaces or workplaces.</li>
                 <li><strong>Why it matters:</strong> Understanding where offences occur helps identify hotspots and inform targeted prevention efforts, policing strategies, and community safety initiatives.</li>
                 <li><strong>How to use it:</strong> Use these maps to guide local interventions, resource deployment, and awareness campaigns in areas with higher recorded incidents.</li>
-                <li><strong>Limitations:</strong> Location data reflects where the offence occurred, which may differ from where the victim resides. It can, but does not always, indicate risk for individuals living in that area.</li>
+                <li><strong>Strengths/Limitations:</strong> Location data reflects where the offence occurred, which may differ from where the victim resides. It can, but does not always, indicate risk for individuals living in that area.<br>
+                Please refer to the technical notes for further information on the strengths and limitations of the data.</li>
             </ul>`            
         ]
     );

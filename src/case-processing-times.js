@@ -128,7 +128,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     <li><strong>What it tells us:</strong> It highlights average (median) processing times for different types of cases, giving insight into how quickly justice is delivered.</li>
     <li><strong>Why it matters:</strong> Delays in case processing can impact victims' confidence in the justice system and prolong trauma. Understanding these timelines helps identify where improvements are needed.</li>
     <li><strong>How to use it:</strong> Use this data to inform discussions on court efficiency, resource allocation, and victim support during lengthy proceedings. It can also guide policy aimed at reducing delays.</li>
-    <li><strong>Limitations:</strong> Figures reflect completed cases only and may be influenced by, for example, case complexity, availability of court resources, and procedural requirements. They do not capture cases that result in informal resolutions or cases withdrawn before trial.</li>
+    <li><strong>Strengths/Limitations:</strong> Figures reflect completed cases only and may be influenced by, for example, case complexity, availability of court resources, and procedural requirements. They do not capture cases that result in informal resolutions or cases withdrawn before trial.</li>
 </ul>`
 
 

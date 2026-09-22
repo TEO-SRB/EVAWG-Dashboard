@@ -181,7 +181,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     <li><strong>What it tells us:</strong> Homicide is rare but represents the most severe outcome of gender-based violence. Women are disproportionately victims in domestic-related cases.</li>
     <li><strong>Why it matters:</strong> These figures underline the importance of early intervention and risk assessment to prevent escalation.</li>
     <li><strong>How to use it:</strong> Incorporate insights into high-risk case management and multi-agency safeguarding approaches.</li>
-    <li><strong>Limitations:</strong> Small numbers mean trends should be interpreted cautiously.<br>
+    <li><strong>Strengths/Limitations:</strong> Please refer to the technical notes for further information on the strengths and limitations of the data.<br>
  </li>
 </ul>`
             
