@@ -42,6 +42,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     insertValue("victims-female", female_victims);
     insertValue("victims-male",  male_victims);
+    insertValue("year-range", years[years.length - 5] + " to " + latest_year);
 
     const victims_girls = data.data[stat][latest_year]["Under 18 years"]["Female"];
     const victims_boys = data.data[stat][latest_year]["Under 18 years"]["Male"];

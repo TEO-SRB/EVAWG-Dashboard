@@ -59,13 +59,13 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     const female_stalking_victims = DOMACVAC.data[DOMACVAC_stat][latest_year]["Female"] ["Stalking and harassment"];
  
- const male_stalking_victims = DOMACVAC.data[DOMACVAC_stat][latest_year]["Male"] ["Stalking and harassment"]; 
+    const male_stalking_victims = DOMACVAC.data[DOMACVAC_stat][latest_year]["Male"] ["Stalking and harassment"]; 
   
-  const total_stalking_victims = female_stalking_victims + male_stalking_victims;
+    const total_stalking_victims = female_stalking_victims + male_stalking_victims;
   
-  insertValue( "stalking", Math.round((female_stalking_victims / total_stalking_victims) * 100) );
+    insertValue( "stalking", Math.round((female_stalking_victims / total_stalking_victims) * 100) );
 
-  insertValue("stalking-year", latest_year)
+    insertValue("stalking-year", latest_year)
 
 
     // Case processing times - average days to complete
@@ -78,49 +78,38 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     insertValue("sexual-days-year", latest_year)
 
-    function mapResizeHandler() {
-
-        const first_card_body = document.querySelectorAll(".card-body")[0];
-        const map_img = document.getElementById("map-img");
-    
-        map_img.height = first_card_body.clientHeight;
-        map_img.width = map_img.naturalWidth / map_img.naturalHeight * map_img.height;
-
-        if (map_img.width > first_card_body.clientWidth) {
-            map_img.width = first_card_body.clientWidth;
-            map_img.height = map_img.naturalHeight / map_img.naturalWidth * map_img.width;
-        }
-
-    }
-
     // women killed by intimate partner
     const DAHVGR = await readData("DAHVGR");
     const DAHVGR_stat = "Domestic abuse homicides";
     updateYearSpans(DAHVGR, DAHVGR_stat);
 
-    const last_5_years = years.slice(-5);
+    let last_5_years = years.slice(-5);
     let domestic_homicicides = 0;
     for (let i = 0; i < 5; i++) {
         domestic_homicicides += DAHVGR.data[DAHVGR_stat][last_5_years[i]]["Female"]["Partner/ex-partner"];
     }
 
-    insertValue("domestic-homicide", domestic_homicicides);
-    insertValue("domestic-homicide-year", latest_year)
+    let year_range = last_5_years[0] + " to " + latest_year;
 
-    let PRCHOM = await readData("PRCHOM"); 
+    insertValue("domestic-homicide", domestic_homicicides);
+    insertValue("domestic-homicide-year", year_range)
+
+    const PRCHOM = await readData("PRCHOM"); 
     const PRCHOM_stat = "All homicides";
-    
+    updateYearSpans(PRCHOM, PRCHOM_stat);
+
     let homicide_victims = 0;
 
-    const PRCHOM_years = Object.keys(PRCHOM.data[PRCHOM_stat]);
+    last_5_years = years.slice(-5);
 
-    for (let i = PRCHOM_years.length - 5; i < PRCHOM_years.length; i ++) {
-        homicide_victims += PRCHOM.data[PRCHOM_stat][PRCHOM_years[i]]["All ages"]["Female"];
-        
+    for (let i = 0; i < 5; i++) {
+        homicide_victims += PRCHOM.data[PRCHOM_stat][last_5_years[i]]["All ages"]["Female"];
     }
 
+    year_range = last_5_years[0] + " to " + latest_year;
+
     insertValue("homicide-victims", homicide_victims);
-    insertValue("homicide-year", latest_year);
+    insertValue("homicide-year", year_range);
 
     insertFooter();
 
