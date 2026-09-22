@@ -33,13 +33,15 @@ window.addEventListener("DOMContentLoaded", async () => {
     const oldKey = "Violence with injury (including homicide & death/serious injury by unlawful driving)";
     const newKey = "Violence with injury";
     for (let i = 0; i < lgds.length; i++) {
-        const obj = data.data[allCrimesStat][latest_year][lgds[i]];
-        obj[newKey] = obj[oldKey];
-        delete obj[oldKey];
+        for (let j = 0; j < recentYears.length; j++) {
+            const obj = data.data[allCrimesStat][recentYears[j]][lgds[i]];
+            obj[newKey] = obj[oldKey];
+            delete obj[oldKey];
 
-        const rateObj = data.data[crimeRateStat][latest_year][lgds[i]];
-        rateObj[newKey] = rateObj[oldKey];
-        delete rateObj[oldKey];
+            const rateObj = data.data[crimeRateStat][recentYears[j]][lgds[i]];
+            rateObj[newKey] = rateObj[oldKey];
+            delete rateObj[oldKey];
+        }
     }
 
     const crime_filter = document.getElementById("crime-filter");
