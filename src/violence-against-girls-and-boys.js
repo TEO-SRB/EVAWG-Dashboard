@@ -107,7 +107,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
 `<p>The <strong>Young Life and Times (YLT) Survey</strong> records the attitudes and opinions of <strong>16-year-olds</strong> in Northern Ireland about the issues that concern them. It is a representative annual survey that has been running since 2003.</p>
 <p>To assess experiences of, and attitudes to, violence against women and girls, The Executive Office (TEO) sponsored the inclusion of relevant questions in the YLT survey from 2023.</p>
-<p>The YLT Survey is completed online between April and May each year. Due to demand for questions, the survey is split into two versions; the version containing the Violence Against Women and Girls (VAWG) module is completed by approximately 1,000 16-year-olds annually.</p>
+<p>The YLT Survey is completed online between April and May each year. Due to demand for questions, the survey is split into two versions. In 2024, 1,156 respondents <strong>aged 16</strong> completed the version containing the Violence Against Women and Girls (VAWG) module</p>
 <p>In the time series above labelled 'Trend in prevalence of gender-based violence among 16-year-olds, 2023 to 2024', caution is required around comparing 2023 and 2024 data due to slight differences in question wording. In 2023 the question was, 'Based on this definition, and regardless of your gender, have you personally experienced any of the following in the last year?' whereas in 2024 the question was 'Based on this definition, and regardless of your gender, have you personally experienced any of the following in the last year because of your gender?'</p>
  <p>This data is available on the <a href="${config.portal_url}" target="_blank">NISRA Data Portal</a> in the following tables:</p>
         <ul>
