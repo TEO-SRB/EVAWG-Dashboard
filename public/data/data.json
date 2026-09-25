@@ -4042,7 +4042,7 @@
   },
   "INDPRCASEEQ": {
     "label": "Indicator - Processing times for criminal cases",
-    "updated": "2026-06-17",
+    "updated": "2026-09-25",
     "data": {
       "Average time taken to complete criminal cases": {
         "2013/14": {
@@ -4248,6 +4248,23 @@
           "Court type - Crown Court": 752,
           "Court type - Adult magistrates' courts": 174,
           "Court type - Youth magistrates' courts": 244
+        },
+        "2025/26": {
+          "Northern Ireland": 209,
+          "Sex - Male": 205,
+          "Sex - Female": 218,
+          "Age - Youth": 231,
+          "Age - Adult": 208,
+          "Offence category - Violence Against the Person": 205,
+          "Offence category - Sexual": 547,
+          "Offence category - Robbery/ Theft/ Burglary": 223,
+          "Offence category - Criminal Damage/ Public Order": 165,
+          "Offence category - Drugs": 250,
+          "Offence category - Motoring": 204,
+          "Offence category - Other": 333,
+          "Court type - Crown Court": 690,
+          "Court type - Adult magistrates' courts": 201,
+          "Court type - Youth magistrates' courts": 220
         }
       }
     }
