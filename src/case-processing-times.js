@@ -41,8 +41,10 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     insertValue("sexual-case-processing", data.data[stat][latest_year]["Offence category - Sexual"]);
     insertValue("all-case-processing", data.data[stat][latest_year]["Northern Ireland"]);
-    insertValue("domestic-days", dom_data.data[dom_stat][latest_year]["All domestic abuse cases"]);
 
+    const dom_latest_year = dom_years[dom_years.length - 1];
+    insertValue("domestic-days", dom_data.data[dom_stat][dom_latest_year]["All domestic abuse cases"]);
+    Array.from(document.getElementsByClassName("domestic-latest-year")).forEach(el => el.innerText = dom_latest_year);
 
     // Create line chart
     createLineChart({
