@@ -279,10 +279,10 @@ export function createDALast3Data({data, stat, year, da_types}) {
     let male_bars = [];
     for (let i = 0; i < da_types.length; i ++) {
              female_bars.push(data.data[stat][year][da_types[i]]
-                [["Recent (last 3 years)"]]
+                [["Previous 3 years"]]
                 ["Female"]);
             male_bars.push(data.data[stat][year][da_types[i]]
-                [["Recent (last 3 years)"]]
+                [["Previous 3 years"]]
                 ["Male"]);
     }
 
