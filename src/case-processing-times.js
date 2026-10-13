@@ -111,6 +111,7 @@ window.addEventListener("DOMContentLoaded", async () => {
             <p>For domestic abuse related cases, the average case processing time relates to cases where at least one offence in the case was prosecuted under the Domestic Abuse and Civil Proceedings Act (Northern Ireland) 2021.</p>`,
 
 `<p>The most recent average Case Processing Times for Criminal Cases dealt with in the Crown Court and in magistrates’ courts in Northern Ireland is for cases completed in 2024/25 and refers to the time from which the offence was reported to, or detected by, the police.</p>
+<p>The data presented on this page are <strong>Official Statistics</strong> derived from case processing data for criminal cases dealt with at courts in Northern Ireland.</p>
 <p>This data is based on all court cases – Crown Court, adult magistrates’ court, and youth magistrates’ court.</p>
 <p>Average is measured as the median number of days taken, i.e., the number of days at which 50% of those cases included under counting rules has been completed. This is an overview of the time taken for a case to be disposed at court from the date that case began its journey through the criminal justice system, based on a start point of the date the offence was reported to, or detected by, the PSNI.</p>
   <p>This data is available on the <a href="${config.portal_url}" target="_blank">NISRA Data Portal</a> in the following tables:</p>

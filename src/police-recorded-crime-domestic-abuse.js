@@ -128,6 +128,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         <p>Police recorded crime data on this page includes those circumstances where domestic abuse forms part of the offence. Victim gender is available, however police recorded domestic abuse crime does not identify gender-based violence.</p>`,
 
         `<p>Statistics on police recorded crime in Northern Ireland are collated and produced by statisticians seconded to the <strong>Police Service of Northern Ireland (PSNI)</strong> from the <strong>Northern Ireland Statistics and Research Agency (NISRA)</strong>.</p>
+        <p>The data presented on this page are <strong>Accredited Official Statistics</strong> derived from police recorded crime data.</p>
         <p>While the PSNI does not fall within the jurisdiction of the Home Office, the practices and procedures of the Home Office's notable offence list are followed and applied within Northern Ireland.</p>
         <p>The crime recording process starts at the point at which an incident comes to the attention of police. This may be brought through a call for service from a member of the public, an incident being referred to the police by another agency or being identified by the police directly.</p>
         <p>The time series chart 'Victims of domestic abuse crimes, 2004/05 to ${latest_year}' includes victims of all ages. However, the bar chart 'Adult victims of domestic abuse crimes ${latest_year}, by crime type' only includes adult victims (18+).</p>

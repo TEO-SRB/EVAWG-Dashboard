@@ -154,6 +154,7 @@ Violence with injury includes homicide and death/serious injury by unlawful driv
 Some of these offences may be flagged by the police as domestic abuse‑related where they meet the domestic abuse definition. These flagged offences are part of overall police recorded crime and are also included within domestic abuse statistics. </p>`,
 
 `<p>Statistics on police recorded crime in Northern Ireland are collated and produced by statisticians seconded to the Police Service of Northern Ireland (PSNI) from the Northern Ireland Statistics and Research Agency (NISRA).</p>
+<p>The data presented on this page are <strong>Accredited Official Statistics</strong> derived from police recorded crime data.</p>
 <p>While the PSNI does not fall within the jurisdiction of the Home Office, the practices and procedures of the Home Office's notable offence list are followed and applied within Northern Ireland.</p>
 <p>The Crime recording process starts at the point at which an incident comes to the attention of police. This may be brought through a call for service from a member of the public, an incident being referred to the police by another agency or being identified by the police directly.</p>
  <p>This data is available on the <a href="${config.portal_url}" target="_blank">NISRA Data Portal</a> in the following tables:</p>
