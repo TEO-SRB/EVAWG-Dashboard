@@ -41,40 +41,41 @@ export function genderDisplay () {
   let selectedGender = getSelectedGender(); 
   
   function hideMaleFigs () {
-    for (let i = 0; i < male_figs.length; i ++) {
+    for (let i = 0; i < male_figs.length; i++) {
       if (selectedGender === "female") {
-          male_figs[i].classList.add("d-none");
+        male_figs[i].classList.add("d-none");
+        male_figs[i].classList.remove("display-6");
+        male_figs[i].classList.add("gender-fig");
       } else {
-          male_figs[i].classList.remove("d-none");
-          if (selectedGender === "male") {
-            male_figs[i].classList.add("display-6");
-          } else {
-            male_figs[i].classList.remove("display-6");
-          }
-      }
-    }
-    for (let i = 0; i < male_cols.length; i ++) {
-      if (selectedGender === "female") {
-        male_cols[i].classList.add("d-none");
-      } else {
-        male_cols[i].classList.remove("d-none");
+        male_figs[i].classList.remove("d-none");
+        
+        if (selectedGender === "male") {
+          male_figs[i].classList.remove("gender-fig");
+          male_figs[i].classList.add("display-6");
+        } else {
+          male_figs[i].classList.remove("display-6");
+          male_figs[i].classList.add("gender-fig");
+        }
       }
     }
   }
 
   function hideFemaleFigs () {
-    for (let i = 0; i < female_figs.length; i ++) {
+    for (let i = 0; i < female_figs.length; i++) {
       if (selectedGender === "male") {
-          female_figs[i].classList.add("d-none");
+        female_figs[i].classList.add("d-none");
+        female_figs[i].classList.remove("display-6");
+        female_figs[i].classList.add("gender-fig");
       } else {
-          female_figs[i].classList.remove("d-none");
-      }
-    }
-    for (let i = 0; i < female_cols.length; i ++) {
-      if (selectedGender === "male") {
-        female_cols[i].classList.add("d-none");
-      } else {
-        female_cols[i].classList.remove("d-none");
+        female_figs[i].classList.remove("d-none");
+        
+        if (selectedGender === "female") {
+          female_figs[i].classList.remove("gender-fig");
+          female_figs[i].classList.add("display-6");
+        } else {
+          female_figs[i].classList.remove("display-6");
+          female_figs[i].classList.add("gender-fig");
+        }
       }
     }
   }
