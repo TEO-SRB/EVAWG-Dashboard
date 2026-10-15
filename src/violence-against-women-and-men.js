@@ -46,19 +46,27 @@ window.addEventListener("DOMContentLoaded", async () => {
     insertValue("violence-female", age_data.data[age_stat][latest_age_year]["All ages"]["Female"]);    
     insertValue("violence-male", age_data.data[age_stat][latest_age_year]["All ages"]["Male"]);    
 
-    insertValue("young-female",age_data.data[age_stat][latest_age_year]["Age 18-29"]["Female"]);
-    insertValue("old-female", age_data.data[age_stat][latest_age_year]["Age 30+"]["Female"]);
-
     insertValue("sexual-female", data.data[stat][latest_year]["Sexual violence"]["Sex - Female"]);
     insertValue("sexual-male", data.data[stat][latest_year]["Sexual violence"]["Sex - Male"]);
+    
     insertValue("physical-female", data.data[stat][latest_year]["Physical violence"]["Sex - Female"]);
     insertValue("physical-male", data.data[stat][latest_year]["Physical violence"]["Sex - Male"]);
 
     insertValue("psychological-female", data.data[stat][latest_year]["Psychological violence"]["Sex - Female"]);
     insertValue("psychological-male", data.data[stat][latest_year]["Psychological violence"]["Sex - Male"]);
 
-    insertValue("young-male",age_data.data[age_stat][latest_age_year]["Age 18-29"]["Male"]);
-    insertValue("old-male", age_data.data[age_stat][latest_age_year]["Age 30+"]["Male"]);
+    // insertValue("young-female",age_data.data[age_stat][latest_age_year]["Age 18-29"]["Female"]);
+    // insertValue("old-female", age_data.data[age_stat][latest_age_year]["Age 30+"]["Female"]);
+
+    // insertValue("young-male",age_data.data[age_stat][latest_age_year]["Age 18-29"]["Male"]);
+    // insertValue("old-male", age_data.data[age_stat][latest_age_year]["Age 30+"]["Male"]);
+
+    insertValue("economic-female", data.data[stat][latest_year]["Economic violence"]["Sex - Female"]);
+    insertValue("economic-male", data.data[stat][latest_year]["Economic violence"]["Sex - Male"]);
+
+    insertValue("online-female", data.data[stat][latest_year]["Online violence"]["Sex - Female"]);
+    insertValue("online-male", data.data[stat][latest_year]["Online violence"]["Sex - Male"]);
+
     // Create bar chart
     const violence_types = Object.keys(data.data[stat][latest_year])
         .filter(x => x !== "Other types of violence")
