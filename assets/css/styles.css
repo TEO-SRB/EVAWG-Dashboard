@@ -537,3 +537,9 @@ a.cookiesbarlink {
 .display-4.unit {
   font-size: 26pt;
 }
+
+.gender-fig {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
