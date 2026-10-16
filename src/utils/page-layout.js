@@ -132,19 +132,24 @@ export function insertNavButtons() {
       </div>
 
 
-      <!-- Desktop only -->
-      <div class="d-none d-lg-block">
-        <div class="row g-2">
-          ${links
-            .map(
-              (l) => `
-                <a id="${l.href.replace(".html", "-btn")}" class="col ${getNavClass(l.href)} d-flex justify-content-center align-items-center text-center" href="${l.href}">
-                  ${l.text}
-                </a>`
-            )
-            .join("")}
-        </div>
-      </div>
+<!-- Desktop only -->
+<div class="d-none d-lg-block">
+  <div class="row g-2">
+    ${links
+      .map(
+        (l) => `
+          <a
+            id="${l.href.replace(".html", "-btn")}"
+            class="col ${getNavClass(l.href)} d-flex justify-content-center align-items-center text-center ${
+              l.href.replace(".html", "-btn") === `${pageKey}-btn` ? "active" : ""
+            }"
+            href="${l.href}">
+            ${l.text}
+          </a>`
+      )
+      .join("")}
+  </div>
+</div>
 
     </div>
   `;

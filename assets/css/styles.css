@@ -274,14 +274,9 @@ table tr:not(:has(th)):hover {
 }
 
 .home-nav {
-  background-color: #d9d9d9;
+  background-color: #595959;
   border: 2px solid #00205B;
-  color: #000;
-}
-
-.home-nav:hover {
-  background-color: #bfbfbf;
-  cursor: pointer;
+  color: #fff;
 }
 
 .blue-nav {
@@ -289,9 +284,10 @@ table tr:not(:has(th)):hover {
   border: 2px solid #00205B;
 }
 
-.blue-nav:hover {
-  background-color: #6B7EA0;
-  cursor: pointer;
+.blue-nav.active {
+  background-color: #C1D5EC;
+  color: #000;
+  cursor: default;
 }
 
 .purple-nav {
@@ -300,9 +296,9 @@ table tr:not(:has(th)):hover {
   color: #fff;
 }
 
-.purple-nav:hover {
-  background-color: #8B5A8E;
-  cursor: pointer;
+.purple-nav.active {
+  background-color: #ce70d2;
+  color: #000;
 }
 
 .green-nav {
@@ -311,9 +307,10 @@ table tr:not(:has(th)):hover {
   color: #000;
 }
 
-.green-nav:hover {
-  background-color: #89A465;
-  cursor: pointer;
+.green-nav.active {
+  background-color: #1D530E;
+  border: 2px solid #00205B;
+  color: #fff;
 }
 
 .chart-canvas {
