@@ -67,7 +67,36 @@ export function insertNavButtons() {
   const file = pathname.slice(pathname.lastIndexOf("/") + 1) || "index.html";
   const pageKey = file.replace(".html", "");
 
-  // Desktop: row of buttons (lg+). Mobile: hamburger dropdown (<lg).
+  function getNavClass(href) {
+
+    // Index tab
+    if (
+      href === "index.html"
+    ) {
+      return "home-nav"
+    }
+
+    // Police recorded crime tabs
+    if (
+      href.includes("police-recorded-crime") ||
+      href === "domestic-homicides.html"
+    ) {
+      return "blue-nav";
+    }
+
+    // Survey data tabs
+    if (
+      href === "violence-against-women-and-men.html" ||
+      href === "violence-against-girls-and-boys.html" ||
+      href === "domestic-abuse.html"
+    ) {
+      return "purple-nav";
+    }
+
+    // Others
+    return "green-nav";
+  }
+
   nav.innerHTML += `
     <div class="container-fluid px-1">
 
@@ -90,7 +119,7 @@ export function insertNavButtons() {
             .map(
               (l) => `
                 <li>
-                  <a class="dropdown-item ${l.href.replace(".html", "-btn") === `${pageKey}-btn` ? "active" : ""}"
+                  <a class="dropdown-item ${getNavClass(l.href)} ${l.href.replace(".html", "-btn") === `${pageKey}-btn` ? "active" : ""}"
                     id="${l.href.replace(".html", "-btn")}-mobile"
                     href="${l.href}">
                     ${l.text}
@@ -109,7 +138,7 @@ export function insertNavButtons() {
           ${links
             .map(
               (l) => `
-                <a id="${l.href.replace(".html", "-btn")}" class="col nav-btn d-flex justify-content-center align-items-center text-center" href="${l.href}">
+                <a id="${l.href.replace(".html", "-btn")}" class="col ${getNavClass(l.href)} d-flex justify-content-center align-items-center text-center" href="${l.href}">
                   ${l.text}
                 </a>`
             )
@@ -119,14 +148,6 @@ export function insertNavButtons() {
 
     </div>
   `;
-
-  // Apply current-page styling to the DESKTOP buttons (to match your existing CSS)
-  const currentDesktop = document.getElementById(`${pageKey}-btn`);
-  if (currentDesktop) {
-    currentDesktop.classList.add("current-page");
-    currentDesktop.classList.remove("nav-btn");
-    currentDesktop.innerHTML = currentDesktop.textContent;
-  }
 }
 
 

@@ -273,6 +273,49 @@ table tr:not(:has(th)):hover {
   cursor: pointer;
 }
 
+.home-nav {
+  background-color: #d9d9d9;
+  border: 2px solid #00205B;
+  color: #000;
+}
+
+.home-nav:hover {
+  background-color: #bfbfbf;
+  cursor: pointer;
+}
+
+.blue-nav {
+  background-color: #3878c5;
+  border: 2px solid #00205B;
+}
+
+.blue-nav:hover {
+  background-color: #6B7EA0;
+  cursor: pointer;
+}
+
+.purple-nav {
+  background-color: #732777;
+  border: 2px solid #00205B;
+  color: #fff;
+}
+
+.purple-nav:hover {
+  background-color: #8B5A8E;
+  cursor: pointer;
+}
+
+.green-nav {
+  background-color: #68A41E;
+  border: 2px solid #00205B;
+  color: #000;
+}
+
+.green-nav:hover {
+  background-color: #89A465;
+  cursor: pointer;
+}
+
 .chart-canvas {
   height: 40vh !important;
 }
